@@ -1,0 +1,87 @@
+{
+  "id": "lesson-4",
+  "number": 4,
+  "lang": "css",
+  "title": "الألوان: hex و rgb و hsl والشفافية",
+  "subtitle": "كيف نحدّد الألوان بدقّة في CSS؟",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "طرق تحديد اللون",
+      "icon": "🌈",
+      "content": [
+        "نحدّد اللون بعدّة صيغ: بالاسم (red)، أو السداسي عشري (#ff0000)، أو rgb، أو hsl."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "css",
+      "langLabel": "CSS",
+      "code": [
+        "h1 { color: red; }",
+        "h2 { color: #3498db; }",
+        "p  { color: rgb(46, 204, 113); }",
+        "a  { color: rgba(0, 0, 0, 0.5); }"
+      ],
+      "annotations": [
+        {
+          "line": 1,
+          "text": "بالاسم: أبسط طريقة."
+        },
+        {
+          "line": 2,
+          "text": "سداسي عشري: # متبوع بـ 6 خانات."
+        },
+        {
+          "line": 3,
+          "text": "rgb: قيم الأحمر والأخضر والأزرق (0-255)."
+        },
+        {
+          "line": 4,
+          "text": "rgba: الحرف a للشفافية (0 شفاف، 1 معتم)."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "الشفافية",
+      "icon": "👻",
+      "content": [
+        "القيمة alpha في rgba أو hsla تتحكّم بالشفافية: 0 شفاف تمامًا، 1 معتم تمامًا، 0.5 نصف شفاف."
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "tip",
+      "title": "نصيحة 💡",
+      "content": "الصيغة hsl سهلة الفهم: درجة اللون (0-360)، التشبّع، والإضاءة. مثالية لتوليد تدرّجات متناسقة."
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "ماذا يمثّل الحرف a في rgba؟",
+      "options": [
+        "الأحمر",
+        "الشفافية (alpha)",
+        "الزاوية",
+        "المساحة"
+      ],
+      "answer": 1,
+      "hint": "alpha.",
+      "explanation": "الحرف a في rgba يمثّل الشفافية: 0 شفاف و 1 معتم."
+    },
+    {
+      "type": "exercise",
+      "exType": "fill-blank",
+      "prompt": "اكتب لونًا أحمر بالصيغة السداسية عشرية.",
+      "answer": [
+        "#ff0000",
+        "#FF0000",
+        "#f00"
+      ],
+      "hint": "# متبوع بستّ خانات.",
+      "explanation": "اللون الأحمر هو #ff0000 (أو اختصارًا #f00)."
+    }
+  ]
+}

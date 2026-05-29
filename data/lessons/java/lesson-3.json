@@ -1,0 +1,179 @@
+{
+  "id": "lesson-3",
+  "number": 3,
+  "lang": "java",
+  "title": "المتغيرات والأنواع البدائية",
+  "subtitle": "في جافا نُعلن نوع كل متغيّر مسبقًا. لنتعرّف على الأنواع البدائية.",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "التصريح بالنوع",
+      "icon": "🏷️",
+      "content": [
+        "جافا لغة «مُصرّح بأنواعها»: نحدّد نوع المتغيّر قبل اسمه. هذا يجعلها صارمة وآمنة."
+      ]
+    },
+    {
+      "type": "list",
+      "heading": "الأنواع البدائية الشائعة",
+      "icon": "📋",
+      "ordered": false,
+      "items": [
+        "`int` عدد صحيح مثل 7",
+        "`double` عدد عشري مثل 3.5",
+        "`char` حرف واحد مثل 'A'",
+        "`boolean` صحيح أو خطأ",
+        "`String` نصّ (ليس بدائيًّا لكنه شائع)"
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "java",
+      "langLabel": "Java",
+      "code": [
+        "int age = 12;",
+        "double price = 9.99;",
+        "char grade = 'A';",
+        "boolean passed = true;"
+      ],
+      "annotations": [
+        {
+          "line": 1,
+          "text": "نُعلن عددًا صحيحًا."
+        },
+        {
+          "line": 2,
+          "text": "نُعلن عددًا عشريًّا."
+        },
+        {
+          "line": 3,
+          "text": "حرف واحد بين علامتي اقتباس مفردتين."
+        },
+        {
+          "line": 4,
+          "text": "قيمة منطقية."
+        }
+      ]
+    },
+    {
+      "type": "visualizer",
+      "data": {
+        "lang": "java",
+        "hasCallStack": false,
+        "code": [
+          "int x = 5;",
+          "int y = 3;",
+          "int sum = x + y;"
+        ],
+        "steps": [
+          {
+            "line": 1,
+            "description": "نبدأ بقراءة البرنامج من أعلى سطر، والذاكرة فارغة تمامًا قبل أن ننفّذ أي شيء.",
+            "memory": [],
+            "output": ""
+          },
+          {
+            "line": 1,
+            "description": "نحجز صندوقًا من نوع int اسمه x ونضع فيه 5.",
+            "memory": [
+              {
+                "name": "x",
+                "value": "5",
+                "updated": true
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 2,
+            "description": "لنتمهّل قليلًا ونتأمّل ما في الذاكرة حتى الآن قبل المتابعة.",
+            "memory": [
+              {
+                "name": "x",
+                "value": "5",
+                "updated": false
+              },
+              {
+                "name": "y",
+                "value": "3",
+                "updated": false
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 2,
+            "description": "نحجز صندوق int اسمه y ونضع فيه 3.",
+            "memory": [
+              {
+                "name": "x",
+                "value": "5",
+                "updated": false
+              },
+              {
+                "name": "y",
+                "value": "3",
+                "updated": true
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 3,
+            "description": "نجمع x + y = 8 ونضعه في sum.",
+            "memory": [
+              {
+                "name": "x",
+                "value": "5",
+                "updated": false
+              },
+              {
+                "name": "y",
+                "value": "3",
+                "updated": false
+              },
+              {
+                "name": "sum",
+                "value": "8",
+                "updated": true
+              }
+            ],
+            "output": ""
+          }
+        ]
+      }
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "title": "فرق مهمّ!",
+      "content": "في جافا الحرف char بين علامتين مفردتين 'A'، أمّا النص String فبين علامتين مزدوجتين \"Hello\"."
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "أي نوع نستخدمه لعدد صحيح في جافا؟",
+      "options": [
+        "double",
+        "int",
+        "char",
+        "String"
+      ],
+      "answer": 1,
+      "hint": "اختصار integer.",
+      "explanation": "نستخدم int للأعداد الصحيحة."
+    },
+    {
+      "type": "exercise",
+      "exType": "fill-blank",
+      "prompt": "أعلن متغيّرًا صحيحًا اسمه n قيمته 10.",
+      "answer": [
+        "int n = 10;",
+        "int n = 10"
+      ],
+      "hint": "النوع ثم الاسم ثم القيمة.",
+      "explanation": "نكتب int n = 10; للتصريح بمتغيّر صحيح."
+    }
+  ]
+}

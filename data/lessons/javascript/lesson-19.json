@@ -1,0 +1,139 @@
+{
+  "id": "lesson-19",
+  "number": 19,
+  "lang": "javascript",
+  "title": "معالجة الأخطاء try...catch",
+  "subtitle": "الأخطاء جزء طبيعي من البرمجة. لنتعلّم التعامل معها بهدوء.",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "لماذا نعالج الأخطاء؟",
+      "icon": "🛡️",
+      "content": [
+        "بدل أن يتعطّل البرنامج فجأة، نلتقط الخطأ ونعرض رسالة لطيفة أو نحاول حلًّا بديلًا."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "javascript",
+      "langLabel": "JavaScript",
+      "code": [
+        "try {",
+        "  let n = Number(\"abc\");",
+        "  if (isNaN(n)) throw new Error(\"ليس رقمًا!\");",
+        "} catch (e) {",
+        "  console.log(\"حدث خطأ: \" + e.message);",
+        "}"
+      ],
+      "annotations": [
+        {
+          "line": 1,
+          "text": "try: جرّب تنفيذ هذا الكود."
+        },
+        {
+          "line": 3,
+          "text": "throw يطلق خطأً عمدًا عند مشكلة."
+        },
+        {
+          "line": 4,
+          "text": "catch يلتقط الخطأ ويتعامل معه."
+        },
+        {
+          "line": 5,
+          "text": "نعرض رسالة الخطأ بلطف."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "الكتلة finally",
+      "icon": "🏁",
+      "content": [
+        "finally تُنفّذ دائمًا سواء حدث خطأ أم لا، مثالية للتنظيف."
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "tip",
+      "title": "تذكّر 💡",
+      "content": "الأخطاء ليست فشلًا، بل رسائل تساعدك. اقرأها بهدوء، فهي تخبرك أين المشكلة بالضبط."
+    },
+    {
+      "type": "visualizer",
+      "data": {
+        "lang": "javascript",
+        "hasCallStack": false,
+        "code": [
+          "try {",
+          "  riskyTask();",
+          "} catch (e) {",
+          "  handle(e);",
+          "}"
+        ],
+        "steps": [
+          {
+            "line": 2,
+            "description": "نحاول تنفيذ المهمّة الخطرة داخل try.",
+            "memory": [
+              {
+                "name": "الحالة",
+                "value": "جارٍ المحاولة",
+                "updated": true
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 2,
+            "description": "وقع خطأ أثناء التنفيذ!",
+            "memory": [
+              {
+                "name": "الحالة",
+                "value": "خطأ!",
+                "updated": true
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 4,
+            "description": "قفز التنفيذ إلى catch وعالجنا الخطأ بأمان.",
+            "memory": [
+              {
+                "name": "الحالة",
+                "value": "تمّت المعالجة",
+                "updated": true
+              }
+            ],
+            "output": ""
+          }
+        ]
+      }
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "أي كتلة تلتقط الخطأ؟",
+      "options": [
+        "try",
+        "catch",
+        "finally",
+        "throw"
+      ],
+      "answer": 1,
+      "hint": "تعني «أمسك».",
+      "explanation": "كتلة catch تلتقط الخطأ الذي وقع داخل try وتتعامل معه."
+    },
+    {
+      "type": "exercise",
+      "exType": "fill-blank",
+      "prompt": "ما الكلمة التي تطلق خطأً عمدًا؟",
+      "answer": [
+        "throw"
+      ],
+      "hint": "تعني «ارمِ».",
+      "explanation": "نستخدم throw لإطلاق خطأ عمدًا عند اكتشاف مشكلة."
+    }
+  ]
+}

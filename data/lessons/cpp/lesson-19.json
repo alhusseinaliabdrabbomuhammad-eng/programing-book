@@ -1,0 +1,135 @@
+{
+  "id": "lesson-19",
+  "number": 19,
+  "lang": "cpp",
+  "title": "معالجة الاستثناءات try/catch/throw",
+  "subtitle": "التعامل مع الأخطاء وقت التشغيل بأمان.",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "ما الاستثناء؟",
+      "icon": "⚠️",
+      "content": [
+        "الاستثناء حدث غير متوقّع. نطلقه بـ throw ونلتقطه بـ try/catch بدل تعطّل البرنامج."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "cpp",
+      "langLabel": "C++",
+      "code": [
+        "try {",
+        "  throw runtime_error(\"خطأ!\");",
+        "} catch (exception& e) {",
+        "  cout << e.what();",
+        "}"
+      ],
+      "annotations": [
+        {
+          "line": 2,
+          "text": "نطلق استثناءً عمدًا."
+        },
+        {
+          "line": 3,
+          "text": "catch يلتقطه بالمرجع."
+        },
+        {
+          "line": 4,
+          "text": "what() يعطي رسالة الخطأ."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "tip",
+      "title": "تذكّر 💡",
+      "content": "الأخطاء ليست فشلًا بل رسائل تساعدك. معالجتها بلطف تجعل برنامجك قويًّا وموثوقًا."
+    },
+    {
+      "type": "visualizer",
+      "data": {
+        "lang": "cpp",
+        "hasCallStack": true,
+        "code": [
+          "try {",
+          "  risky();",
+          "} catch (...) {",
+          "  handle();",
+          "}"
+        ],
+        "steps": [
+          {
+            "line": 2,
+            "description": "ندخل try ونحاول المهمّة الخطرة.",
+            "memory": [
+              {
+                "name": "الحالة",
+                "value": "محاولة",
+                "updated": true
+              }
+            ],
+            "output": "",
+            "callStack": [
+              "try"
+            ]
+          },
+          {
+            "line": 2,
+            "description": "وقع استثناء!",
+            "memory": [
+              {
+                "name": "الحالة",
+                "value": "استثناء!",
+                "updated": true
+              }
+            ],
+            "output": "",
+            "callStack": [
+              "throw"
+            ]
+          },
+          {
+            "line": 4,
+            "description": "قفز التحكّم إلى catch وعالجناه بأمان.",
+            "memory": [
+              {
+                "name": "الحالة",
+                "value": "معالجة",
+                "updated": true
+              }
+            ],
+            "output": "",
+            "callStack": [
+              "catch"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "أي كلمة تطلق استثناءً عمدًا في C++؟",
+      "options": [
+        "catch",
+        "throw",
+        "try",
+        "raise"
+      ],
+      "answer": 1,
+      "hint": "تعني «ارمِ».",
+      "explanation": "نستخدم throw لإطلاق استثناء عمدًا."
+    },
+    {
+      "type": "exercise",
+      "exType": "fill-blank",
+      "prompt": "اكتب الكلمة التي تلتقط الاستثناء.",
+      "answer": [
+        "catch"
+      ],
+      "hint": "تعني «أمسك».",
+      "explanation": "نستخدم catch لالتقاط الاستثناء ومعالجته."
+    }
+  ]
+}

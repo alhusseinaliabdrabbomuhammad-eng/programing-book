@@ -1,0 +1,130 @@
+{
+  "id": "lesson-20",
+  "number": 20,
+  "lang": "javascript",
+  "title": "مشروع ختامي: تطبيق ويب تفاعلي",
+  "subtitle": "لنجمع كل ما تعلّمناه في تطبيق صغير حقيقي: قائمة مهام!",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "الفكرة",
+      "icon": "🎯",
+      "content": [
+        "سنبني تطبيق «قائمة مهام»: حقل لكتابة مهمّة، زر للإضافة، وقائمة تعرض المهام. نستخدم DOM والأحداث والمصفوفات."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "javascript",
+      "langLabel": "JavaScript",
+      "code": [
+        "let tasks = [];",
+        "const input = document.querySelector(\"#task\");",
+        "const btn = document.querySelector(\"#add\");",
+        "btn.addEventListener(\"click\", () => {",
+        "  tasks.push(input.value);",
+        "  render();",
+        "});"
+      ],
+      "annotations": [
+        {
+          "line": 1,
+          "text": "مصفوفة تخزّن المهام."
+        },
+        {
+          "line": 4,
+          "text": "عند النقر على زر الإضافة…"
+        },
+        {
+          "line": 5,
+          "text": "نضيف نص الحقل للمصفوفة."
+        },
+        {
+          "line": 6,
+          "text": "نُعيد رسم القائمة على الشاشة."
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "heading": "الميزات التي طبّقناها",
+      "icon": "✅",
+      "ordered": false,
+      "items": [
+        "المصفوفات لتخزين المهام",
+        "الأحداث للنقر",
+        "DOM لتحديث الشاشة",
+        "الدوال لتنظيم الكود"
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "extra",
+      "title": "خطوة تالية 🚀",
+      "content": "أضِف ميزة حذف مهمّة، أو احفظ المهام في localStorage لتبقى بعد إغلاق الصفحة. التطبيق الحقيقي يبدأ هنا!"
+    },
+    {
+      "type": "visualizer",
+      "data": {
+        "lang": "javascript",
+        "hasCallStack": false,
+        "code": [
+          "tasks.push(\"مذاكرة\");",
+          "render();"
+        ],
+        "steps": [
+          {
+            "line": 1,
+            "description": "نضيف المهمّة \"مذاكرة\" إلى مصفوفة المهام.",
+            "memory": [
+              {
+                "name": "tasks",
+                "value": "[\"مذاكرة\"]",
+                "updated": true
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 2,
+            "description": "render() يرسم القائمة المحدّثة على الصفحة.",
+            "memory": [
+              {
+                "name": "tasks",
+                "value": "[\"مذاكرة\"]",
+                "updated": false
+              },
+              {
+                "name": "الشاشة",
+                "value": "تُعرض المهمّة",
+                "updated": true
+              }
+            ],
+            "output": ""
+          }
+        ]
+      }
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "أي بنية بيانات استخدمناها لتخزين قائمة المهام؟",
+      "options": [
+        "كائن",
+        "مصفوفة",
+        "نصّ",
+        "رقم"
+      ],
+      "answer": 1,
+      "hint": "قائمة مرتّبة.",
+      "explanation": "استخدمنا مصفوفة array لتخزين المهام بترتيب."
+    },
+    {
+      "type": "callout",
+      "variant": "extra",
+      "title": "تهانينا! 🎓",
+      "content": "أكملت رحلة JavaScript! أنت الآن قادر على بناء صفحات ويب تفاعلية. جاهز للاختبار النهائي؟"
+    }
+  ]
+}

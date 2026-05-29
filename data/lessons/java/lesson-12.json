@@ -1,0 +1,157 @@
+{
+  "id": "lesson-12",
+  "number": 12,
+  "lang": "java",
+  "title": "المنشئ Constructor و this",
+  "subtitle": "كيف نُهيّئ الكائن بقيم منذ لحظة إنشائه؟",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "المنشئ Constructor",
+      "icon": "🔧",
+      "content": [
+        "المنشئ دالة خاصّة لها اسم الفئة، تُنفّذ تلقائيًّا عند إنشاء الكائن بـ new، لتهيئة خصائصه."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "java",
+      "langLabel": "Java",
+      "code": [
+        "class Dog {",
+        "  String name;",
+        "  Dog(String n) {",
+        "    this.name = n;",
+        "  }",
+        "}",
+        "Dog d = new Dog(\"ريكس\");"
+      ],
+      "annotations": [
+        {
+          "line": 3,
+          "text": "المنشئ يأخذ اسمًا."
+        },
+        {
+          "line": 4,
+          "text": "this.name تعني خاصية الكائن، n هو الوسيط."
+        },
+        {
+          "line": 7,
+          "text": "ننشئ الكائن ونمرّر الاسم مباشرة."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "الكلمة this",
+      "icon": "👈",
+      "content": [
+        "this تشير إلى الكائن الحالي. نستخدمها للتمييز بين خاصية الكائن والوسيط حين يتشابه الاسم."
+      ]
+    },
+    {
+      "type": "visualizer",
+      "data": {
+        "lang": "java",
+        "hasCallStack": true,
+        "code": [
+          "Dog d = new Dog(\"لولو\");"
+        ],
+        "steps": [
+          {
+            "line": 1,
+            "description": "نبدأ بقراءة البرنامج من أعلى سطر، والذاكرة فارغة تمامًا قبل أن ننفّذ أي شيء.",
+            "memory": [],
+            "output": ""
+          },
+          {
+            "line": 1,
+            "description": "new ينشئ كائنًا ويستدعي المنشئ تلقائيًّا، ممرّرًا \"لولو\".",
+            "memory": [
+              {
+                "name": "الوسيط n",
+                "value": "\"لولو\"",
+                "updated": true
+              }
+            ],
+            "output": "",
+            "callStack": [
+              "Dog(n=\"لولو\")"
+            ]
+          },
+          {
+            "line": 1,
+            "description": "لنتمهّل قليلًا ونتأمّل ما في الذاكرة حتى الآن قبل المتابعة.",
+            "memory": [
+              {
+                "name": "d.name",
+                "value": "\"لولو\"",
+                "updated": false
+              }
+            ],
+            "output": "",
+            "callStack": [
+              "المنشئ ينفّذ"
+            ]
+          },
+          {
+            "line": 1,
+            "description": "المنشئ ينفّذ this.name = n، فتُضبط خاصية الكائن.",
+            "memory": [
+              {
+                "name": "d.name",
+                "value": "\"لولو\"",
+                "updated": true
+              }
+            ],
+            "output": "",
+            "callStack": [
+              "المنشئ ينفّذ"
+            ]
+          },
+          {
+            "line": 1,
+            "description": "انتهى التنفيذ! هذه هي الحالة النهائية للذاكرة والمخرجات بعد تنفيذ كل الأسطر.",
+            "memory": [
+              {
+                "name": "d.name",
+                "value": "\"لولو\"",
+                "updated": false
+              }
+            ],
+            "output": "",
+            "callStack": [
+              "المنشئ ينفّذ"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "متى يُنفّذ المنشئ؟",
+      "options": [
+        "عند حذف الكائن",
+        "عند إنشاء الكائن بـ new",
+        "يدويًّا فقط",
+        "أبدًا"
+      ],
+      "answer": 1,
+      "hint": "مع new.",
+      "explanation": "يُنفّذ المنشئ تلقائيًّا لحظة إنشاء الكائن بالكلمة new."
+    },
+    {
+      "type": "exercise",
+      "exType": "fill-blank",
+      "prompt": "بداخل منشئ، أسنِد الوسيط n إلى خاصية الكائن name.",
+      "answer": [
+        "this.name = n;",
+        "this.name = n"
+      ],
+      "hint": "استخدم this.",
+      "explanation": "نكتب this.name = n; لإسناد الوسيط لخاصية الكائن."
+    }
+  ]
+}

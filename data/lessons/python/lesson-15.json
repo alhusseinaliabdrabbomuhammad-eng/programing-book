@@ -1,0 +1,133 @@
+{
+  "id": "lesson-15",
+  "number": 15,
+  "lang": "python",
+  "title": "الدوال المتقدمة (args, kwargs, lambda)",
+  "subtitle": "ميزات قوية تمنح دوالك مرونة كبيرة.",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "عدد متغيّر من المعاملات *args",
+      "icon": "📦",
+      "content": [
+        "أحيانًا لا نعرف عدد القيم مسبقًا. نستخدم `*args` لاستقبال أي عدد من القيم كصفّ."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "python",
+      "langLabel": "Python",
+      "code": [
+        "def total(*numbers):",
+        "    return sum(numbers)",
+        "print(total(1, 2, 3, 4))"
+      ],
+      "annotations": [
+        {
+          "line": 1,
+          "text": "*numbers يجمع كل القيم الممرّرة."
+        },
+        {
+          "line": 3,
+          "text": "نمرّر 4 أرقام، الناتج 10."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "الدوال المجهولة lambda",
+      "icon": "⚡",
+      "content": [
+        "lambda دالة صغيرة بسطر واحد بلا اسم، مفيدة للمهام البسيطة السريعة."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "python",
+      "langLabel": "Python",
+      "code": [
+        "square = lambda x: x * x",
+        "print(square(6))"
+      ],
+      "annotations": [
+        {
+          "line": 1,
+          "text": "دالة lambda تأخذ x وتُعيد مربّعه."
+        },
+        {
+          "line": 2,
+          "text": "square(6) = 36."
+        }
+      ]
+    },
+    {
+      "type": "visualizer",
+      "data": {
+        "lang": "python",
+        "hasCallStack": false,
+        "code": [
+          "f = lambda n: n + 10",
+          "r = f(5)"
+        ],
+        "steps": [
+          {
+            "line": 1,
+            "description": "ننشئ دالة lambda تأخذ n وتُعيد n + 10، ونسمّيها f.",
+            "memory": [
+              {
+                "name": "f",
+                "value": "<lambda>",
+                "updated": true
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 2,
+            "description": "نستدعي f(5): 5 + 10 = 15، ونخزّنها في r.",
+            "memory": [
+              {
+                "name": "f",
+                "value": "<lambda>",
+                "updated": false
+              },
+              {
+                "name": "r",
+                "value": "15",
+                "updated": true
+              }
+            ],
+            "output": ""
+          }
+        ]
+      }
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "ماذا تفعل lambda؟",
+      "options": [
+        "تنشئ ملفًا",
+        "تعرّف دالة صغيرة بسطر واحد",
+        "تحذف متغيّرًا",
+        "تطبع نصًّا"
+      ],
+      "answer": 1,
+      "hint": "دالة سريعة بلا اسم.",
+      "explanation": "lambda تنشئ دالة صغيرة مجهولة الاسم في سطر واحد للمهام البسيطة."
+    },
+    {
+      "type": "callout",
+      "variant": "tip",
+      "title": "متى نستخدم *args؟",
+      "content": "عندما تريد دالة تقبل عددًا غير محدّد من القيم، مثل دالة جمع تقبل رقمين أو عشرة."
+    },
+    {
+      "type": "callout",
+      "variant": "extra",
+      "title": "رائع جدًّا!",
+      "content": "دوالك أصبحت مرنة وقوية. القادم: التعامل مع الملفات."
+    }
+  ]
+}

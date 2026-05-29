@@ -1,0 +1,153 @@
+{
+  "id": "lesson-6",
+  "number": 6,
+  "lang": "cpp",
+  "title": "التحكم في التدفق if و switch",
+  "subtitle": "اتّخاذ القرارات في C++.",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "جملة if/else",
+      "icon": "🚦",
+      "content": [
+        "if تنفّذ كودًا عند تحقّق الشرط، و else بديلًا، و else if لشروط متعدّدة."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "cpp",
+      "langLabel": "C++",
+      "code": [
+        "int n = 5;",
+        "if (n > 0) {",
+        "  cout << \"موجب\";",
+        "} else {",
+        "  cout << \"غير موجب\";",
+        "}"
+      ],
+      "annotations": [
+        {
+          "line": 2,
+          "text": "إذا أكبر من صفر."
+        },
+        {
+          "line": 3,
+          "text": "اطبع موجب."
+        },
+        {
+          "line": 5,
+          "text": "وإلا اطبع غير موجب."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "switch",
+      "icon": "🔀",
+      "content": [
+        "switch تناسب موازنة قيمة بعدّة احتمالات ثابتة. لا تنسَ break بعد كل حالة!"
+      ]
+    },
+    {
+      "type": "visualizer",
+      "data": {
+        "lang": "cpp",
+        "hasCallStack": false,
+        "code": [
+          "int x = -3;",
+          "string r;",
+          "if (x >= 0) r = \"موجب\";",
+          "else r = \"سالب\";"
+        ],
+        "steps": [
+          {
+            "line": 1,
+            "description": "نبدأ بقراءة البرنامج من أعلى سطر، والذاكرة فارغة تمامًا قبل أن ننفّذ أي شيء.",
+            "memory": [],
+            "output": ""
+          },
+          {
+            "line": 1,
+            "description": "نضع -3 في x.",
+            "memory": [
+              {
+                "name": "x",
+                "value": "-3",
+                "updated": true
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 3,
+            "description": "لنتمهّل قليلًا ونتأمّل ما في الذاكرة حتى الآن قبل المتابعة.",
+            "memory": [
+              {
+                "name": "x",
+                "value": "-3",
+                "updated": false
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 3,
+            "description": "هل -3 >= 0؟ لا. ننتقل للبديل.",
+            "memory": [
+              {
+                "name": "x",
+                "value": "-3",
+                "updated": false
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 4,
+            "description": "نضع \"سالب\" في r.",
+            "memory": [
+              {
+                "name": "x",
+                "value": "-3",
+                "updated": false
+              },
+              {
+                "name": "r",
+                "value": "\"سالب\"",
+                "updated": true
+              }
+            ],
+            "output": ""
+          }
+        ]
+      }
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "ماذا ننسى غالبًا بعد كل حالة في switch؟",
+      "options": [
+        "return",
+        "break",
+        "cout",
+        ";"
+      ],
+      "answer": 1,
+      "hint": "يكسر التسلسل.",
+      "explanation": "ننسى غالبًا break، وبدونها يستمرّ التنفيذ للحالات التالية."
+    },
+    {
+      "type": "exercise",
+      "exType": "fill-blank",
+      "prompt": "اكتب بداية شرط يتحقّق أن x يساوي 3.",
+      "answer": [
+        "if (x == 3)",
+        "if(x == 3)",
+        "if (x==3)"
+      ],
+      "hint": "المساواة ==.",
+      "explanation": "نكتب if (x == 3) للتحقّق من المساواة."
+    }
+  ]
+}

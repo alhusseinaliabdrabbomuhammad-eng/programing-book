@@ -1,0 +1,114 @@
+{
+  "id": "lesson-20",
+  "number": 20,
+  "lang": "java",
+  "title": "مقدمة إلى Java I/O والتسلسل",
+  "subtitle": "كيف يقرأ برنامج جافا الملفات ويكتب إليها؟",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "القراءة والكتابة",
+      "icon": "📂",
+      "content": [
+        "تتيح جافا التعامل مع الملفات عبر فئات في حزمة java.io و java.nio. نكتب نصًّا لملف ونقرؤه لاحقًا."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "java",
+      "langLabel": "Java",
+      "code": [
+        "import java.nio.file.*;",
+        "Files.writeString(Path.of(\"data.txt\"), \"أهلًا\");",
+        "String s = Files.readString(Path.of(\"data.txt\"));",
+        "System.out.println(s);"
+      ],
+      "annotations": [
+        {
+          "line": 2,
+          "text": "نكتب نصًّا إلى ملف."
+        },
+        {
+          "line": 3,
+          "text": "نقرأ محتوى الملف كاملًا."
+        },
+        {
+          "line": 4,
+          "text": "نطبع ما قرأناه: أهلًا."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "التسلسل Serialization",
+      "icon": "💾",
+      "content": [
+        "التسلسل يحوّل كائنًا كاملًا إلى بايتات لحفظه في ملف أو إرساله عبر الشبكة، ثم استعادته لاحقًا."
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "title": "انتبه!",
+      "content": "عمليات الملفات قد تفشل (ملف غير موجود مثلًا). لذا نتعامل معها داخل try/catch دائمًا."
+    },
+    {
+      "type": "visualizer",
+      "data": {
+        "lang": "java",
+        "hasCallStack": false,
+        "code": [
+          "// اكتب",
+          "// اقرأ"
+        ],
+        "steps": [
+          {
+            "line": 1,
+            "description": "نكتب النص \"أهلًا\" إلى الملف data.txt على القرص.",
+            "memory": [
+              {
+                "name": "الملف",
+                "value": "\"أهلًا\"",
+                "updated": true
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 2,
+            "description": "نقرأ المحتوى من الملف ونخزّنه في s.",
+            "memory": [
+              {
+                "name": "s",
+                "value": "\"أهلًا\"",
+                "updated": true
+              }
+            ],
+            "output": "أهلًا"
+          }
+        ]
+      }
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "ماذا يفعل التسلسل Serialization؟",
+      "options": [
+        "يحذف الكائن",
+        "يحوّل الكائن إلى بايتات لحفظه",
+        "يطبعه",
+        "يضاعفه"
+      ],
+      "answer": 1,
+      "hint": "للحفظ والإرسال.",
+      "explanation": "التسلسل يحوّل الكائن إلى بايتات يمكن حفظها أو إرسالها واستعادتها لاحقًا."
+    },
+    {
+      "type": "callout",
+      "variant": "extra",
+      "title": "تهانينا! 🎓",
+      "content": "أكملت دروس جافا! تعرّفت على OOP والاستثناءات والملفات. جاهز للاختبار النهائي؟"
+    }
+  ]
+}

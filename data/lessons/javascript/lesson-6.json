@@ -1,0 +1,152 @@
+{
+  "id": "lesson-6",
+  "number": 6,
+  "lang": "javascript",
+  "title": "المصفوفات: الإنشاء والدوال الأساسية",
+  "subtitle": "المصفوفة قائمة منظّمة من القيم. مثل رفّ كتب مرقّم.",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "ما المصفوفة؟",
+      "icon": "📚",
+      "content": [
+        "المصفوفة قائمة بترتيب، كل عنصر له رقم موضع (فهرس) يبدأ من 0. نُنشئها بأقواس مربّعة []."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "javascript",
+      "langLabel": "JavaScript",
+      "code": [
+        "let fruits = [\"تفاح\", \"موز\", \"عنب\"];",
+        "console.log(fruits[0]);",
+        "console.log(fruits.length);"
+      ],
+      "annotations": [
+        {
+          "line": 1,
+          "text": "قائمة من ثلاث فواكه."
+        },
+        {
+          "line": 2,
+          "text": "العنصر الأول: تفاح (الموضع 0)."
+        },
+        {
+          "line": 3,
+          "text": "عدد العناصر = 3."
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "heading": "دوال مهمّة",
+      "icon": "🛠️",
+      "ordered": false,
+      "items": [
+        "`push(x)` يضيف عنصرًا للنهاية",
+        "`pop()` يحذف آخر عنصر",
+        "`indexOf(x)` يعطي موضع عنصر",
+        "`includes(x)` يتحقّق من وجود عنصر"
+      ]
+    },
+    {
+      "type": "visualizer",
+      "data": {
+        "lang": "javascript",
+        "hasCallStack": false,
+        "code": [
+          "let a = [1, 2];",
+          "a.push(3);",
+          "let last = a.pop();"
+        ],
+        "steps": [
+          {
+            "line": 1,
+            "description": "نبدأ بقراءة البرنامج من أعلى سطر، والذاكرة فارغة تمامًا قبل أن ننفّذ أي شيء.",
+            "memory": [],
+            "output": ""
+          },
+          {
+            "line": 1,
+            "description": "ننشئ مصفوفة فيها 1 و 2.",
+            "memory": [
+              {
+                "name": "a",
+                "value": "[1, 2]",
+                "updated": true
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 2,
+            "description": "لنتمهّل قليلًا ونتأمّل ما في الذاكرة حتى الآن قبل المتابعة.",
+            "memory": [
+              {
+                "name": "a",
+                "value": "[1, 2, 3]",
+                "updated": false
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 2,
+            "description": "push(3) يضيف 3 لنهاية المصفوفة فتصبح [1, 2, 3].",
+            "memory": [
+              {
+                "name": "a",
+                "value": "[1, 2, 3]",
+                "updated": true
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 3,
+            "description": "pop() يحذف آخر عنصر (3) ويُعيده، فنخزّنه في last وتعود المصفوفة [1, 2].",
+            "memory": [
+              {
+                "name": "a",
+                "value": "[1, 2]",
+                "updated": true
+              },
+              {
+                "name": "last",
+                "value": "3",
+                "updated": true
+              }
+            ],
+            "output": ""
+          }
+        ]
+      }
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "ما فهرس أول عنصر في المصفوفة؟",
+      "options": [
+        "1",
+        "0",
+        "-1",
+        "لا يوجد"
+      ],
+      "answer": 1,
+      "hint": "البرمجة تبدأ العدّ من…",
+      "explanation": "الفهرسة تبدأ من 0، فأوّل عنصر فهرسه 0."
+    },
+    {
+      "type": "exercise",
+      "exType": "fill-blank",
+      "prompt": "أضف العنصر \"كتاب\" إلى نهاية مصفوفة اسمها items.",
+      "answer": [
+        "items.push(\"كتاب\")",
+        "items.push(\"كتاب\");"
+      ],
+      "hint": "الدالة push.",
+      "explanation": "نستخدم items.push(\"كتاب\") لإضافة عنصر في النهاية."
+    }
+  ]
+}

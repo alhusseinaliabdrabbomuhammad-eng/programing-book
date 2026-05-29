@@ -1,0 +1,98 @@
+{
+  "id": "lesson-13",
+  "number": 13,
+  "lang": "javascript",
+  "title": "التعامل مع DOM",
+  "subtitle": "DOM هو تمثيل JavaScript لعناصر الصفحة. هكذا نغيّر محتوى الويب حيًّا!",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "ما DOM؟",
+      "icon": "🌳",
+      "content": [
+        "عندما يفتح المتصفّح صفحة، يحوّلها إلى شجرة من العناصر تُسمّى DOM. JavaScript تستطيع قراءة هذه الشجرة وتعديلها."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "javascript",
+      "langLabel": "JavaScript",
+      "code": [
+        "let title = document.getElementById(\"main-title\");",
+        "title.textContent = \"عنوان جديد!\";"
+      ],
+      "annotations": [
+        {
+          "line": 1,
+          "text": "نختار عنصرًا بمعرّفه id."
+        },
+        {
+          "line": 2,
+          "text": "نغيّر نصّه فيتغيّر فورًا على الصفحة."
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "heading": "طرق اختيار العناصر",
+      "icon": "🎯",
+      "ordered": false,
+      "items": [
+        "`getElementById(\"id\")` بالمعرّف",
+        "`querySelector(\".class\")` بأي محدّد CSS",
+        "`querySelectorAll(\"p\")` كل العناصر المطابقة"
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "javascript",
+      "langLabel": "JavaScript",
+      "code": [
+        "let box = document.querySelector(\".box\");",
+        "box.style.color = \"red\";"
+      ],
+      "annotations": [
+        {
+          "line": 1,
+          "text": "نختار أول عنصر بصنف box."
+        },
+        {
+          "line": 2,
+          "text": "نغيّر لون نصّه إلى الأحمر."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "tip",
+      "title": "نصيحة 💡",
+      "content": "textContent يغيّر النص، و style يغيّر المظهر، و classList.add يضيف صنف CSS. جرّبها في صفحة حقيقية!"
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "أي دالة تختار عنصرًا بمعرّفه id؟",
+      "options": [
+        "querySelectorAll",
+        "getElementById",
+        "createElement",
+        "appendChild"
+      ],
+      "answer": 1,
+      "hint": "الاسم يذكر Id.",
+      "explanation": "نستخدم document.getElementById(\"...\") لاختيار عنصر بمعرّفه."
+    },
+    {
+      "type": "exercise",
+      "exType": "fill-blank",
+      "prompt": "غيّر نصّ عنصر مخزّن في المتغيّر el إلى \"مرحبا\".",
+      "answer": [
+        "el.textContent = \"مرحبا\";",
+        "el.textContent = \"مرحبا\""
+      ],
+      "hint": "الخاصية textContent.",
+      "explanation": "نكتب el.textContent = \"مرحبا\"; لتغيير نص العنصر."
+    }
+  ]
+}

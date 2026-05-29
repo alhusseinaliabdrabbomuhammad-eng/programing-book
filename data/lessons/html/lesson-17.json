@@ -1,0 +1,81 @@
+{
+  "id": "lesson-17",
+  "number": 17,
+  "lang": "html",
+  "title": "ربط JavaScript و defer و async",
+  "subtitle": "كيف نضيف التفاعل لصفحتنا، ومتى يُحمّل الكود؟",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "ربط JavaScript",
+      "icon": "📜",
+      "content": [
+        "نربط ملفّ JavaScript بالوسم script وخاصية src. يضيف التفاعل والحيوية للصفحة."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "html",
+      "langLabel": "HTML",
+      "code": [
+        "<script src=\"app.js\" defer></script>"
+      ],
+      "annotations": [
+        {
+          "line": 1,
+          "text": "src مسار الملفّ، defer يؤجّل التنفيذ حتى تجهز الصفحة."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "defer مقابل async",
+      "icon": "⏱️",
+      "content": [
+        "defer: يحمّل الكود أثناء تحميل الصفحة وينفّذه بعد جهوزها بالترتيب. async: ينفّذه فور تحميله دون ترتيب."
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "tip",
+      "title": "الأفضل 💡",
+      "content": "ضع script في نهاية body أو استخدم defer. هكذا تجهز عناصر الصفحة قبل أن يحاول الكود الوصول إليها، فتتجنّب الأخطاء."
+    },
+    {
+      "type": "list",
+      "heading": "الفرق باختصار",
+      "icon": "📋",
+      "ordered": false,
+      "items": [
+        "بلا خاصية: يوقف تحميل الصفحة حتى ينتهي",
+        "`defer`: ينتظر جهوز الصفحة، يحفظ الترتيب",
+        "`async`: ينفّذ فورًا، لا يحفظ الترتيب"
+      ]
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "أي خاصية تؤجّل تنفيذ السكربت حتى تجهز الصفحة وتحفظ الترتيب؟",
+      "options": [
+        "async",
+        "defer",
+        "load",
+        "wait"
+      ],
+      "answer": 1,
+      "hint": "تعني «أجّل».",
+      "explanation": "خاصية defer تؤجّل التنفيذ حتى جهوز الصفحة وتحفظ ترتيب الملفّات."
+    },
+    {
+      "type": "exercise",
+      "exType": "fill-blank",
+      "prompt": "اربط ملفّ سكربت اسمه main.js مع defer.",
+      "answer": [
+        "<script src=\"main.js\" defer></script>"
+      ],
+      "hint": "script مع src و defer.",
+      "explanation": "نكتب <script src=\"main.js\" defer></script> لربط السكربت مؤجّلًا."
+    }
+  ]
+}

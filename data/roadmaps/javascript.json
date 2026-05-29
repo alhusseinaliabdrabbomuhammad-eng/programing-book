@@ -1,0 +1,127 @@
+{
+  "lang": "javascript",
+  "name": "جافاسكربت",
+  "totalLessons": 20,
+  "groups": [
+    {
+      "title": "الأساسيات",
+      "lessons": [
+        {
+          "id": "lesson-1",
+          "number": 1,
+          "title": "ما هي JavaScript؟ ربطها و console.log"
+        },
+        {
+          "id": "lesson-2",
+          "number": 2,
+          "title": "المتغيرات let و const و var والنطاق"
+        },
+        {
+          "id": "lesson-3",
+          "number": 3,
+          "title": "أنواع البيانات وتحويلاتها"
+        },
+        {
+          "id": "lesson-4",
+          "number": 4,
+          "title": "العمليات الحسابية والمنطقية والمقارنة"
+        },
+        {
+          "id": "lesson-5",
+          "number": 5,
+          "title": "السلاسل النصية والقوالب الحرفية"
+        }
+      ]
+    },
+    {
+      "title": "المفاهيم المتوسطة",
+      "lessons": [
+        {
+          "id": "lesson-6",
+          "number": 6,
+          "title": "المصفوفات: الإنشاء والدوال الأساسية"
+        },
+        {
+          "id": "lesson-7",
+          "number": 7,
+          "title": "الكائنات Objects: الخصائص والدوال"
+        },
+        {
+          "id": "lesson-8",
+          "number": 8,
+          "title": "الجمل الشرطية if و else و switch"
+        },
+        {
+          "id": "lesson-9",
+          "number": 9,
+          "title": "الحلقات for و while و for...of"
+        },
+        {
+          "id": "lesson-10",
+          "number": 10,
+          "title": "الدوال ودوال الأسهم"
+        }
+      ]
+    },
+    {
+      "title": "مفاهيم متقدمة",
+      "lessons": [
+        {
+          "id": "lesson-11",
+          "number": 11,
+          "title": "المعاملات الافتراضية والباقية Rest"
+        },
+        {
+          "id": "lesson-12",
+          "number": 12,
+          "title": "الإغلاقات Closures"
+        },
+        {
+          "id": "lesson-13",
+          "number": 13,
+          "title": "التعامل مع DOM"
+        },
+        {
+          "id": "lesson-14",
+          "number": 14,
+          "title": "الأحداث addEventListener"
+        },
+        {
+          "id": "lesson-15",
+          "number": 15,
+          "title": "الكائنات المضمنة Math و Date و JSON"
+        }
+      ]
+    },
+    {
+      "title": "الإتقان والتطبيق",
+      "lessons": [
+        {
+          "id": "lesson-16",
+          "number": 16,
+          "title": "الموقتات setTimeout و setInterval"
+        },
+        {
+          "id": "lesson-17",
+          "number": 17,
+          "title": "الوعود Promises و async/await"
+        },
+        {
+          "id": "lesson-18",
+          "number": 18,
+          "title": "جلب البيانات fetch"
+        },
+        {
+          "id": "lesson-19",
+          "number": 19,
+          "title": "معالجة الأخطاء try...catch"
+        },
+        {
+          "id": "lesson-20",
+          "number": 20,
+          "title": "مشروع ختامي: تطبيق ويب تفاعلي"
+        }
+      ]
+    }
+  ]
+}

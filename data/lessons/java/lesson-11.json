@@ -1,0 +1,147 @@
+{
+  "id": "lesson-11",
+  "number": 11,
+  "lang": "java",
+  "title": "مقدمة إلى OOP: الفئات والكائنات و new",
+  "subtitle": "البرمجة كائنية التوجّه: نمذجة الأشياء الواقعية في الكود.",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "الفئة والكائن",
+      "icon": "🏛️",
+      "content": [
+        "الفئة class مخطّط (مثل تصميم بيت)، والكائن object نسخة حقيقية منه (البيت المبني). ننشئ الكائن بالكلمة new."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "java",
+      "langLabel": "Java",
+      "code": [
+        "class Dog {",
+        "  String name;",
+        "}",
+        "Dog d = new Dog();",
+        "d.name = \"ريكس\";",
+        "System.out.println(d.name);"
+      ],
+      "annotations": [
+        {
+          "line": 1,
+          "text": "نعرّف فئة Dog (المخطّط)."
+        },
+        {
+          "line": 2,
+          "text": "خاصية name."
+        },
+        {
+          "line": 4,
+          "text": "new ينشئ كائنًا حقيقيًّا."
+        },
+        {
+          "line": 5,
+          "text": "نضبط اسمه."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "tip",
+      "title": "تشبيه 💡",
+      "content": "الفئة مثل قالب الكعك، والكائنات هي الكعكات التي نصنعها من القالب. كل كعكة مستقلّة لها زينتها."
+    },
+    {
+      "type": "visualizer",
+      "data": {
+        "lang": "java",
+        "hasCallStack": false,
+        "code": [
+          "Dog d = new Dog();",
+          "d.name = \"ريكس\";"
+        ],
+        "steps": [
+          {
+            "line": 1,
+            "description": "نبدأ بقراءة البرنامج من أعلى سطر، والذاكرة فارغة تمامًا قبل أن ننفّذ أي شيء.",
+            "memory": [],
+            "output": ""
+          },
+          {
+            "line": 1,
+            "description": "new Dog() يصنع كائنًا جديدًا في الذاكرة ويعطينا مرجعًا له في d.",
+            "memory": [
+              {
+                "name": "d",
+                "value": "→ كائن Dog",
+                "updated": true
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 2,
+            "description": "لنتمهّل قليلًا ونتأمّل ما في الذاكرة حتى الآن قبل المتابعة.",
+            "memory": [
+              {
+                "name": "d.name",
+                "value": "\"ريكس\"",
+                "updated": false
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 2,
+            "description": "نضبط خاصية name للكائن بقيمة ريكس.",
+            "memory": [
+              {
+                "name": "d.name",
+                "value": "\"ريكس\"",
+                "updated": true
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 2,
+            "description": "انتهى التنفيذ! هذه هي الحالة النهائية للذاكرة والمخرجات بعد تنفيذ كل الأسطر.",
+            "memory": [
+              {
+                "name": "d.name",
+                "value": "\"ريكس\"",
+                "updated": false
+              }
+            ],
+            "output": ""
+          }
+        ]
+      }
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "أي كلمة تُنشئ كائنًا جديدًا في جافا؟",
+      "options": [
+        "create",
+        "new",
+        "make",
+        "object"
+      ],
+      "answer": 1,
+      "hint": "كلمة قصيرة جديدة.",
+      "explanation": "نستخدم الكلمة new لإنشاء كائن من فئة."
+    },
+    {
+      "type": "exercise",
+      "exType": "fill-blank",
+      "prompt": "أنشئ كائنًا من فئة Car وخزّنه في المتغيّر c.",
+      "answer": [
+        "Car c = new Car();",
+        "Car c = new Car()"
+      ],
+      "hint": "new ثم اسم الفئة.",
+      "explanation": "نكتب Car c = new Car(); لإنشاء كائن."
+    }
+  ]
+}

@@ -1,0 +1,153 @@
+{
+  "id": "lesson-4",
+  "number": 4,
+  "lang": "cpp",
+  "title": "المؤهلات const و constexpr",
+  "subtitle": "كيف نحمي قيمة من التغيير في C++؟",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "المؤهّل const",
+      "icon": "🔒",
+      "content": [
+        "const يجعل المتغيّر ثابتًا لا تتغيّر قيمته بعد إسنادها. يحمينا من التعديل بالخطأ."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "cpp",
+      "langLabel": "C++",
+      "code": [
+        "const int MAX = 100;",
+        "// MAX = 200; خطأ في الترجمة!",
+        "cout << MAX;"
+      ],
+      "annotations": [
+        {
+          "line": 1,
+          "text": "ثابت لا يتغيّر."
+        },
+        {
+          "line": 2,
+          "text": "محاولة تغييره ترفضها الترجمة."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "constexpr",
+      "icon": "⚡",
+      "content": [
+        "constexpr أقوى: تُحسب قيمتها وقت الترجمة لا التشغيل، فتزيد الأداء للقيم الثابتة المعروفة مسبقًا."
+      ]
+    },
+    {
+      "type": "visualizer",
+      "data": {
+        "lang": "cpp",
+        "hasCallStack": false,
+        "code": [
+          "const int R = 5;",
+          "int area = R * R;"
+        ],
+        "steps": [
+          {
+            "line": 1,
+            "description": "نبدأ بقراءة البرنامج من أعلى سطر، والذاكرة فارغة تمامًا قبل أن ننفّذ أي شيء.",
+            "memory": [],
+            "output": ""
+          },
+          {
+            "line": 1,
+            "description": "نعرّف ثابتًا R = 5 لا يتغيّر.",
+            "memory": [
+              {
+                "name": "R",
+                "value": "5 (ثابت)",
+                "updated": true
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 2,
+            "description": "لنتمهّل قليلًا ونتأمّل ما في الذاكرة حتى الآن قبل المتابعة.",
+            "memory": [
+              {
+                "name": "R",
+                "value": "5 (ثابت)",
+                "updated": false
+              },
+              {
+                "name": "area",
+                "value": "25",
+                "updated": false
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 2,
+            "description": "نحسب R * R = 25 ونضعه في area.",
+            "memory": [
+              {
+                "name": "R",
+                "value": "5 (ثابت)",
+                "updated": false
+              },
+              {
+                "name": "area",
+                "value": "25",
+                "updated": true
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 2,
+            "description": "انتهى التنفيذ! هذه هي الحالة النهائية للذاكرة والمخرجات بعد تنفيذ كل الأسطر.",
+            "memory": [
+              {
+                "name": "R",
+                "value": "5 (ثابت)",
+                "updated": false
+              },
+              {
+                "name": "area",
+                "value": "25",
+                "updated": false
+              }
+            ],
+            "output": ""
+          }
+        ]
+      }
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "ماذا يفعل const قبل متغيّر؟",
+      "options": [
+        "يضاعفه",
+        "يمنع تغييره",
+        "يحذفه",
+        "يطبعه"
+      ],
+      "answer": 1,
+      "hint": "يجعله ثابتًا.",
+      "explanation": "const يجعل المتغيّر ثابتًا لا يمكن تعديله."
+    },
+    {
+      "type": "exercise",
+      "exType": "fill-blank",
+      "prompt": "عرّف ثابتًا صحيحًا اسمه LIMIT قيمته 50.",
+      "answer": [
+        "const int LIMIT = 50;",
+        "const int LIMIT = 50"
+      ],
+      "hint": "ابدأ بـ const.",
+      "explanation": "نكتب const int LIMIT = 50; لتعريف ثابت."
+    }
+  ]
+}

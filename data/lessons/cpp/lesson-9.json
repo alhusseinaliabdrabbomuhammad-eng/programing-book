@@ -1,0 +1,189 @@
+{
+  "id": "lesson-9",
+  "number": 9,
+  "lang": "cpp",
+  "title": "الدوال: التعريف والقيمة المرجعية والافتراضية",
+  "subtitle": "تنظيم الكود في دوال قابلة لإعادة الاستخدام.",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "تعريف الدالة",
+      "icon": "🏭",
+      "content": [
+        "نحدّد نوع القيمة المرجعة، ثم الاسم، ثم الوسائط. return تُعيد النتيجة."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "cpp",
+      "langLabel": "C++",
+      "code": [
+        "int add(int a, int b) {",
+        "  return a + b;",
+        "}",
+        "cout << add(3, 4);"
+      ],
+      "annotations": [
+        {
+          "line": 1,
+          "text": "تُعيد int وتأخذ عددين."
+        },
+        {
+          "line": 2,
+          "text": "return يُعيد الناتج."
+        },
+        {
+          "line": 4,
+          "text": "الاستدعاء يعطي 7."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "القيم الافتراضية",
+      "icon": "🎁",
+      "content": [
+        "نعطي وسيطًا قيمة افتراضية تُستخدم إن لم تُمرّر قيمة."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "cpp",
+      "langLabel": "C++",
+      "code": [
+        "int power(int base, int exp = 2) {",
+        "  int r = 1;",
+        "  for (int i = 0; i < exp; i++) r *= base;",
+        "  return r;",
+        "}",
+        "cout << power(5);"
+      ],
+      "annotations": [
+        {
+          "line": 1,
+          "text": "exp افتراضيًّا 2."
+        },
+        {
+          "line": 6,
+          "text": "بلا exp → يُربّع: 25."
+        }
+      ]
+    },
+    {
+      "type": "visualizer",
+      "data": {
+        "lang": "cpp",
+        "hasCallStack": true,
+        "code": [
+          "int sq(int n) {",
+          "  return n * n;",
+          "}",
+          "int r = sq(6);"
+        ],
+        "steps": [
+          {
+            "line": 4,
+            "description": "نبدأ بقراءة البرنامج من أعلى سطر، والذاكرة فارغة تمامًا قبل أن ننفّذ أي شيء.",
+            "memory": [],
+            "output": ""
+          },
+          {
+            "line": 4,
+            "description": "نستدعي sq(6): تذهب 6 للدالة كـ n.",
+            "memory": [
+              {
+                "name": "n",
+                "value": "6",
+                "updated": true
+              }
+            ],
+            "output": "",
+            "callStack": [
+              "sq(n=6)"
+            ]
+          },
+          {
+            "line": 2,
+            "description": "لنتمهّل قليلًا ونتأمّل ما في الذاكرة حتى الآن قبل المتابعة.",
+            "memory": [
+              {
+                "name": "n",
+                "value": "6",
+                "updated": false
+              },
+              {
+                "name": "النتيجة",
+                "value": "36",
+                "updated": false
+              }
+            ],
+            "output": "",
+            "callStack": [
+              "sq يُعيد 36"
+            ]
+          },
+          {
+            "line": 2,
+            "description": "داخل الدالة: 6 * 6 = 36، نُعيدها.",
+            "memory": [
+              {
+                "name": "n",
+                "value": "6",
+                "updated": false
+              },
+              {
+                "name": "النتيجة",
+                "value": "36",
+                "updated": true
+              }
+            ],
+            "output": "",
+            "callStack": [
+              "sq يُعيد 36"
+            ]
+          },
+          {
+            "line": 4,
+            "description": "عادت 36 وخزّنّاها في r.",
+            "memory": [
+              {
+                "name": "r",
+                "value": "36",
+                "updated": true
+              }
+            ],
+            "output": "",
+            "callStack": [
+              "main()"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "ماذا تفعل return في دالة؟",
+      "options": [
+        "تطبع",
+        "تُعيد قيمة للمستدعي",
+        "تحذف",
+        "تكرّر"
+      ],
+      "answer": 1,
+      "hint": "تُرجِع القيمة.",
+      "explanation": "return تُعيد القيمة من الدالة إلى مكان الاستدعاء."
+    },
+    {
+      "type": "exercise",
+      "exType": "fill-blank",
+      "prompt": "اكتب رأس دالة تُعيد int اسمها f بلا وسائط.",
+      "answer": [
+        "int f()"
+      ],
+      "hint": "النوع ثم الاسم وقوسان.",
+      "explanation": "نكتب int f() لرأس دالة تُعيد int دون وسائط."
+    }
+  ]
+}

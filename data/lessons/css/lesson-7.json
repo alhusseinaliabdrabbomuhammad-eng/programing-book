@@ -1,0 +1,93 @@
+{
+  "id": "lesson-7",
+  "number": 7,
+  "lang": "css",
+  "title": "تنسيق النصوص: الخطوط والأحجام والظل",
+  "subtitle": "كيف نجعل النصوص جميلة وسهلة القراءة؟",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "خصائص النصّ",
+      "icon": "✍️",
+      "content": [
+        "نتحكّم بمظهر النص: نوع الخطّ، حجمه، وزنه، محاذاته، والمسافة بين سطوره."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "css",
+      "langLabel": "CSS",
+      "code": [
+        "p {",
+        "  font-family: Arial, sans-serif;",
+        "  font-size: 16px;",
+        "  font-weight: bold;",
+        "  text-align: center;",
+        "  line-height: 1.6;",
+        "}"
+      ],
+      "annotations": [
+        {
+          "line": 2,
+          "text": "نوع الخطّ مع بديل احتياطيّ."
+        },
+        {
+          "line": 3,
+          "text": "حجم الخطّ."
+        },
+        {
+          "line": 4,
+          "text": "وزن الخطّ (سُمكه)."
+        },
+        {
+          "line": 5,
+          "text": "محاذاة النص للوسط."
+        },
+        {
+          "line": 6,
+          "text": "المسافة بين السطور (1.6 مريحة للقراءة)."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "ظلّ النصّ",
+      "icon": "🌑",
+      "content": [
+        "text-shadow يضيف ظلًّا للنصّ: الإزاحة الأفقية، العمودية، التمويه، ثم اللون."
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "tip",
+      "title": "نصيحة للعربية 💡",
+      "content": "استخدم line-height مريحًا (1.6 - 1.8) للنصوص العربية لأن حروفها متّصلة وتحتاج تنفّسًا بين السطور."
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "أي خاصية تحدّد المسافة بين سطور النص؟",
+      "options": [
+        "font-size",
+        "line-height",
+        "text-align",
+        "spacing"
+      ],
+      "answer": 1,
+      "hint": "ارتفاع السطر.",
+      "explanation": "line-height تحدّد المسافة بين السطور وتؤثّر على راحة القراءة."
+    },
+    {
+      "type": "exercise",
+      "exType": "fill-blank",
+      "prompt": "اجعل النص في الوسط أفقيًّا.",
+      "answer": [
+        "text-align: center;",
+        "text-align:center;"
+      ],
+      "hint": "text-align.",
+      "explanation": "نكتب text-align: center; لمحاذاة النص للوسط."
+    }
+  ]
+}

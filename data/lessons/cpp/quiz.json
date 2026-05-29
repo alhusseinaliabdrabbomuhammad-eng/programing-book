@@ -1,0 +1,144 @@
+{
+  "title": "الاختبار النهائي: ++C ⚙️",
+  "lang": "cpp",
+  "questions": [
+    {
+      "type": "multiple-choice",
+      "prompt": "ما وظيفة المترجم g++؟",
+      "options": [
+        "يشغّل الإنترنت",
+        "يحوّل الكود إلى لغة الآلة",
+        "يحذف الملفّات",
+        "يرسم"
+      ],
+      "answer": 1,
+      "explanation": "g++ يترجم كود C++ إلى ملفّ تنفيذيّ."
+    },
+    {
+      "type": "multiple-choice",
+      "prompt": "أي كائن نستخدمه للطباعة في C++؟",
+      "options": [
+        "cin",
+        "cout",
+        "print",
+        "echo"
+      ],
+      "answer": 1,
+      "explanation": "نستخدم cout مع << للطباعة."
+    },
+    {
+      "type": "multiple-choice",
+      "prompt": "ما ناتج 9 % 4 ؟",
+      "options": [
+        "2",
+        "1",
+        "0",
+        "2.25"
+      ],
+      "answer": 1,
+      "explanation": "المعامل % يعطي الباقي: 9÷4 الباقي 1."
+    },
+    {
+      "type": "multiple-choice",
+      "prompt": "أي رمز يعطي عنوان متغيّر؟",
+      "options": [
+        "*",
+        "&",
+        "#",
+        "@"
+      ],
+      "answer": 1,
+      "explanation": "المعامل & يعطي عنوان المتغيّر في الذاكرة."
+    },
+    {
+      "type": "true-false",
+      "prompt": "كل new يجب أن يقابله delete لتحرير الذاكرة.",
+      "answer": true,
+      "explanation": "نعم، نسيان delete يسبّب تسريب ذاكرة."
+    },
+    {
+      "type": "multiple-choice",
+      "prompt": "ماذا يحدث للمتغيّر الأصلي عند تعديل مرجعه؟",
+      "options": [
+        "لا يتغيّر",
+        "يتغيّر معه",
+        "يُحذف",
+        "يُنسخ"
+      ],
+      "answer": 1,
+      "explanation": "المرجع اسم بديل لنفس المتغيّر، فتعديله يعدّل الأصل."
+    },
+    {
+      "type": "multiple-choice",
+      "prompt": "الأعضاء في class افتراضيًّا…؟",
+      "options": [
+        "public",
+        "private",
+        "static",
+        "const"
+      ],
+      "answer": 1,
+      "explanation": "أعضاء class خاصّة private افتراضيًّا."
+    },
+    {
+      "type": "multiple-choice",
+      "prompt": "متى يُنفّذ المدمّر ~؟",
+      "options": [
+        "عند الإنشاء",
+        "عند انتهاء عمر الكائن",
+        "يدويًّا",
+        "أبدًا"
+      ],
+      "answer": 1,
+      "explanation": "المدمّر يُنفّذ تلقائيًّا عند انتهاء عمر الكائن."
+    },
+    {
+      "type": "true-false",
+      "prompt": "الكلمة virtual تُمكّن تعدّد الأشكال وقت التشغيل.",
+      "answer": true,
+      "explanation": "نعم، virtual تجعل اختيار الدالة يتمّ حسب النوع الفعلي."
+    },
+    {
+      "type": "multiple-choice",
+      "prompt": "ما الكلمة المفتاحية لإعلان قالب؟",
+      "options": [
+        "typename",
+        "template",
+        "class",
+        "generic"
+      ],
+      "answer": 1,
+      "explanation": "نبدأ القالب بـ template <typename T>."
+    },
+    {
+      "type": "multiple-choice",
+      "prompt": "أي بنية STL تشبه مصفوفة مرنة الحجم؟",
+      "options": [
+        "array",
+        "vector",
+        "int[]",
+        "map"
+      ],
+      "answer": 1,
+      "explanation": "vector مصفوفة ديناميكية يكبر حجمها تلقائيًّا."
+    },
+    {
+      "type": "true-false",
+      "prompt": "قسمة 7 / 2 لعددين صحيحين في C++ تعطي 3.5.",
+      "answer": false,
+      "explanation": "بل تعطي 3، لأن قسمة الصحيحين تحذف الكسر."
+    },
+    {
+      "type": "multiple-choice",
+      "prompt": "أي كلمة تطلق استثناءً عمدًا؟",
+      "options": [
+        "catch",
+        "throw",
+        "try",
+        "raise"
+      ],
+      "answer": 1,
+      "explanation": "نستخدم throw لإطلاق استثناء عمدًا."
+    }
+  ]
+}

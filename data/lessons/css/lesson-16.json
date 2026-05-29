@@ -1,0 +1,101 @@
+{
+  "id": "lesson-16",
+  "number": 16,
+  "lang": "css",
+  "title": "التحولات والانتقالات",
+  "subtitle": "كيف نضيف حركة ناعمة وتأثيرات عند التفاعل؟",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "الانتقالات transition",
+      "icon": "🎚️",
+      "content": [
+        "transition تجعل تغيّر الخصائص يحدث بسلاسة بدل القفز المفاجئ. مثالية لتأثيرات التمرير hover."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "css",
+      "langLabel": "CSS",
+      "code": [
+        ".btn {",
+        "  background: blue;",
+        "  transition: background 0.3s;",
+        "}",
+        ".btn:hover {",
+        "  background: green;",
+        "}"
+      ],
+      "annotations": [
+        {
+          "line": 3,
+          "text": "أي تغيّر في الخلفية يحدث خلال 0.3 ثانية بسلاسة."
+        },
+        {
+          "line": 5,
+          "text": ":hover يطبّق عند مرور الفأرة."
+        },
+        {
+          "line": 6,
+          "text": "يتحوّل اللون تدريجيًّا للأخضر."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "التحوّلات transform",
+      "icon": "🔄",
+      "content": [
+        "transform يحرّك العنصر أو يدوّره أو يكبّره دون التأثير على تخطيط الصفحة."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "css",
+      "langLabel": "CSS",
+      "code": [
+        ".card:hover {",
+        "  transform: scale(1.1);",
+        "}"
+      ],
+      "annotations": [
+        {
+          "line": 2,
+          "text": "scale(1.1) يكبّر العنصر 10% عند التمرير."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "tip",
+      "title": "نصيحة 💡",
+      "content": "ادمج transition مع transform لتأثيرات احترافية: زرّ يكبر قليلًا بنعومة عند التمرير يبدو حيًّا وجذّابًا!"
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "أي خاصية تجعل تغيّر القيم يحدث بسلاسة؟",
+      "options": [
+        "transform",
+        "transition",
+        "animation",
+        "hover"
+      ],
+      "answer": 1,
+      "hint": "انتقال ناعم.",
+      "explanation": "transition تجعل تغيّر الخصائص يحدث بسلاسة عبر مدّة محدّدة."
+    },
+    {
+      "type": "exercise",
+      "exType": "fill-blank",
+      "prompt": "اجعل العنصر يكبر 20% باستخدام transform.",
+      "answer": [
+        "transform: scale(1.2);",
+        "transform:scale(1.2);"
+      ],
+      "hint": "الدالة scale.",
+      "explanation": "نكتب transform: scale(1.2); لتكبير العنصر 20%."
+    }
+  ]
+}

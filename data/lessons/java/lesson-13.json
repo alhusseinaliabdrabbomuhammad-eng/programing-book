@@ -1,0 +1,151 @@
+{
+  "id": "lesson-13",
+  "number": 13,
+  "lang": "java",
+  "title": "التغليف و private و getters/setters",
+  "subtitle": "كيف نحمي بيانات الكائن من العبث المباشر؟",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "ما التغليف؟",
+      "icon": "🛡️",
+      "content": [
+        "التغليف يعني إخفاء البيانات الداخلية وحمايتها. نجعل الخصائص private فلا يصلها أحد إلّا عبر دوال نتحكّم بها."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "java",
+      "langLabel": "Java",
+      "code": [
+        "class Account {",
+        "  private double balance;",
+        "  public double getBalance() {",
+        "    return balance;",
+        "  }",
+        "  public void deposit(double amt) {",
+        "    if (amt > 0) balance += amt;",
+        "  }",
+        "}"
+      ],
+      "annotations": [
+        {
+          "line": 2,
+          "text": "balance خاصّة، لا تُرى من الخارج."
+        },
+        {
+          "line": 3,
+          "text": "getter يُعيد القيمة بأمان."
+        },
+        {
+          "line": 6,
+          "text": "setter (deposit) يتحقّق قبل التعديل."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "tip",
+      "title": "لماذا؟ 💡",
+      "content": "لو كان balance عامًّا، أيّ كود قد يضع رصيدًا سالبًا! بالتغليف نضمن أن التعديل يمرّ عبر قواعدنا فقط."
+    },
+    {
+      "type": "visualizer",
+      "data": {
+        "lang": "java",
+        "hasCallStack": false,
+        "code": [
+          "Account a = new Account();",
+          "a.deposit(50);",
+          "double b = a.getBalance();"
+        ],
+        "steps": [
+          {
+            "line": 1,
+            "description": "نبدأ بقراءة البرنامج من أعلى سطر، والذاكرة فارغة تمامًا قبل أن ننفّذ أي شيء.",
+            "memory": [],
+            "output": ""
+          },
+          {
+            "line": 1,
+            "description": "ننشئ حسابًا، رصيده الخاصّ 0.",
+            "memory": [
+              {
+                "name": "balance (خاص)",
+                "value": "0.0",
+                "updated": true
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 2,
+            "description": "لنتمهّل قليلًا ونتأمّل ما في الذاكرة حتى الآن قبل المتابعة.",
+            "memory": [
+              {
+                "name": "balance (خاص)",
+                "value": "50.0",
+                "updated": false
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 2,
+            "description": "deposit(50): 50 موجب فيُضاف، يصبح الرصيد 50.",
+            "memory": [
+              {
+                "name": "balance (خاص)",
+                "value": "50.0",
+                "updated": true
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 3,
+            "description": "getBalance() يُعيد 50 بأمان، نخزّنه في b.",
+            "memory": [
+              {
+                "name": "balance (خاص)",
+                "value": "50.0",
+                "updated": false
+              },
+              {
+                "name": "b",
+                "value": "50.0",
+                "updated": true
+              }
+            ],
+            "output": ""
+          }
+        ]
+      }
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "أي معدّل وصول يُخفي الخاصية عن الخارج؟",
+      "options": [
+        "public",
+        "private",
+        "static",
+        "final"
+      ],
+      "answer": 1,
+      "hint": "يعني «خاص».",
+      "explanation": "نستخدم private لإخفاء الخاصية وحمايتها."
+    },
+    {
+      "type": "exercise",
+      "exType": "fill-blank",
+      "prompt": "اكتب معدّل الوصول الذي يخفي خاصية عن باقي الكود.",
+      "answer": [
+        "private"
+      ],
+      "hint": "عكس public.",
+      "explanation": "private يجعل الخاصية متاحة داخل الفئة فقط."
+    }
+  ]
+}

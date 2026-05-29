@@ -1,0 +1,181 @@
+{
+  "id": "lesson-10",
+  "number": 10,
+  "lang": "javascript",
+  "title": "الدوال ودوال الأسهم",
+  "subtitle": "الدالة آلة صغيرة: نُدخل قيمًا فتُخرج نتيجة. لتنظيم الكود وإعادة استخدامه.",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "ما الدالة؟",
+      "icon": "🏭",
+      "content": [
+        "الدالة مجموعة أوامر نعطيها اسمًا لنستدعيها وقت الحاجة. مثل وصفة: نُدخل مكوّنات (وسائط) ونحصل على نتيجة."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "javascript",
+      "langLabel": "JavaScript",
+      "code": [
+        "function add(a, b) {",
+        "  return a + b;",
+        "}",
+        "console.log(add(3, 4));"
+      ],
+      "annotations": [
+        {
+          "line": 1,
+          "text": "نعرّف دالة add تأخذ قيمتين a و b."
+        },
+        {
+          "line": 2,
+          "text": "return تُعيد الناتج للمستدعي."
+        },
+        {
+          "line": 4,
+          "text": "نستدعيها بقيم 3 و 4 فتعيد 7."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "دوال الأسهم",
+      "icon": "🏹",
+      "content": [
+        "طريقة مختصرة وعصرية لكتابة الدوال باستخدام =>."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "javascript",
+      "langLabel": "JavaScript",
+      "code": [
+        "const square = (n) => n * n;",
+        "console.log(square(5));"
+      ],
+      "annotations": [
+        {
+          "line": 1,
+          "text": "دالة سهم تأخذ n وتعيد مربّعه مباشرة."
+        },
+        {
+          "line": 2,
+          "text": "square(5) تعيد 25."
+        }
+      ]
+    },
+    {
+      "type": "visualizer",
+      "data": {
+        "lang": "javascript",
+        "hasCallStack": true,
+        "code": [
+          "function dbl(x) {",
+          "  return x * 2;",
+          "}",
+          "let r = dbl(6);"
+        ],
+        "steps": [
+          {
+            "line": 1,
+            "description": "نبدأ بقراءة البرنامج من أعلى سطر، والذاكرة فارغة تمامًا قبل أن ننفّذ أي شيء.",
+            "memory": [],
+            "output": ""
+          },
+          {
+            "line": 1,
+            "description": "عرّفنا دالة dbl تضاعف ما يُعطى لها.",
+            "memory": [
+              {
+                "name": "dbl",
+                "value": "<function>",
+                "updated": true
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 4,
+            "description": "نستدعي dbl(6): تذهب القيمة 6 للدالة كـ x.",
+            "memory": [
+              {
+                "name": "dbl",
+                "value": "<function>",
+                "updated": false
+              },
+              {
+                "name": "x",
+                "value": "6",
+                "updated": true
+              }
+            ],
+            "output": "",
+            "callStack": [
+              "الإطار: dbl(x=6)"
+            ]
+          },
+          {
+            "line": 2,
+            "description": "داخل الدالة: 6 * 2 = 12، ونُعيده.",
+            "memory": [
+              {
+                "name": "x",
+                "value": "6",
+                "updated": false
+              },
+              {
+                "name": "النتيجة",
+                "value": "12",
+                "updated": true
+              }
+            ],
+            "output": "",
+            "callStack": [
+              "الإطار: dbl يُعيد 12"
+            ]
+          },
+          {
+            "line": 4,
+            "description": "عادت القيمة 12 وخزّنّاها في r.",
+            "memory": [
+              {
+                "name": "r",
+                "value": "12",
+                "updated": true
+              }
+            ],
+            "output": ""
+          }
+        ]
+      }
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "ما الكلمة التي تُعيد قيمة من دالة؟",
+      "options": [
+        "give",
+        "return",
+        "out",
+        "send"
+      ],
+      "answer": 1,
+      "hint": "تعني «أرجِع».",
+      "explanation": "الكلمة return تُعيد القيمة من الدالة إلى مكان الاستدعاء."
+    },
+    {
+      "type": "exercise",
+      "exType": "fill-blank",
+      "prompt": "اكتب دالة سهم اسمها triple تُعيد ثلاثة أضعاف n.",
+      "answer": [
+        "const triple = (n) => n * 3;",
+        "const triple = n => n * 3;",
+        "const triple = (n) => n*3"
+      ],
+      "hint": "استخدم =>.",
+      "explanation": "نكتب const triple = (n) => n * 3; لإنشاء دالة سهم."
+    }
+  ]
+}

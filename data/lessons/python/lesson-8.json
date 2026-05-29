@@ -1,0 +1,179 @@
+{
+  "id": "lesson-8",
+  "number": 8,
+  "lang": "python",
+  "title": "القوائم (Lists)",
+  "subtitle": "كيف نخزّن عدّة قيم في صندوق واحد؟ باستخدام القائمة!",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "ما هي القائمة؟",
+      "icon": "📝",
+      "content": [
+        "القائمة صندوق كبير يحوي عدّة قيم مرتّبة، نكتبها بين قوسين مربّعين [ ] ونفصل بينها بفواصل."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "python",
+      "langLabel": "Python",
+      "code": [
+        "fruits = [\"تفاح\", \"موز\", \"عنب\"]",
+        "print(fruits[0])",
+        "print(len(fruits))"
+      ],
+      "annotations": [
+        {
+          "line": 1,
+          "text": "قائمة فيها ثلاث فواكه."
+        },
+        {
+          "line": 2,
+          "text": "العنصر الأول فهرسه 0: تفاح."
+        },
+        {
+          "line": 3,
+          "text": "عدد العناصر: 3."
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "heading": "دوال مفيدة",
+      "icon": "🛠️",
+      "ordered": false,
+      "items": [
+        "`append(x)` يضيف عنصرًا في النهاية",
+        "`remove(x)` يحذف عنصرًا",
+        "`insert(i,x)` يدرج في موضع محدّد",
+        "`sort()` يرتّب القائمة"
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "python",
+      "langLabel": "Python",
+      "code": [
+        "nums = [3, 1, 2]",
+        "nums.append(5)",
+        "nums.sort()",
+        "print(nums)"
+      ],
+      "annotations": [
+        {
+          "line": 2,
+          "text": "نضيف 5 في النهاية → [3,1,2,5]."
+        },
+        {
+          "line": 3,
+          "text": "نرتّب تصاعديًّا → [1,2,3,5]."
+        }
+      ]
+    },
+    {
+      "type": "visualizer",
+      "data": {
+        "lang": "python",
+        "hasCallStack": false,
+        "code": [
+          "items = [10, 20]",
+          "items.append(30)",
+          "x = items[1]"
+        ],
+        "steps": [
+          {
+            "line": 1,
+            "description": "نبدأ بقراءة البرنامج من أعلى سطر، والذاكرة فارغة تمامًا قبل أن ننفّذ أي شيء.",
+            "memory": [],
+            "output": ""
+          },
+          {
+            "line": 1,
+            "description": "ننشئ قائمة فيها 10 و20.",
+            "memory": [
+              {
+                "name": "items",
+                "value": "[10, 20]",
+                "updated": true
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 2,
+            "description": "لنتمهّل قليلًا ونتأمّل ما في الذاكرة حتى الآن قبل المتابعة.",
+            "memory": [
+              {
+                "name": "items",
+                "value": "[10, 20, 30]",
+                "updated": false
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 2,
+            "description": "append(30) يضيف 30 في نهاية القائمة فتصبح [10, 20, 30].",
+            "memory": [
+              {
+                "name": "items",
+                "value": "[10, 20, 30]",
+                "updated": true
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 3,
+            "description": "نأخذ العنصر ذا الفهرس 1 وهو 20 ونضعه في x.",
+            "memory": [
+              {
+                "name": "items",
+                "value": "[10, 20, 30]",
+                "updated": false
+              },
+              {
+                "name": "x",
+                "value": "20",
+                "updated": true
+              }
+            ],
+            "output": ""
+          }
+        ]
+      }
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "كيف نضيف عنصرًا لنهاية قائمة اسمها data؟",
+      "options": [
+        "data.add(x)",
+        "data.append(x)",
+        "data.push(x)",
+        "data + x"
+      ],
+      "answer": 1,
+      "hint": "اسم الدالة بالإنجليزية يعني «يُلحق».",
+      "explanation": "نستخدم data.append(x) لإضافة عنصر في نهاية القائمة."
+    },
+    {
+      "type": "exercise",
+      "exType": "fill-blank",
+      "prompt": "أنشئ قائمة اسمها colors تحتوي على \"أحمر\" و \"أزرق\".",
+      "answer": [
+        "colors = [\"أحمر\", \"أزرق\"]",
+        "colors = ['أحمر', 'أزرق']"
+      ],
+      "hint": "استخدم الأقواس المربّعة [ ].",
+      "explanation": "القائمة بين أقواس مربّعة وعناصرها مفصولة بفاصلة: colors = [\"أحمر\", \"أزرق\"]."
+    },
+    {
+      "type": "callout",
+      "variant": "extra",
+      "title": "ممتاز!",
+      "content": "القوائم أساس مهم جدًّا. القادم: طرق ذكية لإنشاء القوائم."
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "id": "lesson-19",
+  "number": 19,
+  "lang": "css",
+  "title": "Media Queries والتصميم المتجاوب",
+  "subtitle": "كيف نجعل تصميمنا جميلًا على الجوّال والحاسوب معًا؟",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "ما التصميم المتجاوب؟",
+      "icon": "📱",
+      "content": [
+        "التصميم المتجاوب يتكيّف مع حجم الشاشة: عمودان على الحاسوب يصبحان عمودًا واحدًا على الجوّال. نحقّقه بـ Media Queries."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "css",
+      "langLabel": "CSS",
+      "code": [
+        ".container {",
+        "  display: flex;",
+        "}",
+        "@media (max-width: 600px) {",
+        "  .container {",
+        "    flex-direction: column;",
+        "  }",
+        "}"
+      ],
+      "annotations": [
+        {
+          "line": 2,
+          "text": "على الشاشات الكبيرة: صفّ أفقيّ."
+        },
+        {
+          "line": 4,
+          "text": "عندما يكون العرض 600px أو أقلّ (جوّال)…"
+        },
+        {
+          "line": 6,
+          "text": "…نحوّلها إلى عمود رأسيّ."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "tip",
+      "title": "فلسفة Mobile First 💡",
+      "content": "صمّم للجوّال أولًا (الأبسط)، ثم أضف Media Queries لتحسين الشاشات الأكبر. هذا النهج يُنتج كودًا أنظف وأداءً أفضل."
+    },
+    {
+      "type": "list",
+      "heading": "نقاط توقّف شائعة",
+      "icon": "📐",
+      "ordered": false,
+      "items": [
+        "الجوّال: حتى 600px",
+        "اللوحي: 600px - 900px",
+        "الحاسوب: أكثر من 900px",
+        "نختارها حسب المحتوى لا الأجهزة"
+      ]
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "ما الأداة التي تطبّق أنماطًا حسب حجم الشاشة؟",
+      "options": [
+        "@keyframes",
+        "@media",
+        "@import",
+        "var()"
+      ],
+      "answer": 1,
+      "hint": "استعلام وسائط.",
+      "explanation": "@media (Media Query) تطبّق أنماطًا حسب خصائص الشاشة كعرضها."
+    },
+    {
+      "type": "exercise",
+      "exType": "fill-blank",
+      "prompt": "اكتب استعلام وسائط لشاشة عرضها 500px أو أقلّ.",
+      "answer": [
+        "@media (max-width: 500px)",
+        "@media (max-width:500px)"
+      ],
+      "hint": "max-width.",
+      "explanation": "نكتب @media (max-width: 500px) للشاشات الصغيرة."
+    }
+  ]
+}

@@ -1,0 +1,161 @@
+{
+  "id": "lesson-2",
+  "number": 2,
+  "lang": "cpp",
+  "title": "هيكل البرنامج main و include و cout",
+  "subtitle": "كل برنامج C++ له هيكل ثابت يبدأ من دالة main.",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "الهيكل الأساسي",
+      "icon": "🏗️",
+      "content": [
+        "نُضمّن مكتبات بـ include، والتنفيذ يبدأ من دالة main. نطبع بـ cout."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "cpp",
+      "langLabel": "C++",
+      "code": [
+        "#include <iostream>",
+        "using namespace std;",
+        "int main() {",
+        "  cout << \"مرحبًا بالعالم!\" << endl;",
+        "  return 0;",
+        "}"
+      ],
+      "annotations": [
+        {
+          "line": 1,
+          "text": "نُضمّن مكتبة الإدخال/الإخراج."
+        },
+        {
+          "line": 3,
+          "text": "main نقطة بداية التنفيذ."
+        },
+        {
+          "line": 4,
+          "text": "cout للطباعة، و endl لسطر جديد."
+        },
+        {
+          "line": 5,
+          "text": "return 0 تعني نجاح البرنامج."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "title": "انتبه للأسهم!",
+      "content": "نستخدم << مع cout للطباعة (سهمان لليسار). لا تخلط بينها وبين >> الخاصّة بالإدخال cin."
+    },
+    {
+      "type": "visualizer",
+      "data": {
+        "lang": "cpp",
+        "hasCallStack": true,
+        "code": [
+          "int main() {",
+          "  cout << \"أهلًا\";",
+          "  return 0;",
+          "}"
+        ],
+        "steps": [
+          {
+            "line": 1,
+            "description": "نبدأ بقراءة البرنامج من أعلى سطر، والذاكرة فارغة تمامًا قبل أن ننفّذ أي شيء.",
+            "memory": [],
+            "output": ""
+          },
+          {
+            "line": 1,
+            "description": "يبدأ التشغيل من main.",
+            "memory": [
+              {
+                "name": "الحالة",
+                "value": "بدء main",
+                "updated": true
+              }
+            ],
+            "output": "",
+            "callStack": [
+              "main()"
+            ]
+          },
+          {
+            "line": 2,
+            "description": "لنتمهّل قليلًا ونتأمّل ما في الذاكرة حتى الآن قبل المتابعة.",
+            "memory": [
+              {
+                "name": "الحالة",
+                "value": "طباعة",
+                "updated": false
+              }
+            ],
+            "output": "أهلًا",
+            "callStack": [
+              "main()"
+            ]
+          },
+          {
+            "line": 2,
+            "description": "cout يطبع كلمة أهلًا على الشاشة.",
+            "memory": [
+              {
+                "name": "الحالة",
+                "value": "طباعة",
+                "updated": true
+              }
+            ],
+            "output": "أهلًا",
+            "callStack": [
+              "main()"
+            ]
+          },
+          {
+            "line": 3,
+            "description": "return 0 ينهي البرنامج بنجاح.",
+            "memory": [
+              {
+                "name": "القيمة المرجعة",
+                "value": "0",
+                "updated": true
+              }
+            ],
+            "output": "أهلًا",
+            "callStack": [
+              "main() ينتهي"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "أي كائن نستخدمه للطباعة في C++؟",
+      "options": [
+        "cin",
+        "cout",
+        "print",
+        "echo"
+      ],
+      "answer": 1,
+      "hint": "ينتهي بـ out.",
+      "explanation": "نستخدم cout مع << للطباعة على الشاشة."
+    },
+    {
+      "type": "exercise",
+      "exType": "fill-blank",
+      "prompt": "اطبع كلمة Hi باستخدام cout.",
+      "answer": [
+        "cout << \"Hi\";",
+        "cout<<\"Hi\";"
+      ],
+      "hint": "استخدم <<.",
+      "explanation": "نكتب cout << \"Hi\"; للطباعة."
+    }
+  ]
+}

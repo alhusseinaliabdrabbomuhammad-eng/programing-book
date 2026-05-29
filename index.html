@@ -1,0 +1,109 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="كتاب البرمجة — تطبيق تفاعلي لتعلم ست لغات برمجة من الصفر إلى الاحتراف، يعمل دون اتصال بالإنترنت." />
+  <meta name="theme-color" content="#0f172a" />
+  <title>كتاب البرمجة — تعلّم البرمجة من الصفر</title>
+
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%93%9A%3C/text%3E%3C/svg%3E" />
+
+  <!-- الأنماط: النواة ثم التخطيط ثم المكونات -->
+  <link rel="stylesheet" href="assets/css/core/variables.css" />
+  <link rel="stylesheet" href="assets/css/core/reset.css" />
+  <link rel="stylesheet" href="assets/css/core/typography.css" />
+  <link rel="stylesheet" href="assets/css/core/themes.css" />
+  <link rel="stylesheet" href="assets/css/layout/navbar.css" />
+  <link rel="stylesheet" href="assets/css/layout/sidebar.css" />
+  <link rel="stylesheet" href="assets/css/layout/main.css" />
+  <link rel="stylesheet" href="assets/css/layout/statusbar.css" />
+  <link rel="stylesheet" href="assets/css/components/buttons.css" />
+  <link rel="stylesheet" href="assets/css/components/cards.css" />
+  <link rel="stylesheet" href="assets/css/components/code-block.css" />
+  <link rel="stylesheet" href="assets/css/components/callouts.css" />
+  <link rel="stylesheet" href="assets/css/components/exercises.css" />
+  <link rel="stylesheet" href="assets/css/components/visualizer.css" />
+  <link rel="stylesheet" href="assets/css/components/quiz.css" />
+  <link rel="stylesheet" href="assets/css/components/modal.css" />
+  <link rel="stylesheet" href="assets/css/components/skeleton.css" />
+  <link rel="stylesheet" href="assets/css/components/tour.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">تخطّي إلى المحتوى الرئيسي</a>
+
+  <!-- شريط التنقّل العلوي -->
+  <header class="navbar" id="navbar" role="banner">
+    <div class="navbar__brand">
+      <button class="navbar__sidebar-toggle" id="sidebar-toggle" aria-label="إظهار أو إخفاء القائمة الجانبية" aria-expanded="true">
+        <span class="hamburger" aria-hidden="true"></span>
+      </button>
+      <a href="#/dashboard" class="navbar__logo" aria-label="الصفحة الرئيسية لكتاب البرمجة">
+        <span class="navbar__logo-icon" aria-hidden="true">📚</span>
+        <span class="navbar__logo-text">كتاب البرمجة</span>
+      </a>
+    </div>
+
+    <nav class="navbar__langs" id="lang-nav" aria-label="اختيار لغة البرمجة"></nav>
+
+    <div class="navbar__actions">
+      <button class="btn btn--icon" id="home-btn" aria-label="العودة إلى اللوحة الرئيسية" title="الرئيسية">🏠</button>
+      <button class="btn btn--icon" id="theme-toggle" aria-label="تبديل السمة بين الفاتح والداكن" title="تبديل السمة">🌙</button>
+      <button class="btn btn--icon" id="global-help" aria-label="المساعدة العامة" title="المساعدة">❓</button>
+    </div>
+  </header>
+
+  <div class="layout">
+    <!-- القائمة الجانبية على اليمين -->
+    <aside class="sidebar" id="sidebar" role="complementary" aria-label="خارطة الطريق والدروس">
+      <div class="sidebar__header">
+        <h2 class="sidebar__title" id="sidebar-title">خارطة الطريق</h2>
+        <button class="btn btn--icon btn--small" id="sidebar-help" aria-label="مساعدة حول القائمة الجانبية" title="مساعدة">!</button>
+      </div>
+      <div class="sidebar__body" id="sidebar-body" aria-live="polite">
+        <p class="sidebar__hint">اختر لغة برمجة من الأعلى لعرض دروسها.</p>
+      </div>
+    </aside>
+
+    <!-- المحتوى الرئيسي على اليسار -->
+    <main class="main" id="main-content" role="main" tabindex="-1">
+      <div id="app-view" aria-live="polite"></div>
+    </main>
+  </div>
+
+  <!-- شريط الحالة السفلي -->
+  <footer class="statusbar" id="statusbar" role="contentinfo">
+    <span class="statusbar__item" id="status-location">📍 اللوحة الرئيسية</span>
+    <span class="statusbar__item" id="status-progress">📊 التقدّم: 0%</span>
+    <span class="statusbar__item" id="status-streak">🔥 سلسلة الأيام: 0</span>
+    <span class="statusbar__item" id="status-online">🟢 جاهز للعمل دون اتصال</span>
+  </footer>
+
+  <!-- حاوية النوافذ المنبثقة -->
+  <div id="modal-root" aria-live="polite"></div>
+  <!-- حاوية جولة التعريف -->
+  <div id="tour-root"></div>
+
+  <!-- الوحدات البرمجية (ترتيب التحميل وفق الاعتمادية) -->
+  <script src="assets/js/utils/dom.js"></script>
+  <script src="assets/js/utils/format.js"></script>
+  <script src="assets/js/core/event-bus.js"></script>
+  <script src="assets/js/storage/progress-store.js"></script>
+  <script src="assets/js/storage/data-loader.js"></script>
+  <script src="assets/js/learning/syntax-highlighter.js"></script>
+  <script src="assets/js/learning/visualizer.js"></script>
+  <script src="assets/js/learning/exercise-engine.js"></script>
+  <script src="assets/js/learning/lesson-engine.js"></script>
+  <script src="assets/js/learning/quiz-engine.js"></script>
+  <script src="assets/js/ui/sidebar.js"></script>
+  <script src="assets/js/ui/navbar.js"></script>
+  <script src="assets/js/ui/statusbar.js"></script>
+  <script src="assets/js/ui/dashboard.js"></script>
+  <script src="assets/js/help/help-system.js"></script>
+  <script src="assets/js/help/onboarding-tour.js"></script>
+  <script src="assets/js/core/router.js"></script>
+  <script src="assets/js/core/app.js"></script>
+</body>
+</html>

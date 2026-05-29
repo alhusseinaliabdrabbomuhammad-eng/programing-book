@@ -1,0 +1,85 @@
+{
+  "id": "lesson-14",
+  "number": 14,
+  "lang": "html",
+  "title": "العناصر التفاعلية details و summary",
+  "subtitle": "كيف نصنع قسمًا قابلًا للطيّ بدون JavaScript؟",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "القسم القابل للطيّ",
+      "icon": "📂",
+      "content": [
+        "details ينشئ صندوقًا يفتح ويُغلق بالنقر. summary هو العنوان الظاهر دائمًا. كلّ هذا بـ HTML فقط!"
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "html",
+      "langLabel": "HTML",
+      "code": [
+        "<details>",
+        "  <summary>ما هي البرمجة؟</summary>",
+        "  <p>البرمجة هي كتابة تعليمات للحاسوب.</p>",
+        "</details>"
+      ],
+      "annotations": [
+        {
+          "line": 1,
+          "text": "details الصندوق القابل للطيّ."
+        },
+        {
+          "line": 2,
+          "text": "summary العنوان الذي نضغطه للفتح."
+        },
+        {
+          "line": 3,
+          "text": "المحتوى المخفيّ يظهر عند الفتح."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "tip",
+      "title": "رائع! 💡",
+      "content": "هذا مثال جميل على قوّة HTML وحدها: عنصر تفاعليّ كامل دون أي سطر JavaScript. مفيد للأسئلة الشائعة FAQ."
+    },
+    {
+      "type": "list",
+      "heading": "استخدامات",
+      "icon": "🎯",
+      "ordered": false,
+      "items": [
+        "الأسئلة الشائعة FAQ",
+        "عرض تفاصيل إضافية",
+        "إخفاء محتوى طويل",
+        "قوائم منسدلة بسيطة"
+      ]
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "أي عنصر هو العنوان الظاهر دائمًا في القسم القابل للطيّ؟",
+      "options": [
+        "details",
+        "summary",
+        "header",
+        "title"
+      ],
+      "answer": 1,
+      "hint": "يعني «ملخّص».",
+      "explanation": "summary هو العنوان الظاهر الذي يُنقَر لفتح details."
+    },
+    {
+      "type": "exercise",
+      "exType": "fill-blank",
+      "prompt": "اكتب وسم بداية القسم القابل للطيّ.",
+      "answer": [
+        "<details>"
+      ],
+      "hint": "يعني «تفاصيل».",
+      "explanation": "نستخدم <details> لإنشاء قسم قابل للطيّ."
+    }
+  ]
+}

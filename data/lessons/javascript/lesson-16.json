@@ -1,0 +1,144 @@
+{
+  "id": "lesson-16",
+  "number": 16,
+  "lang": "javascript",
+  "title": "الموقتات setTimeout و setInterval",
+  "subtitle": "كيف نجعل الكود يعمل بعد فترة، أو يتكرّر كل فترة؟",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "التأجيل بـ setTimeout",
+      "icon": "⏰",
+      "content": [
+        "setTimeout ينفّذ دالة مرّة واحدة بعد مدّة بالميلي ثانية (1000 = ثانية)."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "javascript",
+      "langLabel": "JavaScript",
+      "code": [
+        "setTimeout(function() {",
+        "  console.log(\"مرّت ثانيتان!\");",
+        "}, 2000);"
+      ],
+      "annotations": [
+        {
+          "line": 3,
+          "text": "الرقم 2000 يعني التنفيذ بعد ثانيتين."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "التكرار بـ setInterval",
+      "icon": "🔄",
+      "content": [
+        "setInterval يكرّر دالة كل فترة محدّدة حتى نوقفه بـ clearInterval."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "javascript",
+      "langLabel": "JavaScript",
+      "code": [
+        "let id = setInterval(function() {",
+        "  console.log(\"تكّة!\");",
+        "}, 1000);",
+        "// لإيقافه لاحقًا: clearInterval(id);"
+      ],
+      "annotations": [
+        {
+          "line": 3,
+          "text": "يطبع «تكّة!» كل ثانية."
+        },
+        {
+          "line": 4,
+          "text": "نحفظ المعرّف id لإيقافه عند الحاجة."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "title": "تنبيه!",
+      "content": "لا تنسَ إيقاف setInterval بـ clearInterval، وإلا سيستمرّ للأبد ويستهلك موارد الجهاز!"
+    },
+    {
+      "type": "visualizer",
+      "data": {
+        "lang": "javascript",
+        "hasCallStack": false,
+        "code": [
+          "let t = 0;",
+          "// كل ثانية:",
+          "t++;"
+        ],
+        "steps": [
+          {
+            "line": 1,
+            "description": "نبدأ بـ t = 0.",
+            "memory": [
+              {
+                "name": "t",
+                "value": "0",
+                "updated": true
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 3,
+            "description": "بعد ثانية: setInterval ينفّذ t++ فيصبح 1.",
+            "memory": [
+              {
+                "name": "t",
+                "value": "1",
+                "updated": true
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 3,
+            "description": "بعد ثانيتين: ينفّذ مرّة أخرى فيصبح 2.",
+            "memory": [
+              {
+                "name": "t",
+                "value": "2",
+                "updated": true
+              }
+            ],
+            "output": ""
+          }
+        ]
+      }
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "أي دالة تنفّذ كودًا مرّة واحدة بعد تأخير؟",
+      "options": [
+        "setInterval",
+        "setTimeout",
+        "delay",
+        "wait"
+      ],
+      "answer": 1,
+      "hint": "Timeout = مهلة.",
+      "explanation": "setTimeout ينفّذ الدالة مرّة واحدة بعد المدّة المحدّدة."
+    },
+    {
+      "type": "exercise",
+      "exType": "fill-blank",
+      "prompt": "ما الدالة التي توقف مؤقّتًا متكرّرًا مخزّنًا في id؟",
+      "answer": [
+        "clearInterval(id)",
+        "clearInterval(id);"
+      ],
+      "hint": "clear + Interval.",
+      "explanation": "نستخدم clearInterval(id) لإيقاف التكرار."
+    }
+  ]
+}

@@ -1,0 +1,151 @@
+{
+  "id": "lesson-12",
+  "number": 12,
+  "lang": "javascript",
+  "title": "الإغلاقات Closures",
+  "subtitle": "مفهوم قوي: دالة تتذكّر المكان الذي وُلدت فيه. لا تقلق، سنبسّطه!",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "الفكرة ببساطة",
+      "icon": "🧠",
+      "content": [
+        "تخيّل دالة بداخلها دالة أخرى. الدالة الداخلية «تتذكّر» المتغيّرات الخارجية حتى بعد انتهاء الدالة الأم. هذا التذكّر يُسمّى الإغلاق."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "javascript",
+      "langLabel": "JavaScript",
+      "code": [
+        "function makeCounter() {",
+        "  let count = 0;",
+        "  return function() {",
+        "    count++;",
+        "    return count;",
+        "  };",
+        "}",
+        "const next = makeCounter();",
+        "console.log(next());",
+        "console.log(next());"
+      ],
+      "annotations": [
+        {
+          "line": 2,
+          "text": "متغيّر count يعيش داخل الدالة الأم."
+        },
+        {
+          "line": 3,
+          "text": "نُعيد دالة داخلية تتذكّر count."
+        },
+        {
+          "line": 9,
+          "text": "المرّة الأولى: 1."
+        },
+        {
+          "line": 10,
+          "text": "المرّة الثانية: 2 — تذكّرت القيمة السابقة!"
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "tip",
+      "title": "تشبيه لطيف 💡",
+      "content": "الإغلاق مثل حصّالة نقود خاصّة: كل مرّة تضيف عملة وتتذكّر المجموع، ولا يستطيع أحد آخر رؤيته مباشرة."
+    },
+    {
+      "type": "visualizer",
+      "data": {
+        "lang": "javascript",
+        "hasCallStack": false,
+        "code": [
+          "const c = makeCounter();",
+          "c();",
+          "c();"
+        ],
+        "steps": [
+          {
+            "line": 1,
+            "description": "نبدأ بقراءة البرنامج من أعلى سطر، والذاكرة فارغة تمامًا قبل أن ننفّذ أي شيء.",
+            "memory": [],
+            "output": ""
+          },
+          {
+            "line": 1,
+            "description": "أنشأنا عدّادًا. بداخله count = 0 مخفيّ.",
+            "memory": [
+              {
+                "name": "count (مخفي)",
+                "value": "0",
+                "updated": true
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 2,
+            "description": "لنتمهّل قليلًا ونتأمّل ما في الذاكرة حتى الآن قبل المتابعة.",
+            "memory": [
+              {
+                "name": "count (مخفي)",
+                "value": "1",
+                "updated": false
+              }
+            ],
+            "output": "1"
+          },
+          {
+            "line": 2,
+            "description": "نستدعي c(): يزيد count إلى 1 ويُعيده.",
+            "memory": [
+              {
+                "name": "count (مخفي)",
+                "value": "1",
+                "updated": true
+              }
+            ],
+            "output": "1"
+          },
+          {
+            "line": 3,
+            "description": "نستدعي c() ثانية: تذكّر القيمة فزادها إلى 2.",
+            "memory": [
+              {
+                "name": "count (مخفي)",
+                "value": "2",
+                "updated": true
+              }
+            ],
+            "output": "2"
+          }
+        ]
+      }
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "ماذا «تتذكّر» الدالة الداخلية في الإغلاق؟",
+      "options": [
+        "لا شيء",
+        "متغيّرات الدالة الأم المحيطة بها",
+        "فقط وسائطها",
+        "الكونسول"
+      ],
+      "answer": 1,
+      "hint": "تتذكّر بيئتها.",
+      "explanation": "الإغلاق يجعل الدالة الداخلية تتذكّر متغيّرات النطاق الخارجي الذي وُلدت فيه."
+    },
+    {
+      "type": "exercise",
+      "exType": "fill-blank",
+      "prompt": "ما الكلمة التي تجعل الدالة تُعيد قيمة (دالة داخلية مثلًا)؟",
+      "answer": [
+        "return"
+      ],
+      "hint": "تُرجِع القيمة.",
+      "explanation": "نستخدم return لإعادة الدالة الداخلية في نمط الإغلاق."
+    }
+  ]
+}

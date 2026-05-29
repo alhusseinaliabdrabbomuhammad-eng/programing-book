@@ -1,0 +1,81 @@
+{
+  "id": "lesson-7",
+  "number": 7,
+  "lang": "html",
+  "title": "الصور img والنص البديل",
+  "subtitle": "كيف نعرض الصور؟ ولماذا النص البديل مهمّ؟",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "الوسم img",
+      "icon": "🖼️",
+      "content": [
+        "الصورة تُعرض بالوسم img. خاصية src تحدّد مسار الصورة، و alt تصف الصورة بنصّ بديل."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "html",
+      "langLabel": "HTML",
+      "code": [
+        "<img src=\"cat.jpg\" alt=\"قطّة تلعب بكرة\">"
+      ],
+      "annotations": [
+        {
+          "line": 1,
+          "text": "src مسار الصورة، alt وصفها النصّي."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "لماذا alt مهمّ؟",
+      "icon": "♿",
+      "content": [
+        "alt يصف الصورة للمكفوفين عبر قارئات الشاشة، ويظهر إن فشل تحميل الصورة، ويساعد محرّكات البحث على الفهم."
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "critical",
+      "title": "لا تتجاهل alt!",
+      "content": "كل صورة ذات معنى يجب أن يكون لها نص alt وصفيّ. هذا أساس إمكانية الوصول للجميع، بما فيهم ذوو الإعاقة البصرية."
+    },
+    {
+      "type": "list",
+      "heading": "ملاحظات عن img",
+      "icon": "📌",
+      "ordered": false,
+      "items": [
+        "img وسم «مفرد» لا يحتاج وسم نهاية",
+        "src يمكن أن يكون مسارًا محلّيًّا أو رابطًا",
+        "استخدم صورًا مضغوطة لسرعة التحميل"
+      ]
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "ما وظيفة خاصية alt في الصورة؟",
+      "options": [
+        "تكبّر الصورة",
+        "تصف الصورة نصّيًّا لإمكانية الوصول",
+        "تغيّر اللون",
+        "تحرّك الصورة"
+      ],
+      "answer": 1,
+      "hint": "وصف بديل.",
+      "explanation": "alt تصف الصورة نصّيًّا للمكفوفين وعند فشل التحميل."
+    },
+    {
+      "type": "exercise",
+      "exType": "fill-blank",
+      "prompt": "أدرج صورة مسارها dog.png ووصفها «كلب».",
+      "answer": [
+        "<img src=\"dog.png\" alt=\"كلب\">"
+      ],
+      "hint": "img مع src و alt.",
+      "explanation": "نكتب <img src=\"dog.png\" alt=\"كلب\"> لإدراج الصورة."
+    }
+  ]
+}

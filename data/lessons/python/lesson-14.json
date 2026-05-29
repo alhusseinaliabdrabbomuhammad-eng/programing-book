@@ -1,0 +1,154 @@
+{
+  "id": "lesson-14",
+  "number": 14,
+  "lang": "python",
+  "title": "الدوال: التعريف والمعاملات",
+  "subtitle": "كيف نجمّع كودًا مفيدًا ونعيد استخدامه باسم واحد؟",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "ما هي الدالة؟",
+      "icon": "🧩",
+      "content": [
+        "الدالة كتلة كود لها اسم، نكتبها مرة ونستدعيها متى شئنا. نعرّفها بالكلمة `def`."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "python",
+      "langLabel": "Python",
+      "code": [
+        "def greet(name):",
+        "    print(\"أهلًا \" + name)",
+        "greet(\"محمد\")"
+      ],
+      "annotations": [
+        {
+          "line": 1,
+          "text": "نعرّف دالة اسمها greet تستقبل قيمة اسمها name."
+        },
+        {
+          "line": 3,
+          "text": "نستدعي الدالة ونمرّر لها «محمد»."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "القيمة المرجعة return",
+      "icon": "↩️",
+      "content": [
+        "أحيانًا نريد أن تُعيد الدالة نتيجة لنستخدمها. نستخدم `return` لذلك."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "python",
+      "langLabel": "Python",
+      "code": [
+        "def add(a, b):",
+        "    return a + b",
+        "result = add(3, 4)",
+        "print(result)"
+      ],
+      "annotations": [
+        {
+          "line": 2,
+          "text": "الدالة تُعيد مجموع a و b."
+        },
+        {
+          "line": 3,
+          "text": "نخزّن الناتج 7 في result."
+        }
+      ]
+    },
+    {
+      "type": "visualizer",
+      "data": {
+        "lang": "python",
+        "hasCallStack": true,
+        "code": [
+          "def double(x):",
+          "    return x * 2",
+          "y = double(5)"
+        ],
+        "steps": [
+          {
+            "line": 3,
+            "description": "نستدعي double ونمرّر 5، فيقفز التنفيذ إلى داخل الدالة.",
+            "memory": [
+              {
+                "name": "x",
+                "value": "5",
+                "updated": true
+              }
+            ],
+            "output": "",
+            "callStack": [
+              "double(x=5)"
+            ]
+          },
+          {
+            "line": 2,
+            "description": "داخل الدالة: 5 * 2 = 10، وتُعيد الدالة هذه القيمة.",
+            "memory": [
+              {
+                "name": "x",
+                "value": "5",
+                "updated": false
+              }
+            ],
+            "output": "",
+            "callStack": [
+              "double(x=5)"
+            ]
+          },
+          {
+            "line": 3,
+            "description": "نعود ونخزّن القيمة المرجعة 10 في y. انتهى استدعاء الدالة.",
+            "memory": [
+              {
+                "name": "y",
+                "value": "10",
+                "updated": true
+              }
+            ],
+            "output": ""
+          }
+        ]
+      }
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "ما الكلمة التي تعرّف دالة في بايثون؟",
+      "options": [
+        "function",
+        "def",
+        "func",
+        "define"
+      ],
+      "answer": 1,
+      "hint": "كلمة قصيرة من ثلاثة أحرف.",
+      "explanation": "نستخدم الكلمة def لتعريف دالة في بايثون."
+    },
+    {
+      "type": "exercise",
+      "exType": "fill-blank",
+      "prompt": "استدعِ دالة اسمها say ومرّر لها النص \"hi\".",
+      "answer": [
+        "say(\"hi\")",
+        "say('hi')"
+      ],
+      "hint": "اكتب اسم الدالة ثم القوسين بداخلهما القيمة.",
+      "explanation": "نستدعي الدالة باسمها ثم نمرّر القيمة بين القوسين: say(\"hi\")."
+    },
+    {
+      "type": "callout",
+      "variant": "extra",
+      "title": "ممتاز!",
+      "content": "الدوال تنظّم برنامجك وتجعله أنظف. القادم: ميزات متقدّمة للدوال."
+    }
+  ]
+}

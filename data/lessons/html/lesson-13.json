@@ -1,0 +1,99 @@
+{
+  "id": "lesson-13",
+  "number": 13,
+  "lang": "html",
+  "title": "العناصر الدلالية الجديدة",
+  "subtitle": "وسوم HTML5 التي تعطي المحتوى معنى واضحًا.",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "لماذا الدلالية؟",
+      "icon": "🏷️",
+      "content": [
+        "بدل استخدام div لكل شيء، تعطينا HTML5 وسومًا تصف معنى المحتوى، فيفهم المتصفّح ومحرّكات البحث بنية الصفحة."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "html",
+      "langLabel": "HTML",
+      "code": [
+        "<header>الترويسة والشعار</header>",
+        "<nav>روابط التنقّل</nav>",
+        "<main>",
+        "  <article>مقال رئيسي</article>",
+        "  <aside>محتوى جانبيّ</aside>",
+        "</main>",
+        "<footer>التذييل</footer>"
+      ],
+      "annotations": [
+        {
+          "line": 1,
+          "text": "header الترويسة العلوية."
+        },
+        {
+          "line": 2,
+          "text": "nav قائمة التنقّل."
+        },
+        {
+          "line": 3,
+          "text": "main المحتوى الرئيسي."
+        },
+        {
+          "line": 4,
+          "text": "article محتوى مستقلّ."
+        },
+        {
+          "line": 7,
+          "text": "footer تذييل الصفحة."
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "heading": "أهمّ العناصر الدلالية",
+      "icon": "🧱",
+      "ordered": false,
+      "items": [
+        "`<header>` ترويسة",
+        "`<nav>` تنقّل",
+        "`<main>` المحتوى الرئيسي",
+        "`<article>` مقال مستقلّ",
+        "`<section>` قسم",
+        "`<aside>` محتوى جانبيّ",
+        "`<footer>` تذييل"
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "tip",
+      "title": "فائدة كبيرة 💡",
+      "content": "العناصر الدلالية تحسّن ترتيبك في جوجل وتساعد قارئات الشاشة على التنقّل، وتجعل كودك أوضح بكثير من بحر من الـ div!"
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "أي عنصر يمثّل المحتوى الرئيسي للصفحة؟",
+      "options": [
+        "<header>",
+        "<main>",
+        "<footer>",
+        "<nav>"
+      ],
+      "answer": 1,
+      "hint": "يعني «رئيسي».",
+      "explanation": "العنصر main يمثّل المحتوى الرئيسي والفريد للصفحة."
+    },
+    {
+      "type": "exercise",
+      "exType": "fill-blank",
+      "prompt": "اكتب وسم قائمة التنقّل الدلالي.",
+      "answer": [
+        "<nav>"
+      ],
+      "hint": "اختصار navigation.",
+      "explanation": "نستخدم <nav> لقائمة روابط التنقّل."
+    }
+  ]
+}

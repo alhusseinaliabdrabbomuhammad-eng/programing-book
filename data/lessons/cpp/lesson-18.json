@@ -1,0 +1,123 @@
+{
+  "id": "lesson-18",
+  "number": 18,
+  "lang": "cpp",
+  "title": "القوالب Templates",
+  "subtitle": "كود واحد يعمل مع أنواع مختلفة. كفاءة وأناقة!",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "ما القالب؟",
+      "icon": "📐",
+      "content": [
+        "القالب يتيح كتابة دالة أو فئة تعمل مع أيّ نوع دون تكرار. النوع يصبح «معاملًا» يُحدّد عند الاستخدام."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "cpp",
+      "langLabel": "C++",
+      "code": [
+        "template <typename T>",
+        "T maxOf(T a, T b) {",
+        "  return (a > b) ? a : b;",
+        "}",
+        "cout << maxOf(3, 7) << endl;",
+        "cout << maxOf(2.5, 1.2);"
+      ],
+      "annotations": [
+        {
+          "line": 1,
+          "text": "T نوع عامّ يُحدّد لاحقًا."
+        },
+        {
+          "line": 5,
+          "text": "مع أعداد صحيحة → 7."
+        },
+        {
+          "line": 6,
+          "text": "مع أعداد عشرية → 2.5. نفس الدالة!"
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "tip",
+      "title": "لماذا؟ 💡",
+      "content": "بدل كتابة maxInt و maxDouble و maxFloat، نكتب قالبًا واحدًا يعمل مع كل الأنواع. أقلّ كودًا وأقلّ أخطاء."
+    },
+    {
+      "type": "visualizer",
+      "data": {
+        "lang": "cpp",
+        "hasCallStack": false,
+        "code": [
+          "maxOf(3, 7);",
+          "maxOf(2.5, 1.2);"
+        ],
+        "steps": [
+          {
+            "line": 1,
+            "description": "يُستبدل T بـ int، يقارن 3 و 7 ويُعيد 7.",
+            "memory": [
+              {
+                "name": "T",
+                "value": "int",
+                "updated": true
+              },
+              {
+                "name": "الناتج",
+                "value": "7",
+                "updated": true
+              }
+            ],
+            "output": "7"
+          },
+          {
+            "line": 2,
+            "description": "يُستبدل T بـ double، يقارن 2.5 و 1.2 ويُعيد 2.5.",
+            "memory": [
+              {
+                "name": "T",
+                "value": "double",
+                "updated": true
+              },
+              {
+                "name": "الناتج",
+                "value": "2.5",
+                "updated": true
+              }
+            ],
+            "output": "2.5"
+          }
+        ]
+      }
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "ماذا يتيح القالب template؟",
+      "options": [
+        "حذف الأنواع",
+        "كتابة كود يعمل مع أنواع متعدّدة",
+        "تسريع الإنترنت",
+        "الطباعة"
+      ],
+      "answer": 1,
+      "hint": "نوع عامّ.",
+      "explanation": "القالب يتيح كتابة كود واحد يعمل مع أنواع مختلفة."
+    },
+    {
+      "type": "exercise",
+      "exType": "fill-blank",
+      "prompt": "اكتب سطر إعلان قالب بمعامل نوع T.",
+      "answer": [
+        "template <typename T>",
+        "template <class T>"
+      ],
+      "hint": "typename T.",
+      "explanation": "نكتب template <typename T> لإعلان قالب بمعامل نوع."
+    }
+  ]
+}

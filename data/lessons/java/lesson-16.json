@@ -1,0 +1,129 @@
+{
+  "id": "lesson-16",
+  "number": 16,
+  "lang": "java",
+  "title": "تعدد الأشكال والواجهات interface",
+  "subtitle": "كيف يتصرّف الكائن بأشكال مختلفة حسب نوعه الفعلي؟",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "تعدّد الأشكال",
+      "icon": "🎭",
+      "content": [
+        "تعدّد الأشكال يعني أن مرجعًا من نوع الأم قد يشير لكائن ابن، وعند استدعاء دالة مُتجاوزة يُنفَّذ سلوك الابن الفعلي."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "java",
+      "langLabel": "Java",
+      "code": [
+        "Animal a = new Dog();",
+        "a.makeSound();"
+      ],
+      "annotations": [
+        {
+          "line": 1,
+          "text": "المرجع من نوع Animal لكنه يشير لكائن Dog."
+        },
+        {
+          "line": 2,
+          "text": "يُنفَّذ صوت الكلب الفعلي (تعدّد الأشكال)."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "الواجهات interface",
+      "icon": "📜",
+      "content": [
+        "الواجهة عقد يحدّد دوالًا يجب أن تنفّذها الفئة. تُطبَّق بالكلمة implements. مفيدة لتوحيد السلوك بين فئات مختلفة."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "java",
+      "langLabel": "Java",
+      "code": [
+        "interface Drawable {",
+        "  void draw();",
+        "}",
+        "class Circle implements Drawable {",
+        "  public void draw() { System.out.println(\"دائرة\"); }",
+        "}"
+      ],
+      "annotations": [
+        {
+          "line": 1,
+          "text": "الواجهة تعرّف دالة draw دون جسد."
+        },
+        {
+          "line": 4,
+          "text": "Circle تلتزم بتنفيذ draw."
+        }
+      ]
+    },
+    {
+      "type": "visualizer",
+      "data": {
+        "lang": "java",
+        "hasCallStack": false,
+        "code": [
+          "Animal a = new Cat();",
+          "a.makeSound();"
+        ],
+        "steps": [
+          {
+            "line": 1,
+            "description": "مرجع Animal يشير فعليًّا لكائن Cat.",
+            "memory": [
+              {
+                "name": "a",
+                "value": "→ كائن Cat",
+                "updated": true
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 2,
+            "description": "عند الاستدعاء، يختار جافا نسخة Cat فيظهر مواء.",
+            "memory": [
+              {
+                "name": "a",
+                "value": "→ كائن Cat",
+                "updated": false
+              }
+            ],
+            "output": "مياو"
+          }
+        ]
+      }
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "أي كلمة تُطبّق واجهة interface؟",
+      "options": [
+        "extends",
+        "implements",
+        "interface",
+        "new"
+      ],
+      "answer": 1,
+      "hint": "تعني «يُنفّذ».",
+      "explanation": "نستخدم implements لتطبيق واجهة على فئة."
+    },
+    {
+      "type": "exercise",
+      "exType": "fill-blank",
+      "prompt": "اجعل الفئة Square تطبّق الواجهة Drawable.",
+      "answer": [
+        "class Square implements Drawable"
+      ],
+      "hint": "استخدم implements.",
+      "explanation": "نكتب class Square implements Drawable لتطبيق الواجهة."
+    }
+  ]
+}

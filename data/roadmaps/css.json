@@ -1,0 +1,127 @@
+{
+  "lang": "css",
+  "name": "سي إس إس",
+  "totalLessons": 20,
+  "groups": [
+    {
+      "title": "الأساسيات",
+      "lessons": [
+        {
+          "id": "lesson-1",
+          "number": 1,
+          "title": "ما هي CSS؟ طرق ربطها وبناء الجملة"
+        },
+        {
+          "id": "lesson-2",
+          "number": 2,
+          "title": "المحددات الأساسية"
+        },
+        {
+          "id": "lesson-3",
+          "number": 3,
+          "title": "المحددات المركبة"
+        },
+        {
+          "id": "lesson-4",
+          "number": 4,
+          "title": "الألوان: hex و rgb و hsl والشفافية"
+        },
+        {
+          "id": "lesson-5",
+          "number": 5,
+          "title": "نموذج الصندوق Box Model"
+        }
+      ]
+    },
+    {
+      "title": "المفاهيم المتوسطة",
+      "lessons": [
+        {
+          "id": "lesson-6",
+          "number": 6,
+          "title": "أبعاد العناصر و box-sizing"
+        },
+        {
+          "id": "lesson-7",
+          "number": 7,
+          "title": "تنسيق النصوص: الخطوط والأحجام والظل"
+        },
+        {
+          "id": "lesson-8",
+          "number": 8,
+          "title": "الخلفيات والتدرجات"
+        },
+        {
+          "id": "lesson-9",
+          "number": 9,
+          "title": "الحدود والزوايا المستديرة"
+        },
+        {
+          "id": "lesson-10",
+          "number": 10,
+          "title": "العرض والإخفاء display و opacity"
+        }
+      ]
+    },
+    {
+      "title": "مفاهيم متقدمة",
+      "lessons": [
+        {
+          "id": "lesson-11",
+          "number": 11,
+          "title": "تحديد الموضع Positioning"
+        },
+        {
+          "id": "lesson-12",
+          "number": 12,
+          "title": "Flexbox: الحاوية والاتجاه والمحاذاة"
+        },
+        {
+          "id": "lesson-13",
+          "number": 13,
+          "title": "Flexbox: خصائص العناصر"
+        },
+        {
+          "id": "lesson-14",
+          "number": 14,
+          "title": "CSS Grid: تعريف الشبكة"
+        },
+        {
+          "id": "lesson-15",
+          "number": 15,
+          "title": "CSS Grid: وضع العناصر والمساحات المسماة"
+        }
+      ]
+    },
+    {
+      "title": "الإتقان والتطبيق",
+      "lessons": [
+        {
+          "id": "lesson-16",
+          "number": 16,
+          "title": "التحولات والانتقالات"
+        },
+        {
+          "id": "lesson-17",
+          "number": 17,
+          "title": "الرسوم المتحركة keyframes"
+        },
+        {
+          "id": "lesson-18",
+          "number": 18,
+          "title": "المتغيرات و calc و clamp"
+        },
+        {
+          "id": "lesson-19",
+          "number": 19,
+          "title": "Media Queries والتصميم المتجاوب"
+        },
+        {
+          "id": "lesson-20",
+          "number": 20,
+          "title": "إطار عملي: تصميم صفحة كاملة"
+        }
+      ]
+    }
+  ]
+}

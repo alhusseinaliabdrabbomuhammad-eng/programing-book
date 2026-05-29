@@ -1,0 +1,114 @@
+{
+  "id": "lesson-15",
+  "number": 15,
+  "lang": "javascript",
+  "title": "الكائنات المضمنة Math و Date و JSON",
+  "subtitle": "JavaScript تأتي مع أدوات جاهزة قويّة. لنكتشف أهمّها.",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "الكائن Math",
+      "icon": "🔢",
+      "content": [
+        "Math مليء بدوال رياضية جاهزة: Math.round للتقريب، Math.random لرقم عشوائي، Math.max للأكبر."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "javascript",
+      "langLabel": "JavaScript",
+      "code": [
+        "console.log(Math.round(4.6));",
+        "console.log(Math.max(3, 9, 1));",
+        "console.log(Math.floor(Math.random() * 6) + 1);"
+      ],
+      "annotations": [
+        {
+          "line": 1,
+          "text": "يقرّب 4.6 إلى 5."
+        },
+        {
+          "line": 2,
+          "text": "أكبر قيمة: 9."
+        },
+        {
+          "line": 3,
+          "text": "رقم عشوائي من 1 إلى 6 (مثل حجر النرد)."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "الكائن Date و JSON",
+      "icon": "📅",
+      "content": [
+        "Date للتعامل مع التواريخ والأوقات. JSON.stringify يحوّل كائنًا إلى نصّ، و JSON.parse يعكس ذلك."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "javascript",
+      "langLabel": "JavaScript",
+      "code": [
+        "let obj = { name: \"علي\" };",
+        "let text = JSON.stringify(obj);",
+        "console.log(text);"
+      ],
+      "annotations": [
+        {
+          "line": 2,
+          "text": "نحوّل الكائن إلى نصّ لتخزينه أو إرساله."
+        }
+      ]
+    },
+    {
+      "type": "visualizer",
+      "data": {
+        "lang": "javascript",
+        "hasCallStack": false,
+        "code": [
+          "let r = Math.max(5, 2, 8);"
+        ],
+        "steps": [
+          {
+            "line": 1,
+            "description": "Math.max تقارن 5 و 2 و 8 وتُعيد الأكبر وهو 8، ونخزّنه في r.",
+            "memory": [
+              {
+                "name": "r",
+                "value": "8",
+                "updated": true
+              }
+            ],
+            "output": ""
+          }
+        ]
+      }
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "أي دالة تُعطي رقمًا عشوائيًّا بين 0 و 1؟",
+      "options": [
+        "Math.round",
+        "Math.random",
+        "Math.floor",
+        "Math.max"
+      ],
+      "answer": 1,
+      "hint": "عشوائي = random.",
+      "explanation": "Math.random() تُعيد رقمًا عشريًّا عشوائيًّا بين 0 و 1."
+    },
+    {
+      "type": "exercise",
+      "exType": "fill-blank",
+      "prompt": "قرّب الرقم 3.2 لأقرب عدد صحيح باستخدام Math.",
+      "answer": [
+        "Math.round(3.2)"
+      ],
+      "hint": "الدالة round.",
+      "explanation": "نستخدم Math.round(3.2) للتقريب لأقرب صحيح."
+    }
+  ]
+}

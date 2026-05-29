@@ -1,0 +1,137 @@
+{
+  "id": "lesson-18",
+  "number": 18,
+  "lang": "javascript",
+  "title": "جلب البيانات fetch",
+  "subtitle": "كيف تطلب صفحتنا بيانات من خادم على الإنترنت؟",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "ما fetch؟",
+      "icon": "📡",
+      "content": [
+        "fetch دالة تطلب بيانات من رابط (API) وتُعيد وعدًا. نستخدمها لجلب معلومات حيّة كالطقس أو الأخبار."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "javascript",
+      "langLabel": "JavaScript",
+      "code": [
+        "async function getUser() {",
+        "  let res = await fetch(\"https://api.example.com/user\");",
+        "  let data = await res.json();",
+        "  console.log(data);",
+        "}"
+      ],
+      "annotations": [
+        {
+          "line": 2,
+          "text": "نطلب البيانات وننتظر الردّ."
+        },
+        {
+          "line": 3,
+          "text": ".json() تحوّل الردّ إلى كائن JavaScript."
+        },
+        {
+          "line": 4,
+          "text": "نطبع البيانات المستلمة."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "title": "انتبه للأخطاء!",
+      "content": "الشبكة قد تفشل. لفّ fetch دائمًا بـ try/catch لتتعامل مع الأخطاء بلطف بدل تعطّل التطبيق."
+    },
+    {
+      "type": "list",
+      "heading": "خطوات جلب البيانات",
+      "icon": "🪜",
+      "ordered": true,
+      "items": [
+        "استدعِ fetch بالرابط",
+        "انتظر الردّ بـ await",
+        "حوّل الردّ بـ res.json()",
+        "استخدم البيانات في صفحتك"
+      ]
+    },
+    {
+      "type": "visualizer",
+      "data": {
+        "lang": "javascript",
+        "hasCallStack": false,
+        "code": [
+          "// 1. أرسل الطلب",
+          "// 2. انتظر الرد",
+          "// 3. حوّل لـ JSON"
+        ],
+        "steps": [
+          {
+            "line": 1,
+            "description": "نرسل طلب fetch إلى الخادم وننتظر.",
+            "memory": [
+              {
+                "name": "الحالة",
+                "value": "جارٍ الطلب...",
+                "updated": true
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 2,
+            "description": "وصل الردّ من الخادم بنجاح.",
+            "memory": [
+              {
+                "name": "الحالة",
+                "value": "تمّ الاستلام",
+                "updated": true
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 3,
+            "description": "حوّلنا الردّ إلى بيانات قابلة للاستخدام.",
+            "memory": [
+              {
+                "name": "data",
+                "value": "{ ... }",
+                "updated": true
+              }
+            ],
+            "output": ""
+          }
+        ]
+      }
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "ماذا تُعيد دالة fetch؟",
+      "options": [
+        "نصًّا فورًا",
+        "وعدًا Promise",
+        "رقمًا",
+        "مصفوفة فارغة"
+      ],
+      "answer": 1,
+      "hint": "غير متزامنة.",
+      "explanation": "fetch تُعيد وعدًا Promise نتعامل معه بـ await أو .then."
+    },
+    {
+      "type": "exercise",
+      "exType": "fill-blank",
+      "prompt": "حوّل ردّ الـ fetch المخزّن في res إلى JSON باستخدام await.",
+      "answer": [
+        "await res.json()",
+        "await res.json();"
+      ],
+      "hint": "الدالة .json().",
+      "explanation": "نكتب await res.json() لتحويل الردّ إلى بيانات."
+    }
+  ]
+}

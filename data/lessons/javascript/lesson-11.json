@@ -1,0 +1,178 @@
+{
+  "id": "lesson-11",
+  "number": 11,
+  "lang": "javascript",
+  "title": "المعاملات الافتراضية والباقية Rest",
+  "subtitle": "كيف نجعل دوالنا مرنة تقبل عددًا متغيّرًا من القيم؟",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "القيم الافتراضية",
+      "icon": "🎁",
+      "content": [
+        "نعطي وسيطًا قيمة افتراضية تُستخدم إن لم يمرّر المستدعي قيمة."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "javascript",
+      "langLabel": "JavaScript",
+      "code": [
+        "function greet(name = \"صديقي\") {",
+        "  return `أهلًا ${name}`;",
+        "}",
+        "console.log(greet());",
+        "console.log(greet(\"رنا\"));"
+      ],
+      "annotations": [
+        {
+          "line": 1,
+          "text": "إن لم نمرّر اسمًا تُستخدم القيمة صديقي."
+        },
+        {
+          "line": 4,
+          "text": "بلا وسيط → أهلًا صديقي."
+        },
+        {
+          "line": 5,
+          "text": "مع وسيط → أهلًا رنا."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "معامل الباقي Rest",
+      "icon": "📦",
+      "content": [
+        "...nums يجمع كل الوسائط الزائدة في مصفوفة واحدة. مفيد لدوال تقبل عددًا غير محدّد."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "javascript",
+      "langLabel": "JavaScript",
+      "code": [
+        "function sumAll(...nums) {",
+        "  let t = 0;",
+        "  for (let n of nums) t += n;",
+        "  return t;",
+        "}",
+        "console.log(sumAll(1, 2, 3, 4));"
+      ],
+      "annotations": [
+        {
+          "line": 1,
+          "text": "...nums يجمع كل القيم في مصفوفة nums."
+        },
+        {
+          "line": 6,
+          "text": "يجمع 1+2+3+4 = 10."
+        }
+      ]
+    },
+    {
+      "type": "visualizer",
+      "data": {
+        "lang": "javascript",
+        "hasCallStack": false,
+        "code": [
+          "function f(...xs) {",
+          "  return xs.length;",
+          "}",
+          "let c = f(5, 6, 7);"
+        ],
+        "steps": [
+          {
+            "line": 4,
+            "description": "نبدأ بقراءة البرنامج من أعلى سطر، والذاكرة فارغة تمامًا قبل أن ننفّذ أي شيء.",
+            "memory": [],
+            "output": ""
+          },
+          {
+            "line": 4,
+            "description": "نستدعي f(5, 6, 7): تُجمع القيم الثلاث في مصفوفة xs.",
+            "memory": [
+              {
+                "name": "xs",
+                "value": "[5, 6, 7]",
+                "updated": true
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 2,
+            "description": "لنتمهّل قليلًا ونتأمّل ما في الذاكرة حتى الآن قبل المتابعة.",
+            "memory": [
+              {
+                "name": "xs",
+                "value": "[5, 6, 7]",
+                "updated": false
+              },
+              {
+                "name": "النتيجة",
+                "value": "3",
+                "updated": false
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 2,
+            "description": "نُعيد طول المصفوفة وهو 3.",
+            "memory": [
+              {
+                "name": "xs",
+                "value": "[5, 6, 7]",
+                "updated": false
+              },
+              {
+                "name": "النتيجة",
+                "value": "3",
+                "updated": true
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 4,
+            "description": "خزّنّا 3 في c.",
+            "memory": [
+              {
+                "name": "c",
+                "value": "3",
+                "updated": true
+              }
+            ],
+            "output": ""
+          }
+        ]
+      }
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "ماذا يفعل ...args في تعريف الدالة؟",
+      "options": [
+        "يحذف الوسائط",
+        "يجمع الوسائط الزائدة في مصفوفة",
+        "يطبعها",
+        "يمنع الوسائط"
+      ],
+      "answer": 1,
+      "hint": "يُسمّى Rest.",
+      "explanation": "معامل الباقي ...args يجمع كل الوسائط الزائدة في مصفوفة واحدة."
+    },
+    {
+      "type": "exercise",
+      "exType": "fill-blank",
+      "prompt": "اكتب وسيطًا افتراضيًّا اسمه count قيمته 1 في تعريف دالة.",
+      "answer": [
+        "count = 1"
+      ],
+      "hint": "اسم = قيمة.",
+      "explanation": "نكتب count = 1 لإعطاء الوسيط قيمة افتراضية."
+    }
+  ]
+}

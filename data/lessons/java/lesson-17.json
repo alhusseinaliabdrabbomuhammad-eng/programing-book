@@ -1,0 +1,114 @@
+{
+  "id": "lesson-17",
+  "number": 17,
+  "lang": "java",
+  "title": "الفئات المجردة abstract",
+  "subtitle": "فئات لا يمكن إنشاء كائنات منها مباشرة، بل تُورَّث.",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "ما الفئة المجرّدة؟",
+      "icon": "🌫️",
+      "content": [
+        "الفئة abstract مخطّط غير مكتمل: لا ننشئ منها كائنًا، بل ترثها فئات تُكمل تفاصيلها. قد تحتوي دوالًا مجرّدة بلا جسد."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "java",
+      "langLabel": "Java",
+      "code": [
+        "abstract class Shape {",
+        "  abstract double area();",
+        "  void show() { System.out.println(area()); }",
+        "}",
+        "class Circle extends Shape {",
+        "  double r = 2;",
+        "  double area() { return 3.14 * r * r; }",
+        "}"
+      ],
+      "annotations": [
+        {
+          "line": 1,
+          "text": "فئة مجرّدة لا تُنشأ مباشرة."
+        },
+        {
+          "line": 2,
+          "text": "دالة مجرّدة بلا جسد، الابن يُكملها."
+        },
+        {
+          "line": 7,
+          "text": "Circle تنفّذ حساب المساحة فعليًّا."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "tip",
+      "title": "متى نستخدمها؟ 💡",
+      "content": "عندما يكون لدينا مفهوم عامّ (شكل) لا معنى لإنشائه وحده، لكن له أنواع محدّدة (دائرة، مربّع) كلٌّ يحسب مساحته بطريقته."
+    },
+    {
+      "type": "visualizer",
+      "data": {
+        "lang": "java",
+        "hasCallStack": false,
+        "code": [
+          "Shape s = new Circle();",
+          "s.show();"
+        ],
+        "steps": [
+          {
+            "line": 1,
+            "description": "لا يمكن إنشاء Shape مباشرة، لكن ننشئ Circle (ابنته).",
+            "memory": [
+              {
+                "name": "s",
+                "value": "→ كائن Circle",
+                "updated": true
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 2,
+            "description": "show تستدعي area المنفّذة في Circle: 3.14×4 = 12.56.",
+            "memory": [
+              {
+                "name": "النتيجة",
+                "value": "12.56",
+                "updated": true
+              }
+            ],
+            "output": "12.56"
+          }
+        ]
+      }
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "هل يمكن إنشاء كائن مباشر من فئة abstract؟",
+      "options": [
+        "نعم دائمًا",
+        "لا، يجب وراثتها",
+        "فقط بـ new",
+        "فقط static"
+      ],
+      "answer": 1,
+      "hint": "غير مكتملة.",
+      "explanation": "لا يمكن إنشاء كائن من فئة مجرّدة؛ نرثها ونكمل دوالها."
+    },
+    {
+      "type": "exercise",
+      "exType": "fill-blank",
+      "prompt": "اكتب الكلمة التي تجعل فئة مجرّدة.",
+      "answer": [
+        "abstract"
+      ],
+      "hint": "تعني «مجرّد».",
+      "explanation": "نستخدم abstract لتعريف فئة أو دالة مجرّدة."
+    }
+  ]
+}

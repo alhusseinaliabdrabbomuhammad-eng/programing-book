@@ -1,0 +1,19 @@
+{
+  "title": "الاختبار النهائي",
+  "lang": "python",
+  "questions": [
+    {
+      "type": "multiple-choice",
+      "prompt": "نص السؤال؟",
+      "options": ["خيار أ", "خيار ب", "خيار ج", "خيار د"],
+      "answer": 0,
+      "explanation": "شرح الإجابة الصحيحة بأسلوب مبسّط للمبتدئ."
+    },
+    {
+      "type": "true-false",
+      "prompt": "عبارة يجب الحكم عليها.",
+      "answer": true,
+      "explanation": "شرح لماذا العبارة صحيحة أو خاطئة."
+    }
+  ]
+}

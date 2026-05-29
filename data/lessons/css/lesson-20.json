@@ -1,0 +1,104 @@
+{
+  "id": "lesson-20",
+  "number": 20,
+  "lang": "css",
+  "title": "إطار عملي: تصميم صفحة كاملة",
+  "subtitle": "لنجمع كل مهاراتنا في تصميم صفحة جميلة ومتجاوبة!",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "تخطيط احترافيّ",
+      "icon": "🏗️",
+      "content": [
+        "سنصمّم صفحة بثيم ألوان موحّد، تخطيط Grid، وأزرار بتأثيرات ناعمة، ومتجاوبة مع الجوّال."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "css",
+      "langLabel": "CSS",
+      "code": [
+        ":root { --primary: #2c3e50; }",
+        "body {",
+        "  font-family: sans-serif;",
+        "  line-height: 1.6;",
+        "}",
+        ".layout {",
+        "  display: grid;",
+        "  grid-template-columns: 250px 1fr;",
+        "  gap: 20px;",
+        "}"
+      ],
+      "annotations": [
+        {
+          "line": 1,
+          "text": "متغيّر للون الأساسي الموحّد."
+        },
+        {
+          "line": 3,
+          "text": "خطّ مريح وتباعد سطور جيّد."
+        },
+        {
+          "line": 6,
+          "text": "شبكة: شريط جانبيّ 250px ومحتوى مرن."
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "css",
+      "langLabel": "CSS",
+      "code": [
+        "@media (max-width: 700px) {",
+        "  .layout { grid-template-columns: 1fr; }",
+        "}"
+      ],
+      "annotations": [
+        {
+          "line": 1,
+          "text": "على الجوّال: عمود واحد بدل العمودين."
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "heading": "ما طبّقناه",
+      "icon": "✅",
+      "ordered": false,
+      "items": [
+        "المتغيّرات لثيم موحّد",
+        "Grid للتخطيط",
+        "تنسيق النصوص",
+        "Media Queries للتجاوب",
+        "الانتقالات للتأثيرات"
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "extra",
+      "title": "خطوة تالية 🚀",
+      "content": "أضف الوضع الداكن بتغيير المتغيّرات، وحرّك العناصر بـ keyframes. أنت الآن مصمّم واجهات حقيقيّ!"
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "أي نظام استخدمناه لتخطيط الصفحة بعمودين؟",
+      "options": [
+        "table",
+        "float",
+        "grid",
+        "position"
+      ],
+      "answer": 2,
+      "hint": "ثنائي الأبعاد.",
+      "explanation": "استخدمنا CSS Grid لتخطيط الصفحة بشريط جانبيّ ومحتوى."
+    },
+    {
+      "type": "callout",
+      "variant": "extra",
+      "title": "تهانينا! 🎓",
+      "content": "أكملت دروس CSS! تستطيع الآن تصميم صفحات جميلة ومتجاوبة. جاهز للاختبار النهائي؟"
+    }
+  ]
+}

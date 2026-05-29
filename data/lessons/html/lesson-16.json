@@ -1,0 +1,78 @@
+{
+  "id": "lesson-16",
+  "number": 16,
+  "lang": "html",
+  "title": "ربط CSS خارجي والأنماط المضمنة",
+  "subtitle": "كيف نضيف الألوان والتنسيق لصفحتنا؟",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "طرق إضافة CSS",
+      "icon": "🎨",
+      "content": [
+        "هناك ثلاث طرق: ملفّ خارجيّ (الأفضل)، أو وسم style في head، أو نمط مضمّن في العنصر نفسه."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "html",
+      "langLabel": "HTML",
+      "code": [
+        "<head>",
+        "  <link rel=\"stylesheet\" href=\"style.css\">",
+        "</head>"
+      ],
+      "annotations": [
+        {
+          "line": 2,
+          "text": "link يربط ملفّ CSS خارجيّ — الطريقة المفضّلة."
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "html",
+      "langLabel": "HTML",
+      "code": [
+        "<p style=\"color: red;\">نص أحمر</p>"
+      ],
+      "annotations": [
+        {
+          "line": 1,
+          "text": "نمط مضمّن داخل العنصر — للحالات السريعة فقط."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "tip",
+      "title": "الأفضل 💡",
+      "content": "استخدم ملفًّا خارجيًّا دائمًا! يفصل التصميم عن المحتوى، ويسهّل الصيانة، ويتيح مشاركة نفس التنسيق بين صفحات كثيرة."
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "ما أفضل طريقة لإضافة CSS؟",
+      "options": [
+        "نمط مضمّن في كل عنصر",
+        "ملفّ خارجيّ عبر link",
+        "وسم style مكرّر",
+        "لا حاجة لـ CSS"
+      ],
+      "answer": 1,
+      "hint": "يفصل التصميم.",
+      "explanation": "الملفّ الخارجي عبر link هو الأفضل لفصل التصميم وسهولة الصيانة."
+    },
+    {
+      "type": "exercise",
+      "exType": "fill-blank",
+      "prompt": "اربط ملفّ CSS خارجيًّا اسمه main.css",
+      "answer": [
+        "<link rel=\"stylesheet\" href=\"main.css\">"
+      ],
+      "hint": "link مع rel و href.",
+      "explanation": "نكتب <link rel=\"stylesheet\" href=\"main.css\"> لربط ملفّ CSS."
+    }
+  ]
+}

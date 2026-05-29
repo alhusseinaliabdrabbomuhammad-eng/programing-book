@@ -1,0 +1,83 @@
+{
+  "id": "lesson-6",
+  "number": 6,
+  "lang": "html",
+  "title": "الروابط a وأنواع المسارات",
+  "subtitle": "الروابط تربط الصفحات ببعضها. إنها روح الويب!",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "الوسم a",
+      "icon": "🔗",
+      "content": [
+        "نُنشئ رابطًا بالوسم a، ونحدّد الوجهة بالخاصية href. النص بين الوسمين هو ما يُنقَر عليه."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "html",
+      "langLabel": "HTML",
+      "code": [
+        "<a href=\"https://example.com\">زرني</a>",
+        "<a href=\"about.html\">صفحة عنّا</a>",
+        "<a href=\"#section2\">انتقل لقسم</a>"
+      ],
+      "annotations": [
+        {
+          "line": 1,
+          "text": "رابط لموقع خارجي (مسار مطلق)."
+        },
+        {
+          "line": 2,
+          "text": "رابط لصفحة في نفس الموقع (مسار نسبي)."
+        },
+        {
+          "line": 3,
+          "text": "رابط لقسم داخل نفس الصفحة (#)."
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "heading": "أنواع المسارات",
+      "icon": "🛣️",
+      "ordered": false,
+      "items": [
+        "مطلق: رابط كامل يبدأ بـ https://",
+        "نسبيّ: مسار داخل موقعك مثل pages/about.html",
+        "داخليّ: يبدأ بـ # للانتقال داخل الصفحة"
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "tip",
+      "title": "نصيحة 💡",
+      "content": "لفتح الرابط في تبويب جديد أضف target=\"_blank\". ولأمان أكبر أضف rel=\"noopener\"."
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "أي خاصية تحدّد وجهة الرابط؟",
+      "options": [
+        "src",
+        "href",
+        "link",
+        "url"
+      ],
+      "answer": 1,
+      "hint": "اختصار hyperlink reference.",
+      "explanation": "نستخدم href لتحديد وجهة الرابط في الوسم a."
+    },
+    {
+      "type": "exercise",
+      "exType": "fill-blank",
+      "prompt": "أنشئ رابطًا نصّه «جوجل» يفتح https://google.com",
+      "answer": [
+        "<a href=\"https://google.com\">جوجل</a>"
+      ],
+      "hint": "a مع href.",
+      "explanation": "نكتب <a href=\"https://google.com\">جوجل</a> لإنشاء الرابط."
+    }
+  ]
+}

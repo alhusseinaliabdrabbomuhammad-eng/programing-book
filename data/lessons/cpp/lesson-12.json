@@ -1,0 +1,152 @@
+{
+  "id": "lesson-12",
+  "number": 12,
+  "lang": "cpp",
+  "title": "إدارة الذاكرة الديناميكية new و delete",
+  "subtitle": "كيف نحجز ذاكرة وقت التشغيل ونحرّرها؟",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "لماذا الذاكرة الديناميكية؟",
+      "icon": "💾",
+      "content": [
+        "أحيانًا لا نعرف حجم البيانات إلّا وقت التشغيل. new يحجز ذاكرة من «الكومة»، و delete يحرّرها عند الانتهاء."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "cpp",
+      "langLabel": "C++",
+      "code": [
+        "int* p = new int;",
+        "*p = 42;",
+        "cout << *p << endl;",
+        "delete p;"
+      ],
+      "annotations": [
+        {
+          "line": 1,
+          "text": "new يحجز صندوق int ويُعيد عنوانه."
+        },
+        {
+          "line": 2,
+          "text": "نضع 42 في الصندوق المحجوز."
+        },
+        {
+          "line": 4,
+          "text": "delete يحرّر الذاكرة لتجنّب التسريب."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "critical",
+      "title": "قاعدة ذهبية!",
+      "content": "كل new يجب أن يقابله delete! نسيان التحرير يسبّب «تسريب ذاكرة» يستهلك موارد الجهاز تدريجيًّا."
+    },
+    {
+      "type": "visualizer",
+      "data": {
+        "lang": "cpp",
+        "hasCallStack": false,
+        "code": [
+          "int* p = new int;",
+          "*p = 42;",
+          "delete p;"
+        ],
+        "steps": [
+          {
+            "line": 1,
+            "description": "نبدأ بقراءة البرنامج من أعلى سطر، والذاكرة فارغة تمامًا قبل أن ننفّذ أي شيء.",
+            "memory": [],
+            "output": ""
+          },
+          {
+            "line": 1,
+            "description": "new يحجز صندوقًا في الذاكرة، p يحمل عنوانه.",
+            "memory": [
+              {
+                "name": "p",
+                "value": "→ صندوق محجوز",
+                "updated": true
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 2,
+            "description": "لنتمهّل قليلًا ونتأمّل ما في الذاكرة حتى الآن قبل المتابعة.",
+            "memory": [
+              {
+                "name": "p",
+                "value": "→ صندوق",
+                "updated": false
+              },
+              {
+                "name": "*p",
+                "value": "42",
+                "updated": false
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 2,
+            "description": "نضع 42 في الصندوق المحجوز.",
+            "memory": [
+              {
+                "name": "p",
+                "value": "→ صندوق",
+                "updated": false
+              },
+              {
+                "name": "*p",
+                "value": "42",
+                "updated": true
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 3,
+            "description": "delete يحرّر الذاكرة المحجوزة. أحسنت!",
+            "memory": [
+              {
+                "name": "p",
+                "value": "(محرّر)",
+                "updated": true
+              }
+            ],
+            "output": ""
+          }
+        ]
+      }
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "ماذا يجب أن يقابل كل new؟",
+      "options": [
+        "return",
+        "delete",
+        "free",
+        "new آخر"
+      ],
+      "answer": 1,
+      "hint": "يحرّر الذاكرة.",
+      "explanation": "كل new يجب أن يقابله delete لتحرير الذاكرة ومنع التسريب."
+    },
+    {
+      "type": "exercise",
+      "exType": "fill-blank",
+      "prompt": "حرّر الذاكرة التي يشير إليها المؤشّر p.",
+      "answer": [
+        "delete p;",
+        "delete p"
+      ],
+      "hint": "الكلمة delete.",
+      "explanation": "نكتب delete p; لتحرير الذاكرة المحجوزة."
+    }
+  ]
+}

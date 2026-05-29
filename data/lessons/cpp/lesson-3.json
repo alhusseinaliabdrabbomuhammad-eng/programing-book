@@ -1,0 +1,171 @@
+{
+  "id": "lesson-3",
+  "number": 3,
+  "lang": "cpp",
+  "title": "المتغيرات والأنواع الأساسية",
+  "subtitle": "في C++ نحدّد نوع كل متغيّر. لنتعرّف على الأنواع.",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "list",
+      "heading": "الأنواع الأساسية",
+      "icon": "🏷️",
+      "ordered": false,
+      "items": [
+        "`int` عدد صحيح",
+        "`double` عدد عشري",
+        "`char` حرف واحد",
+        "`bool` صحيح/خطأ",
+        "`string` نصّ (من مكتبة string)"
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "cpp",
+      "langLabel": "C++",
+      "code": [
+        "int age = 12;",
+        "double price = 9.99;",
+        "char letter = 'A';",
+        "bool ok = true;"
+      ],
+      "annotations": [
+        {
+          "line": 1,
+          "text": "عدد صحيح."
+        },
+        {
+          "line": 2,
+          "text": "عدد عشري."
+        },
+        {
+          "line": 3,
+          "text": "حرف بين علامتين مفردتين."
+        },
+        {
+          "line": 4,
+          "text": "قيمة منطقية."
+        }
+      ]
+    },
+    {
+      "type": "visualizer",
+      "data": {
+        "lang": "cpp",
+        "hasCallStack": false,
+        "code": [
+          "int x = 5;",
+          "int y = 4;",
+          "int s = x + y;"
+        ],
+        "steps": [
+          {
+            "line": 1,
+            "description": "نبدأ بقراءة البرنامج من أعلى سطر، والذاكرة فارغة تمامًا قبل أن ننفّذ أي شيء.",
+            "memory": [],
+            "output": ""
+          },
+          {
+            "line": 1,
+            "description": "نحجز int اسمه x ونضع 5.",
+            "memory": [
+              {
+                "name": "x",
+                "value": "5",
+                "updated": true
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 2,
+            "description": "لنتمهّل قليلًا ونتأمّل ما في الذاكرة حتى الآن قبل المتابعة.",
+            "memory": [
+              {
+                "name": "x",
+                "value": "5",
+                "updated": false
+              },
+              {
+                "name": "y",
+                "value": "4",
+                "updated": false
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 2,
+            "description": "نحجز int اسمه y ونضع 4.",
+            "memory": [
+              {
+                "name": "x",
+                "value": "5",
+                "updated": false
+              },
+              {
+                "name": "y",
+                "value": "4",
+                "updated": true
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 3,
+            "description": "نجمع x + y = 9 ونضعه في s.",
+            "memory": [
+              {
+                "name": "x",
+                "value": "5",
+                "updated": false
+              },
+              {
+                "name": "y",
+                "value": "4",
+                "updated": false
+              },
+              {
+                "name": "s",
+                "value": "9",
+                "updated": true
+              }
+            ],
+            "output": ""
+          }
+        ]
+      }
+    },
+    {
+      "type": "callout",
+      "variant": "tip",
+      "title": "نصيحة 💡",
+      "content": "لاستخدام النصوص string أضف #include <string> في الأعلى. الحرف char يكفي لحرف واحد فقط."
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "أي نوع للقيمة المنطقية صحيح/خطأ؟",
+      "options": [
+        "int",
+        "bool",
+        "char",
+        "flag"
+      ],
+      "answer": 1,
+      "hint": "اختصار boolean.",
+      "explanation": "نستخدم bool للقيم المنطقية true/false."
+    },
+    {
+      "type": "exercise",
+      "exType": "fill-blank",
+      "prompt": "أعلن متغيّرًا صحيحًا اسمه n قيمته 7.",
+      "answer": [
+        "int n = 7;",
+        "int n = 7"
+      ],
+      "hint": "النوع ثم الاسم.",
+      "explanation": "نكتب int n = 7; للتصريح بمتغيّر صحيح."
+    }
+  ]
+}

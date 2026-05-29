@@ -1,0 +1,102 @@
+{
+  "id": "lesson-17",
+  "number": 17,
+  "lang": "javascript",
+  "title": "الوعود Promises و async/await",
+  "subtitle": "كيف نتعامل مع المهام التي تأخذ وقتًا، كتحميل بيانات من الإنترنت؟",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "لماذا الوعود؟",
+      "icon": "🤝",
+      "content": [
+        "بعض المهام تأخذ وقتًا (كجلب بيانات). الوعد Promise يقول: «سأعطيك النتيجة لاحقًا». فلا تتجمّد الصفحة بالانتظار."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "javascript",
+      "langLabel": "JavaScript",
+      "code": [
+        "let p = new Promise((resolve) => {",
+        "  setTimeout(() => resolve(\"تم!\"), 1000);",
+        "});",
+        "p.then(result => console.log(result));"
+      ],
+      "annotations": [
+        {
+          "line": 1,
+          "text": "ننشئ وعدًا بمهمّة ستكتمل لاحقًا."
+        },
+        {
+          "line": 2,
+          "text": "بعد ثانية «نوفي» بالوعد بالنتيجة تم."
+        },
+        {
+          "line": 4,
+          "text": ".then يستقبل النتيجة عند جهوزها."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "async / await الأنظف",
+      "icon": "✨",
+      "content": [
+        "كلمتا async و await تجعلان الكود غير المتزامن يبدو كالعادي وسهل القراءة."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "javascript",
+      "langLabel": "JavaScript",
+      "code": [
+        "async function load() {",
+        "  let data = await getData();",
+        "  console.log(data);",
+        "}"
+      ],
+      "annotations": [
+        {
+          "line": 1,
+          "text": "async تعلن أن الدالة غير متزامنة."
+        },
+        {
+          "line": 2,
+          "text": "await تنتظر اكتمال الوعد قبل المتابعة."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "tip",
+      "title": "تشبيه 💡",
+      "content": "الوعد مثل إيصال طلب في مطعم: تأخذ الإيصال الآن (الوعد) وتكمل حياتك، وعندما يجهز الطعام (resolve) يُنادونك."
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "ماذا تفعل كلمة await؟",
+      "options": [
+        "تطبع",
+        "تنتظر اكتمال الوعد",
+        "تنشئ مصفوفة",
+        "تحذف متغيّرًا"
+      ],
+      "answer": 1,
+      "hint": "تنتظر النتيجة.",
+      "explanation": "await تنتظر اكتمال الوعد ثم تُكمل التنفيذ بالنتيجة."
+    },
+    {
+      "type": "exercise",
+      "exType": "fill-blank",
+      "prompt": "ما الكلمة التي نضعها قبل function لجعلها غير متزامنة؟",
+      "answer": [
+        "async"
+      ],
+      "hint": "تعني «غير متزامن».",
+      "explanation": "نضع async قبل function لتصبح الدالة غير متزامنة وتدعم await."
+    }
+  ]
+}

@@ -1,0 +1,189 @@
+{
+  "id": "lesson-4",
+  "number": 4,
+  "lang": "python",
+  "title": "التحويل بين الأنواع والإدخال",
+  "subtitle": "سنتعلّم كيف نحوّل قيمة من نوع لآخر، وكيف نأخذ كلامًا من المستخدم.",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "أخذ مدخلات من المستخدم",
+      "icon": "⌨️",
+      "content": [
+        "أحيانًا نريد أن يكتب المستخدم شيئًا. نستخدم الأمر `input` لذلك. ما يكتبه المستخدم يعود إلينا دائمًا على شكل **نصّ (str)**."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "python",
+      "langLabel": "Python",
+      "code": [
+        "name = input(\"ما اسمك؟ \")",
+        "print(\"أهلًا \" + name)"
+      ],
+      "annotations": [
+        {
+          "line": 1,
+          "text": "input يعرض السؤال وينتظر الكتابة، ثم يضع ما كُتب في المتغيّر name."
+        },
+        {
+          "line": 2,
+          "text": "نطبع كلمة أهلًا متبوعة بالاسم. علامة + هنا تدمج النصوص معًا."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "title": "انتبه!",
+      "content": "حتى لو كتب المستخدم رقمًا مثل 25، فإن input يعيده كنصّ \"25\" وليس رقمًا. لإجراء حساب علينا تحويله."
+    },
+    {
+      "type": "text",
+      "heading": "التحويل بين الأنواع",
+      "icon": "🔄",
+      "content": [
+        "لدينا دوال جاهزة للتحويل: `int()` لتحويل لعدد صحيح، `float()` لعدد عشري، و `str()` لتحويل لنصّ."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "python",
+      "langLabel": "Python",
+      "code": [
+        "age_text = input(\"كم عمرك؟ \")",
+        "age = int(age_text)",
+        "print(age + 1)"
+      ],
+      "annotations": [
+        {
+          "line": 2,
+          "text": "int() تحوّل النصّ \"12\" إلى الرقم 12 لنتمكّن من الحساب."
+        },
+        {
+          "line": 3,
+          "text": "الآن نستطيع جمع 1 على العمر بنجاح."
+        }
+      ]
+    },
+    {
+      "type": "visualizer",
+      "data": {
+        "lang": "python",
+        "hasCallStack": false,
+        "code": [
+          "x = \"5\"",
+          "y = int(x)",
+          "z = y + 3"
+        ],
+        "steps": [
+          {
+            "line": 1,
+            "description": "نبدأ بقراءة البرنامج من أعلى سطر، والذاكرة فارغة تمامًا قبل أن ننفّذ أي شيء.",
+            "memory": [],
+            "output": ""
+          },
+          {
+            "line": 1,
+            "description": "يضع الحاسوب النص \"5\" في الصندوق x. لاحظ أنه نصّ وليس رقمًا.",
+            "memory": [
+              {
+                "name": "x",
+                "value": "\"5\"",
+                "updated": true
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 2,
+            "description": "لنتمهّل قليلًا ونتأمّل ما في الذاكرة حتى الآن قبل المتابعة.",
+            "memory": [
+              {
+                "name": "x",
+                "value": "\"5\"",
+                "updated": false
+              },
+              {
+                "name": "y",
+                "value": "5",
+                "updated": false
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 2,
+            "description": "الدالة int تأخذ النص \"5\" وتحوّله إلى الرقم 5، وتضعه في y.",
+            "memory": [
+              {
+                "name": "x",
+                "value": "\"5\"",
+                "updated": false
+              },
+              {
+                "name": "y",
+                "value": "5",
+                "updated": true
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 3,
+            "description": "الآن نجمع 5 + 3 فيصبح الناتج 8 ونضعه في z. نجح الحساب لأننا حوّلنا أولًا!",
+            "memory": [
+              {
+                "name": "x",
+                "value": "\"5\"",
+                "updated": false
+              },
+              {
+                "name": "y",
+                "value": "5",
+                "updated": false
+              },
+              {
+                "name": "z",
+                "value": "8",
+                "updated": true
+              }
+            ],
+            "output": ""
+          }
+        ]
+      }
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "ماذا يُعيد input دائمًا؟",
+      "options": [
+        "عدد صحيح",
+        "نصّ str",
+        "قيمة منطقية",
+        "عدد عشري"
+      ],
+      "answer": 1,
+      "hint": "حتى لو كتبت رقمًا.",
+      "explanation": "الأمر input يُعيد دائمًا نصًّا (str)، ولهذا نحتاج int() أو float() إذا أردنا التعامل معه كرقم."
+    },
+    {
+      "type": "exercise",
+      "exType": "fill-blank",
+      "prompt": "حوّل النص \"100\" إلى عدد صحيح وضعه في متغيّر n.",
+      "answer": [
+        "n = int(\"100\")"
+      ],
+      "hint": "استخدم الدالة int().",
+      "explanation": "int(\"100\") تحوّل النص إلى الرقم 100: n = int(\"100\")."
+    },
+    {
+      "type": "callout",
+      "variant": "extra",
+      "title": "رائع!",
+      "content": "تعلّمت التفاعل مع المستخدم! القادم: العمليات الحسابية والمنطقية."
+    }
+  ]
+}

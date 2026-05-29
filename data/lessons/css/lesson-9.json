@@ -1,0 +1,102 @@
+{
+  "id": "lesson-9",
+  "number": 9,
+  "lang": "css",
+  "title": "الحدود والزوايا المستديرة",
+  "subtitle": "كيف نضيف إطارات ونلطّف الزوايا؟",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "الحدود border",
+      "icon": "🔲",
+      "content": [
+        "الحدّ يحيط بالعنصر. نحدّد سُمكه ونمطه ولونه في خاصية واحدة."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "css",
+      "langLabel": "CSS",
+      "code": [
+        ".card {",
+        "  border: 2px solid #333;",
+        "}"
+      ],
+      "annotations": [
+        {
+          "line": 2,
+          "text": "سُمك 2px، نمط متّصل solid، لون رماديّ داكن."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "الزوايا المستديرة",
+      "icon": "⭕",
+      "content": [
+        "border-radius يدوّر زوايا العنصر. كلما زادت القيمة، زاد التدوير. قيمة 50% تصنع دائرة!"
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "css",
+      "langLabel": "CSS",
+      "code": [
+        ".btn {",
+        "  border-radius: 8px;",
+        "}",
+        ".avatar {",
+        "  border-radius: 50%;",
+        "}"
+      ],
+      "annotations": [
+        {
+          "line": 2,
+          "text": "زوايا ناعمة قليلًا (8px)."
+        },
+        {
+          "line": 5,
+          "text": "50% يحوّل المربّع إلى دائرة كاملة."
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "heading": "أنماط الحدّ",
+      "icon": "🎨",
+      "ordered": false,
+      "items": [
+        "`solid` خطّ متّصل",
+        "`dashed` خطّ متقطّع",
+        "`dotted` نقاط",
+        "`none` بلا حدّ"
+      ]
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "ما القيمة التي تحوّل عنصرًا مربّعًا إلى دائرة؟",
+      "options": [
+        "border-radius: 10px",
+        "border-radius: 50%",
+        "border: round",
+        "circle: true"
+      ],
+      "answer": 1,
+      "hint": "نصف القطر.",
+      "explanation": "border-radius: 50% يحوّل المربّع إلى دائرة كاملة."
+    },
+    {
+      "type": "exercise",
+      "exType": "fill-blank",
+      "prompt": "أضف حدًّا أسود متّصلًا سُمكه 1px.",
+      "answer": [
+        "border: 1px solid black;",
+        "border:1px solid black;"
+      ],
+      "hint": "سُمك نمط لون.",
+      "explanation": "نكتب border: 1px solid black; لحدّ أسود رفيع."
+    }
+  ]
+}

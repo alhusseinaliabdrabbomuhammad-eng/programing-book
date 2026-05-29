@@ -1,0 +1,195 @@
+{
+  "id": "lesson-6",
+  "number": 6,
+  "lang": "python",
+  "title": "النصوص: الفهرسة والتقطيع",
+  "subtitle": "النصوص كسلسلة من الأحرف. لنتعلّم كيف نصل لأي حرف ونقتطع أجزاء.",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "النصّ سلسلة أحرف",
+      "icon": "🔤",
+      "content": [
+        "كل نصّ مكوّن من أحرف لكلّ منها رقم (فهرس) يبدأ من 0 وليس 1! الحرف الأول فهرسه 0، والثاني 1، وهكذا."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "python",
+      "langLabel": "Python",
+      "code": [
+        "word = \"Python\"",
+        "print(word[0])",
+        "print(word[1])",
+        "print(len(word))"
+      ],
+      "annotations": [
+        {
+          "line": 2,
+          "text": "word[0] هو أول حرف: P."
+        },
+        {
+          "line": 3,
+          "text": "word[1] هو الحرف الثاني: y."
+        },
+        {
+          "line": 4,
+          "text": "len تعطي عدد الأحرف: 6."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "التقطيع (Slicing)",
+      "icon": "✂️",
+      "content": [
+        "يمكن أخذ جزء من النصّ بكتابة `word[البداية:النهاية]`. تُؤخذ الأحرف من البداية حتى ما قبل النهاية."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "python",
+      "langLabel": "Python",
+      "code": [
+        "word = \"Python\"",
+        "print(word[0:3])",
+        "print(word[2:])"
+      ],
+      "annotations": [
+        {
+          "line": 2,
+          "text": "يأخذ الأحرف 0 و1 و2: Pyt."
+        },
+        {
+          "line": 3,
+          "text": "من الفهرس 2 حتى النهاية: thon."
+        }
+      ]
+    },
+    {
+      "type": "visualizer",
+      "data": {
+        "lang": "python",
+        "hasCallStack": false,
+        "code": [
+          "s = \"Hi\"",
+          "first = s[0]",
+          "n = len(s)"
+        ],
+        "steps": [
+          {
+            "line": 1,
+            "description": "نبدأ بقراءة البرنامج من أعلى سطر، والذاكرة فارغة تمامًا قبل أن ننفّذ أي شيء.",
+            "memory": [],
+            "output": ""
+          },
+          {
+            "line": 1,
+            "description": "نضع النص \"Hi\" في s. أحرفه: H فهرسه 0، i فهرسه 1.",
+            "memory": [
+              {
+                "name": "s",
+                "value": "\"Hi\"",
+                "updated": true
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 2,
+            "description": "لنتمهّل قليلًا ونتأمّل ما في الذاكرة حتى الآن قبل المتابعة.",
+            "memory": [
+              {
+                "name": "s",
+                "value": "\"Hi\"",
+                "updated": false
+              },
+              {
+                "name": "first",
+                "value": "\"H\"",
+                "updated": false
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 2,
+            "description": "نأخذ الحرف ذا الفهرس 0 وهو H ونضعه في first.",
+            "memory": [
+              {
+                "name": "s",
+                "value": "\"Hi\"",
+                "updated": false
+              },
+              {
+                "name": "first",
+                "value": "\"H\"",
+                "updated": true
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 3,
+            "description": "len(s) تعدّ الأحرف فتعطي 2 ونضعها في n.",
+            "memory": [
+              {
+                "name": "s",
+                "value": "\"Hi\"",
+                "updated": false
+              },
+              {
+                "name": "first",
+                "value": "\"H\"",
+                "updated": false
+              },
+              {
+                "name": "n",
+                "value": "2",
+                "updated": true
+              }
+            ],
+            "output": ""
+          }
+        ]
+      }
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "ما قيمة \"Cat\"[0] ؟",
+      "options": [
+        "a",
+        "C",
+        "t",
+        "Cat"
+      ],
+      "answer": 1,
+      "hint": "الفهرسة تبدأ من 0.",
+      "explanation": "الحرف ذو الفهرس 0 هو الحرف الأول C."
+    },
+    {
+      "type": "exercise",
+      "exType": "fill-blank",
+      "prompt": "اكتب تعبيرًا يعطي عدد أحرف النص الموجود في المتغيّر name.",
+      "answer": [
+        "len(name)"
+      ],
+      "hint": "دالة طول النص.",
+      "explanation": "نستخدم len(name) لمعرفة عدد الأحرف."
+    },
+    {
+      "type": "callout",
+      "variant": "tip",
+      "title": "تذكّر",
+      "content": "الفهرسة تبدأ من الصفر دائمًا في بايثون، وهذه نقطة يخطئ فيها كثير من المبتدئين."
+    },
+    {
+      "type": "callout",
+      "variant": "extra",
+      "title": "أحسنت!",
+      "content": "النصوص أصبحت في متناول يدك. القادم: تنسيق النصوص بأناقة."
+    }
+  ]
+}

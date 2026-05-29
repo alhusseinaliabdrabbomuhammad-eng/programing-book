@@ -1,0 +1,163 @@
+{
+  "id": "lesson-7",
+  "number": 7,
+  "lang": "javascript",
+  "title": "الكائنات Objects: الخصائص والدوال",
+  "subtitle": "الكائن يصف شيئًا واقعيًّا بخصائصه. مثل بطاقة تعريف.",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "ما الكائن؟",
+      "icon": "🗂️",
+      "content": [
+        "الكائن مجموعة من الأزواج: مفتاح وقيمة. يصف شيئًا له صفات. ننشئه بأقواس معقوفة { }."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "javascript",
+      "langLabel": "JavaScript",
+      "code": [
+        "let car = {",
+        "  brand: \"تويوتا\",",
+        "  year: 2020",
+        "};",
+        "console.log(car.brand);"
+      ],
+      "annotations": [
+        {
+          "line": 2,
+          "text": "خاصية اسمها brand قيمتها تويوتا."
+        },
+        {
+          "line": 5,
+          "text": "نصل للخاصية بالنقطة: car.brand."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "دوال داخل الكائن",
+      "icon": "⚙️",
+      "content": [
+        "يمكن أن يحتوي الكائن على دوال (تُسمّى ميثودز) تصف ما يفعله."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "javascript",
+      "langLabel": "JavaScript",
+      "code": [
+        "let dog = {",
+        "  name: \"ريكس\",",
+        "  bark() { return \"هَو هَو\"; }",
+        "};",
+        "console.log(dog.bark());"
+      ],
+      "annotations": [
+        {
+          "line": 3,
+          "text": "دالة داخل الكائن تصف سلوكه."
+        },
+        {
+          "line": 5,
+          "text": "نستدعيها بالأقواس: dog.bark()."
+        }
+      ]
+    },
+    {
+      "type": "visualizer",
+      "data": {
+        "lang": "javascript",
+        "hasCallStack": false,
+        "code": [
+          "let p = { x: 1 };",
+          "p.y = 2;"
+        ],
+        "steps": [
+          {
+            "line": 1,
+            "description": "نبدأ بقراءة البرنامج من أعلى سطر، والذاكرة فارغة تمامًا قبل أن ننفّذ أي شيء.",
+            "memory": [],
+            "output": ""
+          },
+          {
+            "line": 1,
+            "description": "ننشئ كائنًا p فيه خاصية x = 1.",
+            "memory": [
+              {
+                "name": "p",
+                "value": "{ x: 1 }",
+                "updated": true
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 2,
+            "description": "لنتمهّل قليلًا ونتأمّل ما في الذاكرة حتى الآن قبل المتابعة.",
+            "memory": [
+              {
+                "name": "p",
+                "value": "{ x: 1, y: 2 }",
+                "updated": false
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 2,
+            "description": "نضيف خاصية جديدة y = 2 للكائن فيصبح { x: 1, y: 2 }.",
+            "memory": [
+              {
+                "name": "p",
+                "value": "{ x: 1, y: 2 }",
+                "updated": true
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 2,
+            "description": "انتهى التنفيذ! هذه هي الحالة النهائية للذاكرة والمخرجات بعد تنفيذ كل الأسطر.",
+            "memory": [
+              {
+                "name": "p",
+                "value": "{ x: 1, y: 2 }",
+                "updated": false
+              }
+            ],
+            "output": ""
+          }
+        ]
+      }
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "كيف نصل لخاصية name في كائن user؟",
+      "options": [
+        "user->name",
+        "user.name",
+        "user[name]",
+        "name.user"
+      ],
+      "answer": 1,
+      "hint": "نستخدم النقطة.",
+      "explanation": "نصل للخاصية بالنقطة: user.name."
+    },
+    {
+      "type": "exercise",
+      "exType": "fill-blank",
+      "prompt": "أنشئ كائنًا اسمه book له خاصية title قيمتها \"البرمجة\".",
+      "answer": [
+        "let book = { title: \"البرمجة\" };",
+        "let book = {title: \"البرمجة\"}",
+        "const book = { title: \"البرمجة\" };"
+      ],
+      "hint": "استخدم { }.",
+      "explanation": "نكتب let book = { title: \"البرمجة\" }; لإنشاء كائن بخاصية واحدة."
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "id": "lesson-19",
+  "number": 19,
+  "lang": "html",
+  "title": "الصور المتجاوبة srcset و picture",
+  "subtitle": "كيف نعرض صورًا مناسبة لكل حجم شاشة؟",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "لماذا الصور المتجاوبة؟",
+      "icon": "📱",
+      "content": [
+        "شاشة الجوّال صغيرة، لا داعي لتحميل صورة ضخمة عليها. الصور المتجاوبة تختار الحجم المناسب فتوفّر البيانات وتسرّع التحميل."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "html",
+      "langLabel": "HTML",
+      "code": [
+        "<img src=\"small.jpg\"",
+        "  srcset=\"small.jpg 500w, large.jpg 1500w\"",
+        "  alt=\"منظر\">"
+      ],
+      "annotations": [
+        {
+          "line": 2,
+          "text": "srcset يعطي المتصفّح خيارات بأحجام مختلفة ليختار الأنسب."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "العنصر picture",
+      "icon": "🖼️",
+      "content": [
+        "picture يتيح تحكّمًا أدقّ: عرض صورة مختلفة تمامًا حسب حجم الشاشة أو نوعها."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "html",
+      "langLabel": "HTML",
+      "code": [
+        "<picture>",
+        "  <source media=\"(max-width: 600px)\" srcset=\"mobile.jpg\">",
+        "  <img src=\"desktop.jpg\" alt=\"صورة\">",
+        "</picture>"
+      ],
+      "annotations": [
+        {
+          "line": 2,
+          "text": "للشاشات الصغيرة: صورة الجوّال."
+        },
+        {
+          "line": 3,
+          "text": "الافتراضية لباقي الشاشات."
+        }
+      ]
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "ما فائدة srcset؟",
+      "options": [
+        "إخفاء الصورة",
+        "تقديم أحجام صور ليختار المتصفّح الأنسب",
+        "تكبير الصورة دائمًا",
+        "تغيير اللون"
+      ],
+      "answer": 1,
+      "hint": "خيارات أحجام.",
+      "explanation": "srcset يقدّم أحجامًا متعدّدة ليختار المتصفّح الأنسب للشاشة."
+    },
+    {
+      "type": "exercise",
+      "exType": "fill-blank",
+      "prompt": "أي عنصر يتيح عرض صور مختلفة حسب حجم الشاشة؟",
+      "answer": [
+        "<picture>",
+        "picture"
+      ],
+      "hint": "يعني «صورة».",
+      "explanation": "نستخدم <picture> للتحكّم الدقيق بالصور المتجاوبة."
+    }
+  ]
+}

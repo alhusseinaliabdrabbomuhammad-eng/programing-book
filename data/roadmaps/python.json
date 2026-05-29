@@ -1,0 +1,127 @@
+{
+  "lang": "python",
+  "name": "بايثون",
+  "totalLessons": 20,
+  "groups": [
+    {
+      "title": "الأساسيات",
+      "lessons": [
+        {
+          "id": "lesson-1",
+          "number": 1,
+          "title": "مقدمة إلى البرمجة وتركيب بايثون"
+        },
+        {
+          "id": "lesson-2",
+          "number": 2,
+          "title": "أول برنامج: print والتعامل مع الطرفية"
+        },
+        {
+          "id": "lesson-3",
+          "number": 3,
+          "title": "المتغيرات وأنواع البيانات الأساسية"
+        },
+        {
+          "id": "lesson-4",
+          "number": 4,
+          "title": "التحويل بين الأنواع والدوال type و input و print"
+        },
+        {
+          "id": "lesson-5",
+          "number": 5,
+          "title": "العمليات الحسابية والمنطقية"
+        }
+      ]
+    },
+    {
+      "title": "المفاهيم المتوسطة",
+      "lessons": [
+        {
+          "id": "lesson-6",
+          "number": 6,
+          "title": "النصوص: الفهرسة والتقطيع والدوال"
+        },
+        {
+          "id": "lesson-7",
+          "number": 7,
+          "title": "تنسيق النصوص (f-strings) وأحرف الهروب"
+        },
+        {
+          "id": "lesson-8",
+          "number": 8,
+          "title": "القوائم: الإنشاء والفهرسة والدوال"
+        },
+        {
+          "id": "lesson-9",
+          "number": 9,
+          "title": "فهم القوائم والنسخ"
+        },
+        {
+          "id": "lesson-10",
+          "number": 10,
+          "title": "الصفوف والمجموعات"
+        }
+      ]
+    },
+    {
+      "title": "مفاهيم متقدمة",
+      "lessons": [
+        {
+          "id": "lesson-11",
+          "number": 11,
+          "title": "القواميس: المفاتيح والقيم والتكرار"
+        },
+        {
+          "id": "lesson-12",
+          "number": 12,
+          "title": "الجمل الشرطية if/elif/else"
+        },
+        {
+          "id": "lesson-13",
+          "number": 13,
+          "title": "الحلقات التكرارية for و while و range"
+        },
+        {
+          "id": "lesson-14",
+          "number": 14,
+          "title": "الدوال: التعريف والمعاملات و return"
+        },
+        {
+          "id": "lesson-15",
+          "number": 15,
+          "title": "الدوال: args و kwargs والنطاق و lambda"
+        }
+      ]
+    },
+    {
+      "title": "الإتقان والتطبيق",
+      "lessons": [
+        {
+          "id": "lesson-16",
+          "number": 16,
+          "title": "الملفات: القراءة والكتابة ومدير السياق with"
+        },
+        {
+          "id": "lesson-17",
+          "number": 17,
+          "title": "معالجة الاستثناءات try/except/finally"
+        },
+        {
+          "id": "lesson-18",
+          "number": 18,
+          "title": "البرمجة كائنية التوجه: الفئات والكائنات"
+        },
+        {
+          "id": "lesson-19",
+          "number": 19,
+          "title": "الوراثة وتعدد الأشكال"
+        },
+        {
+          "id": "lesson-20",
+          "number": 20,
+          "title": "الوحدات واستيراد المكتبات والبيئات الافتراضية"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "id": "lesson-19",
+  "number": 19,
+  "lang": "python",
+  "title": "الوراثة وتعدد الأشكال",
+  "subtitle": "كيف ترث فئة صفات فئة أخرى لتجنّب تكرار الكود؟",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "الوراثة",
+      "icon": "🧬",
+      "content": [
+        "يمكن لفئة (ابنة) أن ترث صفات وسلوك فئة أخرى (أمّ)، فتأخذ كل ما فيها وتضيف أو تعدّل عليه."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "python",
+      "langLabel": "Python",
+      "code": [
+        "class Animal:",
+        "    def speak(self):",
+        "        print(\"صوت\")",
+        "class Cat(Animal):",
+        "    def speak(self):",
+        "        print(\"مياو\")",
+        "c = Cat()",
+        "c.speak()"
+      ],
+      "annotations": [
+        {
+          "line": 4,
+          "text": "Cat ترث من Animal."
+        },
+        {
+          "line": 5,
+          "text": "تعيد تعريف speak بأسلوبها (تعدّد الأشكال)."
+        },
+        {
+          "line": 8,
+          "text": "يُطبع: مياو."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "تعدّد الأشكال",
+      "icon": "🎭",
+      "content": [
+        "نفس الدالة speak تتصرّف بشكل مختلف حسب نوع الكائن. هذا هو تعدّد الأشكال: شكل واحد، سلوك متعدّد."
+      ]
+    },
+    {
+      "type": "visualizer",
+      "data": {
+        "lang": "python",
+        "hasCallStack": false,
+        "code": [
+          "class A:",
+          "    def hi(self): print(\"A\")",
+          "class B(A):",
+          "    def hi(self): print(\"B\")",
+          "obj = B()",
+          "obj.hi()"
+        ],
+        "steps": [
+          {
+            "line": 5,
+            "description": "ننشئ كائنًا من الفئة B التي ترث من A.",
+            "memory": [
+              {
+                "name": "obj",
+                "value": "B()",
+                "updated": true
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 6,
+            "description": "نستدعي hi. بما أن B أعادت تعريفها، يُنفَّذ نسخة B لا A.",
+            "memory": [
+              {
+                "name": "obj",
+                "value": "B()",
+                "updated": false
+              }
+            ],
+            "output": "B"
+          }
+        ]
+      }
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "كيف نجعل الفئة Child ترث من Parent؟",
+      "options": [
+        "class Child = Parent",
+        "class Child(Parent):",
+        "class Child : Parent",
+        "inherit Parent"
+      ],
+      "answer": 1,
+      "hint": "نضع اسم الأمّ بين قوسين.",
+      "explanation": "نكتب class Child(Parent): فترث Child كل ما في Parent."
+    },
+    {
+      "type": "callout",
+      "variant": "tip",
+      "title": "فائدة الوراثة",
+      "content": "نكتب الكود المشترك مرّة في الأمّ، فلا نكرّره في كل ابنة. توفير ضخم للجهد!"
+    },
+    {
+      "type": "callout",
+      "variant": "extra",
+      "title": "رائع جدًّا!",
+      "content": "صرت تفهم أعمدة OOP. القادم والأخير: الوحدات والمكتبات."
+    }
+  ]
+}

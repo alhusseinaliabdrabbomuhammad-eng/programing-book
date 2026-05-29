@@ -1,0 +1,167 @@
+{
+  "id": "lesson-7",
+  "number": 7,
+  "lang": "java",
+  "title": "الإدخال بـ Scanner والإخراج بـ System.out",
+  "subtitle": "كيف نأخذ مدخلات من المستخدم في جافا؟",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "الكائن Scanner",
+      "icon": "⌨️",
+      "content": [
+        "لقراءة مدخلات المستخدم ننشئ كائن Scanner ونربطه بلوحة المفاتيح System.in."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "java",
+      "langLabel": "Java",
+      "code": [
+        "import java.util.Scanner;",
+        "Scanner sc = new Scanner(System.in);",
+        "System.out.print(\"اسمك: \");",
+        "String name = sc.nextLine();",
+        "System.out.println(\"أهلًا \" + name);"
+      ],
+      "annotations": [
+        {
+          "line": 1,
+          "text": "نستورد Scanner أولًا."
+        },
+        {
+          "line": 2,
+          "text": "ننشئ الكائن."
+        },
+        {
+          "line": 4,
+          "text": "nextLine() تقرأ سطرًا كاملًا."
+        },
+        {
+          "line": 5,
+          "text": "نطبع التحية مع الاسم."
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "heading": "دوال القراءة",
+      "icon": "📥",
+      "ordered": false,
+      "items": [
+        "`nextLine()` سطر نصّي كامل",
+        "`nextInt()` عدد صحيح",
+        "`nextDouble()` عدد عشري",
+        "`next()` كلمة واحدة"
+      ]
+    },
+    {
+      "type": "visualizer",
+      "data": {
+        "lang": "java",
+        "hasCallStack": false,
+        "code": [
+          "int x = sc.nextInt();",
+          "int y = x * 2;"
+        ],
+        "steps": [
+          {
+            "line": 1,
+            "description": "نبدأ بقراءة البرنامج من أعلى سطر، والذاكرة فارغة تمامًا قبل أن ننفّذ أي شيء.",
+            "memory": [],
+            "output": ""
+          },
+          {
+            "line": 1,
+            "description": "يقرأ Scanner رقمًا كتبه المستخدم (مثلًا 6) ويضعه في x.",
+            "memory": [
+              {
+                "name": "x",
+                "value": "6",
+                "updated": true
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 2,
+            "description": "لنتمهّل قليلًا ونتأمّل ما في الذاكرة حتى الآن قبل المتابعة.",
+            "memory": [
+              {
+                "name": "x",
+                "value": "6",
+                "updated": false
+              },
+              {
+                "name": "y",
+                "value": "12",
+                "updated": false
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 2,
+            "description": "نضاعفه فيصبح y = 12.",
+            "memory": [
+              {
+                "name": "x",
+                "value": "6",
+                "updated": false
+              },
+              {
+                "name": "y",
+                "value": "12",
+                "updated": true
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 2,
+            "description": "انتهى التنفيذ! هذه هي الحالة النهائية للذاكرة والمخرجات بعد تنفيذ كل الأسطر.",
+            "memory": [
+              {
+                "name": "x",
+                "value": "6",
+                "updated": false
+              },
+              {
+                "name": "y",
+                "value": "12",
+                "updated": false
+              }
+            ],
+            "output": ""
+          }
+        ]
+      }
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "أي دالة تقرأ عددًا صحيحًا من Scanner؟",
+      "options": [
+        "nextLine()",
+        "nextInt()",
+        "readInt()",
+        "getInt()"
+      ],
+      "answer": 1,
+      "hint": "next + Int.",
+      "explanation": "نستخدم nextInt() لقراءة عدد صحيح."
+    },
+    {
+      "type": "exercise",
+      "exType": "fill-blank",
+      "prompt": "ما الذي نستورده لقراءة المدخلات؟",
+      "answer": [
+        "import java.util.Scanner;",
+        "import java.util.Scanner"
+      ],
+      "hint": "الحزمة java.util.",
+      "explanation": "نكتب import java.util.Scanner; لاستيراد الكلاس Scanner."
+    }
+  ]
+}

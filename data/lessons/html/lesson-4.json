@@ -1,0 +1,80 @@
+{
+  "id": "lesson-4",
+  "number": 4,
+  "lang": "html",
+  "title": "تنسيق النصوص: strong و em وغيرها",
+  "subtitle": "كيف نبرز كلمات مهمّة أو نمنحها معنى خاصًّا؟",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "الإبراز الدلالي",
+      "icon": "✨",
+      "content": [
+        "strong يجعل النص مهمًّا (يظهر عريضًا)، و em يعطيه تشديدًا (يظهر مائلًا). إنها دلالية: تحمل معنى لا مجرّد مظهر."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "html",
+      "langLabel": "HTML",
+      "code": [
+        "<p>هذا <strong>مهمّ جدًّا</strong> للجميع.</p>",
+        "<p>أنا <em>أحبّ</em> البرمجة.</p>"
+      ],
+      "annotations": [
+        {
+          "line": 1,
+          "text": "strong يبرز الأهمّية (عريض)."
+        },
+        {
+          "line": 2,
+          "text": "em يضيف تشديدًا (مائل)."
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "heading": "وسوم نصّية مفيدة",
+      "icon": "🔤",
+      "ordered": false,
+      "items": [
+        "`<strong>` نص مهمّ (عريض)",
+        "`<em>` نص مشدّد (مائل)",
+        "`<mark>` نص مظلّل بلون",
+        "`<br>` سطر جديد",
+        "`<small>` نص صغير"
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "tip",
+      "title": "دلالي أفضل 💡",
+      "content": "نفضّل strong و em على b و i القديمين، لأنهما يحملان «معنى» يفهمه المتصفّح وقارئات الشاشة، لا مجرّد شكل."
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "أي وسم يجعل النص مهمًّا (عريضًا دلاليًّا)؟",
+      "options": [
+        "<em>",
+        "<strong>",
+        "<small>",
+        "<p>"
+      ],
+      "answer": 1,
+      "hint": "يعني «قويّ».",
+      "explanation": "نستخدم <strong> للنص المهمّ، ويظهر عريضًا."
+    },
+    {
+      "type": "exercise",
+      "exType": "fill-blank",
+      "prompt": "ظلّل كلمة «انتبه» باستخدام الوسم المناسب.",
+      "answer": [
+        "<mark>انتبه</mark>"
+      ],
+      "hint": "الوسم mark.",
+      "explanation": "نستخدم <mark>انتبه</mark> لتظليل الكلمة."
+    }
+  ]
+}

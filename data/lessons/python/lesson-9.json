@@ -1,0 +1,179 @@
+{
+  "id": "lesson-9",
+  "number": 9,
+  "lang": "python",
+  "title": "فهم القوائم (List Comprehension)",
+  "subtitle": "طريقة بايثونية أنيقة لإنشاء قوائم جديدة بسطر واحد.",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "الفكرة",
+      "icon": "💡",
+      "content": [
+        "بدل كتابة حلقة طويلة لبناء قائمة، نكتب كل شيء في سطر واحد أنيق يُسمّى list comprehension."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "python",
+      "langLabel": "Python",
+      "code": [
+        "squares = [x * x for x in range(1, 4)]",
+        "print(squares)"
+      ],
+      "annotations": [
+        {
+          "line": 1,
+          "text": "لكل x من 1 إلى 3، احسب x*x وضعه في القائمة. الناتج [1, 4, 9]."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "النسخ",
+      "icon": "📑",
+      "content": [
+        "انتبه: `b = a` لا يصنع نسخة جديدة، بل اسمًا آخر للصندوق نفسه! للنسخ الحقيقي استخدم `a.copy()`."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "python",
+      "langLabel": "Python",
+      "code": [
+        "a = [1, 2, 3]",
+        "b = a.copy()",
+        "b.append(4)",
+        "print(a)",
+        "print(b)"
+      ],
+      "annotations": [
+        {
+          "line": 2,
+          "text": "b نسخة مستقلة عن a."
+        },
+        {
+          "line": 4,
+          "text": "a يبقى [1,2,3]."
+        },
+        {
+          "line": 5,
+          "text": "b أصبح [1,2,3,4]."
+        }
+      ]
+    },
+    {
+      "type": "visualizer",
+      "data": {
+        "lang": "python",
+        "hasCallStack": false,
+        "code": [
+          "result = [n + 1 for n in [10, 20]]"
+        ],
+        "steps": [
+          {
+            "line": 1,
+            "description": "نبدأ بقراءة البرنامج من أعلى سطر، والذاكرة فارغة تمامًا قبل أن ننفّذ أي شيء.",
+            "memory": [],
+            "output": ""
+          },
+          {
+            "line": 1,
+            "description": "يأخذ الحاسوب أول عنصر 10، يضيف 1 فيصبح 11، ويضعه في القائمة الجديدة.",
+            "memory": [
+              {
+                "name": "n",
+                "value": "10",
+                "updated": true
+              },
+              {
+                "name": "result",
+                "value": "[11]",
+                "updated": true
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 1,
+            "description": "لنتمهّل قليلًا ونتأمّل ما في الذاكرة حتى الآن قبل المتابعة.",
+            "memory": [
+              {
+                "name": "n",
+                "value": "20",
+                "updated": false
+              },
+              {
+                "name": "result",
+                "value": "[11, 21]",
+                "updated": false
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 1,
+            "description": "ثم يأخذ 20، يضيف 1 فيصبح 21، ويضيفه. النتيجة النهائية [11, 21].",
+            "memory": [
+              {
+                "name": "n",
+                "value": "20",
+                "updated": true
+              },
+              {
+                "name": "result",
+                "value": "[11, 21]",
+                "updated": true
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 1,
+            "description": "انتهى التنفيذ! هذه هي الحالة النهائية للذاكرة والمخرجات بعد تنفيذ كل الأسطر.",
+            "memory": [
+              {
+                "name": "n",
+                "value": "20",
+                "updated": false
+              },
+              {
+                "name": "result",
+                "value": "[11, 21]",
+                "updated": false
+              }
+            ],
+            "output": ""
+          }
+        ]
+      }
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "ما ناتج [x*2 for x in [1,2,3]] ؟",
+      "options": [
+        "[1,2,3]",
+        "[2,4,6]",
+        "[1,4,9]",
+        "[2,2,2]"
+      ],
+      "answer": 1,
+      "hint": "اضرب كل عنصر في 2.",
+      "explanation": "نضرب كل عنصر في 2 فينتج [2, 4, 6]."
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "title": "فخّ النسخ",
+      "content": "b = a لا ينسخ! يصبح a و b يشيران لنفس القائمة. استخدم a.copy() لنسخة مستقلّة."
+    },
+    {
+      "type": "callout",
+      "variant": "extra",
+      "title": "رائع!",
+      "content": "أصبحت تكتب كود بايثون كالمحترفين. القادم: الصفوف والمجموعات."
+    }
+  ]
+}

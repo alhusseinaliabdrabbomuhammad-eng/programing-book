@@ -1,0 +1,216 @@
+{
+  "id": "lesson-13",
+  "number": 13,
+  "lang": "python",
+  "title": "الحلقات التكرارية (for / while)",
+  "subtitle": "كيف نكرّر مهمّة عدّة مرات دون كتابتها يدويًّا؟",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "حلقة for",
+      "icon": "🔁",
+      "content": [
+        "حلقة for تكرّر الكود لكل عنصر في مجموعة. مع `range(n)` تكرّر من 0 حتى n-1."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "python",
+      "langLabel": "Python",
+      "code": [
+        "for i in range(3):",
+        "    print(\"مرحبًا\", i)"
+      ],
+      "annotations": [
+        {
+          "line": 1,
+          "text": "i يأخذ القيم 0 ثم 1 ثم 2."
+        },
+        {
+          "line": 2,
+          "text": "يُطبع السطر ثلاث مرّات."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "حلقة while",
+      "icon": "♻️",
+      "content": [
+        "حلقة while تكرّر **طالما** الشرط صحيح. احذر من النسيان أن تجعل الشرط يصبح خاطئًا، وإلّا تدور للأبد!"
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "python",
+      "langLabel": "Python",
+      "code": [
+        "count = 0",
+        "while count < 3:",
+        "    print(count)",
+        "    count = count + 1"
+      ],
+      "annotations": [
+        {
+          "line": 4,
+          "text": "نزيد count كل دورة حتى يصل 3 فتتوقّف الحلقة."
+        }
+      ]
+    },
+    {
+      "type": "visualizer",
+      "data": {
+        "lang": "python",
+        "hasCallStack": false,
+        "code": [
+          "total = 0",
+          "for i in range(1, 4):",
+          "    total = total + i"
+        ],
+        "steps": [
+          {
+            "line": 1,
+            "description": "نبدأ total بقيمة 0.",
+            "memory": [
+              {
+                "name": "total",
+                "value": "0",
+                "updated": true
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 2,
+            "description": "i = 1، ندخل الحلقة.",
+            "memory": [
+              {
+                "name": "total",
+                "value": "0",
+                "updated": false
+              },
+              {
+                "name": "i",
+                "value": "1",
+                "updated": true
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 3,
+            "description": "total = 0 + 1 = 1.",
+            "memory": [
+              {
+                "name": "total",
+                "value": "1",
+                "updated": true
+              },
+              {
+                "name": "i",
+                "value": "1",
+                "updated": false
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 2,
+            "description": "i = 2.",
+            "memory": [
+              {
+                "name": "total",
+                "value": "1",
+                "updated": false
+              },
+              {
+                "name": "i",
+                "value": "2",
+                "updated": true
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 3,
+            "description": "total = 1 + 2 = 3.",
+            "memory": [
+              {
+                "name": "total",
+                "value": "3",
+                "updated": true
+              },
+              {
+                "name": "i",
+                "value": "2",
+                "updated": false
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 2,
+            "description": "i = 3.",
+            "memory": [
+              {
+                "name": "total",
+                "value": "3",
+                "updated": false
+              },
+              {
+                "name": "i",
+                "value": "3",
+                "updated": true
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 3,
+            "description": "total = 3 + 3 = 6. انتهت الحلقة، المجموع 6.",
+            "memory": [
+              {
+                "name": "total",
+                "value": "6",
+                "updated": true
+              },
+              {
+                "name": "i",
+                "value": "3",
+                "updated": false
+              }
+            ],
+            "output": ""
+          }
+        ]
+      }
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "كم مرّة تتكرّر for i in range(5) ؟",
+      "options": [
+        "4",
+        "5",
+        "6",
+        "0"
+      ],
+      "answer": 1,
+      "hint": "range(5) يعطي 0,1,2,3,4.",
+      "explanation": "range(5) ينتج خمس قيم من 0 إلى 4، فتتكرّر الحلقة 5 مرّات."
+    },
+    {
+      "type": "callout",
+      "variant": "critical",
+      "title": "حلقة لا نهائية",
+      "content": "في while احرص أن يتغيّر الشرط ليصبح False في النهاية، وإلّا تستمر الحلقة للأبد ويتجمّد البرنامج."
+    },
+    {
+      "type": "callout",
+      "variant": "extra",
+      "title": "رائع!",
+      "content": "الحلقات تختصر آلاف الأسطر! القادم: الدوال لتنظيم الكود."
+    }
+  ]
+}

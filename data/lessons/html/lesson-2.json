@@ -1,0 +1,83 @@
+{
+  "id": "lesson-2",
+  "number": 2,
+  "lang": "html",
+  "title": "عناصر الرأس head والوسوم الوصفية",
+  "subtitle": "head قسم خفيّ لكنه مهمّ: يخبر المتصفّح ومحرّكات البحث عن صفحتك.",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "ما داخل head؟",
+      "icon": "🧠",
+      "content": [
+        "head لا يظهر في الصفحة، لكنه يحوي معلومات مهمّة: العنوان، الترميز، الوصف، وربط الملفّات."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "html",
+      "langLabel": "HTML",
+      "code": [
+        "<head>",
+        "  <meta charset=\"UTF-8\">",
+        "  <meta name=\"viewport\" content=\"width=device-width\">",
+        "  <title>متجري</title>",
+        "</head>"
+      ],
+      "annotations": [
+        {
+          "line": 2,
+          "text": "charset=UTF-8 يدعم العربية وكل اللغات."
+        },
+        {
+          "line": 3,
+          "text": "viewport يجعل الصفحة متجاوبة مع الجوّال."
+        },
+        {
+          "line": 4,
+          "text": "title يظهر في تبويب المتصفّح."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "الوسوم الوصفية meta",
+      "icon": "📋",
+      "content": [
+        "وسوم meta تعطي معلومات عن الصفحة لمحرّكات البحث، مثل الوصف الذي يظهر في نتائج جوجل."
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "title": "لا تنسَ!",
+      "content": "وسم <meta charset=\"UTF-8\"> ضروريّ جدًّا لعرض الحروف العربية بشكل سليم. بدونه قد تظهر رموز غريبة!"
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "أي وسم يظهر في تبويب المتصفّح؟",
+      "options": [
+        "meta",
+        "title",
+        "h1",
+        "head"
+      ],
+      "answer": 1,
+      "hint": "عنوان الصفحة.",
+      "explanation": "الوسم title يحدّد العنوان الذي يظهر في تبويب المتصفّح."
+    },
+    {
+      "type": "exercise",
+      "exType": "fill-blank",
+      "prompt": "اكتب وسم meta الذي يحدّد ترميز UTF-8.",
+      "answer": [
+        "<meta charset=\"UTF-8\">",
+        "<meta charset=\"utf-8\">"
+      ],
+      "hint": "charset=UTF-8.",
+      "explanation": "نكتب <meta charset=\"UTF-8\"> لدعم كل اللغات."
+    }
+  ]
+}

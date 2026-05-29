@@ -1,0 +1,89 @@
+{
+  "id": "lesson-10",
+  "number": 10,
+  "lang": "css",
+  "title": "العرض والإخفاء display و opacity",
+  "subtitle": "كيف نتحكّم بظهور العناصر وكيفية عرضها؟",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "الخاصية display",
+      "icon": "👁️",
+      "content": [
+        "display تحدّد كيف يُعرض العنصر. أهمّ قيمها: block (يأخذ سطرًا كاملًا)، inline (بجانب غيره)، none (يختفي تمامًا)."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "css",
+      "langLabel": "CSS",
+      "code": [
+        ".hidden { display: none; }",
+        ".inline { display: inline-block; }"
+      ],
+      "annotations": [
+        {
+          "line": 1,
+          "text": "none يخفي العنصر ويزيله من التخطيط تمامًا."
+        },
+        {
+          "line": 2,
+          "text": "inline-block: بجانب غيره لكن يقبل أبعادًا."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "الشفافية opacity",
+      "icon": "🌫️",
+      "content": [
+        "opacity تتحكّم بشفافية العنصر كاملًا: 1 معتم، 0 شفاف (لكنه يبقى يشغل مكانه، بخلاف display: none)."
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "title": "فرق مهمّ!",
+      "content": "display: none يُخفي العنصر ويزيل مساحته. أمّا opacity: 0 فيخفيه بصريًّا لكن يُبقي مساحته فارغة. اختر حسب حاجتك!"
+    },
+    {
+      "type": "list",
+      "heading": "قيم display الشائعة",
+      "icon": "📋",
+      "ordered": false,
+      "items": [
+        "`block` سطر كامل (مثل div و p)",
+        "`inline` بجانب غيره (مثل span)",
+        "`inline-block` بجانب غيره مع أبعاد",
+        "`flex` تخطيط مرن",
+        "`none` مخفيّ تمامًا"
+      ]
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "أي قيمة لـ display تُخفي العنصر وتزيل مساحته؟",
+      "options": [
+        "hidden",
+        "none",
+        "invisible",
+        "opacity"
+      ],
+      "answer": 1,
+      "hint": "يعني «لا شيء».",
+      "explanation": "display: none يخفي العنصر ويزيل مساحته من التخطيط."
+    },
+    {
+      "type": "exercise",
+      "exType": "fill-blank",
+      "prompt": "اجعل عنصرًا يختفي تمامًا باستخدام display.",
+      "answer": [
+        "display: none;",
+        "display:none;"
+      ],
+      "hint": "القيمة none.",
+      "explanation": "نكتب display: none; لإخفاء العنصر وإزالة مساحته."
+    }
+  ]
+}

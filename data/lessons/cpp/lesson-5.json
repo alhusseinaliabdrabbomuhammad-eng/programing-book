@@ -1,0 +1,164 @@
+{
+  "id": "lesson-5",
+  "number": 5,
+  "lang": "cpp",
+  "title": "العمليات الحسابية والمنطقية",
+  "subtitle": "الحسابات والمقارنات في C++.",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "list",
+      "heading": "المعاملات",
+      "icon": "➕",
+      "ordered": false,
+      "items": [
+        "`+ - * /` العمليات الأربع",
+        "`%` باقي القسمة (للأعداد الصحيحة)",
+        "`== != > <` المقارنة",
+        "`&& || !` المنطق"
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "title": "فخّ القسمة!",
+      "content": "قسمة عددين صحيحين تعطي صحيحًا: 7 / 2 = 3. لنحصل على 3.5 يجب أن يكون أحدهما double مثل 7.0 / 2."
+    },
+    {
+      "type": "code",
+      "lang": "cpp",
+      "langLabel": "C++",
+      "code": [
+        "cout << 7 / 2 << endl;",
+        "cout << 7.0 / 2 << endl;",
+        "cout << (5 > 3 && 2 < 4);"
+      ],
+      "annotations": [
+        {
+          "line": 1,
+          "text": "قسمة صحيحة → 3."
+        },
+        {
+          "line": 2,
+          "text": "أحدهما عشري → 3.5."
+        },
+        {
+          "line": 3,
+          "text": "كلا الشرطين صحيح → 1 (true)."
+        }
+      ]
+    },
+    {
+      "type": "visualizer",
+      "data": {
+        "lang": "cpp",
+        "hasCallStack": false,
+        "code": [
+          "int a = 9;",
+          "int b = 4;",
+          "int r = a % b;"
+        ],
+        "steps": [
+          {
+            "line": 1,
+            "description": "نبدأ بقراءة البرنامج من أعلى سطر، والذاكرة فارغة تمامًا قبل أن ننفّذ أي شيء.",
+            "memory": [],
+            "output": ""
+          },
+          {
+            "line": 1,
+            "description": "نضع 9 في a.",
+            "memory": [
+              {
+                "name": "a",
+                "value": "9",
+                "updated": true
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 2,
+            "description": "لنتمهّل قليلًا ونتأمّل ما في الذاكرة حتى الآن قبل المتابعة.",
+            "memory": [
+              {
+                "name": "a",
+                "value": "9",
+                "updated": false
+              },
+              {
+                "name": "b",
+                "value": "4",
+                "updated": false
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 2,
+            "description": "نضع 4 في b.",
+            "memory": [
+              {
+                "name": "a",
+                "value": "9",
+                "updated": false
+              },
+              {
+                "name": "b",
+                "value": "4",
+                "updated": true
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 3,
+            "description": "باقي قسمة 9 على 4 هو 1، نضعه في r.",
+            "memory": [
+              {
+                "name": "a",
+                "value": "9",
+                "updated": false
+              },
+              {
+                "name": "b",
+                "value": "4",
+                "updated": false
+              },
+              {
+                "name": "r",
+                "value": "1",
+                "updated": true
+              }
+            ],
+            "output": ""
+          }
+        ]
+      }
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "ما ناتج 9 % 4 ؟",
+      "options": [
+        "2",
+        "1",
+        "0",
+        "2.25"
+      ],
+      "answer": 1,
+      "hint": "الباقي.",
+      "explanation": "9 ÷ 4 = 2 والباقي 1، إذن 9 % 4 = 1."
+    },
+    {
+      "type": "exercise",
+      "exType": "fill-blank",
+      "prompt": "اكتب معامل «و» المنطقي في C++.",
+      "answer": [
+        "&&"
+      ],
+      "hint": "رمزان.",
+      "explanation": "نستخدم && للربط المنطقي «و»."
+    }
+  ]
+}

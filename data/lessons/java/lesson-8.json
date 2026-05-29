@@ -1,0 +1,156 @@
+{
+  "id": "lesson-8",
+  "number": 8,
+  "lang": "java",
+  "title": "جمل التحكم if/else و switch",
+  "subtitle": "كيف يتّخذ برنامج جافا قراراته بناءً على الشروط؟",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "جملة if/else",
+      "icon": "🚦",
+      "content": [
+        "if تنفّذ الكود إذا تحقّق الشرط، و else تنفّذ بديلًا، و else if لشروط متعدّدة."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "java",
+      "langLabel": "Java",
+      "code": [
+        "int n = 7;",
+        "if (n > 0) {",
+        "  System.out.println(\"موجب\");",
+        "} else if (n < 0) {",
+        "  System.out.println(\"سالب\");",
+        "} else {",
+        "  System.out.println(\"صفر\");",
+        "}"
+      ],
+      "annotations": [
+        {
+          "line": 2,
+          "text": "إذا أكبر من صفر."
+        },
+        {
+          "line": 4,
+          "text": "وإلا إذا أصغر من صفر."
+        },
+        {
+          "line": 6,
+          "text": "وإلا (صفر)."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "جملة switch",
+      "icon": "🔀",
+      "content": [
+        "switch مناسبة عند موازنة قيمة واحدة بعدّة احتمالات ثابتة."
+      ]
+    },
+    {
+      "type": "visualizer",
+      "data": {
+        "lang": "java",
+        "hasCallStack": false,
+        "code": [
+          "int score = 85;",
+          "String grade;",
+          "if (score >= 90) grade = \"A\";",
+          "else if (score >= 80) grade = \"B\";",
+          "else grade = \"C\";"
+        ],
+        "steps": [
+          {
+            "line": 1,
+            "description": "نبدأ بقراءة البرنامج من أعلى سطر، والذاكرة فارغة تمامًا قبل أن ننفّذ أي شيء.",
+            "memory": [],
+            "output": ""
+          },
+          {
+            "line": 1,
+            "description": "نضع الدرجة 85 في score.",
+            "memory": [
+              {
+                "name": "score",
+                "value": "85",
+                "updated": true
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 3,
+            "description": "لنتمهّل قليلًا ونتأمّل ما في الذاكرة حتى الآن قبل المتابعة.",
+            "memory": [
+              {
+                "name": "score",
+                "value": "85",
+                "updated": false
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 3,
+            "description": "هل 85 >= 90؟ لا. ننتقل للشرط التالي.",
+            "memory": [
+              {
+                "name": "score",
+                "value": "85",
+                "updated": false
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 4,
+            "description": "هل 85 >= 80؟ نعم! نضع \"B\" في grade.",
+            "memory": [
+              {
+                "name": "score",
+                "value": "85",
+                "updated": false
+              },
+              {
+                "name": "grade",
+                "value": "\"B\"",
+                "updated": true
+              }
+            ],
+            "output": ""
+          }
+        ]
+      }
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "متى تُنفّذ كتلة else if؟",
+      "options": [
+        "دائمًا",
+        "عندما يفشل if وينجح شرطها",
+        "فقط مع switch",
+        "أبدًا"
+      ],
+      "answer": 1,
+      "hint": "بديل وسطيّ.",
+      "explanation": "تُنفّذ else if عندما يفشل شرط if وينجح شرطها هي."
+    },
+    {
+      "type": "exercise",
+      "exType": "fill-blank",
+      "prompt": "اكتب بداية شرط يتحقّق أن x يساوي 5 في جافا.",
+      "answer": [
+        "if (x == 5)",
+        "if(x == 5)",
+        "if (x==5)"
+      ],
+      "hint": "يساوي = ==.",
+      "explanation": "نكتب if (x == 5) للتحقّق من المساواة."
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+/* assets/css/core/typography.css */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--color-heading);
+  margin-bottom: var(--space-3);
+}
+h1 { font-size: var(--fs-3xl); }
+h2 { font-size: var(--fs-2xl); }
+h3 { font-size: var(--fs-xl); }
+h4 { font-size: var(--fs-lg); }
+
+p {
+  margin-bottom: var(--space-4);
+  color: var(--color-text);
+}
+
+strong { font-weight: 700; color: var(--color-heading); }
+em { font-style: normal; color: var(--color-accent); font-weight: 600; }
+
+code {
+  font-family: var(--font-mono);
+  font-size: 0.92em;
+  background-color: var(--color-inline-code-bg);
+  color: var(--color-inline-code);
+  padding: 0.12em 0.4em;
+  border-radius: var(--radius-sm);
+  direction: ltr;
+  unicode-bidi: embed;
+}
+
+a.text-link {
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color var(--transition-fast);
+}
+a.text-link:hover { color: var(--color-accent-hover); }
+
+.lead {
+  font-size: var(--fs-lg);
+  color: var(--color-text-muted);
+}

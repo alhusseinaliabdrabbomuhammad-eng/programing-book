@@ -1,0 +1,130 @@
+{
+  "id": "lesson-20",
+  "number": 20,
+  "lang": "python",
+  "title": "الوحدات والمكتبات",
+  "subtitle": "كيف نستخدم كودًا جاهزًا كتبه آخرون لنوفّر وقتنا؟",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "ما هي الوحدة؟",
+      "icon": "📚",
+      "content": [
+        "الوحدة (module) ملف فيه دوال جاهزة. نستوردها بالكلمة `import` فنستخدم ما فيها دون كتابته من الصفر."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "python",
+      "langLabel": "Python",
+      "code": [
+        "import math",
+        "print(math.sqrt(16))",
+        "print(math.pi)"
+      ],
+      "annotations": [
+        {
+          "line": 1,
+          "text": "نستورد وحدة الرياضيات math."
+        },
+        {
+          "line": 2,
+          "text": "نستخدم دالة الجذر التربيعي: 4.0."
+        },
+        {
+          "line": 3,
+          "text": "نطبع قيمة باي الجاهزة."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "استيراد جزء محدّد",
+      "icon": "🎯",
+      "content": [
+        "يمكن استيراد دالة واحدة فقط: `from math import sqrt` ثم نستخدم sqrt مباشرة."
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "البيئات الافتراضية",
+      "icon": "🧪",
+      "content": [
+        "عند بناء مشاريع كبيرة، ننشئ «بيئة افتراضية» معزولة لكل مشروع لتنظيم مكتباته دون تعارض. أمر شائع: python -m venv myenv."
+      ]
+    },
+    {
+      "type": "visualizer",
+      "data": {
+        "lang": "python",
+        "hasCallStack": false,
+        "code": [
+          "import math",
+          "r = math.sqrt(25)"
+        ],
+        "steps": [
+          {
+            "line": 1,
+            "description": "نستورد وحدة math فتصبح كل دوالها متاحة لنا.",
+            "memory": [
+              {
+                "name": "math",
+                "value": "<module>",
+                "updated": true
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 2,
+            "description": "نستدعي math.sqrt(25) فتُعيد 5.0 ونخزّنها في r.",
+            "memory": [
+              {
+                "name": "math",
+                "value": "<module>",
+                "updated": false
+              },
+              {
+                "name": "r",
+                "value": "5.0",
+                "updated": true
+              }
+            ],
+            "output": ""
+          }
+        ]
+      }
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "كيف نستورد وحدة كاملة اسمها random؟",
+      "options": [
+        "use random",
+        "import random",
+        "include random",
+        "load random"
+      ],
+      "answer": 1,
+      "hint": "كلمة من ستة أحرف.",
+      "explanation": "نكتب import random لاستيراد الوحدة كاملة واستخدام دوالها."
+    },
+    {
+      "type": "exercise",
+      "exType": "fill-blank",
+      "prompt": "استورد الدالة sqrt فقط من وحدة math.",
+      "answer": [
+        "from math import sqrt"
+      ],
+      "hint": "استخدم from ... import ...",
+      "explanation": "نكتب from math import sqrt لاستيراد هذه الدالة وحدها."
+    },
+    {
+      "type": "callout",
+      "variant": "extra",
+      "title": "تهانينا! 🎓",
+      "content": "أكملت كل دروس بايثون! أنت الآن مستعدّ للاختبار النهائي."
+    }
+  ]
+}

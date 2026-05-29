@@ -1,0 +1,95 @@
+{
+  "id": "lesson-8",
+  "number": 8,
+  "lang": "html",
+  "title": "الجداول table و tr و th و td",
+  "subtitle": "كيف نعرض بيانات في صفوف وأعمدة منظّمة؟",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "بنية الجدول",
+      "icon": "📊",
+      "content": [
+        "table يحوي صفوفًا tr، وكل صفّ يحوي خلايا: th للعناوين و td للبيانات."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "html",
+      "langLabel": "HTML",
+      "code": [
+        "<table>",
+        "  <tr>",
+        "    <th>الاسم</th>",
+        "    <th>العمر</th>",
+        "  </tr>",
+        "  <tr>",
+        "    <td>علي</td>",
+        "    <td>12</td>",
+        "  </tr>",
+        "</table>"
+      ],
+      "annotations": [
+        {
+          "line": 1,
+          "text": "بداية الجدول."
+        },
+        {
+          "line": 2,
+          "text": "صفّ العناوين."
+        },
+        {
+          "line": 3,
+          "text": "th = خلية عنوان (عريضة)."
+        },
+        {
+          "line": 7,
+          "text": "td = خلية بيانات عادية."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "tip",
+      "title": "نصيحة 💡",
+      "content": "استخدم الجداول للبيانات الجدولية فقط (كالأرقام والمقارنات)، لا لتنسيق تخطيط الصفحة. للتخطيط نستخدم CSS."
+    },
+    {
+      "type": "list",
+      "heading": "عناصر الجدول",
+      "icon": "🧱",
+      "ordered": false,
+      "items": [
+        "`<table>` الجدول كاملًا",
+        "`<tr>` صفّ (row)",
+        "`<th>` خلية عنوان (header)",
+        "`<td>` خلية بيانات (data)"
+      ]
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "أي وسم يمثّل خلية عنوان في الجدول؟",
+      "options": [
+        "<td>",
+        "<th>",
+        "<tr>",
+        "<table>"
+      ],
+      "answer": 1,
+      "hint": "h تعني header.",
+      "explanation": "نستخدم <th> لخلايا العناوين، وتظهر عريضة."
+    },
+    {
+      "type": "exercise",
+      "exType": "fill-blank",
+      "prompt": "اكتب وسم بداية صفّ في جدول.",
+      "answer": [
+        "<tr>"
+      ],
+      "hint": "r تعني row.",
+      "explanation": "نستخدم <tr> لبدء صفّ في الجدول."
+    }
+  ]
+}

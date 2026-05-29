@@ -1,0 +1,164 @@
+{
+  "id": "lesson-10",
+  "number": 10,
+  "lang": "cpp",
+  "title": "التحميل الزائد للدوال",
+  "subtitle": "دوال بنفس الاسم لكن وسائط مختلفة.",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "ما التحميل الزائد؟",
+      "icon": "🎭",
+      "content": [
+        "يمكن أن يكون لدينا عدّة دوال بنفس الاسم تختلف في عدد أو أنواع وسائطها. يختار المترجم الأنسب حسب الاستدعاء."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "cpp",
+      "langLabel": "C++",
+      "code": [
+        "int add(int a, int b) { return a + b; }",
+        "double add(double a, double b) { return a + b; }",
+        "cout << add(2, 3) << endl;",
+        "cout << add(2.5, 1.5);"
+      ],
+      "annotations": [
+        {
+          "line": 1,
+          "text": "نسخة للأعداد الصحيحة."
+        },
+        {
+          "line": 2,
+          "text": "نسخة للأعداد العشرية."
+        },
+        {
+          "line": 3,
+          "text": "يختار النسخة الصحيحة → 5."
+        },
+        {
+          "line": 4,
+          "text": "يختار العشرية → 4.0."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "tip",
+      "title": "لماذا؟ 💡",
+      "content": "بدل ابتكار أسماء كثيرة (addInt, addDouble)، نستخدم اسمًا واحدًا منطقيًّا ويختار المترجم المناسب تلقائيًّا."
+    },
+    {
+      "type": "visualizer",
+      "data": {
+        "lang": "cpp",
+        "hasCallStack": false,
+        "code": [
+          "add(2, 3);",
+          "add(2.5, 1.5);"
+        ],
+        "steps": [
+          {
+            "line": 1,
+            "description": "نبدأ بقراءة البرنامج من أعلى سطر، والذاكرة فارغة تمامًا قبل أن ننفّذ أي شيء.",
+            "memory": [],
+            "output": ""
+          },
+          {
+            "line": 1,
+            "description": "الاستدعاء بقيمتين صحيحتين → يختار نسخة int، الناتج 5.",
+            "memory": [
+              {
+                "name": "النسخة",
+                "value": "int add",
+                "updated": true
+              },
+              {
+                "name": "الناتج",
+                "value": "5",
+                "updated": true
+              }
+            ],
+            "output": "5"
+          },
+          {
+            "line": 2,
+            "description": "لنتمهّل قليلًا ونتأمّل ما في الذاكرة حتى الآن قبل المتابعة.",
+            "memory": [
+              {
+                "name": "النسخة",
+                "value": "double add",
+                "updated": false
+              },
+              {
+                "name": "الناتج",
+                "value": "4.0",
+                "updated": false
+              }
+            ],
+            "output": "4"
+          },
+          {
+            "line": 2,
+            "description": "الاستدعاء بقيمتين عشريتين → يختار نسخة double، الناتج 4.0.",
+            "memory": [
+              {
+                "name": "النسخة",
+                "value": "double add",
+                "updated": true
+              },
+              {
+                "name": "الناتج",
+                "value": "4.0",
+                "updated": true
+              }
+            ],
+            "output": "4"
+          },
+          {
+            "line": 2,
+            "description": "انتهى التنفيذ! هذه هي الحالة النهائية للذاكرة والمخرجات بعد تنفيذ كل الأسطر.",
+            "memory": [
+              {
+                "name": "النسخة",
+                "value": "double add",
+                "updated": false
+              },
+              {
+                "name": "الناتج",
+                "value": "4.0",
+                "updated": false
+              }
+            ],
+            "output": "4"
+          }
+        ]
+      }
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "على أيّ أساس يختار المترجم النسخة الصحيحة؟",
+      "options": [
+        "اسم الدالة فقط",
+        "عدد وأنواع الوسائط",
+        "حجم الملف",
+        "الترتيب الأبجدي"
+      ],
+      "answer": 1,
+      "hint": "تختلف الوسائط.",
+      "explanation": "يختار المترجم النسخة بناءً على عدد وأنواع الوسائط الممرّرة."
+    },
+    {
+      "type": "exercise",
+      "exType": "fill-blank",
+      "prompt": "ما الكلمة التي تُعيد قيمة من الدالة؟",
+      "answer": [
+        "return"
+      ],
+      "hint": "تُرجِع.",
+      "explanation": "نستخدم return لإعادة قيمة الدالة."
+    }
+  ]
+}

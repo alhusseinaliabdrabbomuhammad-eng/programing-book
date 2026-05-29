@@ -1,0 +1,162 @@
+{
+  "id": "lesson-11",
+  "number": 11,
+  "lang": "cpp",
+  "title": "المراجع ومقارنتها بالمؤشرات",
+  "subtitle": "المرجع اسم بديل لمتغيّر موجود. أبسط من المؤشّر.",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "ما المرجع؟",
+      "icon": "🔗",
+      "content": [
+        "المرجع اسم آخر (لقب) لمتغيّر موجود. أي تعديل عليه يعدّل المتغيّر الأصلي. نعرّفه بـ &."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "cpp",
+      "langLabel": "C++",
+      "code": [
+        "int x = 10;",
+        "int& ref = x;",
+        "ref = 20;",
+        "cout << x;"
+      ],
+      "annotations": [
+        {
+          "line": 2,
+          "text": "ref لقب آخر لـ x."
+        },
+        {
+          "line": 3,
+          "text": "نغيّر ref…"
+        },
+        {
+          "line": 4,
+          "text": "…فيتغيّر x أيضًا إلى 20!"
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "heading": "المرجع مقابل المؤشّر",
+      "icon": "⚖️",
+      "ordered": false,
+      "items": [
+        "المرجع: اسم بديل، لا يمكن تغيير ما يشير إليه، لا يحتاج * أو &.",
+        "المؤشّر: يخزّن عنوانًا، يمكن إعادة توجيهه، يحتاج * للوصول للقيمة."
+      ]
+    },
+    {
+      "type": "visualizer",
+      "data": {
+        "lang": "cpp",
+        "hasCallStack": false,
+        "code": [
+          "int x = 10;",
+          "int& r = x;",
+          "r = 20;"
+        ],
+        "steps": [
+          {
+            "line": 1,
+            "description": "نبدأ بقراءة البرنامج من أعلى سطر، والذاكرة فارغة تمامًا قبل أن ننفّذ أي شيء.",
+            "memory": [],
+            "output": ""
+          },
+          {
+            "line": 1,
+            "description": "نضع 10 في x.",
+            "memory": [
+              {
+                "name": "x",
+                "value": "10",
+                "updated": true
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 2,
+            "description": "لنتمهّل قليلًا ونتأمّل ما في الذاكرة حتى الآن قبل المتابعة.",
+            "memory": [
+              {
+                "name": "x",
+                "value": "10",
+                "updated": false
+              },
+              {
+                "name": "r",
+                "value": "→ x نفسه",
+                "updated": false
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 2,
+            "description": "r يصبح لقبًا آخر لنفس صندوق x.",
+            "memory": [
+              {
+                "name": "x",
+                "value": "10",
+                "updated": false
+              },
+              {
+                "name": "r",
+                "value": "→ x نفسه",
+                "updated": true
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 3,
+            "description": "نغيّر r إلى 20، فيتغيّر x أيضًا لأنهما الصندوق نفسه.",
+            "memory": [
+              {
+                "name": "x",
+                "value": "20",
+                "updated": true
+              },
+              {
+                "name": "r",
+                "value": "→ x نفسه",
+                "updated": false
+              }
+            ],
+            "output": ""
+          }
+        ]
+      }
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "ماذا يحدث للمتغيّر الأصلي عند تعديل مرجعه؟",
+      "options": [
+        "لا يتغيّر",
+        "يتغيّر معه",
+        "يُحذف",
+        "يُنسخ"
+      ],
+      "answer": 1,
+      "hint": "اسم واحد لصندوق واحد.",
+      "explanation": "تعديل المرجع يعدّل المتغيّر الأصلي لأنهما الصندوق نفسه."
+    },
+    {
+      "type": "exercise",
+      "exType": "fill-blank",
+      "prompt": "عرّف مرجعًا إلى int اسمه r يشير إلى x.",
+      "answer": [
+        "int& r = x;",
+        "int &r = x;",
+        "int& r = x"
+      ],
+      "hint": "النوع& ثم = المتغيّر.",
+      "explanation": "نكتب int& r = x; لإنشاء مرجع إلى x."
+    }
+  ]
+}

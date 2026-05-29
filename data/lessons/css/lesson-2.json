@@ -1,0 +1,89 @@
+{
+  "id": "lesson-2",
+  "number": 2,
+  "lang": "css",
+  "title": "المحددات الأساسية",
+  "subtitle": "كيف نختار العناصر التي نريد تنسيقها؟",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "ثلاثة محدّدات أساسية",
+      "icon": "🎯",
+      "content": [
+        "نختار العناصر بثلاث طرق رئيسية: بنوع الوسم، أو بالصنف class، أو بالمعرّف id."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "css",
+      "langLabel": "CSS",
+      "code": [
+        "h1 {",
+        "  color: red;",
+        "}",
+        ".highlight {",
+        "  background: yellow;",
+        "}",
+        "#main {",
+        "  width: 80%;",
+        "}"
+      ],
+      "annotations": [
+        {
+          "line": 1,
+          "text": "محدّد بالوسم: كل عناصر h1."
+        },
+        {
+          "line": 4,
+          "text": "محدّد بالصنف: العناصر ذات class=highlight (نقطة .)"
+        },
+        {
+          "line": 7,
+          "text": "محدّد بالمعرّف: العنصر ذو id=main (مربّع #)."
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "heading": "رموز المحدّدات",
+      "icon": "🔑",
+      "ordered": false,
+      "items": [
+        "بالوسم: نكتب اسم الوسم مباشرة مثل p",
+        "بالصنف: نقطة قبل الاسم مثل .box",
+        "بالمعرّف: مربّع قبل الاسم مثل #header"
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "tip",
+      "title": "نصيحة 💡",
+      "content": "الصنف class يمكن استخدامه لعناصر كثيرة، أمّا المعرّف id فيجب أن يكون فريدًا لعنصر واحد في الصفحة."
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "بأي رمز نختار عنصرًا بصنفه class؟",
+      "options": [
+        "#",
+        "نقطة .",
+        "مربّع",
+        "نجمة *"
+      ],
+      "answer": 1,
+      "hint": "رمز صغير.",
+      "explanation": "نستخدم النقطة . قبل اسم الصنف، مثل .highlight."
+    },
+    {
+      "type": "exercise",
+      "exType": "fill-blank",
+      "prompt": "اكتب محدّدًا يختار العناصر ذات الصنف btn.",
+      "answer": [
+        ".btn"
+      ],
+      "hint": "نقطة ثم الاسم.",
+      "explanation": "نكتب .btn لاختيار العناصر ذات class=btn."
+    }
+  ]
+}

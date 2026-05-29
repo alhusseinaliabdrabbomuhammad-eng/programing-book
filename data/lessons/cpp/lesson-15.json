@@ -1,0 +1,125 @@
+{
+  "id": "lesson-15",
+  "number": 15,
+  "lang": "cpp",
+  "title": "الوراثة وتعدد الأشكال",
+  "subtitle": "إعادة استخدام الكود عبر الوراثة، وتنوّع السلوك عبر تعدّد الأشكال.",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "الوراثة",
+      "icon": "🧬",
+      "content": [
+        "فئة (ابنة) ترث أعضاء فئة (أمّ) عبر : public. فلا نكرّر الكود المشترك."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "cpp",
+      "langLabel": "C++",
+      "code": [
+        "class Animal {",
+        "public:",
+        "  void eat() { cout << \"يأكل\"; }",
+        "};",
+        "class Dog : public Animal {",
+        "public:",
+        "  void bark() { cout << \"ينبح\"; }",
+        "};"
+      ],
+      "annotations": [
+        {
+          "line": 5,
+          "text": "Dog ترث من Animal."
+        },
+        {
+          "line": 7,
+          "text": "ولها سلوكها الخاصّ bark أيضًا."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "تعدّد الأشكال",
+      "icon": "🎭",
+      "content": [
+        "مع الدوال الافتراضية virtual، يختار البرنامج سلوك الكائن الفعلي وقت التشغيل (سنفصّله في الدرس القادم)."
+      ]
+    },
+    {
+      "type": "visualizer",
+      "data": {
+        "lang": "cpp",
+        "hasCallStack": false,
+        "code": [
+          "Dog d;",
+          "d.eat();",
+          "d.bark();"
+        ],
+        "steps": [
+          {
+            "line": 1,
+            "description": "ننشئ كلبًا يرث قدرات Animal.",
+            "memory": [
+              {
+                "name": "d",
+                "value": "Dog (يرث Animal)",
+                "updated": true
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 2,
+            "description": "نستدعي eat الموروثة.",
+            "memory": [
+              {
+                "name": "الحالة",
+                "value": "تنفيذ eat",
+                "updated": true
+              }
+            ],
+            "output": "يأكل"
+          },
+          {
+            "line": 3,
+            "description": "نستدعي bark الخاصّة.",
+            "memory": [
+              {
+                "name": "الحالة",
+                "value": "تنفيذ bark",
+                "updated": true
+              }
+            ],
+            "output": "ينبح"
+          }
+        ]
+      }
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "كيف نجعل Dog ترث من Animal بشكل عامّ؟",
+      "options": [
+        "Dog -> Animal",
+        "class Dog : public Animal",
+        "Dog extends Animal",
+        "Dog from Animal"
+      ],
+      "answer": 1,
+      "hint": "استخدم : public.",
+      "explanation": "نكتب class Dog : public Animal للوراثة العامّة."
+    },
+    {
+      "type": "exercise",
+      "exType": "fill-blank",
+      "prompt": "ما الكلمة التي تجعل دالة قابلة للتجاوز في الأبناء؟",
+      "answer": [
+        "virtual"
+      ],
+      "hint": "تتيح تعدّد الأشكال.",
+      "explanation": "نستخدم virtual لجعل الدالة قابلة للتجاوز وتفعيل تعدّد الأشكال."
+    }
+  ]
+}

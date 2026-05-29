@@ -1,0 +1,97 @@
+{
+  "id": "lesson-15",
+  "number": 15,
+  "lang": "css",
+  "title": "CSS Grid: وضع العناصر والمساحات المسماة",
+  "subtitle": "كيف نضع العناصر في خلايا محدّدة ونسمّي المناطق؟",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "امتداد العناصر",
+      "icon": "↔️",
+      "content": [
+        "يمكن لعنصر أن يمتدّ عبر عدّة أعمدة أو صفوف باستخدام grid-column و grid-row."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "css",
+      "langLabel": "CSS",
+      "code": [
+        ".header {",
+        "  grid-column: 1 / 4;",
+        "}"
+      ],
+      "annotations": [
+        {
+          "line": 2,
+          "text": "يمتدّ من الخطّ 1 إلى الخطّ 4، أي يغطّي ثلاثة أعمدة."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "المناطق المسمّاة",
+      "icon": "🗺️",
+      "content": [
+        "نستطيع تسمية مناطق الشبكة بأسماء واضحة وترتيبها كأنها رسم تخطيطيّ! أسلوب جميل وسهل القراءة."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "css",
+      "langLabel": "CSS",
+      "code": [
+        ".layout {",
+        "  grid-template-areas:",
+        "    'header header'",
+        "    'sidebar main';",
+        "}",
+        ".side { grid-area: sidebar; }"
+      ],
+      "annotations": [
+        {
+          "line": 2,
+          "text": "نرسم تخطيط الصفحة بأسماء."
+        },
+        {
+          "line": 6,
+          "text": "نضع العنصر في المنطقة المسمّاة sidebar."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "tip",
+      "title": "قوّة Grid 💡",
+      "content": "المناطق المسمّاة تجعل تخطيطك مقروءًا كخريطة! تستطيع رؤية شكل الصفحة من الكود مباشرة. رائع للتخطيطات الكبيرة."
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "أي خاصية تسمّي مناطق الشبكة لرسم التخطيط؟",
+      "options": [
+        "grid-column",
+        "grid-template-areas",
+        "grid-gap",
+        "grid-row"
+      ],
+      "answer": 1,
+      "hint": "مناطق مسمّاة.",
+      "explanation": "grid-template-areas تسمّي مناطق الشبكة لرسم التخطيط بوضوح."
+    },
+    {
+      "type": "exercise",
+      "exType": "fill-blank",
+      "prompt": "اجعل عنصرًا يمتدّ من الخطّ 1 إلى 3 في الأعمدة.",
+      "answer": [
+        "grid-column: 1 / 3;",
+        "grid-column:1 / 3;",
+        "grid-column: 1/3;"
+      ],
+      "hint": "grid-column مع /.",
+      "explanation": "نكتب grid-column: 1 / 3; ليمتدّ العنصر عبر عمودين."
+    }
+  ]
+}

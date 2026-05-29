@@ -1,0 +1,173 @@
+{
+  "id": "lesson-7",
+  "number": 7,
+  "lang": "python",
+  "title": "تنسيق النصوص (f-strings)",
+  "subtitle": "كيف ندمج المتغيّرات داخل جملة بسهولة وأناقة؟ الجواب: f-strings.",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "المشكلة",
+      "icon": "🤔",
+      "content": [
+        "لدمج متغيّر داخل جملة، الطريقة القديمة بالجمع + متعبة. الحل الأنيق هو الـ f-string."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "python",
+      "langLabel": "Python",
+      "code": [
+        "name = \"علي\"",
+        "age = 12",
+        "print(f\"اسمي {name} وعمري {age}\")"
+      ],
+      "annotations": [
+        {
+          "line": 3,
+          "text": "نضع حرف f قبل علامة التنصيص، ثم نكتب أسماء المتغيّرات داخل أقواس معقوفة { } فتُستبدل بقيمها تلقائيًّا."
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "heading": "أحرف الهروب",
+      "icon": "🔣",
+      "ordered": false,
+      "items": [
+        "`\\n` سطر جديد",
+        "`\\t` مسافة جدولة",
+        "`\\\"` لطباعة علامة تنصيص داخل النص"
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "python",
+      "langLabel": "Python",
+      "code": [
+        "print(\"السطر الأول\\nالسطر الثاني\")"
+      ],
+      "annotations": [
+        {
+          "line": 1,
+          "text": "\\n تجبر الطباعة على الانتقال لسطر جديد."
+        }
+      ]
+    },
+    {
+      "type": "visualizer",
+      "data": {
+        "lang": "python",
+        "hasCallStack": false,
+        "code": [
+          "x = 5",
+          "y = 3",
+          "print(f\"الناتج: {x + y}\")"
+        ],
+        "steps": [
+          {
+            "line": 1,
+            "description": "نبدأ بقراءة البرنامج من أعلى سطر، والذاكرة فارغة تمامًا قبل أن ننفّذ أي شيء.",
+            "memory": [],
+            "output": ""
+          },
+          {
+            "line": 1,
+            "description": "نضع 5 في x.",
+            "memory": [
+              {
+                "name": "x",
+                "value": "5",
+                "updated": true
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 2,
+            "description": "لنتمهّل قليلًا ونتأمّل ما في الذاكرة حتى الآن قبل المتابعة.",
+            "memory": [
+              {
+                "name": "x",
+                "value": "5",
+                "updated": false
+              },
+              {
+                "name": "y",
+                "value": "3",
+                "updated": false
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 2,
+            "description": "نضع 3 في y.",
+            "memory": [
+              {
+                "name": "x",
+                "value": "5",
+                "updated": false
+              },
+              {
+                "name": "y",
+                "value": "3",
+                "updated": true
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 3,
+            "description": "داخل الـ f-string يحسب الحاسوب {x + y} = 8 ويدمجه في الجملة ثم يطبعها.",
+            "memory": [
+              {
+                "name": "x",
+                "value": "5",
+                "updated": false
+              },
+              {
+                "name": "y",
+                "value": "3",
+                "updated": false
+              }
+            ],
+            "output": "الناتج: 8"
+          }
+        ]
+      }
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "ما الذي يجعل النص f-string؟",
+      "options": [
+        "كلمة format",
+        "حرف f قبل علامة التنصيص",
+        "علامة +",
+        "قوسان"
+      ],
+      "answer": 1,
+      "hint": "انظر بداية النص.",
+      "explanation": "نضع حرف f مباشرة قبل علامة التنصيص لإنشاء f-string، مثل f\"...\"."
+    },
+    {
+      "type": "exercise",
+      "exType": "fill-blank",
+      "prompt": "اكتب f-string يطبع \"العمر: \" متبوعًا بقيمة المتغيّر age.",
+      "answer": [
+        "print(f\"العمر: {age}\")",
+        "f\"العمر: {age}\""
+      ],
+      "hint": "استخدم {age} داخل النص.",
+      "explanation": "f\"العمر: {age}\" تدمج قيمة age داخل الجملة."
+    },
+    {
+      "type": "callout",
+      "variant": "extra",
+      "title": "أنيق جدًّا!",
+      "content": "تعلّمت أجمل طريقة لبناء الجُمل. القادم: القوائم لتخزين عدّة قيم."
+    }
+  ]
+}

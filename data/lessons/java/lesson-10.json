@@ -1,0 +1,172 @@
+{
+  "id": "lesson-10",
+  "number": 10,
+  "lang": "java",
+  "title": "المصفوفات أحادية ومتعددة الأبعاد",
+  "subtitle": "كيف نخزّن مجموعة قيم من نفس النوع في جافا؟",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "المصفوفة الأحادية",
+      "icon": "📊",
+      "content": [
+        "المصفوفة تخزّن عناصر من نفس النوع بحجم ثابت. الفهرسة تبدأ من 0."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "java",
+      "langLabel": "Java",
+      "code": [
+        "int[] scores = {90, 85, 70};",
+        "System.out.println(scores[0]);",
+        "System.out.println(scores.length);"
+      ],
+      "annotations": [
+        {
+          "line": 1,
+          "text": "مصفوفة من ثلاث درجات."
+        },
+        {
+          "line": 2,
+          "text": "العنصر الأول = 90."
+        },
+        {
+          "line": 3,
+          "text": "عدد العناصر = 3."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "المصفوفة ثنائية الأبعاد",
+      "icon": "🔲",
+      "content": [
+        "مثل جدول له صفوف وأعمدة. نصل للعنصر بفهرسين [صف][عمود]."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "java",
+      "langLabel": "Java",
+      "code": [
+        "int[][] grid = {{1, 2}, {3, 4}};",
+        "System.out.println(grid[1][0]);"
+      ],
+      "annotations": [
+        {
+          "line": 2,
+          "text": "الصف 1، العمود 0 = 3."
+        }
+      ]
+    },
+    {
+      "type": "visualizer",
+      "data": {
+        "lang": "java",
+        "hasCallStack": false,
+        "code": [
+          "int[] a = {5, 10, 15};",
+          "int v = a[2];"
+        ],
+        "steps": [
+          {
+            "line": 1,
+            "description": "نبدأ بقراءة البرنامج من أعلى سطر، والذاكرة فارغة تمامًا قبل أن ننفّذ أي شيء.",
+            "memory": [],
+            "output": ""
+          },
+          {
+            "line": 1,
+            "description": "ننشئ مصفوفة فيها 5 و 10 و 15.",
+            "memory": [
+              {
+                "name": "a",
+                "value": "[5, 10, 15]",
+                "updated": true
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 2,
+            "description": "لنتمهّل قليلًا ونتأمّل ما في الذاكرة حتى الآن قبل المتابعة.",
+            "memory": [
+              {
+                "name": "a",
+                "value": "[5, 10, 15]",
+                "updated": false
+              },
+              {
+                "name": "v",
+                "value": "15",
+                "updated": false
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 2,
+            "description": "نقرأ العنصر في الموضع 2 (الثالث) وهو 15، نضعه في v.",
+            "memory": [
+              {
+                "name": "a",
+                "value": "[5, 10, 15]",
+                "updated": false
+              },
+              {
+                "name": "v",
+                "value": "15",
+                "updated": true
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 2,
+            "description": "انتهى التنفيذ! هذه هي الحالة النهائية للذاكرة والمخرجات بعد تنفيذ كل الأسطر.",
+            "memory": [
+              {
+                "name": "a",
+                "value": "[5, 10, 15]",
+                "updated": false
+              },
+              {
+                "name": "v",
+                "value": "15",
+                "updated": false
+              }
+            ],
+            "output": ""
+          }
+        ]
+      }
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "ما فهرس آخر عنصر في مصفوفة طولها 4؟",
+      "options": [
+        "4",
+        "3",
+        "-1",
+        "0"
+      ],
+      "answer": 1,
+      "hint": "الطول ناقص واحد.",
+      "explanation": "الفهرسة من 0، فآخر عنصر في مصفوفة طولها 4 فهرسه 3."
+    },
+    {
+      "type": "exercise",
+      "exType": "fill-blank",
+      "prompt": "أعلن مصفوفة int اسمها arr تحتوي 1 و 2 و 3.",
+      "answer": [
+        "int[] arr = {1, 2, 3};",
+        "int[] arr = {1,2,3};"
+      ],
+      "hint": "استخدم { }.",
+      "explanation": "نكتب int[] arr = {1, 2, 3}; لإنشاء مصفوفة."
+    }
+  ]
+}

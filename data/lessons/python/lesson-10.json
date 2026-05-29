@@ -1,0 +1,162 @@
+{
+  "id": "lesson-10",
+  "number": 10,
+  "lang": "python",
+  "title": "الصفوف (Tuples) والمجموعات (Sets)",
+  "subtitle": "نوعان آخران لتخزين القيم، لكلّ منهما استخدام خاص.",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "الصفوف Tuples",
+      "icon": "🔒",
+      "content": [
+        "الصفّ مثل القائمة لكنه **غير قابل للتغيير** بعد إنشائه. نكتبه بأقواس عادية ( ). مفيد للقيم الثابتة كالإحداثيات."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "python",
+      "langLabel": "Python",
+      "code": [
+        "point = (3, 5)",
+        "print(point[0])"
+      ],
+      "annotations": [
+        {
+          "line": 1,
+          "text": "صفّ يحوي قيمتين، لا يمكن تعديلهما لاحقًا."
+        },
+        {
+          "line": 2,
+          "text": "نصل للعنصر الأول كالقائمة: 3."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "المجموعات Sets",
+      "icon": "🎯",
+      "content": [
+        "المجموعة تخزّن قيمًا **فريدة بلا تكرار وبلا ترتيب**. نكتبها بأقواس معقوفة { }. مفيدة لإزالة التكرار."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "python",
+      "langLabel": "Python",
+      "code": [
+        "nums = {1, 2, 2, 3}",
+        "print(nums)"
+      ],
+      "annotations": [
+        {
+          "line": 1,
+          "text": "رغم تكرار 2، المجموعة تحفظ كل قيمة مرة واحدة → {1, 2, 3}."
+        }
+      ]
+    },
+    {
+      "type": "visualizer",
+      "data": {
+        "lang": "python",
+        "hasCallStack": false,
+        "code": [
+          "s = {1, 2}",
+          "s.add(2)",
+          "s.add(5)"
+        ],
+        "steps": [
+          {
+            "line": 1,
+            "description": "نبدأ بقراءة البرنامج من أعلى سطر، والذاكرة فارغة تمامًا قبل أن ننفّذ أي شيء.",
+            "memory": [],
+            "output": ""
+          },
+          {
+            "line": 1,
+            "description": "ننشئ مجموعة فيها 1 و2.",
+            "memory": [
+              {
+                "name": "s",
+                "value": "{1, 2}",
+                "updated": true
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 2,
+            "description": "لنتمهّل قليلًا ونتأمّل ما في الذاكرة حتى الآن قبل المتابعة.",
+            "memory": [
+              {
+                "name": "s",
+                "value": "{1, 2}",
+                "updated": false
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 2,
+            "description": "نحاول إضافة 2 لكنها موجودة، فلا يتغيّر شيء (لا تكرار).",
+            "memory": [
+              {
+                "name": "s",
+                "value": "{1, 2}",
+                "updated": false
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 3,
+            "description": "نضيف 5 وهي جديدة فتُضاف فعلًا.",
+            "memory": [
+              {
+                "name": "s",
+                "value": "{1, 2, 5}",
+                "updated": true
+              }
+            ],
+            "output": ""
+          }
+        ]
+      }
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "أي بنية لا يمكن تعديلها بعد الإنشاء؟",
+      "options": [
+        "القائمة list",
+        "الصفّ tuple",
+        "المجموعة set",
+        "القاموس"
+      ],
+      "answer": 1,
+      "hint": "يُكتب بأقواس عادية ( ).",
+      "explanation": "الصفّ (tuple) غير قابل للتغيير بعد إنشائه، عكس القائمة."
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "ما ناتج طباعة {1,1,2,3,3} ؟",
+      "options": [
+        "{1,1,2,3,3}",
+        "{1,2,3}",
+        "[1,2,3]",
+        "خطأ"
+      ],
+      "answer": 1,
+      "hint": "المجموعة لا تكرّر.",
+      "explanation": "المجموعة تحذف التكرار فيبقى {1, 2, 3}."
+    },
+    {
+      "type": "callout",
+      "variant": "extra",
+      "title": "ممتاز!",
+      "content": "عرفت أربع بنى لتخزين البيانات. القادم: القواميس وهي قوية جدًّا."
+    }
+  ]
+}

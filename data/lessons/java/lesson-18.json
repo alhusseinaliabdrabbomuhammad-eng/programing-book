@@ -1,0 +1,139 @@
+{
+  "id": "lesson-18",
+  "number": 18,
+  "lang": "java",
+  "title": "الاستثناءات try/catch/finally و throw",
+  "subtitle": "كيف نتعامل مع الأخطاء أثناء التشغيل بأمان في جافا؟",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "ما الاستثناء؟",
+      "icon": "⚠️",
+      "content": [
+        "الاستثناء حدث غير متوقّع يقطع سير البرنامج، كالقسمة على صفر. نلتقطه بـ try/catch بدل تعطّل البرنامج."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "java",
+      "langLabel": "Java",
+      "code": [
+        "try {",
+        "  int r = 10 / 0;",
+        "} catch (ArithmeticException e) {",
+        "  System.out.println(\"لا تقسم على صفر!\");",
+        "} finally {",
+        "  System.out.println(\"انتهى\");",
+        "}"
+      ],
+      "annotations": [
+        {
+          "line": 2,
+          "text": "قسمة على صفر تطلق استثناءً."
+        },
+        {
+          "line": 3,
+          "text": "catch يلتقط نوع الخطأ المحدّد."
+        },
+        {
+          "line": 5,
+          "text": "finally تُنفّذ دائمًا."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "إطلاق استثناء بـ throw",
+      "icon": "🚀",
+      "content": [
+        "نطلق استثناءً عمدًا بـ throw عند اكتشاف حالة خاطئة في منطقنا."
+      ]
+    },
+    {
+      "type": "visualizer",
+      "data": {
+        "lang": "java",
+        "hasCallStack": true,
+        "code": [
+          "try {",
+          "  risky();",
+          "} catch (Exception e) {",
+          "  handle();",
+          "}"
+        ],
+        "steps": [
+          {
+            "line": 2,
+            "description": "ندخل try ونحاول تنفيذ المهمّة الخطرة.",
+            "memory": [
+              {
+                "name": "الحالة",
+                "value": "محاولة",
+                "updated": true
+              }
+            ],
+            "output": "",
+            "callStack": [
+              "try"
+            ]
+          },
+          {
+            "line": 2,
+            "description": "وقع استثناء أثناء التنفيذ!",
+            "memory": [
+              {
+                "name": "الحالة",
+                "value": "استثناء!",
+                "updated": true
+              }
+            ],
+            "output": "",
+            "callStack": [
+              "حدث خطأ"
+            ]
+          },
+          {
+            "line": 4,
+            "description": "قفز التحكّم إلى catch وعالجنا الخطأ.",
+            "memory": [
+              {
+                "name": "الحالة",
+                "value": "معالجة",
+                "updated": true
+              }
+            ],
+            "output": "",
+            "callStack": [
+              "catch"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "أي كتلة تُنفّذ دائمًا سواء وقع خطأ أم لا؟",
+      "options": [
+        "try",
+        "catch",
+        "finally",
+        "throw"
+      ],
+      "answer": 2,
+      "hint": "تعني «أخيرًا».",
+      "explanation": "كتلة finally تُنفّذ دائمًا، مثالية لإغلاق الموارد."
+    },
+    {
+      "type": "exercise",
+      "exType": "fill-blank",
+      "prompt": "ما الكلمة التي تطلق استثناءً عمدًا في جافا؟",
+      "answer": [
+        "throw"
+      ],
+      "hint": "تعني «ارمِ».",
+      "explanation": "نستخدم throw لإطلاق استثناء عمدًا."
+    }
+  ]
+}

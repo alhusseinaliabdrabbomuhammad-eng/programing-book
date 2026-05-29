@@ -1,0 +1,166 @@
+{
+  "id": "lesson-8",
+  "number": 8,
+  "lang": "javascript",
+  "title": "الجمل الشرطية if و else و switch",
+  "subtitle": "كيف يتّخذ البرنامج قرارات؟ مثلما تقرّر أنت ماذا تلبس حسب الطقس.",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "اتّخاذ القرار",
+      "icon": "🚦",
+      "content": [
+        "if تعني «إذا»: إذا تحقّق الشرط نفّذ الكود. else تعني «وإلا»: نفّذ شيئًا آخر."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "javascript",
+      "langLabel": "JavaScript",
+      "code": [
+        "let temp = 30;",
+        "if (temp > 25) {",
+        "  console.log(\"الجو حار\");",
+        "} else {",
+        "  console.log(\"الجو لطيف\");",
+        "}"
+      ],
+      "annotations": [
+        {
+          "line": 2,
+          "text": "إذا كانت الحرارة أكبر من 25…"
+        },
+        {
+          "line": 3,
+          "text": "نطبع: الجو حار."
+        },
+        {
+          "line": 5,
+          "text": "وإلا، نطبع: الجو لطيف."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "switch للخيارات المتعدّدة",
+      "icon": "🔀",
+      "content": [
+        "عندما نوازن قيمة واحدة بعدّة احتمالات، switch أنظف من if المتكرّرة."
+      ]
+    },
+    {
+      "type": "visualizer",
+      "data": {
+        "lang": "javascript",
+        "hasCallStack": false,
+        "code": [
+          "let score = 75;",
+          "let pass;",
+          "if (score >= 50) {",
+          "  pass = true;",
+          "} else {",
+          "  pass = false;",
+          "}"
+        ],
+        "steps": [
+          {
+            "line": 1,
+            "description": "نبدأ بقراءة البرنامج من أعلى سطر، والذاكرة فارغة تمامًا قبل أن ننفّذ أي شيء.",
+            "memory": [],
+            "output": ""
+          },
+          {
+            "line": 1,
+            "description": "نضع الدرجة 75 في score.",
+            "memory": [
+              {
+                "name": "score",
+                "value": "75",
+                "updated": true
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 3,
+            "description": "لنتمهّل قليلًا ونتأمّل ما في الذاكرة حتى الآن قبل المتابعة.",
+            "memory": [
+              {
+                "name": "score",
+                "value": "75",
+                "updated": false
+              },
+              {
+                "name": "pass",
+                "value": "؟",
+                "updated": false
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 3,
+            "description": "نسأل: هل 75 >= 50؟ نعم، الشرط صحيح فندخل الكتلة الأولى.",
+            "memory": [
+              {
+                "name": "score",
+                "value": "75",
+                "updated": false
+              },
+              {
+                "name": "pass",
+                "value": "؟",
+                "updated": false
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 4,
+            "description": "نضع true في pass لأن الطالب نجح.",
+            "memory": [
+              {
+                "name": "score",
+                "value": "75",
+                "updated": false
+              },
+              {
+                "name": "pass",
+                "value": "true",
+                "updated": true
+              }
+            ],
+            "output": ""
+          }
+        ]
+      }
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "متى تُنفّذ كتلة else؟",
+      "options": [
+        "دائمًا",
+        "عندما يكون شرط if خطأ",
+        "عندما يكون شرط if صحيح",
+        "أبدًا"
+      ],
+      "answer": 1,
+      "hint": "else = «وإلا».",
+      "explanation": "تُنفّذ كتلة else فقط عندما يكون شرط if غير محقّق (false)."
+    },
+    {
+      "type": "exercise",
+      "exType": "fill-blank",
+      "prompt": "اكتب بداية شرط يتحقّق أن المتغيّر x أكبر من 10.",
+      "answer": [
+        "if (x > 10)",
+        "if(x > 10)",
+        "if (x>10)"
+      ],
+      "hint": "الكلمة if وقوسان.",
+      "explanation": "نكتب if (x > 10) لبدء الشرط."
+    }
+  ]
+}

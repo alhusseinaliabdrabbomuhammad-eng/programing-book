@@ -1,0 +1,113 @@
+{
+  "id": "lesson-16",
+  "number": 16,
+  "lang": "cpp",
+  "title": "الدوال الافتراضية virtual والفئات المجردة",
+  "subtitle": "كيف نحقّق تعدّد الأشكال الحقيقي وقت التشغيل؟",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "الدوال الافتراضية",
+      "icon": "🔮",
+      "content": [
+        "عند تعليم دالة بـ virtual، يختار البرنامج نسخة الكائن الفعلي وقت التشغيل، حتى لو كان المؤشّر من نوع الأم."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "cpp",
+      "langLabel": "C++",
+      "code": [
+        "class Shape {",
+        "public:",
+        "  virtual void draw() { cout << \"شكل\"; }",
+        "};",
+        "class Circle : public Shape {",
+        "public:",
+        "  void draw() override { cout << \"دائرة\"; }",
+        "};"
+      ],
+      "annotations": [
+        {
+          "line": 3,
+          "text": "draw افتراضية، تُتجاوز في الأبناء."
+        },
+        {
+          "line": 7,
+          "text": "Circle تعطي تنفيذها الخاصّ. override توضّح القصد."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "الفئة المجرّدة",
+      "icon": "🌫️",
+      "content": [
+        "دالة افتراضية بحتة = 0 تجعل الفئة مجرّدة لا تُنشأ مباشرة، بل تُورَّث وتُكمَّل."
+      ]
+    },
+    {
+      "type": "visualizer",
+      "data": {
+        "lang": "cpp",
+        "hasCallStack": false,
+        "code": [
+          "Shape* s = new Circle();",
+          "s->draw();"
+        ],
+        "steps": [
+          {
+            "line": 1,
+            "description": "مؤشّر Shape يشير لكائن Circle فعليًّا.",
+            "memory": [
+              {
+                "name": "s",
+                "value": "→ كائن Circle",
+                "updated": true
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 2,
+            "description": "بفضل virtual، يُنفَّذ draw الخاصّ بـ Circle.",
+            "memory": [
+              {
+                "name": "s",
+                "value": "→ Circle",
+                "updated": false
+              }
+            ],
+            "output": "دائرة"
+          }
+        ]
+      }
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "ما الذي يجعل دالة تُختار وقت التشغيل حسب الكائن الفعلي؟",
+      "options": [
+        "static",
+        "virtual",
+        "const",
+        "inline"
+      ],
+      "answer": 1,
+      "hint": "تفعّل تعدّد الأشكال.",
+      "explanation": "الكلمة virtual تجعل اختيار الدالة يتمّ وقت التشغيل حسب النوع الفعلي."
+    },
+    {
+      "type": "exercise",
+      "exType": "fill-blank",
+      "prompt": "ما الذي نضيفه لجعل دالة افتراضية بحتة (فئة مجرّدة)؟",
+      "answer": [
+        "= 0",
+        "=0"
+      ],
+      "hint": "يساوي صفر.",
+      "explanation": "نضيف = 0 بعد رأس الدالة الافتراضية لجعلها بحتة."
+    }
+  ]
+}

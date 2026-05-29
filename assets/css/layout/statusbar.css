@@ -1,0 +1,27 @@
+/* assets/css/layout/statusbar.css */
+.statusbar {
+  position: sticky;
+  bottom: 0;
+  z-index: var(--z-navbar);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  height: var(--statusbar-height);
+  padding: 0 var(--space-4);
+  background-color: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+  font-size: var(--fs-xs);
+  color: var(--color-text-muted);
+}
+.statusbar__item {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+  .statusbar { justify-content: center; height: auto; padding: var(--space-2) var(--space-4); }
+}

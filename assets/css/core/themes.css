@@ -1,0 +1,81 @@
+/* assets/css/core/themes.css */
+
+/* السمة الداكنة (الافتراضية) */
+:root,
+[data-theme="dark"] {
+  --color-bg: #0f172a;
+  --color-bg-alt: #1e293b;
+  --color-surface: #1e293b;
+  --color-surface-alt: #273449;
+  --color-border: #334155;
+  --color-text: #e2e8f0;
+  --color-text-muted: #94a3b8;
+  --color-heading: #f8fafc;
+  --color-accent: #38bdf8;
+  --color-accent-hover: #0ea5e9;
+  --color-accent-soft: rgba(56, 189, 248, 0.14);
+  --color-focus: #fbbf24;
+
+  --color-inline-code-bg: #0b1220;
+  --color-inline-code: #7dd3fc;
+  --color-code-bg: #0b1220;
+  --color-code-text: #e2e8f0;
+  --color-code-gutter: #1b2538;
+
+  --color-success: #34d399;
+  --color-success-soft: rgba(52, 211, 153, 0.14);
+  --color-warning: #fbbf24;
+  --color-warning-soft: rgba(251, 191, 36, 0.14);
+  --color-danger: #f87171;
+  --color-danger-soft: rgba(248, 113, 113, 0.14);
+  --color-info: #818cf8;
+  --color-info-soft: rgba(129, 140, 248, 0.14);
+
+  /* ألوان تلوين الصياغة */
+  --tok-keyword: #c792ea;
+  --tok-string: #c3e88d;
+  --tok-number: #f78c6c;
+  --tok-comment: #6b7a99;
+  --tok-function: #82aaff;
+  --tok-operator: #89ddff;
+  --tok-builtin: #ffcb6b;
+}
+
+/* السمة الفاتحة */
+[data-theme="light"] {
+  --color-bg: #f1f5f9;
+  --color-bg-alt: #e2e8f0;
+  --color-surface: #ffffff;
+  --color-surface-alt: #f8fafc;
+  --color-border: #cbd5e1;
+  --color-text: #1e293b;
+  --color-text-muted: #64748b;
+  --color-heading: #0f172a;
+  --color-accent: #0284c7;
+  --color-accent-hover: #0369a1;
+  --color-accent-soft: rgba(2, 132, 199, 0.1);
+  --color-focus: #b45309;
+
+  --color-inline-code-bg: #eef2f7;
+  --color-inline-code: #b91c1c;
+  --color-code-bg: #1e293b;
+  --color-code-text: #e2e8f0;
+  --color-code-gutter: #334155;
+
+  --color-success: #059669;
+  --color-success-soft: rgba(5, 150, 105, 0.1);
+  --color-warning: #d97706;
+  --color-warning-soft: rgba(217, 119, 6, 0.12);
+  --color-danger: #dc2626;
+  --color-danger-soft: rgba(220, 38, 38, 0.1);
+  --color-info: #4f46e5;
+  --color-info-soft: rgba(79, 70, 229, 0.1);
+
+  --tok-keyword: #c792ea;
+  --tok-string: #c3e88d;
+  --tok-number: #f78c6c;
+  --tok-comment: #8b98b0;
+  --tok-function: #82aaff;
+  --tok-operator: #89ddff;
+  --tok-builtin: #ffcb6b;
+}

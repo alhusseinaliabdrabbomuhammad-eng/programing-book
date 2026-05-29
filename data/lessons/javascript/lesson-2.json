@@ -1,0 +1,167 @@
+{
+  "id": "lesson-2",
+  "number": 2,
+  "lang": "javascript",
+  "title": "المتغيرات let و const و var والنطاق",
+  "subtitle": "المتغيّرات صناديق نحفظ فيها القيم. لنتعرّف على أنواع الصناديق في JavaScript.",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "ما المتغيّر؟",
+      "icon": "📦",
+      "content": [
+        "المتغيّر صندوق له اسم نضع فيه قيمة لنستخدمها لاحقًا. في JavaScript نُنشئ الصندوق بكلمة let أو const."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "javascript",
+      "langLabel": "JavaScript",
+      "code": [
+        "let age = 12;",
+        "const name = \"سارة\";",
+        "console.log(name, age);"
+      ],
+      "annotations": [
+        {
+          "line": 1,
+          "text": "let ينشئ صندوقًا يمكن تغيير محتواه لاحقًا."
+        },
+        {
+          "line": 2,
+          "text": "const ينشئ صندوقًا ثابتًا لا يتغيّر محتواه."
+        },
+        {
+          "line": 3,
+          "text": "نطبع الاسم والعمر معًا."
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "heading": "متى نستخدم كلًّا منها؟",
+      "icon": "🤔",
+      "ordered": false,
+      "items": [
+        "`const`: عندما لن تتغيّر القيمة (الأكثر أمانًا، استخدمه افتراضيًّا).",
+        "`let`: عندما ستتغيّر القيمة لاحقًا (مثل عدّاد).",
+        "`var`: الطريقة القديمة، نتجنّبها اليوم لأنها تسبّب أخطاء خفيّة."
+      ]
+    },
+    {
+      "type": "visualizer",
+      "data": {
+        "lang": "javascript",
+        "hasCallStack": false,
+        "code": [
+          "let x = 5;",
+          "let y = 10;",
+          "x = y + 2;"
+        ],
+        "steps": [
+          {
+            "line": 1,
+            "description": "نبدأ بقراءة البرنامج من أعلى سطر، والذاكرة فارغة تمامًا قبل أن ننفّذ أي شيء.",
+            "memory": [],
+            "output": ""
+          },
+          {
+            "line": 1,
+            "description": "ننشئ صندوقًا اسمه x ونضع فيه 5.",
+            "memory": [
+              {
+                "name": "x",
+                "value": "5",
+                "updated": true
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 2,
+            "description": "لنتمهّل قليلًا ونتأمّل ما في الذاكرة حتى الآن قبل المتابعة.",
+            "memory": [
+              {
+                "name": "x",
+                "value": "5",
+                "updated": false
+              },
+              {
+                "name": "y",
+                "value": "10",
+                "updated": false
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 2,
+            "description": "ننشئ صندوقًا اسمه y ونضع فيه 10.",
+            "memory": [
+              {
+                "name": "x",
+                "value": "5",
+                "updated": false
+              },
+              {
+                "name": "y",
+                "value": "10",
+                "updated": true
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 3,
+            "description": "نحسب y + 2 = 12 ونضع الناتج في x، فيتغيّر من 5 إلى 12.",
+            "memory": [
+              {
+                "name": "x",
+                "value": "12",
+                "updated": true
+              },
+              {
+                "name": "y",
+                "value": "10",
+                "updated": false
+              }
+            ],
+            "output": ""
+          }
+        ]
+      }
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "title": "انتبه!",
+      "content": "صندوق const لا يقبل التغيير. لو حاولت إعطاءه قيمة جديدة سيظهر خطأ. استخدم let إن كنت تنوي تغيير القيمة."
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "أيّها يُستخدم لقيمة لن تتغيّر؟",
+      "options": [
+        "var",
+        "let",
+        "const",
+        "fix"
+      ],
+      "answer": 2,
+      "hint": "كلمة تعني «ثابت».",
+      "explanation": "نستخدم const للقيم الثابتة التي لا نريد تغييرها."
+    },
+    {
+      "type": "exercise",
+      "exType": "fill-blank",
+      "prompt": "أنشئ متغيّرًا ثابتًا اسمه pi قيمته 3.14",
+      "answer": [
+        "const pi = 3.14;",
+        "const pi = 3.14"
+      ],
+      "hint": "استخدم const.",
+      "explanation": "نكتب const pi = 3.14; لإنشاء ثابت لا يتغيّر."
+    }
+  ]
+}

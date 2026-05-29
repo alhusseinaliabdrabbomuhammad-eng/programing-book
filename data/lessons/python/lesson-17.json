@@ -1,0 +1,119 @@
+{
+  "id": "lesson-17",
+  "number": 17,
+  "lang": "python",
+  "title": "معالجة الاستثناءات (try / except)",
+  "subtitle": "كيف نمنع البرنامج من الانهيار عند حدوث خطأ؟",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "لماذا نحتاجها؟",
+      "icon": "🛡️",
+      "content": [
+        "بعض الأخطاء تحدث وقت التشغيل، مثل القسمة على صفر أو إدخال نص بدل رقم. نحميه باستخدام try و except."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "python",
+      "langLabel": "Python",
+      "code": [
+        "try:",
+        "    x = int(\"abc\")",
+        "except ValueError:",
+        "    print(\"إدخال غير صالح!\")"
+      ],
+      "annotations": [
+        {
+          "line": 2,
+          "text": "محاولة تحويل نص غير رقمي ستسبّب خطأ."
+        },
+        {
+          "line": 3,
+          "text": "بدل الانهيار، ننتقل هنا ونطبع رسالة لطيفة."
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "heading": "بنية الجمل",
+      "icon": "🧱",
+      "ordered": false,
+      "items": [
+        "`try`: الكود الذي قد يخطئ",
+        "`except`: ما نفعله عند الخطأ",
+        "`finally`: ينفَّذ دائمًا في النهاية (اختياري)"
+      ]
+    },
+    {
+      "type": "visualizer",
+      "data": {
+        "lang": "python",
+        "hasCallStack": false,
+        "code": [
+          "try:",
+          "    r = 10 / 0",
+          "except ZeroDivisionError:",
+          "    r = 0"
+        ],
+        "steps": [
+          {
+            "line": 2,
+            "description": "نحاول قسمة 10 على 0، وهذا مستحيل رياضيًّا فيحدث خطأ.",
+            "memory": [],
+            "output": ""
+          },
+          {
+            "line": 3,
+            "description": "بدل أن ينهار البرنامج، يقفز التنفيذ إلى except الخاص بهذا الخطأ.",
+            "memory": [],
+            "output": ""
+          },
+          {
+            "line": 4,
+            "description": "نضع قيمة آمنة 0 في r، فيستمر البرنامج بسلام.",
+            "memory": [
+              {
+                "name": "r",
+                "value": "0",
+                "updated": true
+              }
+            ],
+            "output": ""
+          }
+        ]
+      }
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "ماذا يحدث إن لم نستخدم try/except وحدث خطأ؟",
+      "options": [
+        "لا شيء",
+        "ينهار البرنامج ويتوقّف",
+        "يُصلَح تلقائيًّا",
+        "يُعاد التشغيل"
+      ],
+      "answer": 1,
+      "hint": "الحماية تمنع التوقّف.",
+      "explanation": "بدون معالجة الأخطاء، يتوقّف البرنامج فجأة ويظهر خطأ. try/except يحميه."
+    },
+    {
+      "type": "exercise",
+      "exType": "fill-blank",
+      "prompt": "اكتب الكلمة المفتاحية التي تبدأ بها كتلة الكود الذي قد يخطئ.",
+      "answer": [
+        "try"
+      ],
+      "hint": "ثلاثة أحرف.",
+      "explanation": "نبدأ بكلمة try لوضع الكود الذي قد يسبّب خطأ."
+    },
+    {
+      "type": "callout",
+      "variant": "extra",
+      "title": "رائع!",
+      "content": "برنامجك صار قويًّا لا ينهار بسهولة. القادم: البرمجة كائنية التوجه."
+    }
+  ]
+}

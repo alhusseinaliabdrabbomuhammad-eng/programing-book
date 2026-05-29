@@ -1,0 +1,177 @@
+{
+  "id": "lesson-6",
+  "number": 6,
+  "lang": "java",
+  "title": "السلاسل النصية String و StringBuilder",
+  "subtitle": "كيف نتعامل مع النصوص في جافا بكفاءة؟",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "الـ String",
+      "icon": "🔤",
+      "content": [
+        "String نوع لتخزين النصوص. له دوال مفيدة: length() للطول، charAt() لحرف، toUpperCase()."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "java",
+      "langLabel": "Java",
+      "code": [
+        "String name = \"Ali\";",
+        "System.out.println(name.length());",
+        "System.out.println(name.toUpperCase());"
+      ],
+      "annotations": [
+        {
+          "line": 2,
+          "text": "عدد الأحرف = 3."
+        },
+        {
+          "line": 3,
+          "text": "تحويل لأحرف كبيرة: ALI."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "الدمج والـ StringBuilder",
+      "icon": "🔗",
+      "content": [
+        "ندمج النصوص بـ +. لكن عند الدمج الكثير المتكرّر، StringBuilder أسرع وأكفأ."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "java",
+      "langLabel": "Java",
+      "code": [
+        "StringBuilder sb = new StringBuilder();",
+        "sb.append(\"أهلًا \");",
+        "sb.append(\"بك\");",
+        "System.out.println(sb.toString());"
+      ],
+      "annotations": [
+        {
+          "line": 2,
+          "text": "نضيف نصًّا."
+        },
+        {
+          "line": 3,
+          "text": "نضيف نصًّا آخر."
+        },
+        {
+          "line": 4,
+          "text": "نحوّل النتيجة إلى String ونطبعها."
+        }
+      ]
+    },
+    {
+      "type": "visualizer",
+      "data": {
+        "lang": "java",
+        "hasCallStack": false,
+        "code": [
+          "String s = \"Hi\";",
+          "int len = s.length();"
+        ],
+        "steps": [
+          {
+            "line": 1,
+            "description": "نبدأ بقراءة البرنامج من أعلى سطر، والذاكرة فارغة تمامًا قبل أن ننفّذ أي شيء.",
+            "memory": [],
+            "output": ""
+          },
+          {
+            "line": 1,
+            "description": "نضع النص \"Hi\" في s.",
+            "memory": [
+              {
+                "name": "s",
+                "value": "\"Hi\"",
+                "updated": true
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 2,
+            "description": "لنتمهّل قليلًا ونتأمّل ما في الذاكرة حتى الآن قبل المتابعة.",
+            "memory": [
+              {
+                "name": "s",
+                "value": "\"Hi\"",
+                "updated": false
+              },
+              {
+                "name": "len",
+                "value": "2",
+                "updated": false
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 2,
+            "description": "length() تُعيد عدد الأحرف وهو 2، نخزّنه في len.",
+            "memory": [
+              {
+                "name": "s",
+                "value": "\"Hi\"",
+                "updated": false
+              },
+              {
+                "name": "len",
+                "value": "2",
+                "updated": true
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 2,
+            "description": "انتهى التنفيذ! هذه هي الحالة النهائية للذاكرة والمخرجات بعد تنفيذ كل الأسطر.",
+            "memory": [
+              {
+                "name": "s",
+                "value": "\"Hi\"",
+                "updated": false
+              },
+              {
+                "name": "len",
+                "value": "2",
+                "updated": false
+              }
+            ],
+            "output": ""
+          }
+        ]
+      }
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "أي دالة تُعطي طول النص في جافا؟",
+      "options": [
+        "size()",
+        "length()",
+        "count()",
+        "len()"
+      ],
+      "answer": 1,
+      "hint": "بأقواس فارغة.",
+      "explanation": "نستخدم length() لمعرفة عدد أحرف النص."
+    },
+    {
+      "type": "exercise",
+      "exType": "fill-blank",
+      "prompt": "حوّل النص name إلى أحرف كبيرة.",
+      "answer": [
+        "name.toUpperCase()"
+      ],
+      "hint": "upper = كبيرة.",
+      "explanation": "نستخدم name.toUpperCase() لتحويل النص لأحرف كبيرة."
+    }
+  ]
+}

@@ -1,0 +1,115 @@
+{
+  "id": "lesson-14",
+  "number": 14,
+  "lang": "java",
+  "title": "الكلمة static والمتغيرات الثابتة",
+  "subtitle": "بعض الأعضاء تنتمي للفئة نفسها لا للكائنات. هنا تأتي static.",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "ما static؟",
+      "icon": "📌",
+      "content": [
+        "العضو static ينتمي للفئة كلها، مشترك بين جميع الكائنات. نصل إليه باسم الفئة لا بالكائن."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "java",
+      "langLabel": "Java",
+      "code": [
+        "class Counter {",
+        "  static int count = 0;",
+        "  Counter() { count++; }",
+        "}",
+        "new Counter();",
+        "new Counter();",
+        "System.out.println(Counter.count);"
+      ],
+      "annotations": [
+        {
+          "line": 2,
+          "text": "count مشترك بين كل الكائنات."
+        },
+        {
+          "line": 3,
+          "text": "كل إنشاء يزيد العدّاد المشترك."
+        },
+        {
+          "line": 7,
+          "text": "يطبع 2 لأننا أنشأنا كائنين."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "الدوال الثابتة",
+      "icon": "⚙️",
+      "content": [
+        "الدوال static تُستدعى دون إنشاء كائن، مثل Math.sqrt. ودالة main نفسها static!"
+      ]
+    },
+    {
+      "type": "visualizer",
+      "data": {
+        "lang": "java",
+        "hasCallStack": false,
+        "code": [
+          "new Counter();",
+          "new Counter();"
+        ],
+        "steps": [
+          {
+            "line": 1,
+            "description": "الكائن الأول يُنشأ، المنشئ يزيد count المشترك إلى 1.",
+            "memory": [
+              {
+                "name": "Counter.count",
+                "value": "1",
+                "updated": true
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 2,
+            "description": "الكائن الثاني يُنشأ، count يصبح 2 (مشترك بينهما).",
+            "memory": [
+              {
+                "name": "Counter.count",
+                "value": "2",
+                "updated": true
+              }
+            ],
+            "output": ""
+          }
+        ]
+      }
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "العضو static ينتمي إلى…؟",
+      "options": [
+        "كل كائن على حدة",
+        "الفئة نفسها (مشترك)",
+        "لا شيء",
+        "الذاكرة المؤقتة"
+      ],
+      "answer": 1,
+      "hint": "مشترك للجميع.",
+      "explanation": "العضو static ينتمي للفئة ويُشارك بين جميع الكائنات."
+    },
+    {
+      "type": "exercise",
+      "exType": "fill-blank",
+      "prompt": "كيف نصل إلى المتغيّر الثابت count في الفئة Counter؟",
+      "answer": [
+        "Counter.count"
+      ],
+      "hint": "اسم الفئة ثم نقطة.",
+      "explanation": "نصل للعضو الثابت باسم الفئة: Counter.count."
+    }
+  ]
+}

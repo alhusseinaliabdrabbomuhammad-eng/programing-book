@@ -1,0 +1,178 @@
+{
+  "id": "lesson-8",
+  "number": 8,
+  "lang": "cpp",
+  "title": "المصفوفات والمؤشرات",
+  "subtitle": "كيف نخزّن مجموعة قيم؟ وما المؤشّر؟",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "المصفوفة",
+      "icon": "📊",
+      "content": [
+        "المصفوفة مجموعة عناصر من نفس النوع بحجم ثابت. الفهرسة من 0."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "cpp",
+      "langLabel": "C++",
+      "code": [
+        "int a[3] = {10, 20, 30};",
+        "cout << a[0] << endl;",
+        "cout << a[2];"
+      ],
+      "annotations": [
+        {
+          "line": 1,
+          "text": "مصفوفة من ثلاثة أعداد."
+        },
+        {
+          "line": 2,
+          "text": "العنصر الأول: 10."
+        },
+        {
+          "line": 3,
+          "text": "العنصر الثالث: 30."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "المؤشّرات",
+      "icon": "📍",
+      "content": [
+        "المؤشّر متغيّر يخزّن «عنوان» متغيّر آخر في الذاكرة. & تعطي العنوان، و * تصل للقيمة."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "cpp",
+      "langLabel": "C++",
+      "code": [
+        "int x = 5;",
+        "int* p = &x;",
+        "cout << *p;"
+      ],
+      "annotations": [
+        {
+          "line": 2,
+          "text": "p يخزّن عنوان x."
+        },
+        {
+          "line": 3,
+          "text": "*p يصل للقيمة المخزّنة هناك: 5."
+        }
+      ]
+    },
+    {
+      "type": "visualizer",
+      "data": {
+        "lang": "cpp",
+        "hasCallStack": false,
+        "code": [
+          "int x = 5;",
+          "int* p = &x;"
+        ],
+        "steps": [
+          {
+            "line": 1,
+            "description": "نبدأ بقراءة البرنامج من أعلى سطر، والذاكرة فارغة تمامًا قبل أن ننفّذ أي شيء.",
+            "memory": [],
+            "output": ""
+          },
+          {
+            "line": 1,
+            "description": "نضع 5 في المتغيّر x (له عنوان في الذاكرة).",
+            "memory": [
+              {
+                "name": "x",
+                "value": "5",
+                "updated": true
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 2,
+            "description": "لنتمهّل قليلًا ونتأمّل ما في الذاكرة حتى الآن قبل المتابعة.",
+            "memory": [
+              {
+                "name": "x",
+                "value": "5",
+                "updated": false
+              },
+              {
+                "name": "p",
+                "value": "→ x (عنوان)",
+                "updated": false
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 2,
+            "description": "p يخزّن عنوان x، فيشير إليه. *p يساوي 5.",
+            "memory": [
+              {
+                "name": "x",
+                "value": "5",
+                "updated": false
+              },
+              {
+                "name": "p",
+                "value": "→ x (عنوان)",
+                "updated": true
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 2,
+            "description": "انتهى التنفيذ! هذه هي الحالة النهائية للذاكرة والمخرجات بعد تنفيذ كل الأسطر.",
+            "memory": [
+              {
+                "name": "x",
+                "value": "5",
+                "updated": false
+              },
+              {
+                "name": "p",
+                "value": "→ x (عنوان)",
+                "updated": false
+              }
+            ],
+            "output": ""
+          }
+        ]
+      }
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "أي رمز يعطي عنوان متغيّر في C++؟",
+      "options": [
+        "*",
+        "&",
+        "#",
+        "@"
+      ],
+      "answer": 1,
+      "hint": "عطف العنوان.",
+      "explanation": "المعامل & يعطي عنوان المتغيّر في الذاكرة."
+    },
+    {
+      "type": "exercise",
+      "exType": "fill-blank",
+      "prompt": "صرّح عن مؤشّر إلى int اسمه p يشير إلى x.",
+      "answer": [
+        "int* p = &x;",
+        "int *p = &x;",
+        "int* p = &x"
+      ],
+      "hint": "النوع* ثم = &المتغيّر.",
+      "explanation": "نكتب int* p = &x; لإنشاء مؤشّر يشير إلى x."
+    }
+  ]
+}

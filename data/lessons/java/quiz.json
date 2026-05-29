@@ -1,0 +1,144 @@
+{
+  "title": "الاختبار النهائي: جافا ☕",
+  "lang": "java",
+  "questions": [
+    {
+      "type": "multiple-choice",
+      "prompt": "من أين يبدأ تنفيذ برنامج جافا؟",
+      "options": [
+        "أول سطر",
+        "دالة main",
+        "نهاية الملف",
+        "المنشئ"
+      ],
+      "answer": 1,
+      "explanation": "يبدأ التنفيذ دائمًا من الدالة main."
+    },
+    {
+      "type": "multiple-choice",
+      "prompt": "أي أمر يطبع سطرًا في جافا؟",
+      "options": [
+        "print()",
+        "System.out.println()",
+        "echo()",
+        "cout"
+      ],
+      "answer": 1,
+      "explanation": "نستخدم System.out.println() للطباعة مع سطر جديد."
+    },
+    {
+      "type": "multiple-choice",
+      "prompt": "أي نوع نستخدمه لعدد صحيح؟",
+      "options": [
+        "double",
+        "int",
+        "char",
+        "String"
+      ],
+      "answer": 1,
+      "explanation": "النوع int للأعداد الصحيحة."
+    },
+    {
+      "type": "multiple-choice",
+      "prompt": "ما ناتج 7 / 2 لعددين صحيحين في جافا؟",
+      "options": [
+        "3.5",
+        "3",
+        "4",
+        "خطأ"
+      ],
+      "answer": 1,
+      "explanation": "قسمة صحيحين تعطي صحيحًا، فالكسر يُحذف: 7/2=3."
+    },
+    {
+      "type": "true-false",
+      "prompt": "جافا حسّاسة لحالة الأحرف، فـ System غير system.",
+      "answer": true,
+      "explanation": "نعم، جافا تميّز بين الأحرف الكبيرة والصغيرة."
+    },
+    {
+      "type": "multiple-choice",
+      "prompt": "أي كلمة تُنشئ كائنًا جديدًا؟",
+      "options": [
+        "create",
+        "new",
+        "make",
+        "object"
+      ],
+      "answer": 1,
+      "explanation": "نستخدم new لإنشاء كائن من فئة."
+    },
+    {
+      "type": "multiple-choice",
+      "prompt": "أي معدّل وصول يُخفي الخاصية عن الخارج؟",
+      "options": [
+        "public",
+        "private",
+        "static",
+        "final"
+      ],
+      "answer": 1,
+      "explanation": "private يجعل الخاصية متاحة داخل الفئة فقط."
+    },
+    {
+      "type": "multiple-choice",
+      "prompt": "أي كلمة تجعل فئة ترث من أخرى؟",
+      "options": [
+        "inherits",
+        "extends",
+        "implements",
+        "super"
+      ],
+      "answer": 1,
+      "explanation": "نستخدم extends للوراثة في جافا."
+    },
+    {
+      "type": "true-false",
+      "prompt": "الكلمة final تجعل قيمة المتغيّر قابلة للتغيير لاحقًا.",
+      "answer": false,
+      "explanation": "بل العكس: final تمنع تغيير القيمة بعد إسنادها."
+    },
+    {
+      "type": "multiple-choice",
+      "prompt": "أي كتلة تُنفّذ دائمًا في try سواء وقع خطأ أم لا؟",
+      "options": [
+        "try",
+        "catch",
+        "finally",
+        "throw"
+      ],
+      "answer": 2,
+      "explanation": "كتلة finally تُنفّذ دائمًا، مثالية للتنظيف."
+    },
+    {
+      "type": "multiple-choice",
+      "prompt": "أي بنية تخزّن أزواج مفتاح وقيمة؟",
+      "options": [
+        "ArrayList",
+        "HashMap",
+        "int[]",
+        "String"
+      ],
+      "answer": 1,
+      "explanation": "HashMap تخزّن أزواج مفتاح↔قيمة."
+    },
+    {
+      "type": "true-false",
+      "prompt": "العضو static ينتمي للفئة ويُشارك بين كل الكائنات.",
+      "answer": true,
+      "explanation": "نعم، العضو static مشترك بين جميع كائنات الفئة."
+    },
+    {
+      "type": "multiple-choice",
+      "prompt": "ماذا تستورد لقراءة المدخلات من المستخدم؟",
+      "options": [
+        "java.io.File",
+        "java.util.Scanner",
+        "java.lang.String",
+        "java.net"
+      ],
+      "answer": 1,
+      "explanation": "نستورد java.util.Scanner لقراءة المدخلات."
+    }
+  ]
+}

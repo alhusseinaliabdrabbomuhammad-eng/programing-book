@@ -1,0 +1,144 @@
+{
+  "title": "الاختبار النهائي: بايثون 🐍",
+  "lang": "python",
+  "questions": [
+    {
+      "type": "multiple-choice",
+      "prompt": "ماذا يطبع الأمر print(\"مرحبا\") ؟",
+      "options": [
+        "mar7aba",
+        "مرحبا",
+        "print",
+        "خطأ"
+      ],
+      "answer": 1,
+      "explanation": "الأمر print يعرض ما بين القوسين كما هو على الشاشة."
+    },
+    {
+      "type": "multiple-choice",
+      "prompt": "أي رمز نستخدمه لإنشاء تعليق في بايثون؟",
+      "options": [
+        "//",
+        "#",
+        "/* */",
+        "--"
+      ],
+      "answer": 1,
+      "explanation": "في بايثون نبدأ التعليق بالرمز # ويتجاهله الحاسوب."
+    },
+    {
+      "type": "multiple-choice",
+      "prompt": "ما نوع القيمة 3.14 في بايثون؟",
+      "options": [
+        "int",
+        "str",
+        "float",
+        "bool"
+      ],
+      "answer": 2,
+      "explanation": "الأرقام التي فيها فاصلة عشرية نوعها float."
+    },
+    {
+      "type": "multiple-choice",
+      "prompt": "ماذا يُعيد الأمر input دائمًا؟",
+      "options": [
+        "عدد صحيح",
+        "نصّ str",
+        "قيمة منطقية",
+        "عدد عشري"
+      ],
+      "answer": 1,
+      "explanation": "input يُعيد دائمًا نصًّا، حتى لو كتب المستخدم رقمًا."
+    },
+    {
+      "type": "multiple-choice",
+      "prompt": "ما ناتج 10 % 3 ؟",
+      "options": [
+        "3",
+        "1",
+        "0",
+        "3.33"
+      ],
+      "answer": 1,
+      "explanation": "المعامل % يعطي باقي القسمة: 10÷3 الباقي 1."
+    },
+    {
+      "type": "multiple-choice",
+      "prompt": "كيف نصل لأول عنصر في قائمة my_list؟",
+      "options": [
+        "my_list[1]",
+        "my_list[0]",
+        "my_list(0)",
+        "my_list.first"
+      ],
+      "answer": 1,
+      "explanation": "الفهرسة تبدأ من 0، فأوّل عنصر my_list[0]."
+    },
+    {
+      "type": "multiple-choice",
+      "prompt": "أي كلمة نستخدمها لتعريف دالة في بايثون؟",
+      "options": [
+        "function",
+        "def",
+        "func",
+        "define"
+      ],
+      "answer": 1,
+      "explanation": "نعرّف الدوال بالكلمة def في بايثون."
+    },
+    {
+      "type": "true-false",
+      "prompt": "في بايثون المسافة البادئة (الإزاحة) مهمّة وتحدّد الكتل البرمجية.",
+      "answer": true,
+      "explanation": "نعم، بايثون تعتمد على الإزاحة لتحديد بداية ونهاية الكتل بدل الأقواس."
+    },
+    {
+      "type": "true-false",
+      "prompt": "القيمة True و \"True\" متطابقتان في النوع في بايثون.",
+      "answer": false,
+      "explanation": "True قيمة منطقية bool، بينما \"True\" نصّ str، فهما مختلفتان."
+    },
+    {
+      "type": "multiple-choice",
+      "prompt": "ما الحلقة المناسبة للتكرار عدد مرّات معروف على عناصر قائمة؟",
+      "options": [
+        "while",
+        "for",
+        "if",
+        "def"
+      ],
+      "answer": 1,
+      "explanation": "حلقة for مثالية للمرور على عناصر قائمة معروفة."
+    },
+    {
+      "type": "multiple-choice",
+      "prompt": "كيف نحوّل النص \"5\" إلى عدد صحيح؟",
+      "options": [
+        "str(5)",
+        "int(\"5\")",
+        "float(\"5\")",
+        "num(\"5\")"
+      ],
+      "answer": 1,
+      "explanation": "الدالة int() تحوّل النص إلى عدد صحيح."
+    },
+    {
+      "type": "true-false",
+      "prompt": "القاموس dict في بايثون يخزّن أزواجًا من مفتاح وقيمة.",
+      "answer": true,
+      "explanation": "نعم، القاموس يربط كل مفتاح بقيمة، مثل دفتر هاتف."
+    },
+    {
+      "type": "multiple-choice",
+      "prompt": "ماذا يحدث عند محاولة قسمة على صفر دون معالجة؟",
+      "options": [
+        "تُعيد 0",
+        "يحدث خطأ (استثناء)",
+        "تُعيد None",
+        "لا شيء"
+      ],
+      "answer": 1,
+      "explanation": "القسمة على صفر تطلق استثناء ZeroDivisionError."
+    }
+  ]
+}

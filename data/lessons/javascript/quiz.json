@@ -1,0 +1,150 @@
+{
+  "title": "الاختبار النهائي: JavaScript 📜",
+  "lang": "javascript",
+  "questions": [
+    {
+      "type": "multiple-choice",
+      "prompt": "أي أمر يطبع رسالة في الكونسول؟",
+      "options": [
+        "print()",
+        "echo()",
+        "console.log()",
+        "write()"
+      ],
+      "answer": 2,
+      "explanation": "console.log() يطبع الرسائل في كونسول المتصفّح."
+    },
+    {
+      "type": "multiple-choice",
+      "prompt": "أيّها يُستخدم لقيمة لن تتغيّر؟",
+      "options": [
+        "var",
+        "let",
+        "const",
+        "fix"
+      ],
+      "answer": 2,
+      "explanation": "نستخدم const للقيم الثابتة."
+    },
+    {
+      "type": "multiple-choice",
+      "prompt": "ما ناتج \"5\" + 2 في JavaScript؟",
+      "options": [
+        "7",
+        "\"52\"",
+        "خطأ",
+        "52"
+      ],
+      "answer": 1,
+      "explanation": "جمع نصّ مع رقم بـ + يدمجهما: \"52\"."
+    },
+    {
+      "type": "multiple-choice",
+      "prompt": "ما ناتج 5 === \"5\" ؟",
+      "options": [
+        "true",
+        "false",
+        "خطأ",
+        "5"
+      ],
+      "answer": 1,
+      "explanation": "=== يقارن القيمة والنوع، والنوع مختلف فالنتيجة false."
+    },
+    {
+      "type": "multiple-choice",
+      "prompt": "ما فهرس أول عنصر في مصفوفة؟",
+      "options": [
+        "1",
+        "0",
+        "-1",
+        "لا يوجد"
+      ],
+      "answer": 1,
+      "explanation": "الفهرسة تبدأ من 0."
+    },
+    {
+      "type": "multiple-choice",
+      "prompt": "كيف نصل لخاصية name في كائن user؟",
+      "options": [
+        "user->name",
+        "user.name",
+        "user[name]",
+        "name.user"
+      ],
+      "answer": 1,
+      "explanation": "نصل للخاصية بالنقطة: user.name."
+    },
+    {
+      "type": "multiple-choice",
+      "prompt": "ما الكلمة التي تُعيد قيمة من دالة؟",
+      "options": [
+        "give",
+        "return",
+        "out",
+        "send"
+      ],
+      "answer": 1,
+      "explanation": "return تُعيد القيمة من الدالة."
+    },
+    {
+      "type": "true-false",
+      "prompt": "الإغلاق Closure يجعل الدالة الداخلية تتذكّر متغيّرات نطاقها الخارجي.",
+      "answer": true,
+      "explanation": "نعم، هذا هو جوهر الإغلاق في JavaScript."
+    },
+    {
+      "type": "multiple-choice",
+      "prompt": "أي دالة نستخدمها للاستماع لحدث؟",
+      "options": [
+        "onEvent",
+        "addEventListener",
+        "listen",
+        "handleEvent"
+      ],
+      "answer": 1,
+      "explanation": "addEventListener تستمع لحدث وتنفّذ دالة عند وقوعه."
+    },
+    {
+      "type": "multiple-choice",
+      "prompt": "أي دالة تختار عنصرًا بمعرّفه id؟",
+      "options": [
+        "querySelectorAll",
+        "getElementById",
+        "createElement",
+        "appendChild"
+      ],
+      "answer": 1,
+      "explanation": "getElementById تختار عنصرًا بمعرّفه."
+    },
+    {
+      "type": "multiple-choice",
+      "prompt": "ماذا تفعل كلمة await؟",
+      "options": [
+        "تطبع",
+        "تنتظر اكتمال الوعد",
+        "تنشئ مصفوفة",
+        "تحذف متغيّرًا"
+      ],
+      "answer": 1,
+      "explanation": "await تنتظر اكتمال الوعد ثم تكمل بالنتيجة."
+    },
+    {
+      "type": "true-false",
+      "prompt": "الدالة fetch تُعيد وعدًا Promise نتعامل معه بـ await أو then.",
+      "answer": true,
+      "explanation": "نعم، fetch غير متزامنة وتُعيد وعدًا."
+    },
+    {
+      "type": "multiple-choice",
+      "prompt": "أي كتلة تلتقط الخطأ في معالجة الأخطاء؟",
+      "options": [
+        "try",
+        "catch",
+        "finally",
+        "throw"
+      ],
+      "answer": 1,
+      "explanation": "كتلة catch تلتقط الخطأ وتتعامل معه."
+    }
+  ]
+}

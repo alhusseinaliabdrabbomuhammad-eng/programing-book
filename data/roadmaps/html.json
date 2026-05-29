@@ -1,0 +1,127 @@
+{
+  "lang": "html",
+  "name": "إتش تي إم إل",
+  "totalLessons": 20,
+  "groups": [
+    {
+      "title": "الأساسيات",
+      "lessons": [
+        {
+          "id": "lesson-1",
+          "number": 1,
+          "title": "ما هو HTML؟ هيكل الصفحة الأساسي"
+        },
+        {
+          "id": "lesson-2",
+          "number": 2,
+          "title": "عناصر الرأس head والوسوم الوصفية"
+        },
+        {
+          "id": "lesson-3",
+          "number": 3,
+          "title": "العناوين والفقرات"
+        },
+        {
+          "id": "lesson-4",
+          "number": 4,
+          "title": "تنسيق النصوص: strong و em وغيرها"
+        },
+        {
+          "id": "lesson-5",
+          "number": 5,
+          "title": "القوائم: غير مرتبة ومرتبة وتعريفية"
+        }
+      ]
+    },
+    {
+      "title": "المفاهيم المتوسطة",
+      "lessons": [
+        {
+          "id": "lesson-6",
+          "number": 6,
+          "title": "الروابط a وأنواع المسارات"
+        },
+        {
+          "id": "lesson-7",
+          "number": 7,
+          "title": "الصور img والنص البديل"
+        },
+        {
+          "id": "lesson-8",
+          "number": 8,
+          "title": "الجداول table و tr و th و td"
+        },
+        {
+          "id": "lesson-9",
+          "number": 9,
+          "title": "النماذج form والحقول الأساسية"
+        },
+        {
+          "id": "lesson-10",
+          "number": 10,
+          "title": "أزرار وأنواع الإدخال الجديدة"
+        }
+      ]
+    },
+    {
+      "title": "مفاهيم متقدمة",
+      "lessons": [
+        {
+          "id": "lesson-11",
+          "number": 11,
+          "title": "الوسائط video و audio"
+        },
+        {
+          "id": "lesson-12",
+          "number": 12,
+          "title": "الإطارات الداخلية iframe"
+        },
+        {
+          "id": "lesson-13",
+          "number": 13,
+          "title": "العناصر الدلالية الجديدة"
+        },
+        {
+          "id": "lesson-14",
+          "number": 14,
+          "title": "العناصر التفاعلية details و summary"
+        },
+        {
+          "id": "lesson-15",
+          "number": 15,
+          "title": "البيانات الوصفية المخصصة data-*"
+        }
+      ]
+    },
+    {
+      "title": "الإتقان والتطبيق",
+      "lessons": [
+        {
+          "id": "lesson-16",
+          "number": 16,
+          "title": "ربط CSS خارجي والأنماط المضمنة"
+        },
+        {
+          "id": "lesson-17",
+          "number": 17,
+          "title": "ربط JavaScript و defer و async"
+        },
+        {
+          "id": "lesson-18",
+          "number": 18,
+          "title": "إمكانية الوصول ARIA"
+        },
+        {
+          "id": "lesson-19",
+          "number": 19,
+          "title": "الصور المتجاوبة srcset و picture"
+        },
+        {
+          "id": "lesson-20",
+          "number": 20,
+          "title": "بناء صفحة كاملة: تطبيق عملي"
+        }
+      ]
+    }
+  ]
+}

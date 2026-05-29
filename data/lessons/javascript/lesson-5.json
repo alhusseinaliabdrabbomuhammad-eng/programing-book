@@ -1,0 +1,168 @@
+{
+  "id": "lesson-5",
+  "number": 5,
+  "lang": "javascript",
+  "title": "السلاسل النصية والقوالب الحرفية",
+  "subtitle": "كيف نتعامل مع النصوص وندمجها بأناقة باستخدام القوالب الحرفية.",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "الوصول للأحرف والطول",
+      "icon": "🔤",
+      "content": [
+        "كل نصّ له طول نعرفه بـ .length، ونصل لحرف بموضعه باستخدام []. أوّل حرف موضعه 0."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "javascript",
+      "langLabel": "JavaScript",
+      "code": [
+        "let w = \"مرحبا\";",
+        "console.log(w.length);",
+        "console.log(w[0]);"
+      ],
+      "annotations": [
+        {
+          "line": 2,
+          "text": "عدد الأحرف في الكلمة."
+        },
+        {
+          "line": 3,
+          "text": "الحرف الأول (الموضع 0)."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "القوالب الحرفية",
+      "icon": "✨",
+      "content": [
+        "بدل دمج النصوص بـ +، نستخدم العلامة المائلة الخلفية ` ` ونضع المتغيّرات داخل ${ }. أنظف وأجمل!"
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "javascript",
+      "langLabel": "JavaScript",
+      "code": [
+        "let name = \"ليان\";",
+        "let age = 11;",
+        "console.log(`اسمي ${name} وعمري ${age}`);"
+      ],
+      "annotations": [
+        {
+          "line": 3,
+          "text": "كل ${...} يُستبدل بقيمة المتغيّر داخل النص."
+        }
+      ]
+    },
+    {
+      "type": "visualizer",
+      "data": {
+        "lang": "javascript",
+        "hasCallStack": false,
+        "code": [
+          "let n = \"علي\";",
+          "let msg = `أهلًا ${n}`;"
+        ],
+        "steps": [
+          {
+            "line": 1,
+            "description": "نبدأ بقراءة البرنامج من أعلى سطر، والذاكرة فارغة تمامًا قبل أن ننفّذ أي شيء.",
+            "memory": [],
+            "output": ""
+          },
+          {
+            "line": 1,
+            "description": "نضع النص \"علي\" في الصندوق n.",
+            "memory": [
+              {
+                "name": "n",
+                "value": "\"علي\"",
+                "updated": true
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 2,
+            "description": "لنتمهّل قليلًا ونتأمّل ما في الذاكرة حتى الآن قبل المتابعة.",
+            "memory": [
+              {
+                "name": "n",
+                "value": "\"علي\"",
+                "updated": false
+              },
+              {
+                "name": "msg",
+                "value": "\"أهلًا علي\"",
+                "updated": false
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 2,
+            "description": "نبني نصًّا جديدًا: ${n} يُستبدل بـ علي، فيصبح msg = \"أهلًا علي\".",
+            "memory": [
+              {
+                "name": "n",
+                "value": "\"علي\"",
+                "updated": false
+              },
+              {
+                "name": "msg",
+                "value": "\"أهلًا علي\"",
+                "updated": true
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 2,
+            "description": "انتهى التنفيذ! هذه هي الحالة النهائية للذاكرة والمخرجات بعد تنفيذ كل الأسطر.",
+            "memory": [
+              {
+                "name": "n",
+                "value": "\"علي\"",
+                "updated": false
+              },
+              {
+                "name": "msg",
+                "value": "\"أهلًا علي\"",
+                "updated": false
+              }
+            ],
+            "output": ""
+          }
+        ]
+      }
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "أي رمز نستخدمه داخل القوالب الحرفية لإدراج متغيّر؟",
+      "options": [
+        "{ }",
+        "${ }",
+        "%s",
+        "( )"
+      ],
+      "answer": 1,
+      "hint": "يبدأ بعلامة الدولار.",
+      "explanation": "نستخدم ${ } داخل القالب الحرفي لإدراج قيمة متغيّر."
+    },
+    {
+      "type": "exercise",
+      "exType": "fill-blank",
+      "prompt": "استخدم قالبًا حرفيًّا لطباعة العمر المخزّن في المتغيّر age ضمن جملة «عمري ...».",
+      "answer": [
+        "`عمري ${age}`"
+      ],
+      "hint": "علامة مائلة خلفية و ${}.",
+      "explanation": "نكتب `عمري ${age}` لإدراج قيمة age داخل النص."
+    }
+  ]
+}

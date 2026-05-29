@@ -1,0 +1,187 @@
+{
+  "id": "lesson-4",
+  "number": 4,
+  "lang": "javascript",
+  "title": "العمليات الحسابية والمنطقية والمقارنة",
+  "subtitle": "JavaScript آلة حاسبة ذكية. لنتعلّم العمليات والمقارنات.",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "list",
+      "heading": "المعاملات الحسابية",
+      "icon": "➕",
+      "ordered": false,
+      "items": [
+        "`+` جمع",
+        "`-` طرح",
+        "`*` ضرب",
+        "`/` قسمة",
+        "`%` باقي القسمة",
+        "`**` الأُس"
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "javascript",
+      "langLabel": "JavaScript",
+      "code": [
+        "console.log(7 % 2);",
+        "console.log(2 ** 3);"
+      ],
+      "annotations": [
+        {
+          "line": 1,
+          "text": "باقي 7÷2 هو 1."
+        },
+        {
+          "line": 2,
+          "text": "2 أُس 3 = 8."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "المقارنة الصارمة ===",
+      "icon": "🎯",
+      "content": [
+        "نستخدم === للمقارنة (يقارن القيمة والنوع معًا). تجنّب == العادية لأنها قد تخدعك."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "javascript",
+      "langLabel": "JavaScript",
+      "code": [
+        "console.log(5 === 5);",
+        "console.log(5 === \"5\");",
+        "console.log(3 > 2 && 1 < 2);"
+      ],
+      "annotations": [
+        {
+          "line": 1,
+          "text": "القيمة والنوع متطابقان → true."
+        },
+        {
+          "line": 2,
+          "text": "القيمة متشابهة لكن النوع مختلف (رقم مقابل نصّ) → false."
+        },
+        {
+          "line": 3,
+          "text": "&& تعني «و»: كلا الشرطين صحيح → true."
+        }
+      ]
+    },
+    {
+      "type": "visualizer",
+      "data": {
+        "lang": "javascript",
+        "hasCallStack": false,
+        "code": [
+          "let a = 8;",
+          "let b = 3;",
+          "let big = a > b;"
+        ],
+        "steps": [
+          {
+            "line": 1,
+            "description": "نبدأ بقراءة البرنامج من أعلى سطر، والذاكرة فارغة تمامًا قبل أن ننفّذ أي شيء.",
+            "memory": [],
+            "output": ""
+          },
+          {
+            "line": 1,
+            "description": "نضع 8 في a.",
+            "memory": [
+              {
+                "name": "a",
+                "value": "8",
+                "updated": true
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 2,
+            "description": "لنتمهّل قليلًا ونتأمّل ما في الذاكرة حتى الآن قبل المتابعة.",
+            "memory": [
+              {
+                "name": "a",
+                "value": "8",
+                "updated": false
+              },
+              {
+                "name": "b",
+                "value": "3",
+                "updated": false
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 2,
+            "description": "نضع 3 في b.",
+            "memory": [
+              {
+                "name": "a",
+                "value": "8",
+                "updated": false
+              },
+              {
+                "name": "b",
+                "value": "3",
+                "updated": true
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 3,
+            "description": "نسأل: هل a أكبر من b؟ 8 > 3 صحيح، فيصبح big يساوي true.",
+            "memory": [
+              {
+                "name": "a",
+                "value": "8",
+                "updated": false
+              },
+              {
+                "name": "b",
+                "value": "3",
+                "updated": false
+              },
+              {
+                "name": "big",
+                "value": "true",
+                "updated": true
+              }
+            ],
+            "output": ""
+          }
+        ]
+      }
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "ما ناتج 5 === \"5\" ؟",
+      "options": [
+        "true",
+        "false",
+        "خطأ",
+        "5"
+      ],
+      "answer": 1,
+      "hint": "=== يقارن النوع أيضًا.",
+      "explanation": "المقارنة الصارمة === تتحقّق من القيمة والنوع معًا، والنوع مختلف هنا، لذا false."
+    },
+    {
+      "type": "exercise",
+      "exType": "fill-blank",
+      "prompt": "اكتب تعبيرًا يتحقّق أن x يساوي 10 بمقارنة صارمة.",
+      "answer": [
+        "x === 10"
+      ],
+      "hint": "ثلاث علامات يساوي.",
+      "explanation": "نستخدم x === 10 للمقارنة الصارمة بالقيمة والنوع."
+    }
+  ]
+}

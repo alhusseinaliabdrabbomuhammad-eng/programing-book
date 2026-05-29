@@ -1,0 +1,84 @@
+{
+  "id": "lesson-15",
+  "number": 15,
+  "lang": "html",
+  "title": "البيانات الوصفية المخصصة data-*",
+  "subtitle": "كيف نخزّن بيانات إضافية في العناصر لاستخدامها لاحقًا؟",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "ما خصائص data-*؟",
+      "icon": "🏷️",
+      "content": [
+        "خصائص تبدأ بـ data- نضيف بها معلومات مخصّصة لأيّ عنصر، دون أن تظهر للمستخدم. تستخدمها JavaScript لاحقًا."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "html",
+      "langLabel": "HTML",
+      "code": [
+        "<button data-id=\"42\" data-role=\"admin\">",
+        "  زرّ",
+        "</button>"
+      ],
+      "annotations": [
+        {
+          "line": 1,
+          "text": "data-id و data-role بيانات مخصّصة مخفيّة في الزرّ."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "قراءتها بـ JavaScript",
+      "icon": "🔍",
+      "content": [
+        "نقرأها لاحقًا عبر element.dataset.id (تتحوّل data-id إلى dataset.id)."
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "tip",
+      "title": "متى نستخدمها؟ 💡",
+      "content": "عندما نريد ربط بيانات بعنصر مرئيّ، مثل رقم منتج بزرّ «أضف للسلّة»، لتعرف JavaScript أيّ منتج نُقِر."
+    },
+    {
+      "type": "list",
+      "heading": "قواعد التسمية",
+      "icon": "📐",
+      "ordered": false,
+      "items": [
+        "تبدأ دائمًا بـ data-",
+        "حروف صغيرة بلا فراغات",
+        "مثال: data-user-name",
+        "تُقرأ بـ element.dataset"
+      ]
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "بماذا تبدأ خاصية البيانات المخصّصة؟",
+      "options": [
+        "meta-",
+        "data-",
+        "custom-",
+        "x-"
+      ],
+      "answer": 1,
+      "hint": "أربعة أحرف وشَرطة.",
+      "explanation": "خصائص البيانات المخصّصة تبدأ بـ data- مثل data-id."
+    },
+    {
+      "type": "exercise",
+      "exType": "fill-blank",
+      "prompt": "أضف خاصية بيانات مخصّصة باسم id قيمتها 5 لعنصر.",
+      "answer": [
+        "data-id=\"5\""
+      ],
+      "hint": "data- ثم الاسم.",
+      "explanation": "نكتب data-id=\"5\" لإضافة بيانات مخصّصة."
+    }
+  ]
+}

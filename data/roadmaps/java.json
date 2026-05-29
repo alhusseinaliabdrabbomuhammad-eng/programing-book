@@ -1,0 +1,127 @@
+{
+  "lang": "java",
+  "name": "جافا",
+  "totalLessons": 20,
+  "groups": [
+    {
+      "title": "الأساسيات",
+      "lessons": [
+        {
+          "id": "lesson-1",
+          "number": 1,
+          "title": "مقدمة إلى جافا وإعداد JDK"
+        },
+        {
+          "id": "lesson-2",
+          "number": 2,
+          "title": "هيكل برنامج جافا وأول Hello World"
+        },
+        {
+          "id": "lesson-3",
+          "number": 3,
+          "title": "المتغيرات والأنواع البدائية"
+        },
+        {
+          "id": "lesson-4",
+          "number": 4,
+          "title": "التحويل بين الأنواع والثوابت final"
+        },
+        {
+          "id": "lesson-5",
+          "number": 5,
+          "title": "العمليات الحسابية والمنطقية"
+        }
+      ]
+    },
+    {
+      "title": "المفاهيم المتوسطة",
+      "lessons": [
+        {
+          "id": "lesson-6",
+          "number": 6,
+          "title": "السلاسل النصية String و StringBuilder"
+        },
+        {
+          "id": "lesson-7",
+          "number": 7,
+          "title": "الإدخال بـ Scanner والإخراج بـ System.out"
+        },
+        {
+          "id": "lesson-8",
+          "number": 8,
+          "title": "جمل التحكم if/else و switch"
+        },
+        {
+          "id": "lesson-9",
+          "number": 9,
+          "title": "الحلقات for و while و do-while و for-each"
+        },
+        {
+          "id": "lesson-10",
+          "number": 10,
+          "title": "المصفوفات أحادية ومتعددة الأبعاد"
+        }
+      ]
+    },
+    {
+      "title": "مفاهيم متقدمة",
+      "lessons": [
+        {
+          "id": "lesson-11",
+          "number": 11,
+          "title": "مقدمة إلى OOP: الفئات والكائنات و new"
+        },
+        {
+          "id": "lesson-12",
+          "number": 12,
+          "title": "المنشئ Constructor و this"
+        },
+        {
+          "id": "lesson-13",
+          "number": 13,
+          "title": "التغليف و private و getters/setters"
+        },
+        {
+          "id": "lesson-14",
+          "number": 14,
+          "title": "الكلمة static والمتغيرات الثابتة"
+        },
+        {
+          "id": "lesson-15",
+          "number": 15,
+          "title": "الوراثة extends و super وتجاوز الدوال"
+        }
+      ]
+    },
+    {
+      "title": "الإتقان والتطبيق",
+      "lessons": [
+        {
+          "id": "lesson-16",
+          "number": 16,
+          "title": "تعدد الأشكال والواجهات interface"
+        },
+        {
+          "id": "lesson-17",
+          "number": 17,
+          "title": "الفئات المجردة abstract"
+        },
+        {
+          "id": "lesson-18",
+          "number": 18,
+          "title": "الاستثناءات try/catch/finally و throw"
+        },
+        {
+          "id": "lesson-19",
+          "number": 19,
+          "title": "إطار المجموعات ArrayList و HashMap"
+        },
+        {
+          "id": "lesson-20",
+          "number": 20,
+          "title": "مقدمة إلى Java I/O والتسلسل"
+        }
+      ]
+    }
+  ]
+}

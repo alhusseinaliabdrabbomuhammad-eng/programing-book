@@ -1,0 +1,150 @@
+{
+  "title": "الاختبار النهائي: CSS 🎨",
+  "lang": "css",
+  "questions": [
+    {
+      "type": "multiple-choice",
+      "prompt": "ماذا نسمّي الجزء الذي يحدّد أيّ عنصر سيُنسّق؟",
+      "options": [
+        "الخاصية",
+        "القيمة",
+        "المحدّد",
+        "الوسم"
+      ],
+      "answer": 2,
+      "explanation": "المحدّد (selector) يحدّد العناصر المستهدفة."
+    },
+    {
+      "type": "multiple-choice",
+      "prompt": "بأي رمز نختار عنصرًا بصنفه class؟",
+      "options": [
+        "#",
+        "نقطة .",
+        "مربّع",
+        "نجمة *"
+      ],
+      "answer": 1,
+      "explanation": "نستخدم النقطة . قبل اسم الصنف."
+    },
+    {
+      "type": "multiple-choice",
+      "prompt": "ماذا يمثّل الحرف a في rgba؟",
+      "options": [
+        "الأحمر",
+        "الشفافية",
+        "الزاوية",
+        "المساحة"
+      ],
+      "answer": 1,
+      "explanation": "a (alpha) يمثّل الشفافية: 0 شفاف و 1 معتم."
+    },
+    {
+      "type": "multiple-choice",
+      "prompt": "ما المسافة الداخلية بين المحتوى والحدّ؟",
+      "options": [
+        "margin",
+        "padding",
+        "border",
+        "content"
+      ],
+      "answer": 1,
+      "explanation": "padding هو الحشو الداخليّ بين المحتوى والحدّ."
+    },
+    {
+      "type": "multiple-choice",
+      "prompt": "ما القيمة التي تجعل العرض يشمل الحشو والحدّ؟",
+      "options": [
+        "content-box",
+        "border-box",
+        "padding-box",
+        "full-box"
+      ],
+      "answer": 1,
+      "explanation": "border-box تجعل width يشمل الحشو والحدّ."
+    },
+    {
+      "type": "true-false",
+      "prompt": "القيمة border-radius: 50% تحوّل المربّع إلى دائرة.",
+      "answer": true,
+      "explanation": "نعم، 50% تدوّر الزوايا بالكامل فتصبح دائرة."
+    },
+    {
+      "type": "multiple-choice",
+      "prompt": "أي قيمة لـ display تُخفي العنصر وتزيل مساحته؟",
+      "options": [
+        "hidden",
+        "none",
+        "invisible",
+        "opacity"
+      ],
+      "answer": 1,
+      "explanation": "display: none يخفي العنصر ويزيل مساحته."
+    },
+    {
+      "type": "multiple-choice",
+      "prompt": "أي خاصية تحاذي العناصر على المحور الرئيسي في Flexbox؟",
+      "options": [
+        "align-items",
+        "justify-content",
+        "direction",
+        "display"
+      ],
+      "answer": 1,
+      "explanation": "justify-content تحاذي العناصر على المحور الرئيسي."
+    },
+    {
+      "type": "multiple-choice",
+      "prompt": "ما الوحدة الخاصّة بـ Grid لتقسيم المساحة بنسب؟",
+      "options": [
+        "px",
+        "fr",
+        "em",
+        "%"
+      ],
+      "answer": 1,
+      "explanation": "الوحدة fr تقسم المساحة بنسب في الشبكة."
+    },
+    {
+      "type": "multiple-choice",
+      "prompt": "أي خاصية تجعل تغيّر القيم يحدث بسلاسة؟",
+      "options": [
+        "transform",
+        "transition",
+        "animation",
+        "hover"
+      ],
+      "answer": 1,
+      "explanation": "transition تجعل التغيّر سلسًا عبر مدّة محدّدة."
+    },
+    {
+      "type": "multiple-choice",
+      "prompt": "ما القاعدة التي تعرّف مراحل الرسوم المتحركة؟",
+      "options": [
+        "@media",
+        "@keyframes",
+        "@import",
+        "@font-face"
+      ],
+      "answer": 1,
+      "explanation": "@keyframes تعرّف مراحل الحركة المتعدّدة."
+    },
+    {
+      "type": "true-false",
+      "prompt": "نستخدم var(--color) للوصول لقيمة متغيّر CSS.",
+      "answer": true,
+      "explanation": "نعم، نستخدم الدالة var() لقراءة قيمة المتغيّر."
+    },
+    {
+      "type": "multiple-choice",
+      "prompt": "ما الأداة التي تطبّق أنماطًا حسب حجم الشاشة؟",
+      "options": [
+        "@keyframes",
+        "@media",
+        "@import",
+        "var()"
+      ],
+      "answer": 1,
+      "explanation": "@media تطبّق أنماطًا حسب خصائص الشاشة."
+    }
+  ]
+}

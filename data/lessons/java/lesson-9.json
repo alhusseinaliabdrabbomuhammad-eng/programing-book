@@ -1,0 +1,168 @@
+{
+  "id": "lesson-9",
+  "number": 9,
+  "lang": "java",
+  "title": "الحلقات for و while و do-while و for-each",
+  "subtitle": "التكرار في جافا بأشكاله المختلفة. لكل حالة حلقتها المناسبة.",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "حلقة for",
+      "icon": "🔁",
+      "content": [
+        "مثالية عندما نعرف عدد التكرارات مسبقًا."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "java",
+      "langLabel": "Java",
+      "code": [
+        "for (int i = 1; i <= 3; i++) {",
+        "  System.out.println(i);",
+        "}"
+      ],
+      "annotations": [
+        {
+          "line": 1,
+          "text": "i من 1 إلى 3، تزيد 1 كلّ دورة."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "while و do-while",
+      "icon": "🔄",
+      "content": [
+        "while تتحقّق من الشرط قبل التكرار. do-while تنفّذ مرّة على الأقلّ ثم تتحقّق."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "java",
+      "langLabel": "Java",
+      "code": [
+        "int[] nums = {10, 20, 30};",
+        "for (int x : nums) {",
+        "  System.out.println(x);",
+        "}"
+      ],
+      "annotations": [
+        {
+          "line": 2,
+          "text": "for-each يمرّ على كل عنصر في المصفوفة دون فهارس."
+        }
+      ]
+    },
+    {
+      "type": "visualizer",
+      "data": {
+        "lang": "java",
+        "hasCallStack": false,
+        "code": [
+          "int sum = 0;",
+          "for (int i = 1; i <= 3; i++) {",
+          "  sum += i;",
+          "}"
+        ],
+        "steps": [
+          {
+            "line": 1,
+            "description": "نبدأ بقراءة البرنامج من أعلى سطر، والذاكرة فارغة تمامًا قبل أن ننفّذ أي شيء.",
+            "memory": [],
+            "output": ""
+          },
+          {
+            "line": 1,
+            "description": "نبدأ sum = 0.",
+            "memory": [
+              {
+                "name": "sum",
+                "value": "0",
+                "updated": true
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 2,
+            "description": "i=1: sum يصبح 1.",
+            "memory": [
+              {
+                "name": "i",
+                "value": "1",
+                "updated": true
+              },
+              {
+                "name": "sum",
+                "value": "1",
+                "updated": true
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 3,
+            "description": "i=2: sum يصبح 3.",
+            "memory": [
+              {
+                "name": "i",
+                "value": "2",
+                "updated": true
+              },
+              {
+                "name": "sum",
+                "value": "3",
+                "updated": true
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 4,
+            "description": "i=3: sum يصبح 6. انتهت.",
+            "memory": [
+              {
+                "name": "i",
+                "value": "3",
+                "updated": true
+              },
+              {
+                "name": "sum",
+                "value": "6",
+                "updated": true
+              }
+            ],
+            "output": ""
+          }
+        ]
+      }
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "أي حلقة تُنفّذ مرّة واحدة على الأقلّ دائمًا؟",
+      "options": [
+        "for",
+        "while",
+        "do-while",
+        "for-each"
+      ],
+      "answer": 2,
+      "hint": "تنفّذ ثم تتحقّق.",
+      "explanation": "do-while تنفّذ الكود أولًا ثم تتحقّق من الشرط، فتعمل مرّة على الأقلّ."
+    },
+    {
+      "type": "exercise",
+      "exType": "fill-blank",
+      "prompt": "اكتب بداية حلقة for-each تمرّ على مصفوفة nums من نوع int، المتغيّر x.",
+      "answer": [
+        "for (int x : nums)",
+        "for(int x : nums)"
+      ],
+      "hint": "النوع المتغيّر : المصفوفة.",
+      "explanation": "نكتب for (int x : nums) للمرور على كل عنصر."
+    }
+  ]
+}

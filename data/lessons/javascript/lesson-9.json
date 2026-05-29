@@ -1,0 +1,173 @@
+{
+  "id": "lesson-9",
+  "number": 9,
+  "lang": "javascript",
+  "title": "الحلقات for و while و for...of",
+  "subtitle": "التكرار يوفّر علينا الكتابة. الحاسوب لا يملّ من التكرار!",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "لماذا الحلقات؟",
+      "icon": "🔁",
+      "content": [
+        "لو أردنا طباعة الأرقام من 1 إلى 100 لن نكتب 100 سطر! الحلقة تكرّر الكود تلقائيًّا."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "javascript",
+      "langLabel": "JavaScript",
+      "code": [
+        "for (let i = 1; i <= 3; i++) {",
+        "  console.log(i);",
+        "}"
+      ],
+      "annotations": [
+        {
+          "line": 1,
+          "text": "i تبدأ من 1، تستمرّ ما دامت ≤ 3، وتزيد 1 كلّ دورة."
+        },
+        {
+          "line": 2,
+          "text": "نطبع قيمة i في كلّ دورة."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "المرور على مصفوفة بـ for...of",
+      "icon": "📜",
+      "content": [
+        "for...of طريقة أنيقة للمرور على كل عنصر في مصفوفة دون التفكير بالفهارس."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "javascript",
+      "langLabel": "JavaScript",
+      "code": [
+        "let names = [\"سارة\", \"علي\"];",
+        "for (let name of names) {",
+        "  console.log(name);",
+        "}"
+      ],
+      "annotations": [
+        {
+          "line": 2,
+          "text": "name يأخذ قيمة كل عنصر بالترتيب."
+        }
+      ]
+    },
+    {
+      "type": "visualizer",
+      "data": {
+        "lang": "javascript",
+        "hasCallStack": false,
+        "code": [
+          "let sum = 0;",
+          "for (let i = 1; i <= 3; i++) {",
+          "  sum = sum + i;",
+          "}"
+        ],
+        "steps": [
+          {
+            "line": 1,
+            "description": "نبدأ بقراءة البرنامج من أعلى سطر، والذاكرة فارغة تمامًا قبل أن ننفّذ أي شيء.",
+            "memory": [],
+            "output": ""
+          },
+          {
+            "line": 1,
+            "description": "نبدأ بمجموع sum = 0.",
+            "memory": [
+              {
+                "name": "sum",
+                "value": "0",
+                "updated": true
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 2,
+            "description": "الدورة 1: i = 1، نضيفه فيصبح sum = 1.",
+            "memory": [
+              {
+                "name": "i",
+                "value": "1",
+                "updated": true
+              },
+              {
+                "name": "sum",
+                "value": "1",
+                "updated": true
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 3,
+            "description": "الدورة 2: i = 2، نضيفه فيصبح sum = 3.",
+            "memory": [
+              {
+                "name": "i",
+                "value": "2",
+                "updated": true
+              },
+              {
+                "name": "sum",
+                "value": "3",
+                "updated": true
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 4,
+            "description": "الدورة 3: i = 3، نضيفه فيصبح sum = 6. انتهت الحلقة.",
+            "memory": [
+              {
+                "name": "i",
+                "value": "3",
+                "updated": true
+              },
+              {
+                "name": "sum",
+                "value": "6",
+                "updated": true
+              }
+            ],
+            "output": ""
+          }
+        ]
+      }
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "كم مرّة تتكرّر: for(let i=0; i<4; i++) ؟",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "لا نهائي"
+      ],
+      "answer": 1,
+      "hint": "من 0 إلى 3.",
+      "explanation": "تتكرّر للقيم 0، 1، 2، 3 أي 4 مرّات."
+    },
+    {
+      "type": "exercise",
+      "exType": "fill-blank",
+      "prompt": "اكتب بداية حلقة for تبدأ i من 0.",
+      "answer": [
+        "for (let i = 0;",
+        "for(let i=0;",
+        "for (let i = 0"
+      ],
+      "hint": "let i = 0 داخل for.",
+      "explanation": "نكتب for (let i = 0; ... لبدء الحلقة من الصفر."
+    }
+  ]
+}

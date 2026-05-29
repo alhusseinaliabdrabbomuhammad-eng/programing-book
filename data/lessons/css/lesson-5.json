@@ -1,0 +1,87 @@
+{
+  "id": "lesson-5",
+  "number": 5,
+  "lang": "css",
+  "title": "نموذج الصندوق Box Model",
+  "subtitle": "كل عنصر في CSS صندوق. لنفهم طبقاته!",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "ما نموذج الصندوق؟",
+      "icon": "📦",
+      "content": [
+        "كل عنصر صندوق مكوّن من أربع طبقات من الداخل للخارج: المحتوى، ثم الحشو padding، ثم الحدّ border، ثم الهامش margin."
+      ]
+    },
+    {
+      "type": "list",
+      "heading": "طبقات الصندوق",
+      "icon": "🧅",
+      "ordered": false,
+      "items": [
+        "`content` المحتوى الفعلي (نص/صورة)",
+        "`padding` مسافة داخلية بين المحتوى والحدّ",
+        "`border` الحدّ المحيط",
+        "`margin` مسافة خارجية بين الصندوق وجيرانه"
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "css",
+      "langLabel": "CSS",
+      "code": [
+        ".box {",
+        "  padding: 20px;",
+        "  border: 2px solid black;",
+        "  margin: 10px;",
+        "}"
+      ],
+      "annotations": [
+        {
+          "line": 2,
+          "text": "حشو داخليّ 20px حول المحتوى."
+        },
+        {
+          "line": 3,
+          "text": "حدّ أسود سُمكه 2px."
+        },
+        {
+          "line": 4,
+          "text": "هامش خارجيّ 10px يفصله عن العناصر المجاورة."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "tip",
+      "title": "تشبيه 💡",
+      "content": "تخيّل لوحة في إطار معلّقة على جدار: المحتوى هو اللوحة، الحشو هو المسافة البيضاء حولها، الحدّ هو الإطار، والهامش هو المسافة بين الإطار وإطار آخر مجاور."
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "ما المسافة الداخلية بين المحتوى والحدّ؟",
+      "options": [
+        "margin",
+        "padding",
+        "border",
+        "content"
+      ],
+      "answer": 1,
+      "hint": "حشو داخليّ.",
+      "explanation": "padding هو الحشو الداخليّ بين المحتوى والحدّ."
+    },
+    {
+      "type": "exercise",
+      "exType": "fill-blank",
+      "prompt": "أضف هامشًا خارجيًّا قدره 15px لعنصر.",
+      "answer": [
+        "margin: 15px;",
+        "margin:15px;"
+      ],
+      "hint": "الكلمة margin.",
+      "explanation": "نكتب margin: 15px; لإضافة هامش خارجيّ."
+    }
+  ]
+}

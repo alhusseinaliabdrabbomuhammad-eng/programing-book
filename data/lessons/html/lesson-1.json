@@ -1,0 +1,84 @@
+{
+  "id": "lesson-1",
+  "number": 1,
+  "lang": "html",
+  "title": "ما هو HTML؟ هيكل الصفحة الأساسي",
+  "subtitle": "HTML هو الهيكل العظمي لكل صفحة ويب. لنتعلّم بناءه!",
+  "minInteractions": 1,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "ما هو HTML؟",
+      "icon": "🏗️",
+      "content": [
+        "تخيّل صفحة الويب كبيت. HTML هو الهيكل والجدران: العناوين، الفقرات، الصور، الأزرار. إنه «لغة ترميز» نصف بها محتوى الصفحة باستخدام «وسوم»."
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "الوسوم Tags",
+      "icon": "🏷️",
+      "content": [
+        "الوسم كلمة بين قوسين زاويين مثل <p>. معظم الوسوم تأتي زوجًا: فتح <p> ونهاية </p>، والمحتوى بينهما."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "html",
+      "langLabel": "HTML",
+      "code": [
+        "<!DOCTYPE html>",
+        "<html lang=\"ar\">",
+        "<head>",
+        "  <title>صفحتي</title>",
+        "</head>",
+        "<body>",
+        "  <h1>مرحبًا</h1>",
+        "</body>",
+        "</html>"
+      ],
+      "annotations": [
+        {
+          "line": 1,
+          "text": "يخبر المتصفّح أن هذا مستند HTML."
+        },
+        {
+          "line": 2,
+          "text": "بداية الصفحة، lang=ar للعربية."
+        },
+        {
+          "line": 3,
+          "text": "head يحوي معلومات لا تظهر مباشرة."
+        },
+        {
+          "line": 6,
+          "text": "body يحوي المحتوى المرئي."
+        },
+        {
+          "line": 7,
+          "text": "h1 عنوان رئيسي."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "tip",
+      "title": "نصيحة 💡",
+      "content": "احفظ هذا الهيكل! كل صفحة HTML تبدأ به: DOCTYPE ثم html ثم head و body. إنه أساس كل شيء."
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "أي وسم يحوي المحتوى المرئي للصفحة؟",
+      "options": [
+        "head",
+        "title",
+        "body",
+        "html"
+      ],
+      "answer": 2,
+      "hint": "يعني «الجسم».",
+      "explanation": "الوسم body يحتوي كل ما يظهر للزائر في الصفحة."
+    }
+  ]
+}

@@ -1,0 +1,160 @@
+{
+  "id": "lesson-3",
+  "number": 3,
+  "lang": "javascript",
+  "title": "أنواع البيانات وتحويلاتها",
+  "subtitle": "الأرقام والنصوص والقيم المنطقية… لكل بيانات نوعها الخاص.",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "list",
+      "heading": "الأنواع الأساسية",
+      "icon": "🏷️",
+      "ordered": false,
+      "items": [
+        "`number`: أرقام مثل 7 أو 3.5",
+        "`string`: نصوص بين علامتي اقتباس مثل \"أحمد\"",
+        "`boolean`: صحيح true أو خطأ false",
+        "`undefined`: صندوق فارغ لم نضع فيه شيئًا",
+        "`null`: لا شيء بشكل مقصود"
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "javascript",
+      "langLabel": "JavaScript",
+      "code": [
+        "let n = 42;",
+        "let s = \"42\";",
+        "console.log(typeof n);",
+        "console.log(typeof s);"
+      ],
+      "annotations": [
+        {
+          "line": 3,
+          "text": "typeof تخبرنا بنوع القيمة: هنا number."
+        },
+        {
+          "line": 4,
+          "text": "هنا النوع string لأن 42 بين علامتي اقتباس."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "التحويل بين الأنواع",
+      "icon": "🔄",
+      "content": [
+        "نحوّل نصًّا إلى رقم بـ Number(\"5\")، ورقمًا إلى نصّ بـ String(5)."
+      ]
+    },
+    {
+      "type": "visualizer",
+      "data": {
+        "lang": "javascript",
+        "hasCallStack": false,
+        "code": [
+          "let t = \"7\";",
+          "let num = Number(t);",
+          "let r = num + 3;"
+        ],
+        "steps": [
+          {
+            "line": 1,
+            "description": "نبدأ بقراءة البرنامج من أعلى سطر، والذاكرة فارغة تمامًا قبل أن ننفّذ أي شيء.",
+            "memory": [],
+            "output": ""
+          },
+          {
+            "line": 1,
+            "description": "نضع النص \"7\" في الصندوق t. لاحظ أنه نصّ.",
+            "memory": [
+              {
+                "name": "t",
+                "value": "\"7\"",
+                "updated": true
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 2,
+            "description": "لنتمهّل قليلًا ونتأمّل ما في الذاكرة حتى الآن قبل المتابعة.",
+            "memory": [
+              {
+                "name": "t",
+                "value": "\"7\"",
+                "updated": false
+              },
+              {
+                "name": "num",
+                "value": "7",
+                "updated": false
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 2,
+            "description": "Number تحوّل النص \"7\" إلى الرقم 7 وتضعه في num.",
+            "memory": [
+              {
+                "name": "t",
+                "value": "\"7\"",
+                "updated": false
+              },
+              {
+                "name": "num",
+                "value": "7",
+                "updated": true
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 3,
+            "description": "نجمع 7 + 3 = 10 ونضعه في r. نجح الحساب بعد التحويل!",
+            "memory": [
+              {
+                "name": "t",
+                "value": "\"7\"",
+                "updated": false
+              },
+              {
+                "name": "num",
+                "value": "7",
+                "updated": false
+              },
+              {
+                "name": "r",
+                "value": "10",
+                "updated": true
+              }
+            ],
+            "output": ""
+          }
+        ]
+      }
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "title": "فخّ شائع!",
+      "content": "لو جمعت نصًّا مع رقم بـ + سيدمجهما: \"7\" + 3 يعطي \"73\" وليس 10! لذا حوّل أولًا."
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "ما ناتج \"5\" + 2 في JavaScript؟",
+      "options": [
+        "7",
+        "\"52\"",
+        "خطأ",
+        "52"
+      ],
+      "answer": 1,
+      "hint": "النص + رقم = دمج.",
+      "explanation": "عند جمع نصّ مع رقم بعلامة + يتم الدمج: \"5\" + 2 = \"52\"."
+    }
+  ]
+}

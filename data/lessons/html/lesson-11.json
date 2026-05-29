@@ -1,0 +1,96 @@
+{
+  "id": "lesson-11",
+  "number": 11,
+  "lang": "html",
+  "title": "الوسائط video و audio",
+  "subtitle": "كيف نضيف الفيديو والصوت لصفحتنا؟",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "الفيديو video",
+      "icon": "🎬",
+      "content": [
+        "نعرض فيديو بالوسم video مع controls لإظهار أزرار التشغيل."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "html",
+      "langLabel": "HTML",
+      "code": [
+        "<video src=\"movie.mp4\" controls width=\"400\">",
+        "  متصفّحك لا يدعم الفيديو",
+        "</video>"
+      ],
+      "annotations": [
+        {
+          "line": 1,
+          "text": "controls يعرض أزرار التشغيل والصوت."
+        },
+        {
+          "line": 2,
+          "text": "نص بديل يظهر إن لم يُدعَم الفيديو."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "الصوت audio",
+      "icon": "🔊",
+      "content": [
+        "مشابه للفيديو لكن للصوت فقط."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "html",
+      "langLabel": "HTML",
+      "code": [
+        "<audio src=\"song.mp3\" controls></audio>"
+      ],
+      "annotations": [
+        {
+          "line": 1,
+          "text": "مشغّل صوت بأزرار تحكّم."
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "heading": "خصائص مفيدة",
+      "icon": "⚙️",
+      "ordered": false,
+      "items": [
+        "`controls` يظهر أزرار التحكّم",
+        "`autoplay` تشغيل تلقائيّ",
+        "`loop` تكرار",
+        "`muted` كتم الصوت"
+      ]
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "أي خاصية تُظهر أزرار التشغيل في الفيديو؟",
+      "options": [
+        "play",
+        "controls",
+        "src",
+        "loop"
+      ],
+      "answer": 1,
+      "hint": "تعني «أدوات تحكّم».",
+      "explanation": "خاصية controls تعرض أزرار التشغيل والإيقاف والصوت."
+    },
+    {
+      "type": "exercise",
+      "exType": "fill-blank",
+      "prompt": "أضف فيديو مساره clip.mp4 مع أزرار التحكّم.",
+      "answer": [
+        "<video src=\"clip.mp4\" controls></video>"
+      ],
+      "hint": "video مع src و controls.",
+      "explanation": "نكتب <video src=\"clip.mp4\" controls></video> لعرض فيديو بأزرار."
+    }
+  ]
+}

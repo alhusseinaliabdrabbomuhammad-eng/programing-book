@@ -1,0 +1,88 @@
+{
+  "id": "lesson-11",
+  "number": 11,
+  "lang": "css",
+  "title": "تحديد الموضع Positioning",
+  "subtitle": "كيف نضع العناصر بدقّة في أماكن محدّدة؟",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "الخاصية position",
+      "icon": "📍",
+      "content": [
+        "position تتحكّم بكيفية وضع العنصر. القيم: static (الافتراضي)، relative، absolute، fixed، sticky."
+      ]
+    },
+    {
+      "type": "list",
+      "heading": "قيم position",
+      "icon": "🧭",
+      "ordered": false,
+      "items": [
+        "`static` الوضع الطبيعي الافتراضي",
+        "`relative` يُزاح بالنسبة لمكانه الأصلي",
+        "`absolute` يوضع بالنسبة لأقرب أب موضوع",
+        "`fixed` يثبت على الشاشة عند التمرير",
+        "`sticky` يلتصق عند حدّ معيّن"
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "css",
+      "langLabel": "CSS",
+      "code": [
+        ".badge {",
+        "  position: absolute;",
+        "  top: 10px;",
+        "  inset-inline-end: 10px;",
+        "}"
+      ],
+      "annotations": [
+        {
+          "line": 2,
+          "text": "يوضع بحرّية بالنسبة لأقرب أب موضوع."
+        },
+        {
+          "line": 3,
+          "text": "10px من الأعلى."
+        },
+        {
+          "line": 4,
+          "text": "10px من الجهة الأمامية (تتكيّف مع RTL)."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "tip",
+      "title": "نصيحة RTL 💡",
+      "content": "في المواقع العربية استخدم الخصائص المنطقية مثل inset-inline-start بدل left، فتتكيّف تلقائيًّا مع اتجاه اليمين لليسار."
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "أي قيمة تُثبّت العنصر على الشاشة عند التمرير؟",
+      "options": [
+        "static",
+        "relative",
+        "fixed",
+        "absolute"
+      ],
+      "answer": 2,
+      "hint": "يبقى ثابتًا.",
+      "explanation": "القيمة fixed تثبّت العنصر على الشاشة حتى عند التمرير."
+    },
+    {
+      "type": "exercise",
+      "exType": "fill-blank",
+      "prompt": "اضبط موضع عنصر على relative.",
+      "answer": [
+        "position: relative;",
+        "position:relative;"
+      ],
+      "hint": "الكلمة position.",
+      "explanation": "نكتب position: relative; لتحديد الموضع النسبي."
+    }
+  ]
+}

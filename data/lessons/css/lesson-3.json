@@ -1,0 +1,83 @@
+{
+  "id": "lesson-3",
+  "number": 3,
+  "lang": "css",
+  "title": "المحددات المركبة",
+  "subtitle": "كيف نختار عناصر بدقّة أكبر بدمج المحدّدات؟",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "الدمج بين المحدّدات",
+      "icon": "🔗",
+      "content": [
+        "نستطيع دمج المحدّدات لاستهداف عناصر محدّدة بدقّة: الأبناء، الأحفاد، أو عناصر بصنف معيّن داخل أخرى."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "css",
+      "langLabel": "CSS",
+      "code": [
+        "nav a {",
+        "  color: white;",
+        "}",
+        ".card p {",
+        "  margin: 10px;",
+        "}"
+      ],
+      "annotations": [
+        {
+          "line": 1,
+          "text": "كل رابط a داخل nav (فراغ = حفيد)."
+        },
+        {
+          "line": 4,
+          "text": "كل فقرة p داخل عنصر بصنف card."
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "heading": "أنواع الدمج",
+      "icon": "🧩",
+      "ordered": false,
+      "items": [
+        "`A B` العنصر B داخل A (حفيد)",
+        "`A > B` العنصر B ابن مباشر لـ A",
+        "`A, B` اختيار A و B معًا",
+        "`A.class` العنصر A الذي له صنف معيّن"
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "tip",
+      "title": "نصيحة 💡",
+      "content": "الفاصلة , تعني «و»: h1, h2, h3 تطبّق نفس التنسيق على الثلاثة. أمّا الفراغ فيعني «بداخل»."
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "ماذا يعني المحدّد `nav a` ؟",
+      "options": [
+        "nav أو a",
+        "الروابط a داخل nav",
+        "nav بصنف a",
+        "a قبل nav"
+      ],
+      "answer": 1,
+      "hint": "الفراغ = بداخل.",
+      "explanation": "المحدّد nav a يختار كل روابط a الموجودة داخل عنصر nav."
+    },
+    {
+      "type": "exercise",
+      "exType": "fill-blank",
+      "prompt": "اختر كل عناصر li داخل عنصر بصنف menu.",
+      "answer": [
+        ".menu li"
+      ],
+      "hint": "الصنف ثم فراغ ثم الوسم.",
+      "explanation": "نكتب .menu li لاختيار عناصر li داخل .menu."
+    }
+  ]
+}

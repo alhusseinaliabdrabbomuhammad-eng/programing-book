@@ -1,0 +1,127 @@
+{
+  "lang": "cpp",
+  "name": "سي++",
+  "totalLessons": 20,
+  "groups": [
+    {
+      "title": "الأساسيات",
+      "lessons": [
+        {
+          "id": "lesson-1",
+          "number": 1,
+          "title": "مقدمة إلى C++ وتركيب المترجم g++"
+        },
+        {
+          "id": "lesson-2",
+          "number": 2,
+          "title": "هيكل البرنامج main و include و cout"
+        },
+        {
+          "id": "lesson-3",
+          "number": 3,
+          "title": "المتغيرات والأنواع الأساسية"
+        },
+        {
+          "id": "lesson-4",
+          "number": 4,
+          "title": "المؤهلات const و constexpr"
+        },
+        {
+          "id": "lesson-5",
+          "number": 5,
+          "title": "العمليات الحسابية والمنطقية"
+        }
+      ]
+    },
+    {
+      "title": "المفاهيم المتوسطة",
+      "lessons": [
+        {
+          "id": "lesson-6",
+          "number": 6,
+          "title": "التحكم في التدفق if و switch"
+        },
+        {
+          "id": "lesson-7",
+          "number": 7,
+          "title": "الحلقات for و while و do-while"
+        },
+        {
+          "id": "lesson-8",
+          "number": 8,
+          "title": "المصفوفات والمؤشرات"
+        },
+        {
+          "id": "lesson-9",
+          "number": 9,
+          "title": "الدوال: التعريف والقيمة المرجعية والافتراضية"
+        },
+        {
+          "id": "lesson-10",
+          "number": 10,
+          "title": "التحميل الزائد للدوال"
+        }
+      ]
+    },
+    {
+      "title": "مفاهيم متقدمة",
+      "lessons": [
+        {
+          "id": "lesson-11",
+          "number": 11,
+          "title": "المراجع ومقارنتها بالمؤشرات"
+        },
+        {
+          "id": "lesson-12",
+          "number": 12,
+          "title": "إدارة الذاكرة الديناميكية new و delete"
+        },
+        {
+          "id": "lesson-13",
+          "number": 13,
+          "title": "مقدمة إلى OOP: struct و class"
+        },
+        {
+          "id": "lesson-14",
+          "number": 14,
+          "title": "المنشآت والمدمّرات وقاعدة الثلاثة"
+        },
+        {
+          "id": "lesson-15",
+          "number": 15,
+          "title": "الوراثة وتعدد الأشكال"
+        }
+      ]
+    },
+    {
+      "title": "الإتقان والتطبيق",
+      "lessons": [
+        {
+          "id": "lesson-16",
+          "number": 16,
+          "title": "الدوال الافتراضية virtual والفئات المجردة"
+        },
+        {
+          "id": "lesson-17",
+          "number": 17,
+          "title": "التحميل الزائد للمؤثرات"
+        },
+        {
+          "id": "lesson-18",
+          "number": 18,
+          "title": "القوالب Templates"
+        },
+        {
+          "id": "lesson-19",
+          "number": 19,
+          "title": "معالجة الاستثناءات try/catch/throw"
+        },
+        {
+          "id": "lesson-20",
+          "number": 20,
+          "title": "مكتبة STL: vector و string و algorithm"
+        }
+      ]
+    }
+  ]
+}

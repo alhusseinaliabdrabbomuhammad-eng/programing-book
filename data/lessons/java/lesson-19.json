@@ -1,0 +1,131 @@
+{
+  "id": "lesson-19",
+  "number": 19,
+  "lang": "java",
+  "title": "إطار المجموعات ArrayList و HashMap",
+  "subtitle": "بنى بيانات مرنة أقوى من المصفوفات: قوائم وخرائط.",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "القائمة ArrayList",
+      "icon": "📋",
+      "content": [
+        "ArrayList مثل مصفوفة لكن حجمها يكبر ويصغر تلقائيًّا. نضيف بـ add ونقرأ بـ get."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "java",
+      "langLabel": "Java",
+      "code": [
+        "import java.util.ArrayList;",
+        "ArrayList<String> names = new ArrayList<>();",
+        "names.add(\"علي\");",
+        "names.add(\"سارة\");",
+        "System.out.println(names.get(0));"
+      ],
+      "annotations": [
+        {
+          "line": 3,
+          "text": "نضيف عنصرًا."
+        },
+        {
+          "line": 5,
+          "text": "نقرأ العنصر الأول: علي."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "الخريطة HashMap",
+      "icon": "🗺️",
+      "content": [
+        "HashMap تخزّن أزواج مفتاح↔قيمة. مثالية للبحث السريع، كدفتر هاتف: الاسم ↔ الرقم."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "java",
+      "langLabel": "Java",
+      "code": [
+        "import java.util.HashMap;",
+        "HashMap<String, Integer> ages = new HashMap<>();",
+        "ages.put(\"علي\", 12);",
+        "System.out.println(ages.get(\"علي\"));"
+      ],
+      "annotations": [
+        {
+          "line": 3,
+          "text": "نربط المفتاح علي بالقيمة 12."
+        },
+        {
+          "line": 4,
+          "text": "نسترجع العمر بالمفتاح: 12."
+        }
+      ]
+    },
+    {
+      "type": "visualizer",
+      "data": {
+        "lang": "java",
+        "hasCallStack": false,
+        "code": [
+          "list.add(\"x\");",
+          "list.add(\"y\");"
+        ],
+        "steps": [
+          {
+            "line": 1,
+            "description": "القائمة فارغة، نضيف \"x\" فتصبح [x].",
+            "memory": [
+              {
+                "name": "list",
+                "value": "[x]",
+                "updated": true
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 2,
+            "description": "نضيف \"y\" فتصبح [x, y]. الحجم كبر تلقائيًّا.",
+            "memory": [
+              {
+                "name": "list",
+                "value": "[x, y]",
+                "updated": true
+              }
+            ],
+            "output": ""
+          }
+        ]
+      }
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "أي بنية تخزّن أزواج مفتاح وقيمة؟",
+      "options": [
+        "ArrayList",
+        "HashMap",
+        "int[]",
+        "String"
+      ],
+      "answer": 1,
+      "hint": "خريطة.",
+      "explanation": "HashMap تخزّن أزواج مفتاح↔قيمة للبحث السريع."
+    },
+    {
+      "type": "exercise",
+      "exType": "fill-blank",
+      "prompt": "أضف العنصر \"a\" إلى قائمة ArrayList اسمها list.",
+      "answer": [
+        "list.add(\"a\");",
+        "list.add(\"a\")"
+      ],
+      "hint": "الدالة add.",
+      "explanation": "نستخدم list.add(\"a\") للإضافة إلى القائمة."
+    }
+  ]
+}

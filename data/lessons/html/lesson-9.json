@@ -1,0 +1,82 @@
+{
+  "id": "lesson-9",
+  "number": 9,
+  "lang": "html",
+  "title": "النماذج form والحقول الأساسية",
+  "subtitle": "كيف نجمع بيانات من المستخدم؟",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "الوسم form",
+      "icon": "📝",
+      "content": [
+        "النموذج form يجمع مدخلات المستخدم. بداخله حقول input وأزرار. يرسل البيانات إلى خادم لمعالجتها."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "html",
+      "langLabel": "HTML",
+      "code": [
+        "<form>",
+        "  <label>الاسم:</label>",
+        "  <input type=\"text\" name=\"username\">",
+        "  <input type=\"submit\" value=\"إرسال\">",
+        "</form>"
+      ],
+      "annotations": [
+        {
+          "line": 2,
+          "text": "label وصف الحقل."
+        },
+        {
+          "line": 3,
+          "text": "حقل نصّي لكتابة الاسم."
+        },
+        {
+          "line": 4,
+          "text": "زر إرسال النموذج."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "الربط بين label و input",
+      "icon": "🔗",
+      "content": [
+        "نربط label بحقل عبر for و id ليفهم المتصفّح وقارئات الشاشة العلاقة بينهما."
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "tip",
+      "title": "إمكانية الوصول 💡",
+      "content": "استخدم دائمًا label لكل حقل! هذا يساعد المستخدمين بالضغط على النص لتفعيل الحقل، ويفيد ذوي الإعاقة."
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "أي وسم يجمع مدخلات المستخدم؟",
+      "options": [
+        "<input>",
+        "<form>",
+        "<label>",
+        "<table>"
+      ],
+      "answer": 1,
+      "hint": "يعني «نموذج».",
+      "explanation": "الوسم form يحوي الحقول ويجمع مدخلات المستخدم."
+    },
+    {
+      "type": "exercise",
+      "exType": "fill-blank",
+      "prompt": "اكتب حقل إدخال نصّيًّا (type نصّي).",
+      "answer": [
+        "<input type=\"text\">"
+      ],
+      "hint": "input مع type=text.",
+      "explanation": "نكتب <input type=\"text\"> لحقل نصّي."
+    }
+  ]
+}

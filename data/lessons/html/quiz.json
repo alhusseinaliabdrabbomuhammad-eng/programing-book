@@ -1,0 +1,144 @@
+{
+  "title": "الاختبار النهائي: HTML 🏗️",
+  "lang": "html",
+  "questions": [
+    {
+      "type": "multiple-choice",
+      "prompt": "أي وسم يحوي المحتوى المرئي للصفحة؟",
+      "options": [
+        "head",
+        "title",
+        "body",
+        "html"
+      ],
+      "answer": 2,
+      "explanation": "الوسم body يحوي كل ما يظهر للزائر."
+    },
+    {
+      "type": "multiple-choice",
+      "prompt": "أي وسم يظهر في تبويب المتصفّح؟",
+      "options": [
+        "meta",
+        "title",
+        "h1",
+        "head"
+      ],
+      "answer": 1,
+      "explanation": "الوسم title يحدّد عنوان التبويب."
+    },
+    {
+      "type": "multiple-choice",
+      "prompt": "أيّ عنوان هو الأكبر والأهمّ؟",
+      "options": [
+        "h6",
+        "h3",
+        "h1",
+        "h2"
+      ],
+      "answer": 2,
+      "explanation": "h1 هو العنوان الأكبر والأهمّ."
+    },
+    {
+      "type": "multiple-choice",
+      "prompt": "أي خاصية تحدّد وجهة الرابط؟",
+      "options": [
+        "src",
+        "href",
+        "link",
+        "url"
+      ],
+      "answer": 1,
+      "explanation": "href تحدّد وجهة الرابط في الوسم a."
+    },
+    {
+      "type": "multiple-choice",
+      "prompt": "ما وظيفة خاصية alt في الصورة؟",
+      "options": [
+        "تكبّرها",
+        "تصفها نصّيًّا لإمكانية الوصول",
+        "تغيّر لونها",
+        "تحرّكها"
+      ],
+      "answer": 1,
+      "explanation": "alt تصف الصورة للمكفوفين وعند فشل التحميل."
+    },
+    {
+      "type": "true-false",
+      "prompt": "الوسم <img> وسم مفرد لا يحتاج وسم نهاية.",
+      "answer": true,
+      "explanation": "نعم، img وسم مفرد لا يحتاج إغلاقًا منفصلًا."
+    },
+    {
+      "type": "multiple-choice",
+      "prompt": "أي وسم يمثّل خلية عنوان في الجدول؟",
+      "options": [
+        "<td>",
+        "<th>",
+        "<tr>",
+        "<table>"
+      ],
+      "answer": 1,
+      "explanation": "<th> لخلايا العناوين وتظهر عريضة."
+    },
+    {
+      "type": "multiple-choice",
+      "prompt": "أي عنصر يمثّل المحتوى الرئيسي للصفحة؟",
+      "options": [
+        "<header>",
+        "<main>",
+        "<footer>",
+        "<nav>"
+      ],
+      "answer": 1,
+      "explanation": "العنصر main يمثّل المحتوى الرئيسي الفريد."
+    },
+    {
+      "type": "true-false",
+      "prompt": "نستخدم العناصر الدلالية مثل nav و header لأنها تحسّن إمكانية الوصول وترتيب البحث.",
+      "answer": true,
+      "explanation": "نعم، العناصر الدلالية تفيد قارئات الشاشة ومحرّكات البحث."
+    },
+    {
+      "type": "multiple-choice",
+      "prompt": "ما أفضل طريقة لإضافة CSS؟",
+      "options": [
+        "نمط مضمّن لكل عنصر",
+        "ملفّ خارجيّ عبر link",
+        "style مكرّر",
+        "لا حاجة"
+      ],
+      "answer": 1,
+      "explanation": "الملفّ الخارجي عبر link هو الأفضل لسهولة الصيانة."
+    },
+    {
+      "type": "multiple-choice",
+      "prompt": "أي خاصية تؤجّل تنفيذ السكربت حتى تجهز الصفحة؟",
+      "options": [
+        "async",
+        "defer",
+        "wait",
+        "load"
+      ],
+      "answer": 1,
+      "explanation": "defer تؤجّل التنفيذ وتحفظ ترتيب الملفّات."
+    },
+    {
+      "type": "multiple-choice",
+      "prompt": "ما الذي نستخدمه لوصف زرّ محتواه رمز فقط؟",
+      "options": [
+        "title",
+        "aria-label",
+        "alt",
+        "name"
+      ],
+      "answer": 1,
+      "explanation": "aria-label يصف الزرّ لقارئات الشاشة."
+    },
+    {
+      "type": "true-false",
+      "prompt": "الوسم <meta charset=\"UTF-8\"> ضروريّ لعرض الحروف العربية بشكل سليم.",
+      "answer": true,
+      "explanation": "نعم، بدونه قد تظهر الحروف العربية كرموز غريبة."
+    }
+  ]
+}

@@ -1,0 +1,176 @@
+{
+  "id": "lesson-4",
+  "number": 4,
+  "lang": "java",
+  "title": "التحويل بين الأنواع والثوابت final",
+  "subtitle": "كيف نحوّل بين الأنواع؟ وكيف نحمي قيمة من التغيير؟",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "التحويل الضمني والصريح",
+      "icon": "🔄",
+      "content": [
+        "التحويل من نوع صغير لأكبر تلقائيّ (int إلى double). أمّا العكس فيحتاج تحويلًا صريحًا بوضع النوع بين قوسين."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "java",
+      "langLabel": "Java",
+      "code": [
+        "double d = 5;",
+        "int i = (int) 3.9;",
+        "System.out.println(i);"
+      ],
+      "annotations": [
+        {
+          "line": 1,
+          "text": "int يتحوّل تلقائيًّا إلى double = 5.0."
+        },
+        {
+          "line": 2,
+          "text": "تحويل صريح: 3.9 تصبح 3 (يُحذف الكسر)."
+        },
+        {
+          "line": 3,
+          "text": "يطبع 3."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "الثوابت final",
+      "icon": "🔒",
+      "content": [
+        "نضع final قبل المتغيّر لنمنع تغيير قيمته بعد إسنادها. مفيد للقيم الثابتة كـ PI."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "java",
+      "langLabel": "Java",
+      "code": [
+        "final int MAX = 100;",
+        "// MAX = 200; خطأ!"
+      ],
+      "annotations": [
+        {
+          "line": 1,
+          "text": "ثابت لا يمكن تغييره لاحقًا."
+        },
+        {
+          "line": 2,
+          "text": "محاولة تغييره تسبّب خطأ في الترجمة."
+        }
+      ]
+    },
+    {
+      "type": "visualizer",
+      "data": {
+        "lang": "java",
+        "hasCallStack": false,
+        "code": [
+          "double d = 9.7;",
+          "int n = (int) d;"
+        ],
+        "steps": [
+          {
+            "line": 1,
+            "description": "نبدأ بقراءة البرنامج من أعلى سطر، والذاكرة فارغة تمامًا قبل أن ننفّذ أي شيء.",
+            "memory": [],
+            "output": ""
+          },
+          {
+            "line": 1,
+            "description": "نضع 9.7 في صندوق double اسمه d.",
+            "memory": [
+              {
+                "name": "d",
+                "value": "9.7",
+                "updated": true
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 2,
+            "description": "لنتمهّل قليلًا ونتأمّل ما في الذاكرة حتى الآن قبل المتابعة.",
+            "memory": [
+              {
+                "name": "d",
+                "value": "9.7",
+                "updated": false
+              },
+              {
+                "name": "n",
+                "value": "9",
+                "updated": false
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 2,
+            "description": "التحويل الصريح يقتطع الكسر فيصبح n = 9.",
+            "memory": [
+              {
+                "name": "d",
+                "value": "9.7",
+                "updated": false
+              },
+              {
+                "name": "n",
+                "value": "9",
+                "updated": true
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 2,
+            "description": "انتهى التنفيذ! هذه هي الحالة النهائية للذاكرة والمخرجات بعد تنفيذ كل الأسطر.",
+            "memory": [
+              {
+                "name": "d",
+                "value": "9.7",
+                "updated": false
+              },
+              {
+                "name": "n",
+                "value": "9",
+                "updated": false
+              }
+            ],
+            "output": ""
+          }
+        ]
+      }
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "ماذا يفعل final قبل متغيّر؟",
+      "options": [
+        "يحذفه",
+        "يمنع تغيير قيمته",
+        "يضاعفه",
+        "يطبعه"
+      ],
+      "answer": 1,
+      "hint": "يجعله ثابتًا.",
+      "explanation": "final يجعل المتغيّر ثابتًا لا يمكن تغيير قيمته."
+    },
+    {
+      "type": "exercise",
+      "exType": "fill-blank",
+      "prompt": "حوّل المتغيّر العشري d إلى int تحويلًا صريحًا.",
+      "answer": [
+        "(int) d",
+        "(int)d"
+      ],
+      "hint": "ضع النوع بين قوسين.",
+      "explanation": "نكتب (int) d للتحويل الصريح إلى عدد صحيح."
+    }
+  ]
+}

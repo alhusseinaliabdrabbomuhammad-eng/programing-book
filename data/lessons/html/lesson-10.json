@@ -1,0 +1,92 @@
+{
+  "id": "lesson-10",
+  "number": 10,
+  "lang": "html",
+  "title": "أزرار وأنواع الإدخال الجديدة",
+  "subtitle": "HTML5 جلب أنواع حقول ذكيّة تسهّل الإدخال.",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "أنواع input الحديثة",
+      "icon": "🎛️",
+      "content": [
+        "HTML5 أضاف أنواعًا تتحقّق تلقائيًّا وتعرض لوحات مفاتيح مناسبة على الجوّال."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "html",
+      "langLabel": "HTML",
+      "code": [
+        "<input type=\"email\" placeholder=\"بريدك\">",
+        "<input type=\"number\" min=\"1\" max=\"10\">",
+        "<input type=\"date\">",
+        "<input type=\"color\">"
+      ],
+      "annotations": [
+        {
+          "line": 1,
+          "text": "email يتحقّق من صيغة البريد."
+        },
+        {
+          "line": 2,
+          "text": "number للأرقام مع حدّ أدنى وأقصى."
+        },
+        {
+          "line": 3,
+          "text": "date يعرض منتقي تاريخ."
+        },
+        {
+          "line": 4,
+          "text": "color يعرض منتقي ألوان."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "الأزرار",
+      "icon": "🔘",
+      "content": [
+        "button وسم مرن لزرّ. placeholder يعرض تلميحًا داخل الحقل قبل الكتابة."
+      ]
+    },
+    {
+      "type": "list",
+      "heading": "أنواع شائعة",
+      "icon": "📋",
+      "ordered": false,
+      "items": [
+        "`text` نصّ عادي",
+        "`email` بريد إلكتروني",
+        "`password` كلمة سرّ مخفيّة",
+        "`number` أرقام",
+        "`checkbox` خانة اختيار"
+      ]
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "أي نوع input يتحقّق تلقائيًّا من صيغة البريد؟",
+      "options": [
+        "text",
+        "email",
+        "number",
+        "date"
+      ],
+      "answer": 1,
+      "hint": "اسمه واضح.",
+      "explanation": "النوع email يتحقّق تلقائيًّا من صحّة صيغة البريد."
+    },
+    {
+      "type": "exercise",
+      "exType": "fill-blank",
+      "prompt": "اكتب حقل إدخال لكلمة سرّ مخفيّة.",
+      "answer": [
+        "<input type=\"password\">"
+      ],
+      "hint": "type=password.",
+      "explanation": "نكتب <input type=\"password\"> لحقل كلمة سرّ مخفيّة."
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "id": "lesson-12",
+  "number": 12,
+  "lang": "html",
+  "title": "الإطارات الداخلية iframe",
+  "subtitle": "كيف ندرج صفحة أو فيديو يوتيوب داخل صفحتنا؟",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "ما iframe؟",
+      "icon": "🪟",
+      "content": [
+        "iframe نافذة تعرض صفحة أخرى داخل صفحتك، مثل إطار صورة يعرض موقعًا آخر. شائع لإدراج خرائط أو فيديوهات يوتيوب."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "html",
+      "langLabel": "HTML",
+      "code": [
+        "<iframe src=\"https://example.com\"",
+        "  width=\"600\" height=\"400\">",
+        "</iframe>"
+      ],
+      "annotations": [
+        {
+          "line": 1,
+          "text": "src يحدّد الصفحة المعروضة داخل الإطار."
+        },
+        {
+          "line": 2,
+          "text": "نحدّد العرض والارتفاع."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "title": "انتبه للأمان!",
+      "content": "لا تثق بأي محتوى داخل iframe من مصادر مجهولة، وبعض المواقع تمنع عرضها داخل إطارات لأسباب أمنية."
+    },
+    {
+      "type": "list",
+      "heading": "استخدامات شائعة",
+      "icon": "🎯",
+      "ordered": false,
+      "items": [
+        "إدراج فيديو يوتيوب",
+        "عرض خرائط جوجل",
+        "تضمين صفحة دفع",
+        "عرض مستند PDF"
+      ]
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "ما وظيفة iframe؟",
+      "options": [
+        "إضافة صورة",
+        "عرض صفحة أخرى داخل الصفحة",
+        "إنشاء جدول",
+        "تنسيق النص"
+      ],
+      "answer": 1,
+      "hint": "إطار داخل إطار.",
+      "explanation": "iframe يعرض صفحة أخرى داخل صفحتك الحالية."
+    },
+    {
+      "type": "exercise",
+      "exType": "fill-blank",
+      "prompt": "أيّ خاصية تحدّد الصفحة المعروضة داخل iframe؟",
+      "answer": [
+        "src"
+      ],
+      "hint": "نفس خاصية الصورة.",
+      "explanation": "نستخدم src لتحديد مصدر الصفحة داخل iframe."
+    }
+  ]
+}

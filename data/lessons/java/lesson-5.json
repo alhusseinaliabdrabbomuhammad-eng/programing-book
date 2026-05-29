@@ -1,0 +1,173 @@
+{
+  "id": "lesson-5",
+  "number": 5,
+  "lang": "java",
+  "title": "العمليات الحسابية والمنطقية",
+  "subtitle": "جافا تجري الحسابات والمقارنات بدقّة. لنتعرّف على معاملاتها.",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "list",
+      "heading": "المعاملات الحسابية",
+      "icon": "➕",
+      "ordered": false,
+      "items": [
+        "`+` جمع",
+        "`-` طرح",
+        "`*` ضرب",
+        "`/` قسمة",
+        "`%` باقي القسمة"
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "title": "فخّ شائع!",
+      "content": "قسمة عددين صحيحين في جافا تعطي عددًا صحيحًا! 7 / 2 = 3 وليس 3.5. لنحصل على 3.5 يجب أن يكون أحدهما double."
+    },
+    {
+      "type": "code",
+      "lang": "java",
+      "langLabel": "Java",
+      "code": [
+        "System.out.println(7 / 2);",
+        "System.out.println(7.0 / 2);",
+        "System.out.println(7 % 2);"
+      ],
+      "annotations": [
+        {
+          "line": 1,
+          "text": "قسمة صحيحة → 3."
+        },
+        {
+          "line": 2,
+          "text": "أحد الطرفين عشري → 3.5."
+        },
+        {
+          "line": 3,
+          "text": "الباقي → 1."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "المعاملات المنطقية",
+      "icon": "⚖️",
+      "content": [
+        "نقارن بـ == و != و > و <. ونربط الشروط بـ && (و) و || (أو)."
+      ]
+    },
+    {
+      "type": "visualizer",
+      "data": {
+        "lang": "java",
+        "hasCallStack": false,
+        "code": [
+          "int a = 8;",
+          "int b = 5;",
+          "boolean r = a > b && b > 0;"
+        ],
+        "steps": [
+          {
+            "line": 1,
+            "description": "نبدأ بقراءة البرنامج من أعلى سطر، والذاكرة فارغة تمامًا قبل أن ننفّذ أي شيء.",
+            "memory": [],
+            "output": ""
+          },
+          {
+            "line": 1,
+            "description": "نضع 8 في a.",
+            "memory": [
+              {
+                "name": "a",
+                "value": "8",
+                "updated": true
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 2,
+            "description": "لنتمهّل قليلًا ونتأمّل ما في الذاكرة حتى الآن قبل المتابعة.",
+            "memory": [
+              {
+                "name": "a",
+                "value": "8",
+                "updated": false
+              },
+              {
+                "name": "b",
+                "value": "5",
+                "updated": false
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 2,
+            "description": "نضع 5 في b.",
+            "memory": [
+              {
+                "name": "a",
+                "value": "8",
+                "updated": false
+              },
+              {
+                "name": "b",
+                "value": "5",
+                "updated": true
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 3,
+            "description": "نتحقّق: a>b صحيح، و b>0 صحيح، فالنتيجة true.",
+            "memory": [
+              {
+                "name": "a",
+                "value": "8",
+                "updated": false
+              },
+              {
+                "name": "b",
+                "value": "5",
+                "updated": false
+              },
+              {
+                "name": "r",
+                "value": "true",
+                "updated": true
+              }
+            ],
+            "output": ""
+          }
+        ]
+      }
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "ما ناتج 7 / 2 لعددين صحيحين في جافا؟",
+      "options": [
+        "3.5",
+        "3",
+        "4",
+        "خطأ"
+      ],
+      "answer": 1,
+      "hint": "القسمة الصحيحة تحذف الكسر.",
+      "explanation": "قسمة صحيحين تعطي صحيحًا: 7 / 2 = 3."
+    },
+    {
+      "type": "exercise",
+      "exType": "fill-blank",
+      "prompt": "اكتب معامل «و» المنطقي في جافا.",
+      "answer": [
+        "&&"
+      ],
+      "hint": "رمزان متشابهان.",
+      "explanation": "نستخدم && للربط المنطقي «و» بين شرطين."
+    }
+  ]
+}

@@ -1,0 +1,152 @@
+{
+  "id": "lesson-12",
+  "number": 12,
+  "lang": "python",
+  "title": "الجمل الشرطية (if / elif / else)",
+  "subtitle": "كيف نجعل البرنامج يتّخذ قرارات مختلفة حسب الظروف؟",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "اتخاذ القرار",
+      "icon": "🚦",
+      "content": [
+        "كثيرًا ما نقول: «إذا كان كذا، افعل كذا، وإلّا افعل غير ذلك». في بايثون نستخدم if و elif و else. لاحظ المسافة البادئة (الإزاحة) المهمّة جدًّا!"
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "python",
+      "langLabel": "Python",
+      "code": [
+        "age = 15",
+        "if age >= 18:",
+        "    print(\"بالغ\")",
+        "elif age >= 13:",
+        "    print(\"مراهق\")",
+        "else:",
+        "    print(\"طفل\")"
+      ],
+      "annotations": [
+        {
+          "line": 2,
+          "text": "إذا كان العمر 18 فأكثر..."
+        },
+        {
+          "line": 4,
+          "text": "وإلّا إذا كان 13 فأكثر..."
+        },
+        {
+          "line": 6,
+          "text": "وإن لم يتحقّق أي شرط."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "critical",
+      "title": "الإزاحة مهمّة!",
+      "content": "بايثون تعتمد على المسافة البادئة (٤ مسافات) لمعرفة الكود التابع للشرط. الإزاحة الخاطئة تسبّب خطأ."
+    },
+    {
+      "type": "visualizer",
+      "data": {
+        "lang": "python",
+        "hasCallStack": false,
+        "code": [
+          "x = 7",
+          "if x > 10:",
+          "    print(\"كبير\")",
+          "else:",
+          "    print(\"صغير\")"
+        ],
+        "steps": [
+          {
+            "line": 1,
+            "description": "نبدأ بقراءة البرنامج من أعلى سطر، والذاكرة فارغة تمامًا قبل أن ننفّذ أي شيء.",
+            "memory": [],
+            "output": ""
+          },
+          {
+            "line": 1,
+            "description": "نضع 7 في x.",
+            "memory": [
+              {
+                "name": "x",
+                "value": "7",
+                "updated": true
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 2,
+            "description": "لنتمهّل قليلًا ونتأمّل ما في الذاكرة حتى الآن قبل المتابعة.",
+            "memory": [
+              {
+                "name": "x",
+                "value": "7",
+                "updated": false
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 2,
+            "description": "نفحص الشرط: هل 7 > 10؟ لا، الشرط False فنتجاهل سطر «كبير».",
+            "memory": [
+              {
+                "name": "x",
+                "value": "7",
+                "updated": false
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 5,
+            "description": "نذهب إلى else وننفّذ سطره فيُطبع «صغير».",
+            "memory": [
+              {
+                "name": "x",
+                "value": "7",
+                "updated": false
+              }
+            ],
+            "output": "صغير"
+          }
+        ]
+      }
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "متى يُنفَّذ كود else؟",
+      "options": [
+        "دائمًا",
+        "عندما يكون شرط if صحيحًا",
+        "عندما تفشل كل الشروط السابقة",
+        "أبدًا"
+      ],
+      "answer": 2,
+      "hint": "else هو «وإلّا».",
+      "explanation": "ينفَّذ else فقط عندما تكون كل شروط if و elif غير محقّقة (False)."
+    },
+    {
+      "type": "exercise",
+      "exType": "fill-blank",
+      "prompt": "اكتب سطر الشرط الذي يفحص إن كان المتغيّر n أكبر من 100 (لا تكتب ما بعده).",
+      "answer": [
+        "if n > 100:"
+      ],
+      "hint": "ابدأ بكلمة if وانتهِ بنقطتين.",
+      "explanation": "نكتب if n > 100: ثم في السطر التالي مع إزاحة نضع ما يُنفّذ."
+    },
+    {
+      "type": "callout",
+      "variant": "extra",
+      "title": "ممتاز!",
+      "content": "برنامجك أصبح ذكيًّا يتّخذ قرارات. القادم: الحلقات لتكرار المهام."
+    }
+  ]
+}

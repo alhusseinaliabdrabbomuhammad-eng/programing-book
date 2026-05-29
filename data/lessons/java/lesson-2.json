@@ -1,0 +1,154 @@
+{
+  "id": "lesson-2",
+  "number": 2,
+  "lang": "java",
+  "title": "هيكل برنامج جافا وأول Hello World",
+  "subtitle": "كل برنامج جافا يبدأ بهيكل ثابت. لنفهم كل جزء فيه.",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "الهيكل الأساسي",
+      "icon": "🏗️",
+      "content": [
+        "كل برنامج جافا داخل «فئة» class، والتنفيذ يبدأ من دالة خاصّة اسمها main."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "java",
+      "langLabel": "Java",
+      "code": [
+        "public class Main {",
+        "  public static void main(String[] args) {",
+        "    System.out.println(\"مرحبًا بالعالم!\");",
+        "  }",
+        "}"
+      ],
+      "annotations": [
+        {
+          "line": 1,
+          "text": "نعرّف فئة اسمها Main تحتوي البرنامج."
+        },
+        {
+          "line": 2,
+          "text": "main نقطة البداية، ينفّذها الحاسوب أولًا."
+        },
+        {
+          "line": 3,
+          "text": "println تطبع سطرًا ثم تنتقل لسطر جديد."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "title": "انتبه!",
+      "content": "اسم الملف يجب أن يطابق اسم الفئة العامّة: لو الفئة Main فالملف Main.java بالضبط."
+    },
+    {
+      "type": "visualizer",
+      "data": {
+        "lang": "java",
+        "hasCallStack": true,
+        "code": [
+          "public static void main(...) {",
+          "  System.out.println(\"أهلًا\");",
+          "}"
+        ],
+        "steps": [
+          {
+            "line": 1,
+            "description": "نبدأ بقراءة البرنامج من أعلى سطر، والذاكرة فارغة تمامًا قبل أن ننفّذ أي شيء.",
+            "memory": [],
+            "output": ""
+          },
+          {
+            "line": 1,
+            "description": "يبدأ التشغيل من دالة main تلقائيًّا.",
+            "memory": [
+              {
+                "name": "الحالة",
+                "value": "بدء main",
+                "updated": true
+              }
+            ],
+            "output": "",
+            "callStack": [
+              "main()"
+            ]
+          },
+          {
+            "line": 2,
+            "description": "لنتمهّل قليلًا ونتأمّل ما في الذاكرة حتى الآن قبل المتابعة.",
+            "memory": [
+              {
+                "name": "الحالة",
+                "value": "طباعة",
+                "updated": false
+              }
+            ],
+            "output": "أهلًا",
+            "callStack": [
+              "main()"
+            ]
+          },
+          {
+            "line": 2,
+            "description": "تُنفّذ println فتظهر كلمة أهلًا في الشاشة.",
+            "memory": [
+              {
+                "name": "الحالة",
+                "value": "طباعة",
+                "updated": true
+              }
+            ],
+            "output": "أهلًا",
+            "callStack": [
+              "main()"
+            ]
+          },
+          {
+            "line": 2,
+            "description": "انتهى التنفيذ! هذه هي الحالة النهائية للذاكرة والمخرجات بعد تنفيذ كل الأسطر.",
+            "memory": [
+              {
+                "name": "الحالة",
+                "value": "طباعة",
+                "updated": false
+              }
+            ],
+            "output": "أهلًا",
+            "callStack": [
+              "main()"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "من أين يبدأ تنفيذ برنامج جافا؟",
+      "options": [
+        "من أول سطر",
+        "من دالة main",
+        "من نهاية الملف",
+        "من الفئة"
+      ],
+      "answer": 1,
+      "hint": "دالة لها اسم محدّد.",
+      "explanation": "التنفيذ يبدأ دائمًا من الدالة main."
+    },
+    {
+      "type": "exercise",
+      "exType": "fill-blank",
+      "prompt": "أكمل أمر طباعة جملة في جافا: System.out.____(\"hi\");",
+      "answer": [
+        "println"
+      ],
+      "hint": "تطبع وتنزل سطرًا.",
+      "explanation": "نستخدم System.out.println(\"hi\"); للطباعة مع سطر جديد."
+    }
+  ]
+}

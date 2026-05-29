@@ -1,0 +1,95 @@
+{
+  "id": "lesson-12",
+  "number": 12,
+  "lang": "css",
+  "title": "Flexbox: الحاوية والاتجاه والمحاذاة",
+  "subtitle": "Flexbox أقوى أداة لترتيب العناصر بسهولة. لنتقنها!",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "ما Flexbox؟",
+      "icon": "🧰",
+      "content": [
+        "Flexbox نظام يرتّب العناصر في صفّ أو عمود بمرونة، ويوزّع المساحة ويحاذي بسهولة مدهشة. نفعّله بـ display: flex على الحاوية."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "css",
+      "langLabel": "CSS",
+      "code": [
+        ".container {",
+        "  display: flex;",
+        "  justify-content: center;",
+        "  align-items: center;",
+        "}"
+      ],
+      "annotations": [
+        {
+          "line": 2,
+          "text": "يفعّل Flexbox على الحاوية."
+        },
+        {
+          "line": 3,
+          "text": "justify-content يحاذي على المحور الرئيسي (أفقيًّا هنا)."
+        },
+        {
+          "line": 4,
+          "text": "align-items يحاذي على المحور العموديّ."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "اتجاه المحور",
+      "icon": "↔️",
+      "content": [
+        "flex-direction يحدّد الاتجاه: row صفّ (افتراضيّ) أو column عمود."
+      ]
+    },
+    {
+      "type": "list",
+      "heading": "قيم justify-content",
+      "icon": "🎯",
+      "ordered": false,
+      "items": [
+        "`center` في الوسط",
+        "`space-between` مسافات متساوية بين العناصر",
+        "`flex-start` في البداية",
+        "`flex-end` في النهاية"
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "tip",
+      "title": "سرّ التوسيط 💡",
+      "content": "لتوسيط أيّ شيء أفقيًّا وعموديًّا: display: flex مع justify-content: center و align-items: center. حلّ سحريّ لمشكلة قديمة!"
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "أي خاصية تحاذي العناصر على المحور الرئيسي في Flexbox؟",
+      "options": [
+        "align-items",
+        "justify-content",
+        "flex-direction",
+        "display"
+      ],
+      "answer": 1,
+      "hint": "تنظّم المحتوى.",
+      "explanation": "justify-content تحاذي العناصر على المحور الرئيسي."
+    },
+    {
+      "type": "exercise",
+      "exType": "fill-blank",
+      "prompt": "فعّل Flexbox على حاوية.",
+      "answer": [
+        "display: flex;",
+        "display:flex;"
+      ],
+      "hint": "القيمة flex.",
+      "explanation": "نكتب display: flex; لتفعيل Flexbox على الحاوية."
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "id": "lesson-N",
+  "number": 0,
+  "lang": "python",
+  "title": "عنوان الدرس",
+  "subtitle": "وصف مختصر للدرس بأسلوب مشجّع للمبتدئ",
+  "minInteractions": 1,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "عنوان القسم",
+      "icon": "📖",
+      "content": ["فقرة شرح بسيطة. تدعم **العريض** و `code` و __تمييز__."]
+    },
+    {
+      "type": "list",
+      "heading": "قائمة",
+      "icon": "📋",
+      "ordered": false,
+      "items": ["عنصر أول", "عنصر ثانٍ"]
+    },
+    {
+      "type": "code",
+      "lang": "python",
+      "langLabel": "Python",
+      "code": ["print(\"Hello\")"],
+      "annotations": [{ "line": 1, "text": "شرح هذا السطر بالعربية." }]
+    },
+    {
+      "type": "callout",
+      "variant": "tip",
+      "title": "نصيحة",
+      "content": "نص النصيحة."
+    },
+    {
+      "type": "visualizer",
+      "data": {
+        "lang": "python",
+        "hasCallStack": false,
+        "code": ["x = 5", "print(x)"],
+        "steps": [
+          { "line": 1, "description": "وصف الخطوة بالعربية.", "memory": [{ "name": "x", "value": "5", "updated": true }], "output": "" },
+          { "line": 2, "description": "وصف الخطوة الثانية.", "memory": [{ "name": "x", "value": "5" }], "output": "5" }
+        ]
+      }
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "نص السؤال؟",
+      "options": ["خيار أ", "خيار ب"],
+      "answer": 0,
+      "hint": "تلميح",
+      "explanation": "شرح الإجابة الصحيحة."
+    }
+  ]
+}

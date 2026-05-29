@@ -1,0 +1,144 @@
+{
+  "id": "lesson-18",
+  "number": 18,
+  "lang": "python",
+  "title": "البرمجة كائنية التوجه: الفئات",
+  "subtitle": "كيف نصمّم قوالب لإنشاء كائنات لها صفات وسلوكيات؟",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "الفكرة",
+      "icon": "🏗️",
+      "content": [
+        "تخيّل قالب كعك (فئة Class)، نصنع منه عدّة كعكات (كائنات Objects). الفئة تصف الصفات والسلوك، والكائن نسخة حقيقية منها."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "python",
+      "langLabel": "Python",
+      "code": [
+        "class Dog:",
+        "    def __init__(self, name):",
+        "        self.name = name",
+        "    def bark(self):",
+        "        print(self.name + \" يقول هوهو\")",
+        "d = Dog(\"ركس\")",
+        "d.bark()"
+      ],
+      "annotations": [
+        {
+          "line": 2,
+          "text": "__init__ دالة خاصة تعمل عند إنشاء كائن جديد."
+        },
+        {
+          "line": 3,
+          "text": "نحفظ الاسم في صفة الكائن self.name."
+        },
+        {
+          "line": 6,
+          "text": "ننشئ كلبًا اسمه ركس."
+        },
+        {
+          "line": 7,
+          "text": "نطلب من الكلب أن ينبح."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "tip",
+      "title": "ما هو self؟",
+      "content": "self يشير إلى الكائن نفسه. عبره نصل لصفات هذا الكائن تحديدًا."
+    },
+    {
+      "type": "visualizer",
+      "data": {
+        "lang": "python",
+        "hasCallStack": true,
+        "code": [
+          "class Cat:",
+          "    def __init__(self, n):",
+          "        self.name = n",
+          "c = Cat(\"مشمش\")"
+        ],
+        "steps": [
+          {
+            "line": 4,
+            "description": "نطلب إنشاء قطّة باسم «مشمش»، فيُستدعى __init__ تلقائيًّا.",
+            "memory": [
+              {
+                "name": "n",
+                "value": "\"مشمش\"",
+                "updated": true
+              }
+            ],
+            "output": "",
+            "callStack": [
+              "__init__"
+            ]
+          },
+          {
+            "line": 3,
+            "description": "داخل __init__ نحفظ الاسم في صفة الكائن self.name.",
+            "memory": [
+              {
+                "name": "n",
+                "value": "\"مشمش\"",
+                "updated": false
+              },
+              {
+                "name": "c.name",
+                "value": "\"مشمش\"",
+                "updated": true
+              }
+            ],
+            "output": "",
+            "callStack": [
+              "__init__"
+            ]
+          },
+          {
+            "line": 4,
+            "description": "يكتمل إنشاء الكائن c وهو قطّة اسمها مشمش.",
+            "memory": [
+              {
+                "name": "c",
+                "value": "Cat(name='مشمش')",
+                "updated": true
+              }
+            ],
+            "output": ""
+          }
+        ]
+      }
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "ما اسم الدالة التي تعمل تلقائيًّا عند إنشاء كائن؟",
+      "options": [
+        "__start__",
+        "__init__",
+        "__new__",
+        "create"
+      ],
+      "answer": 1,
+      "hint": "تبدأ وتنتهي بشرطتين سفليتين.",
+      "explanation": "الدالة __init__ هي المُنشئ الذي يعمل تلقائيًّا عند إنشاء كائن جديد."
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "title": "لا تنسَ self",
+      "content": "أول معامل في دوال الفئة يكون دائمًا self، يمثّل الكائن نفسه."
+    },
+    {
+      "type": "callout",
+      "variant": "extra",
+      "title": "ممتاز!",
+      "content": "فتحت بابًا كبيرًا في عالم البرمجة. القادم: الوراثة."
+    }
+  ]
+}

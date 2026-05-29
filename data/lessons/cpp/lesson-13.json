@@ -1,0 +1,148 @@
+{
+  "id": "lesson-13",
+  "number": 13,
+  "lang": "cpp",
+  "title": "مقدمة إلى OOP: struct و class",
+  "subtitle": "نمذجة الأشياء الواقعية بالفئات والكائنات.",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "الفئة والكائن",
+      "icon": "🏛️",
+      "content": [
+        "class مخطّط لنوع جديد له بيانات (أعضاء) ودوال. ننشئ منه كائنات. الفرق عن struct: أعضاء class خاصّة افتراضيًّا."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "cpp",
+      "langLabel": "C++",
+      "code": [
+        "class Dog {",
+        "public:",
+        "  string name;",
+        "  void bark() { cout << \"هَو\"; }",
+        "};",
+        "Dog d;",
+        "d.name = \"ريكس\";",
+        "d.bark();"
+      ],
+      "annotations": [
+        {
+          "line": 2,
+          "text": "public يجعل الأعضاء متاحة من الخارج."
+        },
+        {
+          "line": 4,
+          "text": "دالة عضو تصف سلوك الكلب."
+        },
+        {
+          "line": 6,
+          "text": "ننشئ كائنًا."
+        },
+        {
+          "line": 8,
+          "text": "نستدعي سلوكه."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "tip",
+      "title": "تشبيه 💡",
+      "content": "الفئة قالب الكعك، والكائنات الكعكات. كل كائن نسخة مستقلّة لها بياناتها الخاصّة."
+    },
+    {
+      "type": "visualizer",
+      "data": {
+        "lang": "cpp",
+        "hasCallStack": false,
+        "code": [
+          "Dog d;",
+          "d.name = \"ريكس\";"
+        ],
+        "steps": [
+          {
+            "line": 1,
+            "description": "نبدأ بقراءة البرنامج من أعلى سطر، والذاكرة فارغة تمامًا قبل أن ننفّذ أي شيء.",
+            "memory": [],
+            "output": ""
+          },
+          {
+            "line": 1,
+            "description": "ننشئ كائن Dog اسمه d في الذاكرة.",
+            "memory": [
+              {
+                "name": "d",
+                "value": "كائن Dog",
+                "updated": true
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 2,
+            "description": "لنتمهّل قليلًا ونتأمّل ما في الذاكرة حتى الآن قبل المتابعة.",
+            "memory": [
+              {
+                "name": "d.name",
+                "value": "\"ريكس\"",
+                "updated": false
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 2,
+            "description": "نضبط خاصية name بقيمة ريكس.",
+            "memory": [
+              {
+                "name": "d.name",
+                "value": "\"ريكس\"",
+                "updated": true
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 2,
+            "description": "انتهى التنفيذ! هذه هي الحالة النهائية للذاكرة والمخرجات بعد تنفيذ كل الأسطر.",
+            "memory": [
+              {
+                "name": "d.name",
+                "value": "\"ريكس\"",
+                "updated": false
+              }
+            ],
+            "output": ""
+          }
+        ]
+      }
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "الأعضاء في class افتراضيًّا…؟",
+      "options": [
+        "public",
+        "private",
+        "static",
+        "const"
+      ],
+      "answer": 1,
+      "hint": "عكس struct.",
+      "explanation": "أعضاء class خاصّة private افتراضيًّا، بخلاف struct العامّة."
+    },
+    {
+      "type": "exercise",
+      "exType": "fill-blank",
+      "prompt": "اكتب الكلمة التي تجعل أعضاء الفئة متاحة من الخارج.",
+      "answer": [
+        "public"
+      ],
+      "hint": "عكس private.",
+      "explanation": "نستخدم public: لجعل الأعضاء متاحة من الخارج."
+    }
+  ]
+}

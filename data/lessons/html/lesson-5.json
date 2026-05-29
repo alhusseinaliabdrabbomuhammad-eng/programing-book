@@ -1,0 +1,90 @@
+{
+  "id": "lesson-5",
+  "number": 5,
+  "lang": "html",
+  "title": "القوائم: غير مرتبة ومرتبة وتعريفية",
+  "subtitle": "كيف نعرض قائمة عناصر بشكل منظّم؟",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "القوائم غير المرتّبة",
+      "icon": "•",
+      "content": [
+        "ul قائمة بنقاط (لا يهمّ الترتيب)، كلّ عنصر داخل li."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "html",
+      "langLabel": "HTML",
+      "code": [
+        "<ul>",
+        "  <li>تفاح</li>",
+        "  <li>موز</li>",
+        "  <li>عنب</li>",
+        "</ul>"
+      ],
+      "annotations": [
+        {
+          "line": 1,
+          "text": "ul = قائمة غير مرتّبة (نقاط)."
+        },
+        {
+          "line": 2,
+          "text": "li = عنصر واحد في القائمة."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "القوائم المرتّبة",
+      "icon": "1️⃣",
+      "content": [
+        "ol قائمة بأرقام (الترتيب مهمّ)، مثالية للخطوات."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "html",
+      "langLabel": "HTML",
+      "code": [
+        "<ol>",
+        "  <li>افتح الباب</li>",
+        "  <li>ادخل</li>",
+        "  <li>أغلق الباب</li>",
+        "</ol>"
+      ],
+      "annotations": [
+        {
+          "line": 1,
+          "text": "ol = قائمة مرتّبة (أرقام)."
+        }
+      ]
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "أي وسم نستخدمه لقائمة مرقّمة بالترتيب؟",
+      "options": [
+        "<ul>",
+        "<ol>",
+        "<li>",
+        "<dl>"
+      ],
+      "answer": 1,
+      "hint": "o تعني ordered.",
+      "explanation": "نستخدم <ol> للقوائم المرتّبة المرقّمة."
+    },
+    {
+      "type": "exercise",
+      "exType": "fill-blank",
+      "prompt": "اكتب عنصر قائمة واحدًا يحتوي كلمة «خطوة».",
+      "answer": [
+        "<li>خطوة</li>"
+      ],
+      "hint": "الوسم li.",
+      "explanation": "نستخدم <li>خطوة</li> لعنصر قائمة واحد."
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "id": "lesson-18",
+  "number": 18,
+  "lang": "html",
+  "title": "إمكانية الوصول ARIA",
+  "subtitle": "كيف نجعل صفحتنا مفهومة للجميع، بمن فيهم ذوو الإعاقة؟",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "ما إمكانية الوصول؟",
+      "icon": "♿",
+      "content": [
+        "إمكانية الوصول تعني تصميم صفحات يستطيع الجميع استخدامها، بما فيهم المكفوفون الذين يعتمدون على «قارئات الشاشة»."
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "سمات ARIA",
+      "icon": "🏷️",
+      "content": [
+        "عندما لا يكفي HTML الدلالي، نضيف سمات aria لنشرح دور العنصر وحالته لقارئات الشاشة."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "html",
+      "langLabel": "HTML",
+      "code": [
+        "<button aria-label=\"إغلاق النافذة\">✕</button>",
+        "<nav aria-label=\"التنقّل الرئيسي\">...</nav>"
+      ],
+      "annotations": [
+        {
+          "line": 1,
+          "text": "aria-label يعطي وصفًا للزرّ الذي محتواه رمز فقط."
+        },
+        {
+          "line": 2,
+          "text": "يوضّح دور قائمة التنقّل لقارئات الشاشة."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "critical",
+      "title": "قاعدة ذهبية!",
+      "content": "استخدم HTML الدلالي أولًا (button و nav...)، ولا تلجأ لـ ARIA إلّا عند الضرورة. ARIA السيّئة أسوأ من عدمها!"
+    },
+    {
+      "type": "list",
+      "heading": "ممارسات مهمّة",
+      "icon": "✅",
+      "ordered": false,
+      "items": [
+        "نص alt لكل صورة",
+        "label لكل حقل",
+        "aria-label للأزرار الرمزية",
+        "تباين ألوان كافٍ للنصوص",
+        "إمكانية التنقّل بلوحة المفاتيح"
+      ]
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "ما الذي نستخدمه لوصف زرّ محتواه رمز فقط؟",
+      "options": [
+        "title",
+        "aria-label",
+        "alt",
+        "name"
+      ],
+      "answer": 1,
+      "hint": "يعطي تسمية بديلة.",
+      "explanation": "نستخدم aria-label لوصف الزرّ لقارئات الشاشة."
+    },
+    {
+      "type": "exercise",
+      "exType": "fill-blank",
+      "prompt": "أضف وصفًا «بحث» لزرّ عبر سمة ARIA.",
+      "answer": [
+        "aria-label=\"بحث\""
+      ],
+      "hint": "aria-label.",
+      "explanation": "نكتب aria-label=\"بحث\" لوصف الزرّ لقارئات الشاشة."
+    }
+  ]
+}

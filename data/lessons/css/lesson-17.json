@@ -1,0 +1,94 @@
+{
+  "id": "lesson-17",
+  "number": 17,
+  "lang": "css",
+  "title": "الرسوم المتحركة keyframes",
+  "subtitle": "كيف نصنع حركات متعدّدة المراحل تعمل تلقائيًّا؟",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "ما keyframes؟",
+      "icon": "🎬",
+      "content": [
+        "@keyframes تعرّف مراحل الحركة (من...إلى أو بنسب مئوية)، ثم نطبّقها على عنصر بخاصية animation."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "css",
+      "langLabel": "CSS",
+      "code": [
+        "@keyframes bounce {",
+        "  0%   { transform: translateY(0); }",
+        "  50%  { transform: translateY(-30px); }",
+        "  100% { transform: translateY(0); }",
+        "}",
+        ".ball {",
+        "  animation: bounce 1s infinite;",
+        "}"
+      ],
+      "annotations": [
+        {
+          "line": 1,
+          "text": "نعرّف حركة اسمها bounce."
+        },
+        {
+          "line": 2,
+          "text": "البداية: المكان الأصلي."
+        },
+        {
+          "line": 3,
+          "text": "المنتصف: يرتفع 30px."
+        },
+        {
+          "line": 7,
+          "text": "نطبّقها: تدوم ثانية وتتكرّر للأبد."
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "heading": "خصائص animation",
+      "icon": "⚙️",
+      "ordered": false,
+      "items": [
+        "اسم الحركة",
+        "المدّة مثل 2s",
+        "`infinite` تكرار لا نهائي",
+        "`ease` نمط التسارع",
+        "`alternate` ذهابًا وإيابًا"
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "tip",
+      "title": "الفرق 💡",
+      "content": "transition للتغيّر بين حالتين (مثل hover). أمّا keyframes فلحركات معقّدة متعدّدة المراحل تعمل تلقائيًّا."
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "ما القاعدة التي تعرّف مراحل الرسوم المتحركة؟",
+      "options": [
+        "@media",
+        "@keyframes",
+        "@import",
+        "@font-face"
+      ],
+      "answer": 1,
+      "hint": "إطارات مفتاحية.",
+      "explanation": "@keyframes تعرّف مراحل الحركة المتعدّدة."
+    },
+    {
+      "type": "exercise",
+      "exType": "fill-blank",
+      "prompt": "اكتب القيمة التي تجعل الحركة تتكرّر للأبد.",
+      "answer": [
+        "infinite"
+      ],
+      "hint": "تعني «لا نهائي».",
+      "explanation": "نستخدم infinite لجعل الحركة تتكرّر بلا توقّف."
+    }
+  ]
+}

@@ -1,0 +1,151 @@
+{
+  "id": "lesson-14",
+  "number": 14,
+  "lang": "javascript",
+  "title": "الأحداث addEventListener",
+  "subtitle": "كيف نجعل الصفحة تستجيب لنقرات المستخدم وكتابته؟",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "ما الحدث؟",
+      "icon": "👆",
+      "content": [
+        "الحدث شيء يحدث في الصفحة: نقرة، تحريك فأرة، ضغط زر. نستمع للحدث وننفّذ كودًا عند وقوعه."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "javascript",
+      "langLabel": "JavaScript",
+      "code": [
+        "let btn = document.querySelector(\"#myBtn\");",
+        "btn.addEventListener(\"click\", function() {",
+        "  alert(\"تم النقر!\");",
+        "});"
+      ],
+      "annotations": [
+        {
+          "line": 2,
+          "text": "نستمع لحدث النقر click على الزر."
+        },
+        {
+          "line": 3,
+          "text": "عند النقر تظهر رسالة منبثقة."
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "heading": "أحداث شائعة",
+      "icon": "🔔",
+      "ordered": false,
+      "items": [
+        "`click` النقر",
+        "`input` الكتابة في حقل",
+        "`mouseover` مرور الفأرة",
+        "`keydown` ضغط مفتاح",
+        "`submit` إرسال نموذج"
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "tip",
+      "title": "نصيحة عملية 💡",
+      "content": "الدالة التي نمرّرها تُسمّى «معالج الحدث». تُنفَّذ تلقائيًّا كلّما وقع الحدث. هذا قلب التفاعل في الويب!"
+    },
+    {
+      "type": "visualizer",
+      "data": {
+        "lang": "javascript",
+        "hasCallStack": false,
+        "code": [
+          "let n = 0;",
+          "// عند كل نقرة:",
+          "n = n + 1;"
+        ],
+        "steps": [
+          {
+            "line": 1,
+            "description": "نبدأ بقراءة البرنامج من أعلى سطر، والذاكرة فارغة تمامًا قبل أن ننفّذ أي شيء.",
+            "memory": [],
+            "output": ""
+          },
+          {
+            "line": 1,
+            "description": "نبدأ بعدّاد n = 0.",
+            "memory": [
+              {
+                "name": "n",
+                "value": "0",
+                "updated": true
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 3,
+            "description": "لنتمهّل قليلًا ونتأمّل ما في الذاكرة حتى الآن قبل المتابعة.",
+            "memory": [
+              {
+                "name": "n",
+                "value": "1",
+                "updated": false
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 3,
+            "description": "النقرة الأولى: المعالج يزيد n إلى 1.",
+            "memory": [
+              {
+                "name": "n",
+                "value": "1",
+                "updated": true
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 3,
+            "description": "النقرة الثانية: المعالج يزيد n إلى 2.",
+            "memory": [
+              {
+                "name": "n",
+                "value": "2",
+                "updated": true
+              }
+            ],
+            "output": ""
+          }
+        ]
+      }
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "أي دالة نستخدمها للاستماع لحدث؟",
+      "options": [
+        "onEvent",
+        "addEventListener",
+        "listen",
+        "handleEvent"
+      ],
+      "answer": 1,
+      "hint": "تضيف مستمعًا.",
+      "explanation": "نستخدم addEventListener للاستماع لحدث وتنفيذ دالة عند وقوعه."
+    },
+    {
+      "type": "exercise",
+      "exType": "fill-blank",
+      "prompt": "استمع لحدث النقر على عنصر btn ونفّذ الدالة show.",
+      "answer": [
+        "btn.addEventListener(\"click\", show);",
+        "btn.addEventListener('click', show);"
+      ],
+      "hint": "الحدث اسمه click.",
+      "explanation": "نكتب btn.addEventListener(\"click\", show); لربط دالة بالنقر."
+    }
+  ]
+}

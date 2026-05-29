@@ -1,0 +1,64 @@
+/* assets/css/components/exercises.css */
+.exercise {
+  margin: var(--space-5) 0;
+  padding: var(--space-5);
+  border: 2px dashed var(--color-accent);
+  border-radius: var(--radius-lg);
+  background-color: var(--color-accent-soft);
+}
+.exercise__label {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-2);
+}
+.exercise__prompt { font-weight: 600; margin-bottom: var(--space-3); }
+
+.exercise__options { display: flex; flex-direction: column; gap: var(--space-2); margin-bottom: var(--space-3); }
+.exercise__option {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background-color: var(--color-surface);
+  cursor: pointer;
+  transition: border-color var(--transition-fast), background-color var(--transition-fast);
+}
+.exercise__option:hover { border-color: var(--color-accent); }
+.exercise__option.is-selected { border-color: var(--color-accent); background-color: var(--color-accent-soft); }
+.exercise__option.is-correct { border-color: var(--color-success); background-color: var(--color-success-soft); }
+.exercise__option.is-wrong { border-color: var(--color-danger); background-color: var(--color-danger-soft); }
+.exercise__option input { accent-color: var(--color-accent); }
+
+.exercise__input,
+.exercise__textarea {
+  width: 100%;
+  padding: var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background-color: var(--color-surface);
+  font-family: var(--font-mono);
+  direction: ltr;
+  text-align: left;
+  margin-bottom: var(--space-3);
+}
+.exercise__textarea { min-height: 120px; resize: vertical; }
+
+.exercise__feedback {
+  margin-top: var(--space-3);
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  display: none;
+}
+.exercise__feedback.is-visible { display: block; }
+.exercise__feedback.is-correct { background-color: var(--color-success-soft); color: var(--color-success); }
+.exercise__feedback.is-wrong { background-color: var(--color-danger-soft); color: var(--color-danger); }
+.exercise__actions { display: flex; gap: var(--space-2); }

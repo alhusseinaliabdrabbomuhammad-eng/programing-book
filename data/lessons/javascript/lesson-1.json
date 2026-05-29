@@ -1,0 +1,68 @@
+{
+  "id": "lesson-1",
+  "number": 1,
+  "lang": "javascript",
+  "title": "ما هي JavaScript؟ ربطها و console.log",
+  "subtitle": "لغة الويب الحيّة التي تجعل الصفحات تتفاعل معك. لنبدأ من الصفر!",
+  "minInteractions": 1,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "ما هي JavaScript؟",
+      "icon": "🌐",
+      "content": [
+        "تخيّل صفحة ويب كأنها دمية ساكنة. JavaScript هي الروح التي تحرّكها: تستجيب لنقراتك، تغيّر الألوان، وتُظهر رسائل. إنها لغة البرمجة الوحيدة التي يفهمها متصفّح الويب مباشرة."
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "كيف نشغّلها؟",
+      "icon": "▶️",
+      "content": [
+        "أسهل طريقة: افتح المتصفّح، اضغط F12 لفتح «أدوات المطوّر»، ثم بطاقة Console. هناك نكتب الأوامر ونرى النتائج فورًا. الأمر console.log يطبع رسالة في هذه النافذة."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "javascript",
+      "langLabel": "JavaScript",
+      "code": [
+        "console.log(\"مرحبًا بالعالم!\");"
+      ],
+      "annotations": [
+        {
+          "line": 1,
+          "text": "console.log صندوق سحري يطبع ما بداخل القوسين في نافذة الكونسول."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "الربط بصفحة HTML",
+      "icon": "🔗",
+      "content": [
+        "لربط الكود بصفحة، نضعه داخل وسم script: <script src=\"app.js\"></script> قبل نهاية الجسم body."
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "tip",
+      "title": "نصيحة لطيفة 💡",
+      "content": "لا تخف من الكونسول! إنه ملعبك الآمن. اكتب أي شيء وجرّب. الخطأ هنا لا يكسر شيئًا، بل يعلّمك."
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "أي أمر يطبع رسالة في الكونسول؟",
+      "options": [
+        "print()",
+        "echo()",
+        "console.log()",
+        "write()"
+      ],
+      "answer": 2,
+      "hint": "اسمه يبدأ بكلمة console.",
+      "explanation": "الأمر console.log() هو الطريقة الأساسية لطباعة الرسائل في كونسول المتصفّح."
+    }
+  ]
+}

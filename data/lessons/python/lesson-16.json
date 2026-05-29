@@ -1,0 +1,134 @@
+{
+  "id": "lesson-16",
+  "number": 16,
+  "lang": "python",
+  "title": "الملفات: القراءة والكتابة",
+  "subtitle": "كيف يحفظ البرنامج بياناته في ملف ويقرؤها لاحقًا؟",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "فتح ملف بأمان",
+      "icon": "📂",
+      "content": [
+        "نستخدم `with open(...)` لفتح ملف، وميزته أنه يُغلق الملف تلقائيًّا بعد الانتهاء. نحدّد الوضع: `\"w\"` للكتابة، `\"r\"` للقراءة."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "python",
+      "langLabel": "Python",
+      "code": [
+        "with open(\"note.txt\", \"w\") as f:",
+        "    f.write(\"مرحبًا\")"
+      ],
+      "annotations": [
+        {
+          "line": 1,
+          "text": "نفتح الملف للكتابة، ونسمّيه f."
+        },
+        {
+          "line": 2,
+          "text": "نكتب النص داخل الملف."
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "python",
+      "langLabel": "Python",
+      "code": [
+        "with open(\"note.txt\", \"r\") as f:",
+        "    content = f.read()",
+        "print(content)"
+      ],
+      "annotations": [
+        {
+          "line": 2,
+          "text": "نقرأ كامل محتوى الملف."
+        },
+        {
+          "line": 3,
+          "text": "نطبع المحتوى: مرحبًا."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "tip",
+      "title": "لماذا with؟",
+      "content": "تضمن إغلاق الملف حتى لو حدث خطأ، فلا تفقد بياناتك. عادة جيّدة جدًّا!"
+    },
+    {
+      "type": "visualizer",
+      "data": {
+        "lang": "python",
+        "hasCallStack": false,
+        "code": [
+          "with open(\"a.txt\", \"w\") as f:",
+          "    f.write(\"Hi\")"
+        ],
+        "steps": [
+          {
+            "line": 1,
+            "description": "نفتح الملف a.txt في وضع الكتابة، ونحصل على مقبض الملف f.",
+            "memory": [
+              {
+                "name": "f",
+                "value": "<file a.txt>",
+                "updated": true
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 2,
+            "description": "نكتب \"Hi\" في الملف. بعد انتهاء كتلة with يُغلق الملف تلقائيًّا.",
+            "memory": [
+              {
+                "name": "f",
+                "value": "<file a.txt>",
+                "updated": false
+              }
+            ],
+            "output": "(تمّت الكتابة في الملف)"
+          }
+        ]
+      }
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "أي وضع يُستخدم للقراءة؟",
+      "options": [
+        "\"w\"",
+        "\"r\"",
+        "\"a\"",
+        "\"x\""
+      ],
+      "answer": 1,
+      "hint": "r تعني read.",
+      "explanation": "الوضع \"r\" (read) يُستخدم لقراءة الملفات."
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "ما ميزة استخدام with عند فتح الملفات؟",
+      "options": [
+        "أسرع",
+        "يغلق الملف تلقائيًّا",
+        "يكتب أكثر",
+        "يلوّن النص"
+      ],
+      "answer": 1,
+      "hint": "تتعلّق بإغلاق الملف.",
+      "explanation": "الميزة الأساسية أن with يغلق الملف تلقائيًّا بعد الانتهاء حتى عند حدوث خطأ."
+    },
+    {
+      "type": "callout",
+      "variant": "extra",
+      "title": "ممتاز!",
+      "content": "صار برنامجك يتذكّر البيانات بين التشغيلات. القادم: التعامل مع الأخطاء بأمان."
+    }
+  ]
+}

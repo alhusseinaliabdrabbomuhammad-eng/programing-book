@@ -1,0 +1,153 @@
+{
+  "id": "lesson-11",
+  "number": 11,
+  "lang": "python",
+  "title": "القواميس (Dictionaries)",
+  "subtitle": "تخزين البيانات على شكل مفتاح وقيمة، مثل دفتر هاتف.",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "الفكرة",
+      "icon": "📒",
+      "content": [
+        "القاموس يربط بين **مفتاح** و**قيمة**. مثل دفتر هاتف: الاسم (مفتاح) يقابله الرقم (قيمة). نكتبه بأقواس معقوفة { } بصيغة مفتاح: قيمة."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "python",
+      "langLabel": "Python",
+      "code": [
+        "student = {\"name\": \"ليلى\", \"age\": 13}",
+        "print(student[\"name\"])"
+      ],
+      "annotations": [
+        {
+          "line": 1,
+          "text": "قاموس فيه مفتاحان: name و age."
+        },
+        {
+          "line": 2,
+          "text": "نصل للقيمة عبر مفتاحها: ليلى."
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "heading": "عمليات شائعة",
+      "icon": "🛠️",
+      "ordered": false,
+      "items": [
+        "`d[\"key\"]` للوصول لقيمة",
+        "`d[\"new\"] = x` لإضافة مفتاح جديد",
+        "`d.keys()` كل المفاتيح",
+        "`d.values()` كل القيم"
+      ]
+    },
+    {
+      "type": "visualizer",
+      "data": {
+        "lang": "python",
+        "hasCallStack": false,
+        "code": [
+          "d = {\"a\": 1}",
+          "d[\"b\"] = 2",
+          "x = d[\"a\"]"
+        ],
+        "steps": [
+          {
+            "line": 1,
+            "description": "نبدأ بقراءة البرنامج من أعلى سطر، والذاكرة فارغة تمامًا قبل أن ننفّذ أي شيء.",
+            "memory": [],
+            "output": ""
+          },
+          {
+            "line": 1,
+            "description": "ننشئ قاموسًا فيه المفتاح a وقيمته 1.",
+            "memory": [
+              {
+                "name": "d",
+                "value": "{'a': 1}",
+                "updated": true
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 2,
+            "description": "لنتمهّل قليلًا ونتأمّل ما في الذاكرة حتى الآن قبل المتابعة.",
+            "memory": [
+              {
+                "name": "d",
+                "value": "{'a': 1, 'b': 2}",
+                "updated": false
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 2,
+            "description": "نضيف مفتاحًا جديدًا b بقيمة 2.",
+            "memory": [
+              {
+                "name": "d",
+                "value": "{'a': 1, 'b': 2}",
+                "updated": true
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 3,
+            "description": "نأخذ قيمة المفتاح a وهي 1 ونضعها في x.",
+            "memory": [
+              {
+                "name": "d",
+                "value": "{'a': 1, 'b': 2}",
+                "updated": false
+              },
+              {
+                "name": "x",
+                "value": "1",
+                "updated": true
+              }
+            ],
+            "output": ""
+          }
+        ]
+      }
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "كيف نصل لقيمة المفتاح \"age\" في قاموس اسمه p؟",
+      "options": [
+        "p.age",
+        "p[\"age\"]",
+        "p(age)",
+        "p->age"
+      ],
+      "answer": 1,
+      "hint": "نستخدم الأقواس المربّعة مع المفتاح.",
+      "explanation": "نكتب p[\"age\"] للوصول للقيمة المرتبطة بالمفتاح age."
+    },
+    {
+      "type": "exercise",
+      "exType": "fill-blank",
+      "prompt": "أضف للقاموس car المفتاح \"color\" بقيمة \"أحمر\".",
+      "answer": [
+        "car[\"color\"] = \"أحمر\"",
+        "car['color'] = 'أحمر'"
+      ],
+      "hint": "استخدم car[المفتاح] = القيمة.",
+      "explanation": "نكتب car[\"color\"] = \"أحمر\" لإضافة مفتاح جديد بقيمته."
+    },
+    {
+      "type": "callout",
+      "variant": "extra",
+      "title": "رائع!",
+      "content": "القواميس من أقوى أدوات بايثون. القادم: اتخاذ القرارات بالجمل الشرطية."
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "id": "lesson-18",
+  "number": 18,
+  "lang": "css",
+  "title": "المتغيرات و calc و clamp",
+  "subtitle": "أدوات حديثة تجعل CSS أذكى وأسهل صيانة.",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "متغيّرات CSS",
+      "icon": "🎨",
+      "content": [
+        "نعرّف متغيّرات بقيم نعيد استخدامها في كل مكان. لو غيّرنا اللون مرّة واحدة، يتغيّر في كل الصفحة!"
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "css",
+      "langLabel": "CSS",
+      "code": [
+        ":root {",
+        "  --main-color: #3498db;",
+        "}",
+        ".btn {",
+        "  background: var(--main-color);",
+        "}"
+      ],
+      "annotations": [
+        {
+          "line": 1,
+          "text": ":root يعرّف متغيّرات عامّة للصفحة كلها."
+        },
+        {
+          "line": 2,
+          "text": "متغيّر يبدأ بشَرطتين --."
+        },
+        {
+          "line": 5,
+          "text": "نستخدمه بـ var()."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "calc و clamp",
+      "icon": "🧮",
+      "content": [
+        "calc() يجري حسابات: width: calc(100% - 40px). و clamp() يحدّد قيمة بين حدّ أدنى ومثاليّ وأقصى، رائع للتصميم المتجاوب."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "css",
+      "langLabel": "CSS",
+      "code": [
+        "h1 {",
+        "  font-size: clamp(1.5rem, 4vw, 3rem);",
+        "}"
+      ],
+      "annotations": [
+        {
+          "line": 2,
+          "text": "الحجم لا يقلّ عن 1.5rem ولا يزيد عن 3rem، ويتكيّف بينهما."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "tip",
+      "title": "قوّة كبيرة 💡",
+      "content": "المتغيّرات أساس أنظمة الألوان والثيمات (الوضع الفاتح/الداكن). غيّر متغيّرًا واحدًا، يتبدّل المظهر كله!"
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "كيف نستخدم متغيّر CSS اسمه --color؟",
+      "options": [
+        "use(--color)",
+        "var(--color)",
+        "get(--color)",
+        "$color"
+      ],
+      "answer": 1,
+      "hint": "دالة var.",
+      "explanation": "نستخدم var(--color) للوصول لقيمة المتغيّر."
+    },
+    {
+      "type": "exercise",
+      "exType": "fill-blank",
+      "prompt": "استخدم متغيّر CSS اسمه --bg كقيمة لخاصية.",
+      "answer": [
+        "var(--bg)"
+      ],
+      "hint": "الدالة var.",
+      "explanation": "نكتب var(--bg) لاستخدام قيمة المتغيّر."
+    }
+  ]
+}

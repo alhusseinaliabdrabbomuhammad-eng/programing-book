@@ -1,0 +1,83 @@
+{
+  "id": "lesson-14",
+  "number": 14,
+  "lang": "css",
+  "title": "CSS Grid: تعريف الشبكة",
+  "subtitle": "Grid نظام ثنائي الأبعاد لتخطيطات الصفحات المعقّدة.",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "ما CSS Grid؟",
+      "icon": "🔲",
+      "content": [
+        "إذا كان Flexbox لبُعد واحد (صفّ أو عمود)، فإن Grid لبُعدين معًا: صفوف وأعمدة. مثاليّ لتخطيط صفحات كاملة."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "css",
+      "langLabel": "CSS",
+      "code": [
+        ".grid {",
+        "  display: grid;",
+        "  grid-template-columns: 1fr 1fr 1fr;",
+        "  gap: 16px;",
+        "}"
+      ],
+      "annotations": [
+        {
+          "line": 2,
+          "text": "يفعّل نظام الشبكة."
+        },
+        {
+          "line": 3,
+          "text": "ثلاثة أعمدة متساوية (الوحدة fr = جزء من المساحة)."
+        },
+        {
+          "line": 4,
+          "text": "gap المسافة بين الخلايا."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "الوحدة fr",
+      "icon": "📏",
+      "content": [
+        "الوحدة fr (fraction) تقسم المساحة المتاحة بنسب. 1fr 2fr يعني عمودًا بنسبة الثلث وآخر بالثلثين."
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "tip",
+      "title": "نصيحة 💡",
+      "content": "استخدم gap بدل الهوامش بين عناصر الشبكة! إنها أنظف وتضيف المسافات بين الخلايا دون فوضى الهوامش الخارجية."
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "ما الوحدة الخاصّة بـ Grid لتقسيم المساحة بنسب؟",
+      "options": [
+        "px",
+        "fr",
+        "em",
+        "%"
+      ],
+      "answer": 1,
+      "hint": "اختصار fraction.",
+      "explanation": "الوحدة fr تقسم المساحة المتاحة في الشبكة بنسب."
+    },
+    {
+      "type": "exercise",
+      "exType": "fill-blank",
+      "prompt": "فعّل نظام الشبكة Grid على حاوية.",
+      "answer": [
+        "display: grid;",
+        "display:grid;"
+      ],
+      "hint": "القيمة grid.",
+      "explanation": "نكتب display: grid; لتفعيل نظام الشبكة."
+    }
+  ]
+}

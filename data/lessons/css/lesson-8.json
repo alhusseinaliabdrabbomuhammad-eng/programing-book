@@ -1,0 +1,100 @@
+{
+  "id": "lesson-8",
+  "number": 8,
+  "lang": "css",
+  "title": "الخلفيات والتدرجات",
+  "subtitle": "كيف نضيف ألوانًا وصورًا وتدرّجات خلف العناصر؟",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "ألوان وصور الخلفية",
+      "icon": "🖌️",
+      "content": [
+        "background-color للون خلفية، و background-image لصورة خلفية."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "css",
+      "langLabel": "CSS",
+      "code": [
+        ".hero {",
+        "  background-color: #222;",
+        "  background-image: url('bg.jpg');",
+        "  background-size: cover;",
+        "}"
+      ],
+      "annotations": [
+        {
+          "line": 2,
+          "text": "لون خلفية احتياطيّ."
+        },
+        {
+          "line": 3,
+          "text": "صورة الخلفية."
+        },
+        {
+          "line": 4,
+          "text": "cover يملأ المساحة كاملة دون تشويه."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "التدرّجات اللونية",
+      "icon": "🌅",
+      "content": [
+        "التدرّج لون يتحوّل تدريجيًّا. linear-gradient تدرّج خطّيّ، و radial-gradient دائريّ."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "css",
+      "langLabel": "CSS",
+      "code": [
+        ".banner {",
+        "  background: linear-gradient(to right, blue, green);",
+        "}"
+      ],
+      "annotations": [
+        {
+          "line": 2,
+          "text": "تدرّج من الأزرق إلى الأخضر يسارًا → يمينًا."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "tip",
+      "title": "نصيحة 💡",
+      "content": "التدرّجات تُعتبر «صورًا» في CSS، فنضعها في background دون ملفّ خارجيّ. جرّب دمج أكثر من لون!"
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "أي دالة تنشئ تدرّجًا خطّيًّا؟",
+      "options": [
+        "radial-gradient",
+        "linear-gradient",
+        "background-image",
+        "url"
+      ],
+      "answer": 1,
+      "hint": "خطّيّ = linear.",
+      "explanation": "linear-gradient تنشئ تدرّجًا لونيًّا خطّيًّا."
+    },
+    {
+      "type": "exercise",
+      "exType": "fill-blank",
+      "prompt": "اضبط لون خلفية عنصر على الأسود black.",
+      "answer": [
+        "background-color: black;",
+        "background: black;",
+        "background-color:black;"
+      ],
+      "hint": "background-color.",
+      "explanation": "نكتب background-color: black; للون خلفية أسود."
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "id": "lesson-6",
+  "number": 6,
+  "lang": "css",
+  "title": "أبعاد العناصر و box-sizing",
+  "subtitle": "كيف نتحكّم بعرض وارتفاع العناصر بدقّة؟",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "العرض والارتفاع",
+      "icon": "📏",
+      "content": [
+        "نحدّد حجم العنصر بـ width للعرض و height للارتفاع. القيم بالبكسل px أو النسبة % أو وحدات مرنة."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "css",
+      "langLabel": "CSS",
+      "code": [
+        ".box {",
+        "  width: 300px;",
+        "  height: 150px;",
+        "}"
+      ],
+      "annotations": [
+        {
+          "line": 2,
+          "text": "عرض ثابت 300 بكسل."
+        },
+        {
+          "line": 3,
+          "text": "ارتفاع ثابت 150 بكسل."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "الخاصية box-sizing",
+      "icon": "🎯",
+      "content": [
+        "مشكلة: العرض الافتراضي لا يشمل الحشو والحدّ، فيتمدّد الصندوق! الحلّ box-sizing: border-box يجعل العرض يشمل كل شيء."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "css",
+      "langLabel": "CSS",
+      "code": [
+        "* {",
+        "  box-sizing: border-box;",
+        "}"
+      ],
+      "annotations": [
+        {
+          "line": 2,
+          "text": "يجعل width يشمل الحشو والحدّ — يبسّط الحسابات كثيرًا!"
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "tip",
+      "title": "قاعدة ذهبية 💡",
+      "content": "ضع box-sizing: border-box على كل العناصر (*) في بداية ملفّك. سيوفّر عليك صداعًا كبيرًا في حساب الأحجام!"
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "ما القيمة التي تجعل العرض يشمل الحشو والحدّ؟",
+      "options": [
+        "content-box",
+        "border-box",
+        "padding-box",
+        "full-box"
+      ],
+      "answer": 1,
+      "hint": "يشمل الحدّ.",
+      "explanation": "القيمة border-box تجعل العرض يشمل الحشو والحدّ."
+    },
+    {
+      "type": "exercise",
+      "exType": "fill-blank",
+      "prompt": "اضبط عرض عنصر على 50 بالمئة.",
+      "answer": [
+        "width: 50%;",
+        "width:50%;"
+      ],
+      "hint": "الكلمة width و %.",
+      "explanation": "نكتب width: 50%; لجعل العرض نصف الحاوية."
+    }
+  ]
+}

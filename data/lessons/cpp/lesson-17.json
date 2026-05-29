@@ -1,0 +1,127 @@
+{
+  "id": "lesson-17",
+  "number": 17,
+  "lang": "cpp",
+  "title": "التحميل الزائد للمؤثرات",
+  "subtitle": "كيف نعرّف معنى + أو == لأنواعنا الخاصّة؟",
+  "minInteractions": 2,
+  "sections": [
+    {
+      "type": "text",
+      "heading": "الفكرة",
+      "icon": "➕",
+      "content": [
+        "نستطيع تعريف ما تفعله المؤثّرات (+ - == ...) عند تطبيقها على كائناتنا. هذا يجعل استخدامها طبيعيًّا وأنيقًا."
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "cpp",
+      "langLabel": "C++",
+      "code": [
+        "class Point {",
+        "public:",
+        "  int x, y;",
+        "  Point operator+(Point o) {",
+        "    return {x + o.x, y + o.y};",
+        "  }",
+        "};"
+      ],
+      "annotations": [
+        {
+          "line": 4,
+          "text": "نعرّف معنى + بين نقطتين."
+        },
+        {
+          "line": 5,
+          "text": "نجمع الإحداثيات المتناظرة."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "tip",
+      "title": "لماذا؟ 💡",
+      "content": "بدل كتابة addPoints(a, b)، نكتب ببساطة a + b فيكون الكود أوضح وأقرب للرياضيات الطبيعية."
+    },
+    {
+      "type": "visualizer",
+      "data": {
+        "lang": "cpp",
+        "hasCallStack": false,
+        "code": [
+          "Point a{1, 2};",
+          "Point b{3, 4};",
+          "Point c = a + b;"
+        ],
+        "steps": [
+          {
+            "line": 1,
+            "description": "النقطة a إحداثياتها (1, 2).",
+            "memory": [
+              {
+                "name": "a",
+                "value": "(1, 2)",
+                "updated": true
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 2,
+            "description": "النقطة b إحداثياتها (3, 4).",
+            "memory": [
+              {
+                "name": "a",
+                "value": "(1, 2)",
+                "updated": false
+              },
+              {
+                "name": "b",
+                "value": "(3, 4)",
+                "updated": true
+              }
+            ],
+            "output": ""
+          },
+          {
+            "line": 3,
+            "description": "a + b يستدعي مؤثّرنا فيجمع: (4, 6) ويُخزّن في c.",
+            "memory": [
+              {
+                "name": "c",
+                "value": "(4, 6)",
+                "updated": true
+              }
+            ],
+            "output": ""
+          }
+        ]
+      }
+    },
+    {
+      "type": "exercise",
+      "exType": "multiple-choice",
+      "prompt": "ما الكلمة المفتاحية لتعريف مؤثّر مخصّص؟",
+      "options": [
+        "override",
+        "operator",
+        "virtual",
+        "friend"
+      ],
+      "answer": 1,
+      "hint": "تسبق رمز المؤثّر.",
+      "explanation": "نستخدم operator متبوعة برمز المؤثّر مثل operator+."
+    },
+    {
+      "type": "exercise",
+      "exType": "fill-blank",
+      "prompt": "اكتب رأس دالة تحمّل المؤثّر + يُعيد Point ويأخذ Point o.",
+      "answer": [
+        "Point operator+(Point o)"
+      ],
+      "hint": "operator+ ثم الوسيط.",
+      "explanation": "نكتب Point operator+(Point o) لتحميل مؤثّر الجمع."
+    }
+  ]
+}
